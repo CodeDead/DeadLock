@@ -74,15 +74,11 @@ namespace DeadLock.Classes
 
         internal void CancelTask()
         {
-            if (IsRunning())
-            {
-                if (!GetCancellationToken().IsCancellationRequested)
-                {
-                    _cts.Cancel();
-                    SetCancelled(true);
-                    ResetCancellationToken();
-                }
-            }
+            if (!IsRunning()) return;
+            if (GetCancellationToken().IsCancellationRequested) return;
+            _cts.Cancel();
+            SetCancelled(true);
+            ResetCancellationToken();
         }
 
         internal void SetOwnership(bool owned)
@@ -147,7 +143,7 @@ namespace DeadLock.Classes
             bool isWriteAccess = false;
             try
             {
-                AuthorizationRuleCollection collection = Directory.GetAccessControl(GetPath()).GetAccessRules(true, true, typeof(System.Security.Principal.NTAccount));
+                AuthorizationRuleCollection collection = Directory.GetAccessControl(GetPath()).GetAccessRules(true, true, typeof(NTAccount));
                 foreach (FileSystemAccessRule rule in collection)
                 {
                     if (rule.AccessControlType == AccessControlType.Allow)

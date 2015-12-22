@@ -643,7 +643,7 @@ namespace DeadLock.Forms
             this.cancelCurrentOperationToolStripMenuItem});
             this.cmsItems.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(236)))), ((int)(((byte)(249)))));
             this.cmsItems.Name = "cmsItems";
-            this.cmsItems.Size = new System.Drawing.Size(213, 204);
+            this.cmsItems.Size = new System.Drawing.Size(213, 182);
             this.cmsItems.Style = Syncfusion.Windows.Forms.Tools.ContextMenuStripEx.ContextMenuStyle.Metro;
             // 
             // unlockToolStripMenuItem
@@ -725,7 +725,7 @@ namespace DeadLock.Forms
             this.trueOwnershipToolStripMenuItem.Image = global::DeadLock.Properties.Resources.allow;
             this.trueOwnershipToolStripMenuItem.Name = "trueOwnershipToolStripMenuItem";
             this.trueOwnershipToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
-            this.trueOwnershipToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.trueOwnershipToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.trueOwnershipToolStripMenuItem.Text = "True";
             this.trueOwnershipToolStripMenuItem.Click += new System.EventHandler(this.trueOwnershipToolStripMenuItem_Click);
             // 
@@ -734,7 +734,7 @@ namespace DeadLock.Forms
             this.falseOwnershipToolStripMenuItem.Image = global::DeadLock.Properties.Resources.delete;
             this.falseOwnershipToolStripMenuItem.Name = "falseOwnershipToolStripMenuItem";
             this.falseOwnershipToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
-            this.falseOwnershipToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.falseOwnershipToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.falseOwnershipToolStripMenuItem.Text = "False";
             this.falseOwnershipToolStripMenuItem.Click += new System.EventHandler(this.falseOwnershipToolStripMenuItem_Click);
             // 
@@ -971,6 +971,7 @@ namespace DeadLock.Forms
             // 
             // FrmMain
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderColor = System.Drawing.Color.SteelBlue;
@@ -988,6 +989,8 @@ namespace DeadLock.Forms
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.Shown += new System.EventHandler(this.FrmMain_Shown);
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.FrmMain_DragDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.FrmMain_DragEnter);
             ((System.ComponentModel.ISupportInitialize)(this.mfbmMain)).EndInit();
             this.splItems.Panel1.ResumeLayout(false);
             this.splItems.Panel2.ResumeLayout(false);

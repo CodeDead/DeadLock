@@ -754,5 +754,19 @@ namespace DeadLock.Forms
             lvl.SetOwnership(false);
             lsvItems.SelectedItems[0].SubItems[2].Text = lvl.HasOwnership().ToString();
         }
+
+        private void FrmMain_DragEnter(object sender, DragEventArgs e)
+        {
+            e.Effect = e.Data.GetDataPresent(DataFormats.FileDrop) ? DragDropEffects.Copy : DragDropEffects.None;
+        }
+
+        private void FrmMain_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] fileList = (string[])e.Data.GetData(DataFormats.FileDrop, false);
+            foreach (string f in fileList)
+            {
+                OpenPath(f);
+            }
+        }
     }
 }

@@ -677,7 +677,7 @@ namespace DeadLock.Forms
 
         private void settingsBarItem_Click(object sender, EventArgs e)
         {
-            new FrmSettings(nfiTray, this).ShowDialog();
+            new FrmSettings(nfiTray).ShowDialog();
         }
 
         private void killToolStripMenuItem_Click(object sender, EventArgs e)

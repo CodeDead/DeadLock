@@ -6,7 +6,9 @@
 // applicable laws. 
 #endregion
 using System;
+using System.Diagnostics;
 using System.Windows.Forms;
+using Microsoft.Win32;
 using Syncfusion.Windows.Forms;
 using Syncfusion.Windows.Forms.Tools;
 
@@ -16,13 +18,13 @@ namespace DeadLock.Forms
     {
 
         private NotifyIcon _nfi;
-        private MetroForm _frmMain;
+        private bool _originalIntegration;
+        private bool _originalStartup;
 
-        public FrmSettings(NotifyIcon nfi, MetroForm frmMain)
+        public FrmSettings(NotifyIcon nfi)
         {
             InitializeComponent();
             _nfi = nfi;
-            _frmMain = frmMain;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -34,20 +36,58 @@ namespace DeadLock.Forms
         {
             try
             {
+                //General
                 tbtnAutoUpdate.ToggleState = Properties.Settings.Default.AutoUpdate ? ToggleButtonState.Active : ToggleButtonState.Inactive;
                 tbtnNotifyIcon.ToggleState = Properties.Settings.Default.ShowNotifyIcon ? ToggleButtonState.Active : ToggleButtonState.Inactive;
                 tbtnStartMinimized.ToggleState = Properties.Settings.Default.StartMinimized ? ToggleButtonState.Active : ToggleButtonState.Inactive;
                 tbtnAdminWarning.ToggleState = Properties.Settings.Default.ShowAdminWarning ? ToggleButtonState.Active : ToggleButtonState.Inactive;
 
+                //Appearance
                 cpbThemeStyle.SelectedColor = Properties.Settings.Default.MetroColor;
                 itxtBorderThickness.IntegerValue = Properties.Settings.Default.BorderThickness;
                 tbtnFormSize.ToggleState = Properties.Settings.Default.RememberFormSize ? ToggleButtonState.Active : ToggleButtonState.Inactive;
                 tbtnDetails.ToggleState = Properties.Settings.Default.ViewDetails ? ToggleButtonState.Active : ToggleButtonState.Inactive;
+
+                //Advanced
+                tbtnAutoRun.ToggleState = AutoStartUp() ? ToggleButtonState.Active : ToggleButtonState.Inactive;
+                _originalStartup = tbtnAutoRun.ToggleState == ToggleButtonState.Active;
+
+                tbtnWindowsExplorerIntegration.ToggleState = ExplorerIntegration() ? ToggleButtonState.Active : ToggleButtonState.Inactive;
+                _originalIntegration = tbtnWindowsExplorerIntegration.ToggleState == ToggleButtonState.Active;
             }
             catch (Exception ex)
             {
                 MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private static bool AutoStartUp()
+        {
+            return Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run", "DeadLock", "").ToString() == Application.ExecutablePath;
+        }
+
+        private static bool ExplorerIntegration()
+        {
+            bool fileExplorerIntegration = false;
+            bool folderExplorerIntegration = false;
+            using (RegistryKey key = Registry.ClassesRoot.OpenSubKey(@"*\shell\DeadLock\command"))
+            {
+                if (key != null && key.GetValue(@"", "").ToString() == Application.ExecutablePath + " %1")
+                {
+                    fileExplorerIntegration = true;
+                }
+            }
+
+
+            using (RegistryKey key = Registry.ClassesRoot.OpenSubKey(@"Directory\shell\DeadLock\command"))
+            {
+                if (key != null && key.GetValue(@"", "").ToString() == Application.ExecutablePath + " %1")
+                {
+                    folderExplorerIntegration = true;
+                }
+            }
+
+            return folderExplorerIntegration && fileExplorerIntegration;
         }
 
         private void SaveSettings()
@@ -83,12 +123,52 @@ namespace DeadLock.Forms
                 Properties.Settings.Default.RememberFormSize = tbtnFormSize.ToggleState == ToggleButtonState.Active;
                 Properties.Settings.Default.ViewDetails = tbtnDetails.ToggleState == ToggleButtonState.Active;
 
+                if(_originalStartup != (tbtnAutoRun.ToggleState == ToggleButtonState.Active))
+                {
+                    _originalStartup = tbtnAutoRun.ToggleState == ToggleButtonState.Active;
+                    if (_originalStartup)
+                    {
+                        StartRegManager("0 " + "\"" + Application.ExecutablePath + "\"");
+                    }
+                    else
+                    {
+                        StartRegManager("1");
+                    }
+                }
+
+                if (_originalIntegration != (tbtnWindowsExplorerIntegration.ToggleState == ToggleButtonState.Active))
+                {
+                    _originalIntegration = tbtnWindowsExplorerIntegration.ToggleState == ToggleButtonState.Active;
+                    if (_originalIntegration)
+                    {
+                        StartRegManager("2 " + "\"" + Application.ExecutablePath + "\"");
+                    }
+                    else
+                    {
+                        StartRegManager("3");
+                    }
+                }
                 Properties.Settings.Default.Save();
             }
             catch (Exception ex)
             {
                 MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private static void StartRegManager(string args)
+        {
+            Process process = new Process
+            {
+                StartInfo =
+                        {
+                            FileName = Application.StartupPath + "\\RegManager.exe",
+                            Arguments = args,
+                            WindowStyle = ProcessWindowStyle.Hidden
+                        }
+            };
+            process.Start();
+            process.WaitForExit();
         }
 
         private void LoadTheme()
@@ -121,6 +201,15 @@ namespace DeadLock.Forms
         {
             try
             {
+                if (ExplorerIntegration())
+                {
+                    StartRegManager("3");
+                }
+                if (AutoStartUp())
+                {
+                    StartRegManager("1");
+                }
+
                 Properties.Settings.Default.Reset();
                 Properties.Settings.Default.Save();
                 LoadSettings();

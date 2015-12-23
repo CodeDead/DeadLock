@@ -437,7 +437,6 @@ namespace DeadLock.Forms
             try
             {
                 SetLoading(selected, 1);
-
                 lvl.SetRunning(true);
                 LockManager.Remove(selected.Text, lvl.GetCancellationToken());
 
@@ -487,11 +486,6 @@ namespace DeadLock.Forms
 
             try
             {
-                if (!lvl.HasOwnership())
-                {
-                    lvl.SetOwnership(true);
-                }
-
                 CancelSelectedTask(selected);
                 await Task.Run(() =>
                 {
@@ -499,8 +493,7 @@ namespace DeadLock.Forms
                     {
                     }
                 });
-                _lvlManager.FindListViewLocker(selected.Text)?.SetLocker(new List<Process>());
-
+                lvl.SetLocker(new List<Process>());
 
                 if (!File.Exists(selected.Text) && !Directory.Exists(selected.Text))
                 {
@@ -560,8 +553,7 @@ namespace DeadLock.Forms
 
                         lsvDetails.Items.Add(lvi);
                     }
-
-                    _lvlManager.FindListViewLocker(selected.Text)?.SetLocker(lockers);
+                    lvl.SetLocker(lockers);
 
                     lsvDetails.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
                     lsvDetails.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
@@ -579,8 +571,6 @@ namespace DeadLock.Forms
             }
             finally
             {
-                lvl.SetLocker(new List<Process>());
-                SetCancelled(selected);
                 lvl.SetRunning(false);
             }
         }
@@ -594,7 +584,6 @@ namespace DeadLock.Forms
             ListViewLocker lvl = _lvlManager.FindListViewLocker(lsvItems.SelectedItems[0].Text);
             foreach (Process p in lvl.GetLockers())
             {
-
                 ListViewItem lvi = new ListViewItem { Text = LockManager.GetMainModuleFilepath(p.Id) };
                 lvi.SubItems.Add(LockManager.GetMainModuleFilepath(p.Id));
                 lvi.SubItems.Add(p.Id.ToString());
@@ -609,7 +598,6 @@ namespace DeadLock.Forms
             lsvItems.Items.Clear();
             lsvDetails.Items.Clear();
             imgFileIcons.Images.Clear();
-
 
             _lvlManager.CancelAllTasks();
             _lvlManager = new ListViewLockerManager();

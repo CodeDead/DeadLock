@@ -368,6 +368,7 @@ namespace DeadLock.Forms
             this.trueBarItem.ShowToolTipInPopUp = false;
             this.trueBarItem.SizeToFit = true;
             this.trueBarItem.Text = "True";
+            this.trueBarItem.Click += new System.EventHandler(this.trueOwnershipToolStripMenuItem_Click);
             // 
             // falseBarItem
             // 
@@ -378,6 +379,7 @@ namespace DeadLock.Forms
             this.falseBarItem.ShowToolTipInPopUp = false;
             this.falseBarItem.SizeToFit = true;
             this.falseBarItem.Text = "False";
+            this.falseBarItem.Click += new System.EventHandler(this.falseOwnershipToolStripMenuItem_Click);
             // 
             // removeItemBarItem
             // 

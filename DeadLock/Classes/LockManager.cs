@@ -52,12 +52,20 @@ namespace DeadLock.Classes
                             }
                         }
                     }
-                    catch (OperationCanceledException) { }
+                    catch (OperationCanceledException){}
                 }, ct);
             }
             else
             {
-                lockers = NativeMethods.FindLockingProcesses(itemPath);
+                await Task.Run(() =>
+                {
+                    try
+                    {
+                        ct.ThrowIfCancellationRequested();
+                        lockers = NativeMethods.FindLockingProcesses(itemPath);
+                    }
+                    catch (OperationCanceledException){}
+                }, ct);
             }
             return lockers;
         }

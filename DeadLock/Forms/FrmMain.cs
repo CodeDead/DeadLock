@@ -22,7 +22,6 @@ namespace DeadLock.Forms
 {
     public partial class FrmMain : MetroForm
     {
-        private readonly LanguageManager _lm;
         private ListViewLockerManager _lvlManager;
 
         public FrmMain(IReadOnlyCollection<string> args)
@@ -30,7 +29,6 @@ namespace DeadLock.Forms
             InitializeComponent();
             try
             {
-                _lm = new LanguageManager(Properties.Settings.Default.Language);
                 _lvlManager = new ListViewLockerManager();
 
                 LanguageSwitch();
@@ -51,7 +49,7 @@ namespace DeadLock.Forms
         {
             try
             {
-
+                //TODO: Needs a lot of work !
             }
             catch (Exception ex)
             {
@@ -69,7 +67,7 @@ namespace DeadLock.Forms
 
                 if (version[0] != Application.ProductVersion)
                 {
-                    if (MessageBoxAdv.Show(_lm.GetText("NewVersion_Msg_1") + " " + version[0] + " " + _lm.GetText("NewVersion_Msg_2"), "DeadLock", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBoxAdv.Show("Version " + version[0] + " is now available !" + Environment.NewLine + "Would you like to download the latest version ?", "DeadLock", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         new FrmUpdater(version[1]).ShowDialog();
                     }
@@ -78,7 +76,7 @@ namespace DeadLock.Forms
                 {
                     if (showNoUpdates)
                     {
-                        MessageBoxAdv.Show(_lm.GetText("NoNewVersion_Msg"), "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBoxAdv.Show("You have the latest version !", "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
@@ -163,7 +161,7 @@ namespace DeadLock.Forms
 
             try
             {
-                lvi.SubItems.Add(_lm.GetText("Unknown_Lvi"));
+                lvi.SubItems.Add("Unknown");
             }
             catch (Exception ex)
             {
@@ -259,7 +257,7 @@ namespace DeadLock.Forms
                 if (!lvl.HasCancelled())
                 {
                     selected.SubItems[1].ForeColor = Color.Green;
-                    selected.SubItems[1].Text = _lm.GetText("SuccessUnlock_Lvi");
+                    selected.SubItems[1].Text = "Successfully unlocked !";
                 }
                 else
                 {
@@ -273,7 +271,7 @@ namespace DeadLock.Forms
                 selected.SubItems[1].ForeColor = Color.Red;
                 try
                 {
-                    selected.SubItems[1].Text = _lm.GetText("UnSuccessUnlock_Lvi");
+                    selected.SubItems[1].Text = "Could not unlock the item !";
                 }
                 catch (Exception exc)
                 {
@@ -319,7 +317,7 @@ namespace DeadLock.Forms
                 if (!lvl.HasCancelled())
                 {
                     selected.SubItems[1].ForeColor = Color.Green;
-                    selected.SubItems[1].Text = _lm.GetText("SuccessCopy_Lvi");
+                    selected.SubItems[1].Text = "Successfully copied the item !";
                 }
                 else
                 {
@@ -334,7 +332,7 @@ namespace DeadLock.Forms
 
                 try
                 {
-                    selected.SubItems[1].Text = _lm.GetText("UnSuccessCopy_Lvi");
+                    selected.SubItems[1].Text = "Could not copy the item !";
                 }
                 catch (Exception exc)
                 {
@@ -397,7 +395,7 @@ namespace DeadLock.Forms
                 if (!lvl.HasCancelled())
                 {
                     selected.SubItems[1].ForeColor = Color.Green;
-                    selected.SubItems[1].Text = _lm.GetText("SuccessMove_Lvi");
+                    selected.SubItems[1].Text = "Successfully moved the item !";
                 }
                 else
                 {
@@ -412,7 +410,7 @@ namespace DeadLock.Forms
 
                 try
                 {
-                    selected.SubItems[1].Text = _lm.GetText("UnSuccessMove_Lvi");
+                    selected.SubItems[1].Text = "Could not move the item !";
                 }
                 catch (Exception exc)
                 {
@@ -443,7 +441,7 @@ namespace DeadLock.Forms
                 if (!lvl.HasCancelled())
                 {
                     selected.SubItems[1].ForeColor = Color.Green;
-                    selected.SubItems[1].Text = _lm.GetText("SuccessRemove_Lvi");
+                    selected.SubItems[1].Text = "Successfully removed the item !";
                 }
                 else
                 {
@@ -458,7 +456,7 @@ namespace DeadLock.Forms
 
                 try
                 {
-                    selected.SubItems[1].Text = _lm.GetText("UnSuccessRemove_Lvi");
+                    selected.SubItems[1].Text = "Could not remove the item !";
                 }
                 catch (Exception exc)
                 {
@@ -512,7 +510,7 @@ namespace DeadLock.Forms
                     {
                         try
                         {
-                            selected.SubItems[1].Text = _lm.GetText("Unlocked_Lvi");
+                            selected.SubItems[1].Text = "Unlocked";
                         }
                         catch (Exception ex)
                         {
@@ -524,7 +522,7 @@ namespace DeadLock.Forms
                     {
                         try
                         {
-                            selected.SubItems[1].Text = _lm.GetText("Locked_Lvi");
+                            selected.SubItems[1].Text = "Locked";
                         }
                         catch (Exception ex)
                         {
@@ -626,6 +624,7 @@ namespace DeadLock.Forms
 
         private static void SetCancelled(ListViewItem selected)
         {
+            //TODO: Needs LanguageManager
             if (selected == null) return;
             selected.SubItems[1].ForeColor = Color.Red;
             selected.SubItems[1].Text = "Operation cancelled";
@@ -634,6 +633,7 @@ namespace DeadLock.Forms
 
         private static void SetLoading(ListViewItem selected, int index)
         {
+            //TODO: Needs languageManager
             if (selected == null) return;
             selected.SubItems[index].ForeColor = Color.Black;
             selected.SubItems[index].Text = "Loading...";
@@ -697,7 +697,7 @@ namespace DeadLock.Forms
                 {
                     Process.GetProcessById(Convert.ToInt32(l.SubItems[2].Text)).Kill();
                 }
-                MessageBoxAdv.Show(_lm.GetText("SuccessProcessKill_Msg"), "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBoxAdv.Show("Successfully killed the selected process(es)", "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {

@@ -57,7 +57,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\FileUtil.cs" />
-    <Compile Include="Classes\LanguageManager.cs" />
     <Compile Include="Classes\ListViewLocker.cs" />
     <Compile Include="Classes\ListViewLockerManager.cs" />
     <Compile Include="Classes\LockManager.cs" />
@@ -128,14 +127,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Resources\Languages\Res.de.resx" />
-    <EmbeddedResource Include="Resources\Languages\Res.en.resx" />
-    <EmbeddedResource Include="Resources\Languages\Res.fr.resx" />
-    <EmbeddedResource Include="Resources\Languages\Res.it.resx" />
-    <EmbeddedResource Include="Resources\Languages\Res.nl.resx" />
-    <EmbeddedResource Include="Resources\Languages\Res.pl.resx" />
-    <EmbeddedResource Include="Resources\Languages\Res.ru.resx" />
-    <EmbeddedResource Include="Resources\Languages\Res.th.resx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -209,6 +200,9 @@
     <Content Include="Resources\Images\autosize.png" />
     <None Include="Resources\Images\ownership.png" />
     <None Include="Resources\Images\restart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Languages\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

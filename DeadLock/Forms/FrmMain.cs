@@ -217,7 +217,7 @@ namespace DeadLock.Forms
 
             CancelSelectedTask(lsvItems.SelectedItems[0]);
 
-            _lvlManager.DeleteListViewLocker(lsvItems.SelectedItems[0].Text);
+            _lvlManager.DeleteListViewLocker(_lvlManager.FindListViewLocker(lsvItems.SelectedItems[0].Text));
 
             int iImageIndex = lsvItems.SelectedItems[0].ImageIndex;
             int iIndex = lsvItems.SelectedItems[0].Index;
@@ -489,9 +489,7 @@ namespace DeadLock.Forms
                 CancelSelectedTask(selected);
                 await Task.Run(() =>
                 {
-                    while (lvl.IsRunning())
-                    {
-                    }
+                    while (lvl.IsRunning()){ }
                 });
                 lvl.SetLocker(new List<Process>());
 
@@ -499,6 +497,7 @@ namespace DeadLock.Forms
                 {
                     imgFileIcons.Images.RemoveByKey(selected.Text);
                     lsvItems.Items.Remove(selected);
+                    _lvlManager.DeleteListViewLocker(lvl);
                     return;
                 }
 

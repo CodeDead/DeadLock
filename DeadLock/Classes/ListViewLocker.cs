@@ -91,19 +91,16 @@ namespace DeadLock.Classes
                 {
                     if (File.GetAttributes(GetPath()).HasFlag(FileAttributes.Directory))
                     {
-                        WindowsIdentity windowsIdentity = WindowsIdentity.GetCurrent();
-                        if (windowsIdentity != null)
-                        {
-                            SecurityIdentifier cu = windowsIdentity.User;
-                            DirectorySecurity fileS = Directory.GetAccessControl(GetPath());
-                            if (cu != null)
-                            {
-                                fileS.SetOwner(cu);
-                                fileS.SetAccessRule(new FileSystemAccessRule(cu, FileSystemRights.FullControl, AccessControlType.Allow));
-                                Directory.SetAccessControl(GetPath(), fileS);
-                                File.SetAttributes(GetPath(), FileAttributes.Normal);
-                            }
-                        }
+                        DirectoryInfo info = new DirectoryInfo(GetPath());
+                        WindowsIdentity self = WindowsIdentity.GetCurrent();
+                        DirectorySecurity ds = info.GetAccessControl();
+                        ds.AddAccessRule(new FileSystemAccessRule(self.Name,
+                        FileSystemRights.FullControl,
+                        InheritanceFlags.ObjectInherit |
+                        InheritanceFlags.ContainerInherit,
+                        PropagationFlags.None,
+                        AccessControlType.Allow));
+                        info.SetAccessControl(ds);
                     }
                     else
                     {
@@ -115,7 +112,7 @@ namespace DeadLock.Classes
                             if (cu != null)
                             {
                                 fileS.SetOwner(cu);
-                                fileS.SetAccessRule(new FileSystemAccessRule(cu, FileSystemRights.FullControl, AccessControlType.Allow));
+                                fileS.AddAccessRule(new FileSystemAccessRule(cu, FileSystemRights.FullControl, AccessControlType.Allow));
                                 File.SetAccessControl(GetPath(), fileS);
                                 File.SetAttributes(GetPath(), FileAttributes.Normal);
                             }

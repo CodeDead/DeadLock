@@ -135,7 +135,13 @@ namespace DeadLock.Classes
                     }
                     else
                     {
-
+                        FileSecurity fs = File.GetAccessControl(GetPath());
+                        AuthorizationRuleCollection rules = fs.GetAccessRules(true, false, typeof (NTAccount));
+                        foreach (FileSystemAccessRule rule in rules)
+                        {
+                            fs.RemoveAccessRule(rule);
+                        }
+                        File.SetAccessControl(GetPath(), fs);
                     }
                 }
             }

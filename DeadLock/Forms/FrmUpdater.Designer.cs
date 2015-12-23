@@ -95,6 +95,7 @@ namespace DeadLock.Forms
             this.btnCancel.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.btnCancel.BeforeTouchSize = new System.Drawing.Size(75, 23);
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.IsBackStageButton = false;
             this.btnCancel.Location = new System.Drawing.Point(12, 93);
@@ -166,10 +167,12 @@ namespace DeadLock.Forms
             // 
             // FrmUpdater
             // 
+            this.AcceptButton = this.btnUpdate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderColor = System.Drawing.Color.SteelBlue;
             this.BorderThickness = 3;
+            this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(388, 128);
             this.Controls.Add(this.btnSelectPath);
             this.Controls.Add(this.txtPath);

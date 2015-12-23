@@ -73,7 +73,7 @@ namespace DeadLock.Forms
                 {
                     if (MessageBoxAdv.Show(_lm.GetText("NewVersion_Msg_1") + " " + version[0] + " " + _lm.GetText("NewVersion_Msg_2"), "DeadLock", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        new FrmUpdater(version[1]).Show();
+                        new FrmUpdater(version[1]).ShowDialog();
                     }
                 }
                 else

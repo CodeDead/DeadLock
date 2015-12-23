@@ -11,8 +11,6 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Net;
-using System.Runtime.Remoting.Messaging;
-using System.Security.AccessControl;
 using System.Security.Principal;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -482,92 +480,109 @@ namespace DeadLock.Forms
         private async void lsvItems_DoubleClick(object sender, EventArgs e)
         {
             if (lsvItems.SelectedItems.Count == 0) return;
-
             lsvDetails.Items.Clear();
 
             ListViewItem selected = lsvItems.SelectedItems[0];
             ListViewLocker lvl = _lvlManager.FindListViewLocker(selected.Text);
 
-            CancelSelectedTask(selected);
-            await Task.Run(() =>
+            try
             {
-                while (lvl.IsRunning()) { }
-            });
-            _lvlManager.FindListViewLocker(selected.Text)?.SetLocker(new List<Process>());
-
-
-            if (!File.Exists(selected.Text) && !Directory.Exists(selected.Text))
-            {
-                imgFileIcons.Images.RemoveByKey(selected.Text);
-                lsvItems.Items.Remove(selected);
-                return;
-            }
-
-            SetLoading(selected, 1);
-            SetLoading(selected, 2);
-
-            lvl.SetRunning(true);
-            List<Process> lockers = await LockManager.GetLockerDetails(selected.Text, lvl.GetCancellationToken());
-            if (!lvl.HasCancelled())
-            {
-                if (lockers.Count == 0)
+                if (!lvl.HasOwnership())
                 {
-                    try
-                    {
-                        selected.SubItems[1].Text = _lm.GetText("Unlocked_Lvi");
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    selected.SubItems[1].ForeColor = Color.Green;
+                    lvl.SetOwnership(true);
                 }
-                else
-                {
-                    try
-                    {
-                        selected.SubItems[1].Text = _lm.GetText("Locked_Lvi");
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    selected.SubItems[1].ForeColor = Color.Red;
-                }
-                selected.SubItems[2].Text = lvl.HasOwnership().ToString();
 
-                foreach (Process p in lockers)
+                CancelSelectedTask(selected);
+                await Task.Run(() =>
                 {
-                    string path = LockManager.GetMainModuleFilepath(p.Id);
-                    ListViewItem lvi = new ListViewItem();
-                    if (string.IsNullOrEmpty(path))
+                    while (lvl.IsRunning())
                     {
-                        path = "Access denied";
-                        lvi.Text = path;
+                    }
+                });
+                _lvlManager.FindListViewLocker(selected.Text)?.SetLocker(new List<Process>());
+
+
+                if (!File.Exists(selected.Text) && !Directory.Exists(selected.Text))
+                {
+                    imgFileIcons.Images.RemoveByKey(selected.Text);
+                    lsvItems.Items.Remove(selected);
+                    return;
+                }
+
+                SetLoading(selected, 1);
+                SetLoading(selected, 2);
+
+                lvl.SetRunning(true);
+                List<Process> lockers = await LockManager.GetLockerDetails(selected.Text, lvl.GetCancellationToken());
+                if (!lvl.HasCancelled())
+                {
+                    if (lockers.Count == 0)
+                    {
+                        try
+                        {
+                            selected.SubItems[1].Text = _lm.GetText("Unlocked_Lvi");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        selected.SubItems[1].ForeColor = Color.Green;
                     }
                     else
                     {
-                        lvi.Text = Path.GetFileName(path);
+                        try
+                        {
+                            selected.SubItems[1].Text = _lm.GetText("Locked_Lvi");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        selected.SubItems[1].ForeColor = Color.Red;
                     }
-                    lvi.SubItems.Add(path);
-                    lvi.SubItems.Add(p.Id.ToString());
+                    selected.SubItems[2].Text = lvl.HasOwnership().ToString();
 
-                    lsvDetails.Items.Add(lvi);
+                    foreach (Process p in lockers)
+                    {
+                        string path = LockManager.GetMainModuleFilepath(p.Id);
+                        ListViewItem lvi = new ListViewItem();
+                        if (string.IsNullOrEmpty(path))
+                        {
+                            path = "Access denied";
+                            lvi.Text = path;
+                        }
+                        else
+                        {
+                            lvi.Text = Path.GetFileName(path);
+                        }
+                        lvi.SubItems.Add(path);
+                        lvi.SubItems.Add(p.Id.ToString());
+
+                        lsvDetails.Items.Add(lvi);
+                    }
+
+                    _lvlManager.FindListViewLocker(selected.Text)?.SetLocker(lockers);
+
+                    lsvDetails.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+                    lsvDetails.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
                 }
-
-                _lvlManager.FindListViewLocker(selected.Text)?.SetLocker(lockers);
-
-                lsvDetails.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
-                lsvDetails.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+                else
+                {
+                    lvl.SetLocker(new List<Process>());
+                    SetCancelled(selected);
+                }
+                lvl.SetRunning(false);
             }
-            else
+            catch (Exception ex)
+            {
+                MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
             {
                 lvl.SetLocker(new List<Process>());
                 SetCancelled(selected);
+                lvl.SetRunning(false);
             }
-            lvl.SetRunning(false);
-
-
         }
 
         private void lsvItems_SelectedIndexChanged(object sender, EventArgs e)

@@ -52,7 +52,12 @@ namespace DeadLock.Classes
                             }
                         }
                     }
-                    catch (OperationCanceledException){}
+                    catch (OperationCanceledException)
+                    {
+                    }
+                    catch (UnauthorizedAccessException)
+                    {
+                    }
                 }, ct);
             }
             else
@@ -64,7 +69,12 @@ namespace DeadLock.Classes
                         ct.ThrowIfCancellationRequested();
                         lockers = NativeMethods.FindLockingProcesses(itemPath);
                     }
-                    catch (OperationCanceledException){}
+                    catch (OperationCanceledException)
+                    {
+                    }
+                    catch (UnauthorizedAccessException)
+                    {
+                    }
                 }, ct);
             }
             return lockers;

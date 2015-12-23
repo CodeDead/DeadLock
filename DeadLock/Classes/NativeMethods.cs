@@ -111,7 +111,7 @@ namespace DeadLock.Classes
                     }
                     else throw new Exception("Could not list the processes that are locking the resource !");
                 }
-                else if (res != 0) throw new Exception("Could not list the processes that are locking the resource. Failed to get size of result !");
+                else if (res != 0) throw new UnauthorizedAccessException("Could not list the processes that are locking the resource. Failed to get size of result !");
             }
             finally
             {

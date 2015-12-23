@@ -16,14 +16,9 @@ namespace DeadLock.Classes
             _listViewLockers.Add(lvl);
         }
 
-        internal void DeleteListViewLocker(string path)
+        internal void DeleteListViewLocker(ListViewLocker lvl)
         {
-            foreach (ListViewLocker lvl in _listViewLockers)
-            {
-                if (lvl.GetPath() != path) continue;
-                _listViewLockers.Remove(lvl);
-                break;
-            }
+            _listViewLockers.Remove(lvl);
         }
 
         private IEnumerable<ListViewLocker> GetListViewLockers()

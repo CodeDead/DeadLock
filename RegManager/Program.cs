@@ -29,43 +29,74 @@ namespace RegManager
             }
         }
 
+        private static void EnableExplorerIntegration(string path)
+        {
+            if (File.Exists(path))
+            {
+                Registry.ClassesRoot.CreateSubKey(@"*\shell\DeadLock", true);
+                Registry.ClassesRoot.CreateSubKey(@"*\shell\DeadLock\command", true);
+                Registry.SetValue(@"HKEY_CLASSES_ROOT\*\shell\DeadLock\command", "", path + " %1");
+
+                Registry.ClassesRoot.CreateSubKey(@"Directory\shell\DeadLock", true);
+                Registry.ClassesRoot.CreateSubKey(@"Directory\shell\DeadLock\command", true);
+                Registry.SetValue(@"HKEY_CLASSES_ROOT\Directory\shell\DeadLock\command", "", path + " %1");
+            }
+            else
+            {
+                Console.Write("Warning: path does not exist !");
+            }
+        }
+
+        private static void DisableExplorerIntegration(string path)
+        {
+            using (RegistryKey key = Registry.ClassesRoot.OpenSubKey(@"*\shell\DeadLock\command"))
+            {
+                if (key != null)
+                {
+                    Registry.ClassesRoot.DeleteSubKeyTree(@"*\shell\DeadLock");
+                }
+            }
+
+
+            using (RegistryKey key = Registry.ClassesRoot.OpenSubKey(@"Directory\shell\DeadLock\command"))
+            {
+                if (key != null)
+                {
+                    Registry.ClassesRoot.DeleteSubKeyTree(@"Directory\shell\DeadLock");
+                }
+            }
+        }
+
         private static void ChangeExplorerIntegration(bool value, string path)
         {
             if (value)
             {
-                if (File.Exists(path))
-                {
-                    Registry.ClassesRoot.CreateSubKey(@"*\shell\DeadLock", true);
-                    Registry.ClassesRoot.CreateSubKey(@"*\shell\DeadLock\command", true);
-                    Registry.SetValue(@"HKEY_CLASSES_ROOT\*\shell\DeadLock\command", "", path + " %1");
-
-                    Registry.ClassesRoot.CreateSubKey(@"Directory\shell\DeadLock", true);
-                    Registry.ClassesRoot.CreateSubKey(@"Directory\shell\DeadLock\command", true);
-                    Registry.SetValue(@"HKEY_CLASSES_ROOT\Directory\shell\DeadLock\command", "", path + " %1");
-                }
-                else
-                {
-                    Console.Write("Warning: path does not exist !");
-                }
+                EnableExplorerIntegration(path);
             }
             else
             {
-                using (RegistryKey key = Registry.ClassesRoot.OpenSubKey(@"*\shell\DeadLock\command"))
-                {
-                    if (key != null)
-                    {
-                        Registry.ClassesRoot.DeleteSubKeyTree(@"*\shell\DeadLock");
-                    }
-                }
+                DisableExplorerIntegration(path);
+            }
+        }
 
+        private static void EnableAutoStartup(string path)
+        {
+            if (File.Exists(path))
+            {
+                Registry.SetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run", "DeadLock", path);
+            }
+            else
+            {
+                Console.WriteLine("Warning: path does not exist !");
+            }
+        }
 
-                using (RegistryKey key = Registry.ClassesRoot.OpenSubKey(@"Directory\shell\DeadLock\command"))
-                {
-                    if (key != null)
-                    {
-                        Registry.ClassesRoot.DeleteSubKeyTree(@"Directory\shell\DeadLock");
-                    }
-                }
+        private static void DisableAutoStartup(string path)
+        {
+            if (Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run", "DeadLock", "").ToString() == "") return;
+            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run", true))
+            {
+                key?.DeleteValue("DeadLock");
             }
         }
 
@@ -73,22 +104,11 @@ namespace RegManager
         {
             if (value)
             {
-                if (File.Exists(path))
-                {
-                    Registry.SetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run", "DeadLock", path);
-                }
-                else
-                {
-                    Console.WriteLine("Warning: path does not exist !");
-                }
+                EnableAutoStartup(path);
             }
             else
             {
-                if (Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run", "DeadLock", "").ToString() == "") return;
-                using (RegistryKey key = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run", true))
-                {
-                    key?.DeleteValue("DeadLock");
-                }
+                DisableAutoStartup(path);
             }
         }
     }

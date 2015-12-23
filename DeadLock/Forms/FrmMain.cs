@@ -61,39 +61,36 @@ namespace DeadLock.Forms
             }
         }
 
-        private async void Update(bool showError, bool showNoUpdates)
+        private void Update(bool showError, bool showNoUpdates)
         {
-            await Task.Run(() =>
+            try
             {
-                try
-                {
-                    WebClient wc = new WebClient();
-                    string download = wc.DownloadString("http://codedead.com/Software/DeadLock/version.txt");
-                    string[] version = download.Split('|');
+                WebClient wc = new WebClient();
+                string download = wc.DownloadString("http://codedead.com/Software/DeadLock/version.txt");
+                string[] version = download.Split('|');
 
-                    if (version[0] != Application.ProductVersion)
-                    {
-                        if (MessageBoxAdv.Show(_lm.GetText("NewVersion_Msg_1") + " " + version[0] + " " + _lm.GetText("NewVersion_Msg_2"), "DeadLock", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                        {
-                            Process.Start(version[1]);
-                        }
-                    }
-                    else
-                    {
-                        if (showNoUpdates)
-                        {
-                            MessageBoxAdv.Show(_lm.GetText("NoNewVersion_Msg"), "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                    }
-                }
-                catch (Exception ex)
+                if (version[0] != Application.ProductVersion)
                 {
-                    if (showError)
+                    if (MessageBoxAdv.Show(_lm.GetText("NewVersion_Msg_1") + " " + version[0] + " " + _lm.GetText("NewVersion_Msg_2"), "DeadLock", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        new FrmUpdater(version[1]).Show();
                     }
                 }
-            });
+                else
+                {
+                    if (showNoUpdates)
+                    {
+                        MessageBoxAdv.Show(_lm.GetText("NoNewVersion_Msg"), "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                if (showError)
+                {
+                    MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void LoadTheme()
@@ -164,7 +161,7 @@ namespace DeadLock.Forms
             if (_lvlManager.FindListViewLocker(path) != null) return;
 
             int index = lsvItems.Items.Count;
-            ListViewItem lvi = new ListViewItem { Text = path, UseItemStyleForSubItems = false, ImageIndex = index};
+            ListViewItem lvi = new ListViewItem { Text = path, UseItemStyleForSubItems = false, ImageIndex = index };
 
             try
             {
@@ -498,73 +495,79 @@ namespace DeadLock.Forms
             });
             _lvlManager.FindListViewLocker(selected.Text)?.SetLocker(new List<Process>());
 
-            try
+
+            if (!File.Exists(selected.Text) && !Directory.Exists(selected.Text))
             {
-                if (!File.Exists(selected.Text) && !Directory.Exists(selected.Text))
+                imgFileIcons.Images.RemoveByKey(selected.Text);
+                lsvItems.Items.Remove(selected);
+                return;
+            }
+
+            SetLoading(selected, 1);
+            SetLoading(selected, 2);
+
+            lvl.SetRunning(true);
+            List<Process> lockers = await LockManager.GetLockerDetails(selected.Text, lvl.GetCancellationToken());
+            if (!lvl.HasCancelled())
+            {
+                if (lockers.Count == 0)
                 {
-                    imgFileIcons.Images.RemoveByKey(selected.Text);
-                    lsvItems.Items.Remove(selected);
-                    return;
-                }
-
-                SetLoading(selected, 1);
-                SetLoading(selected, 2);
-
-                lvl.SetRunning(true);
-                List<Process> lockers = await LockManager.GetLockerDetails(selected.Text, lvl.GetCancellationToken());
-                if (!lvl.HasCancelled())
-                {
-                    if (lockers.Count == 0)
+                    try
                     {
-                        try
-                        {
-                            selected.SubItems[1].Text = _lm.GetText("Unlocked_Lvi");
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        selected.SubItems[1].ForeColor = Color.Green;
+                        selected.SubItems[1].Text = _lm.GetText("Unlocked_Lvi");
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        try
-                        {
-                            selected.SubItems[1].Text = _lm.GetText("Locked_Lvi");
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        selected.SubItems[1].ForeColor = Color.Red;
+                        MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    selected.SubItems[2].Text = lvl.HasOwnership().ToString();
-
-                    foreach (Process p in lockers)
-                    {
-                        ListViewItem lvi = new ListViewItem { Text = Path.GetFileName(NativeMethods.GetExecutablePath(p)) };
-                        lvi.SubItems.Add(NativeMethods.GetExecutablePath(p));
-                        lvi.SubItems.Add(p.Id.ToString());
-
-                        lsvDetails.Items.Add(lvi);
-                    }
-
-                    _lvlManager.FindListViewLocker(selected.Text)?.SetLocker(lockers);
-
-                    lsvDetails.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
-                    lsvDetails.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+                    selected.SubItems[1].ForeColor = Color.Green;
                 }
                 else
                 {
-                    lvl.SetLocker(new List<Process>());
-                    SetCancelled(selected);
+                    try
+                    {
+                        selected.SubItems[1].Text = _lm.GetText("Locked_Lvi");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    selected.SubItems[1].ForeColor = Color.Red;
                 }
-                lvl.SetRunning(false);
+                selected.SubItems[2].Text = lvl.HasOwnership().ToString();
+
+                foreach (Process p in lockers)
+                {
+                    string path = LockManager.GetMainModuleFilepath(p.Id);
+                    ListViewItem lvi = new ListViewItem();
+                    if (string.IsNullOrEmpty(path))
+                    {
+                        path = "Access denied";
+                        lvi.Text = path;
+                    }
+                    else
+                    {
+                        lvi.Text = Path.GetFileName(path);
+                    }
+                    lvi.SubItems.Add(path);
+                    lvi.SubItems.Add(p.Id.ToString());
+
+                    lsvDetails.Items.Add(lvi);
+                }
+
+                _lvlManager.FindListViewLocker(selected.Text)?.SetLocker(lockers);
+
+                lsvDetails.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+                lsvDetails.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             }
-            catch (Exception ex)
+            else
             {
-                MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lvl.SetLocker(new List<Process>());
+                SetCancelled(selected);
             }
+            lvl.SetRunning(false);
+
+
         }
 
         private void lsvItems_SelectedIndexChanged(object sender, EventArgs e)
@@ -572,10 +575,13 @@ namespace DeadLock.Forms
             lsvDetails.Items.Clear();
             if (lsvItems.SelectedItems.Count == 0) return;
 
-            foreach (Process p in _lvlManager.FindListViewLocker(lsvItems.SelectedItems[0].Text).GetLockers())
+            //Needs work
+            ListViewLocker lvl = _lvlManager.FindListViewLocker(lsvItems.SelectedItems[0].Text);
+            foreach (Process p in lvl.GetLockers())
             {
-                ListViewItem lvi = new ListViewItem { Text = Path.GetFileName(NativeMethods.GetExecutablePath(p)) };
-                lvi.SubItems.Add(NativeMethods.GetExecutablePath(p));
+
+                ListViewItem lvi = new ListViewItem { Text = LockManager.GetMainModuleFilepath(p.Id) };
+                lvi.SubItems.Add(LockManager.GetMainModuleFilepath(p.Id));
                 lvi.SubItems.Add(p.Id.ToString());
 
                 lsvDetails.Items.Add(lvi);

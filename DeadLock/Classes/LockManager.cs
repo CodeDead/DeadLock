@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Management;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -34,7 +35,7 @@ namespace DeadLock.Classes
                                     ct.ThrowIfCancellationRequested();
                                     try
                                     {
-                                        if (l.Id == p.Id && NativeMethods.GetExecutablePath(l) == NativeMethods.GetExecutablePath(p))
+                                        if (l.Id == p.Id && GetMainModuleFilepath(l.Id) == GetMainModuleFilepath(p.Id))
                                         {
                                             add = false;
                                         }
@@ -59,6 +60,28 @@ namespace DeadLock.Classes
                 lockers = NativeMethods.FindLockingProcesses(itemPath);
             }
             return lockers;
+        }
+
+        internal static string GetMainModuleFilepath(int processId)
+        {
+            string path = "";
+            try
+            {
+                string wmiQueryString = "SELECT ProcessId, ExecutablePath FROM Win32_Process WHERE ProcessId = " + processId;
+                using (ManagementObjectSearcher searcher = new ManagementObjectSearcher(wmiQueryString))
+                {
+                    using (ManagementObjectCollection results = searcher.Get())
+                    {
+                        ManagementObject mo = results.Cast<ManagementObject>().FirstOrDefault();
+                        if (mo != null)
+                        {
+                            path = (string)mo["ExecutablePath"];
+                        }
+                    }
+                }
+            }
+            catch (Win32Exception) { }
+            return path;
         }
 
         private static IEnumerable<string> GetDirectoryFiles(string rootPath, string patternMatch, SearchOption searchOption)
@@ -108,6 +131,7 @@ namespace DeadLock.Classes
                         }
                     }
                     catch (OperationCanceledException) { }
+                    catch (Win32Exception) { }
 
                 }, ct);
                 return true;

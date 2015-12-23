@@ -130,31 +130,5 @@ namespace DeadLock.Classes
             }
             return processes;
         }
-
-        internal static string GetExecutablePath(Process process)
-        {
-            return Environment.OSVersion.Version.Major >= 6 ? GetExecutablePathAboveVista(process.Id) : process.MainModule.FileName;
-        }
-
-        private static string GetExecutablePathAboveVista(int processId)
-        {
-            StringBuilder buffer = new StringBuilder(1024);
-            IntPtr hprocess = OpenProcess(0x00001000, false, processId);
-            if (hprocess == IntPtr.Zero) throw new Win32Exception(Marshal.GetLastWin32Error());
-            try
-            {
-                // ReSharper disable once RedundantAssignment
-                int size = buffer.Capacity;
-                if (QueryFullProcessImageName(hprocess, 0, buffer, out size))
-                {
-                    return buffer.ToString();
-                }
-            }
-            finally
-            {
-                CloseHandle(hprocess);
-            }
-            throw new Win32Exception(Marshal.GetLastWin32Error());
-        }
     }
 }

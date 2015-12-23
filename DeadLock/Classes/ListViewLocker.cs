@@ -5,6 +5,8 @@ using System.IO;
 using System.Security.AccessControl;
 using System.Security.Principal;
 using System.Threading;
+using System.Windows.Forms;
+using Syncfusion.Windows.Forms;
 
 namespace DeadLock.Classes
 {
@@ -83,58 +85,65 @@ namespace DeadLock.Classes
 
         internal void SetOwnership(bool owned)
         {
-            if (owned)
+            try
             {
-                if (File.GetAttributes(GetPath()).HasFlag(FileAttributes.Directory))
+                if (owned)
                 {
-                    WindowsIdentity windowsIdentity = WindowsIdentity.GetCurrent();
-                    if (windowsIdentity != null)
+                    if (File.GetAttributes(GetPath()).HasFlag(FileAttributes.Directory))
                     {
-                        SecurityIdentifier cu = windowsIdentity.User;
-                        DirectorySecurity fileS = Directory.GetAccessControl(GetPath());
-                        if (cu != null)
+                        WindowsIdentity windowsIdentity = WindowsIdentity.GetCurrent();
+                        if (windowsIdentity != null)
                         {
-                            fileS.SetOwner(cu);
-                            fileS.SetAccessRule(new FileSystemAccessRule(cu, FileSystemRights.FullControl, AccessControlType.Allow));
-                            Directory.SetAccessControl(GetPath(), fileS);
-                            File.SetAttributes(GetPath(), FileAttributes.Normal);
+                            SecurityIdentifier cu = windowsIdentity.User;
+                            DirectorySecurity fileS = Directory.GetAccessControl(GetPath());
+                            if (cu != null)
+                            {
+                                fileS.SetOwner(cu);
+                                fileS.SetAccessRule(new FileSystemAccessRule(cu, FileSystemRights.FullControl, AccessControlType.Allow));
+                                Directory.SetAccessControl(GetPath(), fileS);
+                                File.SetAttributes(GetPath(), FileAttributes.Normal);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        WindowsIdentity windowsIdentity = WindowsIdentity.GetCurrent();
+                        if (windowsIdentity != null)
+                        {
+                            SecurityIdentifier cu = windowsIdentity.User;
+                            FileSecurity fileS = File.GetAccessControl(GetPath());
+                            if (cu != null)
+                            {
+                                fileS.SetOwner(cu);
+                                fileS.SetAccessRule(new FileSystemAccessRule(cu, FileSystemRights.FullControl, AccessControlType.Allow));
+                                File.SetAccessControl(GetPath(), fileS);
+                                File.SetAttributes(GetPath(), FileAttributes.Normal);
+                            }
                         }
                     }
                 }
                 else
                 {
-                    WindowsIdentity windowsIdentity = WindowsIdentity.GetCurrent();
-                    if (windowsIdentity != null)
+                    if (File.GetAttributes(GetPath()).HasFlag(FileAttributes.Directory))
                     {
-                        SecurityIdentifier cu = windowsIdentity.User;
-                        FileSecurity fileS = File.GetAccessControl(GetPath());
-                        if (cu != null)
+                        DirectoryInfo directoryInfo = new DirectoryInfo(GetPath());
+                        DirectorySecurity directorySecurity = directoryInfo.GetAccessControl();
+                        AuthorizationRuleCollection rules = directorySecurity.GetAccessRules(true, false, typeof(NTAccount));
+                        foreach (FileSystemAccessRule rule in rules)
                         {
-                            fileS.SetOwner(cu);
-                            fileS.SetAccessRule(new FileSystemAccessRule(cu, FileSystemRights.FullControl, AccessControlType.Allow));
-                            File.SetAccessControl(GetPath(), fileS);
-                            File.SetAttributes(GetPath(), FileAttributes.Normal);
+                            directorySecurity.RemoveAccessRule(rule);
                         }
+                        Directory.SetAccessControl(GetPath(), directorySecurity);
+                    }
+                    else
+                    {
+
                     }
                 }
             }
-            else
+            catch (Exception ex)
             {
-                if (File.GetAttributes(GetPath()).HasFlag(FileAttributes.Directory))
-                {
-                    DirectoryInfo directoryInfo = new DirectoryInfo(GetPath());
-                    DirectorySecurity directorySecurity = directoryInfo.GetAccessControl();
-                    AuthorizationRuleCollection rules = directorySecurity.GetAccessRules(true, false, typeof(NTAccount));
-                    foreach (FileSystemAccessRule rule in rules)
-                    {
-                        directorySecurity.RemoveAccessRule(rule);
-                    }
-                    Directory.SetAccessControl(GetPath(), directorySecurity);
-                }
-                else
-                {
-                    
-                }
+                MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -59,7 +59,7 @@ namespace DeadLock.Forms
             }
         }
 
-        private void Update(bool showError, bool showNoUpdates)
+        private static void Update(bool showError, bool showNoUpdates)
         {
             try
             {
@@ -596,7 +596,6 @@ namespace DeadLock.Forms
             lsvDetails.Items.Clear();
             if (lsvItems.SelectedItems.Count == 0) return;
 
-            //Needs work
             ListViewLocker lvl = _lvlManager.FindListViewLocker(lsvItems.SelectedItems[0].Text);
             foreach (ProcessLocker p in lvl.GetLockers())
             {
@@ -782,19 +781,20 @@ namespace DeadLock.Forms
         private void trueOwnershipToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (lsvItems.SelectedItems.Count == 0) return;
-
-            ListViewLocker lvl = _lvlManager.FindListViewLocker(lsvItems.SelectedItems[0].Text);
-            lvl.SetOwnership(true);
-            lsvItems.SelectedItems[0].SubItems[2].Text = lvl.HasOwnership().ToString();
+            SetOwnership(lsvItems.SelectedItems[0], true);
         }
 
         private void falseOwnershipToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (lsvItems.SelectedItems.Count == 0) return;
+            SetOwnership(lsvItems.SelectedItems[0], false);
+        }
 
-            ListViewLocker lvl = _lvlManager.FindListViewLocker(lsvItems.SelectedItems[0].Text);
-            lvl.SetOwnership(false);
-            lsvItems.SelectedItems[0].SubItems[2].Text = lvl.HasOwnership().ToString();
+        private void SetOwnership(ListViewItem lvi, bool ownership)
+        {
+            ListViewLocker lvl = _lvlManager.FindListViewLocker(lvi.Text);
+            lvl.SetOwnership(ownership);
+            lvi.SubItems[2].Text = lvl.HasOwnership().ToString();
         }
 
         private void FrmMain_DragEnter(object sender, DragEventArgs e)

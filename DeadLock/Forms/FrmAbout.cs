@@ -8,6 +8,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -42,7 +43,14 @@ namespace DeadLock.Forms
 
         private void btnLicense_Click(object sender, EventArgs e)
         {
-            new FrmLicense().Show();
+            try
+            {
+                Process.Start(Application.StartupPath + "\\gpl.pdf");
+            }
+            catch (Exception ex)
+            {
+                MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void FrmAbout_Load(object sender, EventArgs e)

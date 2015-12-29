@@ -231,7 +231,14 @@ namespace DeadLock.Forms
 
         private void licenseBarItem_Click(object sender, EventArgs e)
         {
-            new FrmLicense().Show();
+            try
+            {
+                Process.Start(Application.StartupPath + "\\gpl.pdf");
+            }
+            catch (Exception ex)
+            {
+                MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private async void unlockToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -369,7 +376,14 @@ namespace DeadLock.Forms
 
         private void helpBarItem_Click(object sender, EventArgs e)
         {
-            new FrmHelp().Show();
+            try
+            {
+                Process.Start(Application.StartupPath + "\\help.pdf");
+            }
+            catch (Exception ex)
+            {
+                MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private async void moveToolStripMenuItem_Click(object sender, EventArgs e)

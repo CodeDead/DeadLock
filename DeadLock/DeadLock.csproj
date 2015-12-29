@@ -67,18 +67,6 @@
     <Compile Include="Forms\FrmAbout.Designer.cs">
       <DependentUpon>FrmAbout.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmHelp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FrmHelp.Designer.cs">
-      <DependentUpon>FrmHelp.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FrmLicense.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FrmLicense.Designer.cs">
-      <DependentUpon>FrmLicense.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,12 +89,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\FrmAbout.resx">
       <DependentUpon>FrmAbout.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmHelp.resx">
-      <DependentUpon>FrmHelp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmLicense.resx">
-      <DependentUpon>FrmLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>

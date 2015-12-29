@@ -23,13 +23,17 @@ namespace DeadLock.Classes
         private bool _hasCancelled;
         private bool _isRunning;
 
-        internal ListViewLocker(string path)
+        private readonly Language _language;
+
+        internal ListViewLocker(string path, Language language)
         {
             _path = path;
             _lockers = new List<ProcessLocker>();
             _cts = new CancellationTokenSource();
             _hasCancelled = true;
             _isRunning = false;
+
+            _language = language;
         }
 
         internal bool IsRunning()
@@ -130,7 +134,6 @@ namespace DeadLock.Classes
                 {
                     if (File.GetAttributes(GetPath()).HasFlag(FileAttributes.Directory))
                     {
-                        MessageBoxAdv.Show("Is folder, removing all access...");
                         DirectoryInfo directoryInfo = new DirectoryInfo(GetPath());
                         DirectorySecurity directorySecurity = directoryInfo.GetAccessControl();
                         directorySecurity.SetAccessRuleProtection(true, false);
@@ -200,7 +203,7 @@ namespace DeadLock.Classes
                     {
                         foreach (string path in GetDirectoryFiles(GetPath(), "*.*", SearchOption.AllDirectories))
                         {
-                            foreach (Process p in NativeMethods.FindLockingProcesses(path))
+                            foreach (Process p in NativeMethods.FindLockingProcesses(path, _language))
                             {
                                 bool add = true;
                                 foreach (ProcessLocker l in lockers)
@@ -220,7 +223,7 @@ namespace DeadLock.Classes
                                 }
                                 if (add)
                                 {
-                                    lockers.Add(new ProcessLocker(p));
+                                    lockers.Add(new ProcessLocker(p, _language));
                                 }
                             }
                         }
@@ -240,9 +243,9 @@ namespace DeadLock.Classes
                     try
                     {
                         GetCancellationToken().ThrowIfCancellationRequested();
-                        foreach (Process p in NativeMethods.FindLockingProcesses(GetPath()))
+                        foreach (Process p in NativeMethods.FindLockingProcesses(GetPath(), _language))
                         {
-                            lockers.Add(new ProcessLocker(p));
+                            lockers.Add(new ProcessLocker(p, _language));
                         }
                     }
                     catch (OperationCanceledException)
@@ -267,7 +270,7 @@ namespace DeadLock.Classes
                     IEnumerable<string> subDirs = Directory.EnumerateDirectories(rootPath);
                     foreach (string dir in subDirs)
                     {
-                        foundFiles = foundFiles.Concat(GetDirectoryFiles(dir, patternMatch, searchOption)); // Add files in subdirectories recursively to the list
+                        foundFiles = foundFiles.Concat(GetDirectoryFiles(dir, patternMatch, searchOption));
                     }
                 }
                 catch (UnauthorizedAccessException) { }
@@ -310,20 +313,7 @@ namespace DeadLock.Classes
             }
             catch (Win32Exception win32Exception)
             {
-                //TODO: Implement language manager
-                WindowsIdentity identity = WindowsIdentity.GetCurrent();
-                if (identity == null) return false;
-                WindowsPrincipal principal = new WindowsPrincipal(identity);
-                if (principal.IsInRole(WindowsBuiltInRole.Administrator)) return false;
-                if (MessageBoxAdv.Show(win32Exception.Message + Environment.NewLine + "Would you like to restart DeadLock with administrator rights ?", "DeadLock", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) return false;
-                ProcessStartInfo proc = new ProcessStartInfo
-                {
-                    UseShellExecute = true,
-                    WorkingDirectory = Environment.CurrentDirectory,
-                    FileName = Application.ExecutablePath,
-                    Verb = "runas"
-                };
-                Process.Start(proc);
+                MessageBoxAdv.Show(win32Exception.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return false;
         }

@@ -1,4 +1,5 @@
-﻿namespace DeadLock.Classes
+﻿// ReSharper disable UnassignedField.Global
+namespace DeadLock.Classes
 {
     public class Language
     {
@@ -153,9 +154,19 @@
         public string BtnUpdate;
         #endregion
 
-        public Language()
-        {
-            
-        }
+        #region NativeMethods
+
+        public string MsgCouldNotRestart;
+        public string MsgCouldNotRegister;
+        public string MsgCouldNotList;
+        public string MsgCouldNotListResult;
+
+        #endregion
+
+        #region ProcessLocker
+
+        public string MsgAccessDenied;
+
+        #endregion
     }
 }

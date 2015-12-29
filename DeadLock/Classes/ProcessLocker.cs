@@ -12,11 +12,12 @@ namespace DeadLock.Classes
 
         private string _fileName;
         private string _filePath;
+        private readonly Language _language;
 
-        public ProcessLocker(Process l)
+        public ProcessLocker(Process l, Language language)
         {
             _locker = l;
-
+            _language = language;
             SetFilePath(GetMainModuleFilepath(l.Id));
             SetFileName(Path.GetFileName(_filePath));
         }
@@ -28,7 +29,7 @@ namespace DeadLock.Classes
 
         private void SetFilePath(string filePath)
         {
-            _filePath = string.IsNullOrEmpty(filePath) ? "Access denied" : filePath;
+            _filePath = string.IsNullOrEmpty(filePath) ? _language.MsgAccessDenied : filePath;
         }
 
         private static string GetMainModuleFilepath(int processId)

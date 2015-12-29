@@ -68,14 +68,14 @@ namespace DeadLock.Classes
 
 
         //TODO: Implement LanguageManager
-        internal static List<Process> FindLockingProcesses(string path)
+        internal static List<Process> FindLockingProcesses(string path, Language language)
         {
             uint handle;
             string key = Guid.NewGuid().ToString();
             List<Process> processes = new List<Process>();
 
             int res = RmStartSession(out handle, 0, key);
-            if (res != 0) throw new Exception("Could not begin restart session. Unable to determine resource locker.");
+            if (res != 0) throw new Exception(language.MsgCouldNotRestart);
 
             try
             {
@@ -87,7 +87,7 @@ namespace DeadLock.Classes
                 string[] resources = { path };
                 res = RmRegisterResources(handle, (uint)resources.Length, resources, 0, null, 0, null);
 
-                if (res != 0) throw new Exception("Could not register resource.");
+                if (res != 0) throw new Exception(language.MsgCouldNotRegister);
                 res = RmGetList(handle, out pnProcInfoNeeded, ref pnProcInfo, null, ref lpdwRebootReasons);
 
                 if (res == errorMoreData)
@@ -109,9 +109,9 @@ namespace DeadLock.Classes
                             catch (ArgumentException) { }
                         }
                     }
-                    else throw new Exception("Could not list the processes that are locking the resource !");
+                    else throw new Exception(language.MsgCouldNotList);
                 }
-                else if (res != 0) throw new UnauthorizedAccessException("Could not list the processes that are locking the resource. Failed to get size of result !");
+                else if (res != 0) throw new UnauthorizedAccessException(language.MsgCouldNotListResult);
             }
             finally
             {

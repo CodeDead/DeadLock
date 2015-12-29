@@ -242,7 +242,7 @@ namespace DeadLock.Forms
             imgFileIcons.Images.Add(img);
             img.Dispose();
 
-            ListViewLocker lvl = new ListViewLocker(path);
+            ListViewLocker lvl = new ListViewLocker(path, _languageManager.GetLanguage());
             lvi.SubItems.Add(lvl.HasOwnership().ToString());
             lsvItems.Items.Add(lvi);
 

@@ -137,7 +137,7 @@ namespace DeadLock.Forms
                     
                     if (MessageBoxAdv.Show(l.MsgVersion + version[0] + l.MsgAvailable + Environment.NewLine + l.MsgDownloadNewVersion, "DeadLock", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        new FrmUpdater(version[1]).ShowDialog();
+                        new FrmUpdater(version[1], _languageManager.GetLanguage()).ShowDialog();
                     }
                 }
                 else
@@ -739,7 +739,7 @@ namespace DeadLock.Forms
 
         private void settingsBarItem_Click(object sender, EventArgs e)
         {
-            new FrmSettings(nfiTray).ShowDialog();
+            new FrmSettings(nfiTray, _languageManager.GetLanguage()).ShowDialog();
         }
 
         private void killToolStripMenuItem_Click(object sender, EventArgs e)

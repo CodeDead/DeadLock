@@ -8,6 +8,7 @@
 using System;
 using System.Diagnostics;
 using System.Windows.Forms;
+using DeadLock.Classes;
 using Microsoft.Win32;
 using Syncfusion.Windows.Forms;
 using Syncfusion.Windows.Forms.Tools;
@@ -20,11 +21,42 @@ namespace DeadLock.Forms
         private readonly NotifyIcon _nfi;
         private bool _originalIntegration;
         private bool _originalStartup;
+        private readonly Language _language;
 
-        public FrmSettings(NotifyIcon nfi)
+        public FrmSettings(NotifyIcon nfi, Language l)
         {
             InitializeComponent();
             _nfi = nfi;
+            _language = l;
+
+            LoadLanguage();
+        }
+
+        private void LoadLanguage()
+        {
+            Text = @"DeadLock - " + _language.TxtSettings;
+
+            tpaGeneral.Text = _language.LblGeneral;
+            tpaAppearance.Text = _language.LblAppearance;
+            tpaAdvanced.Text = _language.LblAdvanced;
+
+            lblAutoUpdate.Text = _language.ChbAutoUpdate;
+            lblNotifyIcon.Text = _language.ChbShowNotifyIcon;
+            lblMinimized.Text = _language.ChbStartMinimized;
+            lblAdminWarning.Text = _language.ChbShowAdminWarning;
+
+            lblThemeStyle.Text = _language.LblThemeStyle;
+            lblBorderThickness.Text = _language.LblBorderThickness;
+            lblFormSize.Text = _language.LblRememberFormSize;
+            lblDetails.Text = _language.LblShowDetails;
+            lblLanguage.Text = _language.LblLanguage;
+
+            lblAutorun.Text = _language.LblAutoRunDeadLock;
+            lblWindowsExplorerIntegration.Text = _language.LblWindowsExplorerIntegration;
+
+            btnClose.Text = _language.BtnSettingsClose;
+            btnReset.Text = _language.BtnReset;
+            btnSave.Text = _language.BtnSave;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -117,7 +149,7 @@ namespace DeadLock.Forms
 
                 if ((cpbThemeStyle.MetroColor != Properties.Settings.Default.MetroColor) || (Properties.Settings.Default.BorderThickness != (int)itxtBorderThickness.IntegerValue))
                 {
-                    MessageBoxAdv.Show("A restart is required in order to change the appearance.", "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBoxAdv.Show(_language.MsgRestartRequired, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 Properties.Settings.Default.MetroColor = cpbThemeStyle.SelectedColor;
                 Properties.Settings.Default.BorderThickness = (int)itxtBorderThickness.IntegerValue;

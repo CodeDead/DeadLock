@@ -112,12 +112,14 @@
         public string TxtSettings;
 
         //Settings Form - General Tab:
+        public string LblGeneral;
         public string ChbAutoUpdate;
         public string ChbShowNotifyIcon;
         public string ChbStartMinimized;
         public string ChbShowAdminWarning;
 
         //Settings Form - Appearance Tab:
+        public string LblAppearance;
         public string LblThemeStyle;
         public string LblBorderThickness;
         public string LblRememberFormSize;
@@ -125,6 +127,7 @@
         public string LblLanguage;
 
         //Settings Form - Advanced Tab:
+        public string LblAdvanced;
         public string LblAutoRunDeadLock;
         public string LblWindowsExplorerIntegration;
 

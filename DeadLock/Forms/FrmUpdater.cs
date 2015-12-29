@@ -9,6 +9,7 @@ using System;
 using System.ComponentModel;
 using System.Net;
 using System.Windows.Forms;
+using DeadLock.Classes;
 using Syncfusion.Windows.Forms;
 
 namespace DeadLock.Forms
@@ -17,15 +18,30 @@ namespace DeadLock.Forms
     {
         private readonly string _downloadLink;
         private readonly WebClient _webClient;
+        private readonly Language _language;
 
-        public FrmUpdater(string link)
+        public FrmUpdater(string link, Language language)
         {
             InitializeComponent();
             _downloadLink = link;
             _webClient = new WebClient();
+            _language = language;
 
             _webClient.DownloadFileCompleted += Completed;
             _webClient.DownloadProgressChanged += ProgressChanged;
+
+            LoadLanguage();
+        }
+
+        private void LoadLanguage()
+        {
+            Text = @"DeadLock - " + _language.TxtUpdater;
+
+            lblPath.Text = _language.LblPath;
+            lblProgress.Text = _language.LblProgress;
+
+            btnCancel.Text = _language.BtnCancel;
+            btnUpdate.Text = _language.BtnUpdate;
         }
 
         private void btnSelectPath_Click(object sender, EventArgs e)

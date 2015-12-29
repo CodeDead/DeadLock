@@ -32,5 +32,8 @@
     <Setting Name="BorderThickness" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">3</Value>
     </Setting>
+    <Setting Name="LanguagePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

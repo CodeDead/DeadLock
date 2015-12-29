@@ -142,5 +142,17 @@ namespace DeadLock.Properties {
                 this["BorderThickness"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string LanguagePath {
+            get {
+                return ((string)(this["LanguagePath"]));
+            }
+            set {
+                this["LanguagePath"] = value;
+            }
+        }
     }
 }

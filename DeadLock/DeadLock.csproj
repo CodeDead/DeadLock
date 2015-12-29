@@ -56,7 +56,6 @@
     <Compile Include="Classes\FileUtil.cs" />
     <Compile Include="Classes\ListViewLocker.cs" />
     <Compile Include="Classes\ListViewLockerManager.cs" />
-    <Compile Include="Classes\LockManager.cs" />
     <Compile Include="Classes\NativeMethods.cs" />
     <Compile Include="Classes\ProcessLocker.cs" />
     <Compile Include="Forms\FrmAbout.cs">

@@ -259,7 +259,7 @@ namespace DeadLock.Forms
                 SetLoading(selected, 1);
 
                 lvl.SetRunning(true);
-                await LockManager.Unlock(selected.Text, lvl.GetCancellationToken());
+                await lvl.Unlock();
 
                 if (!lvl.HasCancelled())
                 {
@@ -270,7 +270,6 @@ namespace DeadLock.Forms
                 {
                     SetCancelled(selected);
                 }
-                lvl.SetRunning(false);
             }
             catch (Exception ex)
             {
@@ -285,6 +284,11 @@ namespace DeadLock.Forms
                     MessageBoxAdv.Show(exc.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            finally
+            {
+                lvl.SetRunning(false);
+            }
+
             lsvDetails.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
             lsvDetails.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
         }
@@ -319,7 +323,7 @@ namespace DeadLock.Forms
                 SetLoading(selected, 1);
 
                 lvl.SetRunning(true);
-                await LockManager.Copy(selected.Text, lvl.GetCancellationToken());
+                await lvl.Copy();
 
                 if (!lvl.HasCancelled())
                 {
@@ -330,7 +334,6 @@ namespace DeadLock.Forms
                 {
                     SetCancelled(selected);
                 }
-                lvl.SetRunning(false);
             }
             catch (Exception ex)
             {
@@ -345,6 +348,10 @@ namespace DeadLock.Forms
                 {
                     MessageBoxAdv.Show(exc.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+            finally
+            {
+                lvl.SetRunning(false);
             }
         }
 
@@ -404,7 +411,7 @@ namespace DeadLock.Forms
                 SetLoading(selected, 1);
 
                 lvl.SetRunning(true);
-                await LockManager.Move(selected.Text, lvl.GetCancellationToken());
+                await lvl.Move();
 
                 if (!lvl.HasCancelled())
                 {
@@ -415,7 +422,6 @@ namespace DeadLock.Forms
                 {
                     SetCancelled(selected);
                 }
-                lvl.SetRunning(false);
             }
             catch (Exception ex)
             {
@@ -430,6 +436,10 @@ namespace DeadLock.Forms
                 {
                     MessageBoxAdv.Show(exc.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+            finally
+            {
+                lvl.SetRunning(false);
             }
         }
 
@@ -450,7 +460,7 @@ namespace DeadLock.Forms
             {
                 SetLoading(selected, 1);
                 lvl.SetRunning(true);
-                LockManager.Remove(selected.Text, lvl.GetCancellationToken());
+                lvl.Remove();
 
                 if (!lvl.HasCancelled())
                 {
@@ -461,7 +471,6 @@ namespace DeadLock.Forms
                 {
                     SetCancelled(selected);
                 }
-                lvl.SetRunning(false);
             }
             catch (Exception ex)
             {
@@ -476,6 +485,10 @@ namespace DeadLock.Forms
                 {
                     MessageBoxAdv.Show(exc.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+            finally
+            {
+                lvl.SetRunning(false);
             }
         }
 
@@ -517,7 +530,8 @@ namespace DeadLock.Forms
                 SetLoading(selected, 2);
 
                 lvl.SetRunning(true);
-                List<ProcessLocker> lockers = await LockManager.GetLockerDetails(selected.Text, lvl.GetCancellationToken());
+                List<ProcessLocker> lockers = await lvl.GetLockerDetails();
+                
                 if (!lvl.HasCancelled())
                 {
                     if (lockers.Count == 0)
@@ -564,7 +578,6 @@ namespace DeadLock.Forms
                     lvl.SetLocker(new List<ProcessLocker>());
                     SetCancelled(selected);
                 }
-                lvl.SetRunning(false);
             }
             catch (Exception ex)
             {

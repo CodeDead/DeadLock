@@ -25,6 +25,7 @@ namespace DeadLock.Forms
     public partial class FrmMain : MetroForm
     {
         private ListViewLockerManager _lvlManager;
+        private readonly LanguageManager _languageManager;
 
         public FrmMain(IReadOnlyCollection<string> args)
         {
@@ -32,7 +33,11 @@ namespace DeadLock.Forms
             try
             {
                 _lvlManager = new ListViewLockerManager();
-
+                _languageManager = new LanguageManager();
+                if (!string.IsNullOrEmpty(Properties.Settings.Default.LanguagePath))
+                {
+                    _languageManager.LoadLanguage(Properties.Settings.Default.LanguagePath);
+                }
                 LanguageSwitch();
             }
             catch (Exception ex)
@@ -49,18 +54,78 @@ namespace DeadLock.Forms
 
         private void LanguageSwitch()
         {
-            try
-            {
-                //TODO: Needs a lot of work !
-            }
-            catch (Exception ex)
-            {
-                MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+            Language l = _languageManager.GetLanguage();
+            //Main form - Menu items:
+            fileParentBarItem.Text = l.BarFile;
+            editParentBarItem.Text = l.BarEdit;
+            viewParentBarItem.Text = l.BarView;
+            toolsParentBarItem.Text = l.BarTools;
+            helpParentBarItem.Text = l.BarHelp;
 
-        private static void Update(bool showError, bool showNoUpdates)
+            //Main Form - File menu - Items:
+            openFilesBarItem.Text = l.BarItemOpenFiles;
+            openFolderbarItem.Text = l.BarItemOpenFolder;
+            restartBarItem.Text = l.BarItemRestart;
+            exitBarItem.Text = l.BarItemExit;
+
+            //Main Form - Edit menu - Items:
+            unlockParentBarItem.Text = l.BarItemUnlock;
+            unlockBarItem.Text = l.BarItemUnlock;
+            copyBarItem.Text = l.BarItemCopy;
+            moveBarItem.Text = l.BarItemMove;
+            removeBarItem.Text = l.BarItemRemove;
+
+            ownershipParentBarItem.Text = l.BarItemOwnership;
+            trueBarItem.Text = l.BarItemOwnershipTrue;
+            falseBarItem.Text = l.BarItemOwnershipFalse;
+
+            removeItemBarItem.Text = l.BarItemRemoveItem;
+            clearItemsbarItem.Text = l.BarItemClearItems;
+            autoSizeColumnsBarItem.Text = l.BarItemAutoSizeColumns;
+            cancelOperationBarItem.Text = l.BarItemCancelTask;
+
+            //Main Form - View menu - Items:
+            detailsBarItem.Text = l.BarItemDetails;
+
+            //Main Form - Tools menu - Items:
+            settingsBarItem.Text = l.BarItemSettings;
+
+            //Main Form - Help menu - Items:
+            helpBarItem.Text = l.BarItemHelp;
+            checkForUpdatesBarItem.Text = l.BarItemCheckForUpdates;
+            homePageBarItem.Text = l.BarItemHomePage;
+            licenseBarItem.Text = l.BarItemLicense;
+            aboutBarItem.Text = l.BarItemAbout;
+
+            //Main Form - ListView Items:
+            clhPath.Text = l.ClhPath;
+            clhStatus.Text = l.ClhStatus;
+            clhOwnership.Text = l.ClhOwnership;
+
+            //Main Form - ListView Details:
+            clhFileName.Text = l.ClhFileName;
+            clhProcessID.Text = l.ClhProcessId;
+
+
+            //Main Form - Status bar:
+            versionStaticBarItem.Text = l.LblVersion;
+
+            //Main Form - ContextMenu Items:
+            detailsToolStripMenuItem.Text = l.CmiDetails;
+            openInVirusTotalToolStripMenuItem.Text = l.CmiOpenInVirusTotal;
+            openInVirusTotalToolStripMenuItem1.Text = l.CmiOpenInVirusTotal;
+
+            //Main Form - ContextMenu Details:
+            killToolStripMenuItem.Text = l.CmiKill;
+            openFileLocationToolStripMenuItem.Text = l.CmiOpenFileLocation;
+
+            //Main Form - NotifyIcon:
+            hideShowToolStripMenuItem.Text = l.CmiHideShow;
+    }
+
+        private void Update(bool showError, bool showNoUpdates)
         {
+            Language l = _languageManager.GetLanguage();
             try
             {
                 WebClient wc = new WebClient();
@@ -69,7 +134,8 @@ namespace DeadLock.Forms
 
                 if (version[0] != Application.ProductVersion)
                 {
-                    if (MessageBoxAdv.Show("Version " + version[0] + " is now available !" + Environment.NewLine + "Would you like to download the latest version ?", "DeadLock", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    
+                    if (MessageBoxAdv.Show(l.MsgVersion + version[0] + l.MsgAvailable + Environment.NewLine + l.MsgDownloadNewVersion, "DeadLock", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         new FrmUpdater(version[1]).ShowDialog();
                     }
@@ -78,7 +144,7 @@ namespace DeadLock.Forms
                 {
                     if (showNoUpdates)
                     {
-                        MessageBoxAdv.Show("You have the latest version !", "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBoxAdv.Show(l.MsgLatestVersionAlreadyInstalled, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
@@ -131,7 +197,7 @@ namespace DeadLock.Forms
 
         private void aboutBarItem_Click(object sender, EventArgs e)
         {
-            new FrmAbout().ShowDialog();
+            new FrmAbout(_languageManager.GetLanguage()).ShowDialog();
         }
 
         private void exitBarItem_Click(object sender, EventArgs e)
@@ -157,18 +223,11 @@ namespace DeadLock.Forms
         {
             if (!File.Exists(path) && !Directory.Exists(path)) return;
             if (_lvlManager.FindListViewLocker(path) != null) return;
-
+            Language l = _languageManager.GetLanguage();
             int index = lsvItems.Items.Count;
             ListViewItem lvi = new ListViewItem { Text = path, UseItemStyleForSubItems = false, ImageIndex = index };
 
-            try
-            {
-                lvi.SubItems.Add("Unknown");
-            }
-            catch (Exception ex)
-            {
-                MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            lvi.SubItems.Add(l.MsgUnknown);
 
             Image img;
             if (File.GetAttributes(path).HasFlag(FileAttributes.Directory))
@@ -247,6 +306,7 @@ namespace DeadLock.Forms
         {
             if (lsvItems.SelectedItems.Count == 0) return;
 
+            Language l = _languageManager.GetLanguage();
             ListViewItem selected = lsvItems.SelectedItems[0];
             ListViewLocker lvl = _lvlManager.FindListViewLocker(selected.Text);
 
@@ -266,7 +326,7 @@ namespace DeadLock.Forms
                 if (!lvl.HasCancelled())
                 {
                     selected.SubItems[1].ForeColor = Color.Green;
-                    selected.SubItems[1].Text = "Successfully unlocked !";
+                    selected.SubItems[1].Text = l.MsgSuccessfullyUnlocked;
                 }
                 else
                 {
@@ -277,14 +337,7 @@ namespace DeadLock.Forms
             {
                 MessageBoxAdv.Show(ex.Message + Environment.NewLine + ex.StackTrace, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 selected.SubItems[1].ForeColor = Color.Red;
-                try
-                {
-                    selected.SubItems[1].Text = "Could not unlock the item !";
-                }
-                catch (Exception exc)
-                {
-                    MessageBoxAdv.Show(exc.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                selected.SubItems[1].Text = l.MsgCouldNotUnlock;
             }
             finally
             {
@@ -313,6 +366,7 @@ namespace DeadLock.Forms
 
             ListViewItem selected = lsvItems.SelectedItems[0];
             ListViewLocker lvl = _lvlManager.FindListViewLocker(selected.Text);
+            Language l = _languageManager.GetLanguage();
 
             CancelSelectedTask(selected);
             await Task.Run(() =>
@@ -330,7 +384,7 @@ namespace DeadLock.Forms
                 if (!lvl.HasCancelled())
                 {
                     selected.SubItems[1].ForeColor = Color.Green;
-                    selected.SubItems[1].Text = "Successfully copied the item !";
+                    selected.SubItems[1].Text = l.MsgSuccessfullyCopied;
                 }
                 else
                 {
@@ -341,15 +395,7 @@ namespace DeadLock.Forms
             {
                 MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 selected.SubItems[1].ForeColor = Color.Red;
-
-                try
-                {
-                    selected.SubItems[1].Text = "Could not copy the item !";
-                }
-                catch (Exception exc)
-                {
-                    MessageBoxAdv.Show(exc.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                selected.SubItems[1].Text = l.MsgCouldNotCopy;
             }
             finally
             {
@@ -359,6 +405,7 @@ namespace DeadLock.Forms
 
         private void FrmMain_Shown(object sender, EventArgs e)
         {
+            Language l = _languageManager.GetLanguage();
             try
             {
                 if (Properties.Settings.Default.ShowAdminWarning)
@@ -369,7 +416,7 @@ namespace DeadLock.Forms
                         WindowsPrincipal principal = new WindowsPrincipal(identity);
                         if (!principal.IsInRole(WindowsBuiltInRole.Administrator))
                         {
-                            MessageBoxAdv.Show("Some functions might not work correctly without administrative rights !", "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBoxAdv.Show(l.MsgAdministrator, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         }
                     }
                 }
@@ -401,6 +448,7 @@ namespace DeadLock.Forms
 
             ListViewItem selected = lsvItems.SelectedItems[0];
             ListViewLocker lvl = _lvlManager.FindListViewLocker(selected.Text);
+            Language l = _languageManager.GetLanguage();
 
             CancelSelectedTask(selected);
             await Task.Run(() =>
@@ -418,7 +466,7 @@ namespace DeadLock.Forms
                 if (!lvl.HasCancelled())
                 {
                     selected.SubItems[1].ForeColor = Color.Green;
-                    selected.SubItems[1].Text = "Successfully moved the item !";
+                    selected.SubItems[1].Text = l.MsgSuccessfullyMoved;
                 }
                 else
                 {
@@ -429,15 +477,7 @@ namespace DeadLock.Forms
             {
                 MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 selected.SubItems[1].ForeColor = Color.Red;
-
-                try
-                {
-                    selected.SubItems[1].Text = "Could not move the item !";
-                }
-                catch (Exception exc)
-                {
-                    MessageBoxAdv.Show(exc.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                selected.SubItems[1].Text = l.MsgCouldNotMove;
             }
             finally
             {
@@ -451,6 +491,7 @@ namespace DeadLock.Forms
 
             ListViewItem selected = lsvItems.SelectedItems[0];
             ListViewLocker lvl = _lvlManager.FindListViewLocker(selected.Text);
+            Language l = _languageManager.GetLanguage();
 
             CancelSelectedTask(selected);
             await Task.Run(() =>
@@ -467,7 +508,7 @@ namespace DeadLock.Forms
                 if (!lvl.HasCancelled())
                 {
                     selected.SubItems[1].ForeColor = Color.Green;
-                    selected.SubItems[1].Text = "Successfully removed the item !";
+                    selected.SubItems[1].Text = l.MsgSuccessfullyRemoved;
                 }
                 else
                 {
@@ -478,15 +519,7 @@ namespace DeadLock.Forms
             {
                 MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 selected.SubItems[1].ForeColor = Color.Red;
-
-                try
-                {
-                    selected.SubItems[1].Text = "Could not remove the item !";
-                }
-                catch (Exception exc)
-                {
-                    MessageBoxAdv.Show(exc.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                selected.SubItems[1].Text = l.MsgCouldNotRemove;
             }
             finally
             {
@@ -510,6 +543,7 @@ namespace DeadLock.Forms
 
             ListViewItem selected = lsvItems.SelectedItems[0];
             ListViewLocker lvl = _lvlManager.FindListViewLocker(selected.Text);
+            Language l = _languageManager.GetLanguage();
 
             try
             {
@@ -538,26 +572,12 @@ namespace DeadLock.Forms
                 {
                     if (lockers.Count == 0)
                     {
-                        try
-                        {
-                            selected.SubItems[1].Text = "Unlocked";
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+                        selected.SubItems[1].Text = l.MsgUnlocked;
                         selected.SubItems[1].ForeColor = Color.Green;
                     }
                     else
                     {
-                        try
-                        {
-                            selected.SubItems[1].Text = "Locked";
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+                        selected.SubItems[1].Text = l.MsgLocked;
                         selected.SubItems[1].ForeColor = Color.Red;
                     }
                     selected.SubItems[2].Text = lvl.HasOwnership().ToString();
@@ -639,21 +659,23 @@ namespace DeadLock.Forms
             DetailsChange();
         }
 
-        private static void SetCancelled(ListViewItem selected)
+        private void SetCancelled(ListViewItem selected)
         {
             //TODO: Needs LanguageManager
             if (selected == null) return;
+            Language l = _languageManager.GetLanguage();
             selected.SubItems[1].ForeColor = Color.Red;
-            selected.SubItems[1].Text = "Operation cancelled";
-            selected.SubItems[2].Text = "Operation cancelled";
+            selected.SubItems[1].Text = l.MsgOperationCancelled;
+            selected.SubItems[2].Text = l.MsgOperationCancelled;
         }
 
-        private static void SetLoading(ListViewItem selected, int index)
+        private void SetLoading(ListViewItem selected, int index)
         {
             //TODO: Needs languageManager
             if (selected == null) return;
+            Language l = _languageManager.GetLanguage();
             selected.SubItems[index].ForeColor = Color.Black;
-            selected.SubItems[index].Text = "Loading...";
+            selected.SubItems[index].Text = l.MsgLoading;
         }
 
         private void cancelCurrentOperationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -661,7 +683,6 @@ namespace DeadLock.Forms
             if (lsvItems.SelectedItems.Count == 0) return;
 
             ListViewItem selected = lsvItems.SelectedItems[0];
-
             if (CancelSelectedTask(selected))
             {
                 SetCancelled(selected);
@@ -724,13 +745,14 @@ namespace DeadLock.Forms
         private void killToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (lsvDetails.SelectedItems.Count == 0) return;
+            Language lang = _languageManager.GetLanguage();
             try
             {
                 foreach (ListViewItem l in lsvDetails.SelectedItems)
                 {
                     Process.GetProcessById(Convert.ToInt32(l.SubItems[2].Text)).Kill();
                 }
-                MessageBoxAdv.Show("Successfully killed the selected process(es)", "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBoxAdv.Show(lang.MsgSuccessfullyKilled, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {

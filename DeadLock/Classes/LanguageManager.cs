@@ -1,20 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
+using System.Xml.Serialization;
 
 namespace DeadLock.Classes
 {
-    class LanguageManager
+    public class LanguageManager
     {
-        private List<Language> _languages;
+        private Language _currentLanguage;
 
         public LanguageManager()
         {
-            _languages = new List<Language>();
+            _currentLanguage = new Language();
         }
 
+        public void LoadLanguage(string path)
+        {
+            XmlSerializer serializer = new XmlSerializer(_currentLanguage.GetType());
+            using (StreamReader reader = new StreamReader(path))
+            {
+                _currentLanguage = (Language)serializer.Deserialize(reader);
+            }
+        }
 
+        public Language GetLanguage()
+        {
+            return _currentLanguage;
+        }
     }
 }

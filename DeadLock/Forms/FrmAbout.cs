@@ -8,15 +8,28 @@
 using System;
 using System.Diagnostics;
 using System.Windows.Forms;
+using DeadLock.Classes;
 using Syncfusion.Windows.Forms;
 
 namespace DeadLock.Forms
 {
     public partial class FrmAbout : MetroForm
     {
-        public FrmAbout()
+        private readonly Language _language;
+
+        public FrmAbout(Language language)
         {
             InitializeComponent();
+            _language = language;
+
+            LoadLanguage();
+        }
+
+        private void LoadLanguage()
+        {
+            Text = @"DeadLock - " + _language.TxtAbout;
+            btnClose.Text = _language.BtnAboutClose;
+            btnLicense.Text = _language.BtnLicense;
         }
 
         private void btnClose_Click(object sender, EventArgs e)

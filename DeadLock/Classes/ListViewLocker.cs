@@ -10,6 +10,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Syncfusion.Windows.Forms;
+// ReSharper disable PossibleMultipleEnumeration
 
 namespace DeadLock.Classes
 {
@@ -57,7 +58,7 @@ namespace DeadLock.Classes
             _lockers = lockers;
         }
 
-        internal CancellationToken GetCancellationToken()
+        private CancellationToken GetCancellationToken()
         {
             return _cts.Token;
         }
@@ -309,18 +310,20 @@ namespace DeadLock.Classes
             }
             catch (Win32Exception win32Exception)
             {
-                //TODO: Implement LanguageManager
-                if (MessageBoxAdv.Show(win32Exception.Message + Environment.NewLine + "Would you like to restart DeadLock with administrator rights ?", "DeadLock", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                //TODO: Implement language manager
+                WindowsIdentity identity = WindowsIdentity.GetCurrent();
+                if (identity == null) return false;
+                WindowsPrincipal principal = new WindowsPrincipal(identity);
+                if (principal.IsInRole(WindowsBuiltInRole.Administrator)) return false;
+                if (MessageBoxAdv.Show(win32Exception.Message + Environment.NewLine + "Would you like to restart DeadLock with administrator rights ?", "DeadLock", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) return false;
+                ProcessStartInfo proc = new ProcessStartInfo
                 {
-                    ProcessStartInfo proc = new ProcessStartInfo
-                    {
-                        UseShellExecute = true,
-                        WorkingDirectory = Environment.CurrentDirectory,
-                        FileName = Application.ExecutablePath,
-                        Verb = "runas"
-                    };
-                    Process.Start(proc);
-                }
+                    UseShellExecute = true,
+                    WorkingDirectory = Environment.CurrentDirectory,
+                    FileName = Application.ExecutablePath,
+                    Verb = "runas"
+                };
+                Process.Start(proc);
             }
             return false;
         }

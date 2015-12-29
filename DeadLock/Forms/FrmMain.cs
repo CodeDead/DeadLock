@@ -11,7 +11,9 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Net;
+using System.Security.Cryptography;
 using System.Security.Principal;
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DeadLock.Classes;
@@ -673,11 +675,27 @@ namespace DeadLock.Forms
             if (File.GetAttributes(lsvItems.SelectedItems[0].Text).HasFlag(FileAttributes.Directory)) return;
             try
             {
-                Process.Start("https://www.virustotal.com/en/file/" + FileUtil.GetSHA256FromFile(lsvItems.SelectedItems[0].Text) + "/analysis/");
+                Process.Start("https://www.virustotal.com/en/file/" + GetSha256FromFile(lsvItems.SelectedItems[0].Text) + "/analysis/");
             }
             catch (Exception ex)
             {
                 MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private static string GetSha256FromFile(string path)
+        {
+            using (FileStream fs = File.OpenRead(path))
+            {
+                using (SHA256 sha = new SHA256Managed())
+                {
+                    StringBuilder sb = new StringBuilder();
+                    foreach (byte t in sha.ComputeHash(fs))
+                    {
+                        sb.Append(t.ToString("x2"));
+                    }
+                    return sb.ToString();
+                }
             }
         }
 
@@ -686,7 +704,7 @@ namespace DeadLock.Forms
             if (lsvDetails.SelectedItems.Count == 0) return;
             try
             {
-                Process.Start("https://www.virustotal.com/en/file/" + FileUtil.GetSHA256FromFile(lsvDetails.SelectedItems[0].SubItems[1].Text) + "/analysis/");
+                Process.Start("https://www.virustotal.com/en/file/" + GetSha256FromFile(lsvDetails.SelectedItems[0].SubItems[1].Text) + "/analysis/");
             }
             catch (Exception ex)
             {

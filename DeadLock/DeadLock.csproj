@@ -53,7 +53,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\FileUtil.cs" />
     <Compile Include="Classes\ListViewLocker.cs" />
     <Compile Include="Classes\ListViewLockerManager.cs" />
     <Compile Include="Classes\NativeMethods.cs" />

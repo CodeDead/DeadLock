@@ -13,7 +13,7 @@ namespace DeadLock.Classes
     internal class ListViewLocker
     {
         private readonly string _path;
-        private List<Process> _lockers;
+        private List<ProcessLocker> _lockers;
         private CancellationTokenSource _cts;
 
         private bool _hasCancelled;
@@ -22,7 +22,7 @@ namespace DeadLock.Classes
         internal ListViewLocker(string path)
         {
             _path = path;
-            _lockers = new List<Process>();
+            _lockers = new List<ProcessLocker>();
             _cts = new CancellationTokenSource();
             _hasCancelled = true;
             _isRunning = false;
@@ -44,12 +44,12 @@ namespace DeadLock.Classes
             return _path;
         }
 
-        internal IEnumerable<Process> GetLockers()
+        internal IEnumerable<ProcessLocker> GetLockers()
         {
             return _lockers;
         }
 
-        internal void SetLocker(List<Process> lockers)
+        internal void SetLocker(List<ProcessLocker> lockers)
         {
             _lockers = lockers;
         }
@@ -173,10 +173,6 @@ namespace DeadLock.Classes
             catch (Exception)
             {
                 isWriteAccess = false;
-            }
-            if (!isWriteAccess)
-            {
-                //handle notifications                  
             }
 
             return isWriteAccess;

@@ -503,7 +503,7 @@ namespace DeadLock.Forms
                 {
                     while (lvl.IsRunning()){ }
                 });
-                lvl.SetLocker(new List<Process>());
+                lvl.SetLocker(new List<ProcessLocker>());
 
                 if (!File.Exists(selected.Text) && !Directory.Exists(selected.Text))
                 {
@@ -517,7 +517,7 @@ namespace DeadLock.Forms
                 SetLoading(selected, 2);
 
                 lvl.SetRunning(true);
-                List<Process> lockers = await LockManager.GetLockerDetails(selected.Text, lvl.GetCancellationToken());
+                List<ProcessLocker> lockers = await LockManager.GetLockerDetails(selected.Text, lvl.GetCancellationToken());
                 if (!lvl.HasCancelled())
                 {
                     if (lockers.Count == 0)
@@ -546,21 +546,11 @@ namespace DeadLock.Forms
                     }
                     selected.SubItems[2].Text = lvl.HasOwnership().ToString();
 
-                    foreach (Process p in lockers)
+                    foreach (ProcessLocker p in lockers)
                     {
-                        string path = LockManager.GetMainModuleFilepath(p.Id);
-                        ListViewItem lvi = new ListViewItem();
-                        if (string.IsNullOrEmpty(path))
-                        {
-                            path = "Access denied";
-                            lvi.Text = path;
-                        }
-                        else
-                        {
-                            lvi.Text = Path.GetFileName(path);
-                        }
-                        lvi.SubItems.Add(path);
-                        lvi.SubItems.Add(p.Id.ToString());
+                        ListViewItem lvi = new ListViewItem {Text = p.GetFileName()};
+                        lvi.SubItems.Add(p.GetFilePath());
+                        lvi.SubItems.Add(p.GetProcessId().ToString());
 
                         lsvDetails.Items.Add(lvi);
                     }
@@ -571,7 +561,7 @@ namespace DeadLock.Forms
                 }
                 else
                 {
-                    lvl.SetLocker(new List<Process>());
+                    lvl.SetLocker(new List<ProcessLocker>());
                     SetCancelled(selected);
                 }
                 lvl.SetRunning(false);
@@ -593,12 +583,11 @@ namespace DeadLock.Forms
 
             //Needs work
             ListViewLocker lvl = _lvlManager.FindListViewLocker(lsvItems.SelectedItems[0].Text);
-            foreach (Process p in lvl.GetLockers())
+            foreach (ProcessLocker p in lvl.GetLockers())
             {
-                ListViewItem lvi = new ListViewItem { Text = LockManager.GetMainModuleFilepath(p.Id) };
-                lvi.SubItems.Add(LockManager.GetMainModuleFilepath(p.Id));
-                lvi.SubItems.Add(p.Id.ToString());
-
+                ListViewItem lvi = new ListViewItem { Text = p.GetFileName() };
+                lvi.SubItems.Add(p.GetFilePath());
+                lvi.SubItems.Add(p.GetProcessId().ToString());
                 lsvDetails.Items.Add(lvi);
             }
         }

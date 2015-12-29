@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Management;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,9 +14,9 @@ namespace DeadLock.Classes
 {
     internal static class LockManager
     {
-        internal static async Task<List<Process>> GetLockerDetails(string itemPath, CancellationToken ct)
+        internal static async Task<List<ProcessLocker>> GetLockerDetails(string itemPath, CancellationToken ct)
         {
-            List<Process> lockers = new List<Process>();
+            List<ProcessLocker> lockers = new List<ProcessLocker>();
 
             if (File.GetAttributes(itemPath).HasFlag(FileAttributes.Directory))
             {
@@ -30,12 +29,12 @@ namespace DeadLock.Classes
                             foreach (Process p in NativeMethods.FindLockingProcesses(path))
                             {
                                 bool add = true;
-                                foreach (Process l in lockers)
+                                foreach (ProcessLocker l in lockers)
                                 {
                                     ct.ThrowIfCancellationRequested();
                                     try
                                     {
-                                        if (l.Id == p.Id && GetMainModuleFilepath(l.Id) == GetMainModuleFilepath(p.Id))
+                                        if (l.GetProcessId() == p.Id)
                                         {
                                             add = false;
                                         }
@@ -47,7 +46,7 @@ namespace DeadLock.Classes
                                 }
                                 if (add)
                                 {
-                                    lockers.Add(p);
+                                    lockers.Add(new ProcessLocker(p));
                                 }
                             }
                         }
@@ -67,7 +66,10 @@ namespace DeadLock.Classes
                     try
                     {
                         ct.ThrowIfCancellationRequested();
-                        lockers = NativeMethods.FindLockingProcesses(itemPath);
+                        foreach (Process p in NativeMethods.FindLockingProcesses(itemPath))
+                        {
+                            lockers.Add(new ProcessLocker(p));
+                        }
                     }
                     catch (OperationCanceledException)
                     {
@@ -80,27 +82,7 @@ namespace DeadLock.Classes
             return lockers;
         }
 
-        internal static string GetMainModuleFilepath(int processId)
-        {
-            string path = "";
-            try
-            {
-                string wmiQueryString = "SELECT ProcessId, ExecutablePath FROM Win32_Process WHERE ProcessId = " + processId;
-                using (ManagementObjectSearcher searcher = new ManagementObjectSearcher(wmiQueryString))
-                {
-                    using (ManagementObjectCollection results = searcher.Get())
-                    {
-                        ManagementObject mo = results.Cast<ManagementObject>().FirstOrDefault();
-                        if (mo != null)
-                        {
-                            path = (string)mo["ExecutablePath"];
-                        }
-                    }
-                }
-            }
-            catch (Win32Exception) { }
-            return path;
-        }
+        
 
         private static IEnumerable<string> GetDirectoryFiles(string rootPath, string patternMatch, SearchOption searchOption)
         {
@@ -135,17 +117,17 @@ namespace DeadLock.Classes
 
             try
             {
-                List<Process> lockers = await GetLockerDetails(path, ct);
+                List<ProcessLocker> lockers = await GetLockerDetails(path, ct);
                 await Task.Run(() =>
                 {
                     try
                     {
-                        foreach (Process p in lockers)
+                        foreach (ProcessLocker p in lockers)
                         {
                             ct.ThrowIfCancellationRequested();
-                            if (p.HasExited) continue;
-                            p.Kill();
-                            p.WaitForExit();
+                            if (p.GetProcess().HasExited) continue;
+                            p.GetProcess().Kill();
+                            p.GetProcess().WaitForExit();
                         }
                     }
                     catch (OperationCanceledException) { }

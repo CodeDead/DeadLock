@@ -97,6 +97,7 @@ namespace DeadLock.Classes
                         DirectoryInfo info = new DirectoryInfo(GetPath());
                         WindowsIdentity self = WindowsIdentity.GetCurrent();
                         DirectorySecurity ds = info.GetAccessControl();
+                        ds.SetAccessRuleProtection(false, true);
                         if (self?.User != null)
                         {
                             if (ds.GetOwner(typeof (NTAccount)).ToString() != self.Name)
@@ -111,6 +112,7 @@ namespace DeadLock.Classes
                     {
                         WindowsIdentity self = WindowsIdentity.GetCurrent();
                         FileSecurity fs = File.GetAccessControl(GetPath());
+                        fs.SetAccessRuleProtection(false, true);
                         if (self?.User != null)
                         {
                             if (fs.GetOwner(typeof(NTAccount)).ToString() != self.Name)
@@ -127,9 +129,11 @@ namespace DeadLock.Classes
                 {
                     if (File.GetAttributes(GetPath()).HasFlag(FileAttributes.Directory))
                     {
+                        MessageBoxAdv.Show("Is folder, removing all access...");
                         DirectoryInfo directoryInfo = new DirectoryInfo(GetPath());
                         DirectorySecurity directorySecurity = directoryInfo.GetAccessControl();
-                        AuthorizationRuleCollection rules = directorySecurity.GetAccessRules(true, false, typeof(NTAccount));
+                        directorySecurity.SetAccessRuleProtection(true, false);
+                        AuthorizationRuleCollection rules = directorySecurity.GetAccessRules(true, true, typeof(NTAccount));
                         foreach (FileSystemAccessRule rule in rules)
                         {
                             directorySecurity.RemoveAccessRule(rule);
@@ -139,7 +143,8 @@ namespace DeadLock.Classes
                     else
                     {
                         FileSecurity fs = File.GetAccessControl(GetPath());
-                        AuthorizationRuleCollection rules = fs.GetAccessRules(true, false, typeof (NTAccount));
+                        fs.SetAccessRuleProtection(true, false);
+                        AuthorizationRuleCollection rules = fs.GetAccessRules(true, true, typeof (NTAccount));
                         foreach (FileSystemAccessRule rule in rules)
                         {
                             fs.RemoveAccessRule(rule);

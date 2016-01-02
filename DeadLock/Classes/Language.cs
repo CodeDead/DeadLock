@@ -1,9 +1,7 @@
-﻿// ReSharper disable UnassignedField.Global
-namespace DeadLock.Classes
+﻿namespace DeadLock.Classes
 {
     public class Language
     {
-
         #region Main_Form
         //Main form - Menu items:
         public string BarFile;

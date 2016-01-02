@@ -141,6 +141,26 @@ namespace DeadLock.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
+        ///&lt;Language xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+        ///  &lt;BarFile&gt;&amp;amp;File&lt;/BarFile&gt;
+        ///  &lt;BarEdit&gt;&amp;amp;Edit&lt;/BarEdit&gt;
+        ///  &lt;BarView&gt;&amp;amp;View&lt;/BarView&gt;
+        ///  &lt;BarTools&gt;&amp;amp;Tools&lt;/BarTools&gt;
+        ///  &lt;BarHelp&gt;&amp;amp;Help&lt;/BarHelp&gt;
+        ///  &lt;BarItemOpenFiles&gt;Open file(s)...&lt;/BarItemOpenFiles&gt;
+        ///  &lt;BarItemOpenFolder&gt;Open folder...&lt;/BarItemOpenFolder&gt;
+        ///  &lt;BarItemRestart&gt;Restart&lt;/BarItemRestart&gt;
+        ///  &lt;BarItemExit&gt;Exit&lt;/BarItemExit&gt;
+        ///  &lt;BarItemUnlock&gt;Unlock [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string eng {
+            get {
+                return ResourceManager.GetString("eng", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap exit {

@@ -38,6 +38,10 @@ namespace DeadLock.Forms
                 {
                     _languageManager.LoadLanguage(Properties.Settings.Default.LanguagePath);
                 }
+                else
+                {
+                    _languageManager.LoadDefaultLanguage();
+                }
                 LanguageSwitch();
             }
             catch (Exception ex)

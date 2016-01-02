@@ -34,13 +34,13 @@ namespace DeadLock.Forms
             {
                 _lvlManager = new ListViewLockerManager();
                 _languageManager = new LanguageManager();
-                if (!string.IsNullOrEmpty(Properties.Settings.Default.LanguagePath))
+                if (Properties.Settings.Default.Language == 2)
                 {
                     _languageManager.LoadLanguage(Properties.Settings.Default.LanguagePath);
                 }
                 else
                 {
-                    _languageManager.LoadDefaultLanguage();
+                    _languageManager.LoadLanguage();
                 }
                 LanguageSwitch();
             }
@@ -118,6 +118,18 @@ namespace DeadLock.Forms
             detailsToolStripMenuItem.Text = l.CmiDetails;
             openInVirusTotalToolStripMenuItem.Text = l.CmiOpenInVirusTotal;
             openInVirusTotalToolStripMenuItem1.Text = l.CmiOpenInVirusTotal;
+            unlockToolStripMenuItem.Text = l.BarItemUnlock;
+            unlockToolStripMenuItem1.Text = l.BarItemUnlock;
+            copyToolStripMenuItem.Text = l.BarItemCopy;
+            moveToolStripMenuItem.Text = l.BarItemMove;
+            removeToolStripMenuItem.Text = l.BarItemRemove;
+
+            ownershipToolStripMenuItem.Text = l.BarItemOwnership;
+            trueOwnershipToolStripMenuItem.Text = l.BarItemOwnershipTrue;
+            falseOwnershipToolStripMenuItem.Text = l.BarItemOwnershipFalse;
+            removeItemToolStripMenuItem.Text = l.BarItemRemoveItem;
+            clearItemsToolStripMenuItem.Text = l.BarItemClearItems;
+            cancelCurrentOperationToolStripMenuItem.Text = l.BarItemCancelTask;
 
             //Main Form - ContextMenu Details:
             killToolStripMenuItem.Text = l.CmiKill;
@@ -125,7 +137,11 @@ namespace DeadLock.Forms
 
             //Main Form - NotifyIcon:
             hideShowToolStripMenuItem.Text = l.CmiHideShow;
-    }
+            settingsToolStripMenuItem.Text = l.BarItemSettings;
+            helpToolStripMenuItem.Text = l.BarItemHelp;
+            aboutToolStripMenuItem.Text = l.BarItemAbout;
+            exitToolStripMenuItem.Text = l.BarItemExit;
+        }
 
         private void Update(bool showError, bool showNoUpdates)
         {

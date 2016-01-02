@@ -27,6 +27,7 @@ namespace RegManager
                     Console.WriteLine("Warning: argument not supported !");
                     break;
             }
+            Console.WriteLine("Done.");
         }
 
         private static void EnableExplorerIntegration(string path)
@@ -57,7 +58,6 @@ namespace RegManager
                 }
             }
 
-
             using (RegistryKey key = Registry.ClassesRoot.OpenSubKey(@"Directory\shell\DeadLock\command"))
             {
                 if (key != null)
@@ -71,10 +71,12 @@ namespace RegManager
         {
             if (value)
             {
+                Console.WriteLine("Enabling Windows Explorer integration...");
                 EnableExplorerIntegration(path);
             }
             else
             {
+                Console.WriteLine("Disabling Windows Explorer integration...");
                 DisableExplorerIntegration();
             }
         }
@@ -104,10 +106,12 @@ namespace RegManager
         {
             if (value)
             {
+                Console.WriteLine("Enabling Auto Startup...");
                 EnableAutoStartup(path);
             }
             else
             {
+                Console.WriteLine("Disabling Auto Startup...");
                 DisableAutoStartup();
             }
         }

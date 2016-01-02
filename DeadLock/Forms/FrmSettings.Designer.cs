@@ -81,6 +81,10 @@ namespace DeadLock.Forms
             this.tbtnAutoUpdate = new Syncfusion.Windows.Forms.Tools.ToggleButton();
             this.lblAutoUpdate = new System.Windows.Forms.Label();
             this.tpaAppearance = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.cboLanguage = new Syncfusion.Windows.Forms.Tools.ComboBoxAdv();
+            this.btnSelectPath = new Syncfusion.Windows.Forms.ButtonAdv();
+            this.txtLanguagePath = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.lblLanguage = new System.Windows.Forms.Label();
             this.tbtnDetails = new Syncfusion.Windows.Forms.Tools.ToggleButton();
             this.lblDetails = new System.Windows.Forms.Label();
             this.tbtnFormSize = new Syncfusion.Windows.Forms.Tools.ToggleButton();
@@ -97,9 +101,6 @@ namespace DeadLock.Forms
             this.btnClose = new Syncfusion.Windows.Forms.ButtonAdv();
             this.btnReset = new Syncfusion.Windows.Forms.ButtonAdv();
             this.btnSave = new Syncfusion.Windows.Forms.ButtonAdv();
-            this.lblLanguage = new System.Windows.Forms.Label();
-            this.txtLanguagePath = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.btnSelectPath = new Syncfusion.Windows.Forms.ButtonAdv();
             this.pnlSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbcPanels)).BeginInit();
             this.tbcPanels.SuspendLayout();
@@ -109,13 +110,14 @@ namespace DeadLock.Forms
             ((System.ComponentModel.ISupportInitialize)(this.tbtnNotifyIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbtnAutoUpdate)).BeginInit();
             this.tpaAppearance.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cboLanguage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLanguagePath)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbtnDetails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbtnFormSize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itxtBorderThickness)).BeginInit();
             this.tpaAdvanced.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbtnWindowsExplorerIntegration)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbtnAutoRun)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLanguagePath)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSettings
@@ -273,6 +275,7 @@ namespace DeadLock.Forms
             // tpaAppearance
             // 
             this.tpaAppearance.BackColor = System.Drawing.Color.White;
+            this.tpaAppearance.Controls.Add(this.cboLanguage);
             this.tpaAppearance.Controls.Add(this.btnSelectPath);
             this.tpaAppearance.Controls.Add(this.txtLanguagePath);
             this.tpaAppearance.Controls.Add(this.lblLanguage);
@@ -294,6 +297,69 @@ namespace DeadLock.Forms
             this.tpaAppearance.Text = "Appearance";
             this.tpaAppearance.ThemesEnabled = false;
             // 
+            // cboLanguage
+            // 
+            this.cboLanguage.BackColor = System.Drawing.Color.White;
+            this.cboLanguage.BeforeTouchSize = new System.Drawing.Size(100, 21);
+            this.cboLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboLanguage.Items.AddRange(new object[] {
+            "English",
+            "Italian",
+            "Custom"});
+            this.cboLanguage.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cboLanguage, "English"));
+            this.cboLanguage.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cboLanguage, "Italian"));
+            this.cboLanguage.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cboLanguage, "Custom"));
+            this.cboLanguage.Location = new System.Drawing.Point(228, 129);
+            this.cboLanguage.MetroColor = System.Drawing.Color.SteelBlue;
+            this.cboLanguage.Name = "cboLanguage";
+            this.cboLanguage.Size = new System.Drawing.Size(100, 21);
+            this.cboLanguage.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
+            this.cboLanguage.TabIndex = 9;
+            this.cboLanguage.UseMetroButtonColor = true;
+            this.cboLanguage.UseMetroColorsInActiveMode = true;
+            // 
+            // btnSelectPath
+            // 
+            this.btnSelectPath.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
+            this.btnSelectPath.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnSelectPath.BeforeTouchSize = new System.Drawing.Size(56, 20);
+            this.btnSelectPath.ForeColor = System.Drawing.Color.White;
+            this.btnSelectPath.IsBackStageButton = false;
+            this.btnSelectPath.Location = new System.Drawing.Point(334, 156);
+            this.btnSelectPath.MetroColor = System.Drawing.Color.SteelBlue;
+            this.btnSelectPath.Name = "btnSelectPath";
+            this.btnSelectPath.Size = new System.Drawing.Size(56, 20);
+            this.btnSelectPath.TabIndex = 11;
+            this.btnSelectPath.Text = "...";
+            this.btnSelectPath.UseVisualStyle = true;
+            this.btnSelectPath.Click += new System.EventHandler(this.btnSelectPath_Click);
+            // 
+            // txtLanguagePath
+            // 
+            this.txtLanguagePath.BackColor = System.Drawing.Color.White;
+            this.txtLanguagePath.BeforeTouchSize = new System.Drawing.Size(100, 20);
+            this.txtLanguagePath.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtLanguagePath.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLanguagePath.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtLanguagePath.Location = new System.Drawing.Point(228, 156);
+            this.txtLanguagePath.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtLanguagePath.Name = "txtLanguagePath";
+            this.txtLanguagePath.ReadOnly = true;
+            this.txtLanguagePath.Size = new System.Drawing.Size(100, 20);
+            this.txtLanguagePath.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Metro;
+            this.txtLanguagePath.TabIndex = 10;
+            this.txtLanguagePath.DoubleClick += new System.EventHandler(this.btnSelectPath_Click);
+            // 
+            // lblLanguage
+            // 
+            this.lblLanguage.AutoSize = true;
+            this.lblLanguage.Location = new System.Drawing.Point(72, 137);
+            this.lblLanguage.Name = "lblLanguage";
+            this.lblLanguage.Size = new System.Drawing.Size(58, 13);
+            this.lblLanguage.TabIndex = 8;
+            this.lblLanguage.Text = "Language:";
+            // 
             // tbtnDetails
             // 
             this.tbtnDetails.ActiveState = activeStateCollection5;
@@ -301,7 +367,7 @@ namespace DeadLock.Forms
             this.tbtnDetails.ForeColor = System.Drawing.Color.Black;
             inactiveStateCollection5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.tbtnDetails.InactiveState = inactiveStateCollection5;
-            this.tbtnDetails.Location = new System.Drawing.Point(228, 117);
+            this.tbtnDetails.Location = new System.Drawing.Point(228, 103);
             this.tbtnDetails.MinimumSize = new System.Drawing.Size(52, 20);
             this.tbtnDetails.Name = "tbtnDetails";
             this.tbtnDetails.Renderer = toggleButtonRenderer5;
@@ -313,7 +379,7 @@ namespace DeadLock.Forms
             // 
             this.lblDetails.AutoSize = true;
             this.lblDetails.BackColor = System.Drawing.Color.Transparent;
-            this.lblDetails.Location = new System.Drawing.Point(72, 124);
+            this.lblDetails.Location = new System.Drawing.Point(72, 110);
             this.lblDetails.Name = "lblDetails";
             this.lblDetails.Size = new System.Drawing.Size(70, 13);
             this.lblDetails.TabIndex = 6;
@@ -326,7 +392,7 @@ namespace DeadLock.Forms
             this.tbtnFormSize.ForeColor = System.Drawing.Color.Black;
             inactiveStateCollection6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.tbtnFormSize.InactiveState = inactiveStateCollection6;
-            this.tbtnFormSize.Location = new System.Drawing.Point(228, 91);
+            this.tbtnFormSize.Location = new System.Drawing.Point(228, 77);
             this.tbtnFormSize.MinimumSize = new System.Drawing.Size(52, 20);
             this.tbtnFormSize.Name = "tbtnFormSize";
             this.tbtnFormSize.Renderer = toggleButtonRenderer6;
@@ -338,7 +404,7 @@ namespace DeadLock.Forms
             // 
             this.lblFormSize.AutoSize = true;
             this.lblFormSize.BackColor = System.Drawing.Color.Transparent;
-            this.lblFormSize.Location = new System.Drawing.Point(72, 98);
+            this.lblFormSize.Location = new System.Drawing.Point(72, 84);
             this.lblFormSize.Name = "lblFormSize";
             this.lblFormSize.Size = new System.Drawing.Size(105, 13);
             this.lblFormSize.TabIndex = 4;
@@ -352,7 +418,7 @@ namespace DeadLock.Forms
             this.itxtBorderThickness.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.itxtBorderThickness.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.itxtBorderThickness.IntegerValue = ((long)(1));
-            this.itxtBorderThickness.Location = new System.Drawing.Point(228, 65);
+            this.itxtBorderThickness.Location = new System.Drawing.Point(228, 51);
             this.itxtBorderThickness.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.itxtBorderThickness.MinValue = ((long)(1));
             this.itxtBorderThickness.Name = "itxtBorderThickness";
@@ -366,7 +432,7 @@ namespace DeadLock.Forms
             // 
             this.lblBorderThickness.AutoSize = true;
             this.lblBorderThickness.BackColor = System.Drawing.Color.Transparent;
-            this.lblBorderThickness.Location = new System.Drawing.Point(72, 72);
+            this.lblBorderThickness.Location = new System.Drawing.Point(72, 58);
             this.lblBorderThickness.Name = "lblBorderThickness";
             this.lblBorderThickness.Size = new System.Drawing.Size(89, 13);
             this.lblBorderThickness.TabIndex = 2;
@@ -379,7 +445,7 @@ namespace DeadLock.Forms
             this.cpbThemeStyle.ColorUISize = new System.Drawing.Size(208, 230);
             this.cpbThemeStyle.ForeColor = System.Drawing.Color.White;
             this.cpbThemeStyle.IsBackStageButton = false;
-            this.cpbThemeStyle.Location = new System.Drawing.Point(228, 36);
+            this.cpbThemeStyle.Location = new System.Drawing.Point(228, 22);
             this.cpbThemeStyle.Name = "cpbThemeStyle";
             this.cpbThemeStyle.SelectedAsBackcolor = true;
             this.cpbThemeStyle.SelectedAsText = true;
@@ -392,7 +458,7 @@ namespace DeadLock.Forms
             // 
             this.lblThemeStyle.AutoSize = true;
             this.lblThemeStyle.BackColor = System.Drawing.Color.Transparent;
-            this.lblThemeStyle.Location = new System.Drawing.Point(72, 46);
+            this.lblThemeStyle.Location = new System.Drawing.Point(72, 32);
             this.lblThemeStyle.Name = "lblThemeStyle";
             this.lblThemeStyle.Size = new System.Drawing.Size(67, 13);
             this.lblThemeStyle.TabIndex = 0;
@@ -512,47 +578,6 @@ namespace DeadLock.Forms
             this.btnSave.UseVisualStyle = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // lblLanguage
-            // 
-            this.lblLanguage.AutoSize = true;
-            this.lblLanguage.Location = new System.Drawing.Point(72, 150);
-            this.lblLanguage.Name = "lblLanguage";
-            this.lblLanguage.Size = new System.Drawing.Size(58, 13);
-            this.lblLanguage.TabIndex = 8;
-            this.lblLanguage.Text = "Language:";
-            // 
-            // txtLanguagePath
-            // 
-            this.txtLanguagePath.BackColor = System.Drawing.Color.White;
-            this.txtLanguagePath.BeforeTouchSize = new System.Drawing.Size(100, 20);
-            this.txtLanguagePath.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.txtLanguagePath.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtLanguagePath.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtLanguagePath.Location = new System.Drawing.Point(228, 143);
-            this.txtLanguagePath.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.txtLanguagePath.Name = "txtLanguagePath";
-            this.txtLanguagePath.ReadOnly = true;
-            this.txtLanguagePath.Size = new System.Drawing.Size(100, 20);
-            this.txtLanguagePath.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Metro;
-            this.txtLanguagePath.TabIndex = 9;
-            this.txtLanguagePath.DoubleClick += new System.EventHandler(this.btnSelectPath_Click);
-            // 
-            // btnSelectPath
-            // 
-            this.btnSelectPath.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
-            this.btnSelectPath.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnSelectPath.BeforeTouchSize = new System.Drawing.Size(56, 20);
-            this.btnSelectPath.ForeColor = System.Drawing.Color.White;
-            this.btnSelectPath.IsBackStageButton = false;
-            this.btnSelectPath.Location = new System.Drawing.Point(334, 143);
-            this.btnSelectPath.MetroColor = System.Drawing.Color.SteelBlue;
-            this.btnSelectPath.Name = "btnSelectPath";
-            this.btnSelectPath.Size = new System.Drawing.Size(56, 20);
-            this.btnSelectPath.TabIndex = 10;
-            this.btnSelectPath.Text = "...";
-            this.btnSelectPath.UseVisualStyle = true;
-            this.btnSelectPath.Click += new System.EventHandler(this.btnSelectPath_Click);
-            // 
             // FrmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -585,6 +610,8 @@ namespace DeadLock.Forms
             ((System.ComponentModel.ISupportInitialize)(this.tbtnAutoUpdate)).EndInit();
             this.tpaAppearance.ResumeLayout(false);
             this.tpaAppearance.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cboLanguage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLanguagePath)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbtnDetails)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbtnFormSize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itxtBorderThickness)).EndInit();
@@ -592,7 +619,6 @@ namespace DeadLock.Forms
             this.tpaAdvanced.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbtnWindowsExplorerIntegration)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbtnAutoRun)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLanguagePath)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -630,5 +656,6 @@ namespace DeadLock.Forms
         private Syncfusion.Windows.Forms.Tools.TextBoxExt txtLanguagePath;
         private System.Windows.Forms.Label lblLanguage;
         private Syncfusion.Windows.Forms.ButtonAdv btnSelectPath;
+        private Syncfusion.Windows.Forms.Tools.ComboBoxAdv cboLanguage;
     }
 }

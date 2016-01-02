@@ -110,7 +110,11 @@
         public string TxtAbout;
 
         //About Form - About:
-        public string TxtAboutTextBox;
+        public string TxtAboutCreated;
+        public string TxtAboutImages;
+        public string TxtAboutTheme;
+        public string TxtAboutCopyright;
+        public string TxtAboutTranslation;
 
         //About Form - Buttons:
         public string BtnAboutClose;

@@ -1,5 +1,7 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <Language xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Author>DeadLine</Author>
+  <Comment></Comment>
   <BarFile>&amp;File</BarFile>
   <BarEdit>&amp;Edit</BarEdit>
   <BarView>&amp;View</BarView>
@@ -58,6 +60,11 @@
   <MsgDownloadNewVersion>Would you like to download the latest version ?</MsgDownloadNewVersion>
   <MsgLatestVersionAlreadyInstalled>The latest version of DeadLock is already installed !</MsgLatestVersionAlreadyInstalled>
   <TxtAbout>About</TxtAbout>
+  <TxtAboutCreated>DeadLock was created by DeadLine.</TxtAboutCreated>
+  <TxtAboutImages>Images: small-n-flat by paomedia</TxtAboutImages>
+  <TxtAboutTheme>Theme by: SyncFusion</TxtAboutTheme>
+  <TxtAboutCopyright>Copyright © CodeDead 2016</TxtAboutCopyright>
+  <TxtAboutTranslation>Translation:</TxtAboutTranslation>
   <BtnAboutClose>Close</BtnAboutClose>
   <BtnLicense>License</BtnLicense>
   <TxtSettings>Settings</TxtSettings>

@@ -176,6 +176,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Paomedia-Small-N-Flat-Lock.ico" />
+    <None Include="Resources\Languages\ita.xml" />
     <None Include="Resources\Languages\eng.xml" />
     <None Include="Resources\Images\allow.png" />
     <Content Include="Resources\Images\autosize.png" />

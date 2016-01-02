@@ -21,13 +21,28 @@ namespace DeadLock.Classes
             }
         }
 
-        internal void LoadDefaultLanguage()
+        internal void LoadLanguage()
         {
             XmlSerializer serializer = new XmlSerializer(_currentLanguage.GetType());
             using (MemoryStream stream = new MemoryStream())
             {
                 StreamWriter writer = new StreamWriter(stream);
-                writer.Write(Properties.Resources.eng);
+                string res = "";
+                switch (Properties.Settings.Default.SelectedLanguage)
+                {
+                    case 0:
+                        res = Properties.Resources.eng;
+                        break;
+                    case 1:
+                        res = Properties.Resources.ita;
+                        break;
+                    case 2:
+                        break;
+                    default:
+                        res = Properties.Resources.eng;
+                        break;
+                }
+                writer.Write(res);
                 writer.Flush();
                 stream.Position = 0;
                 _currentLanguage = (Language)serializer.Deserialize(stream);

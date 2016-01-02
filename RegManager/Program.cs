@@ -47,7 +47,7 @@ namespace RegManager
             }
         }
 
-        private static void DisableExplorerIntegration(string path)
+        private static void DisableExplorerIntegration()
         {
             using (RegistryKey key = Registry.ClassesRoot.OpenSubKey(@"*\shell\DeadLock\command"))
             {
@@ -75,7 +75,7 @@ namespace RegManager
             }
             else
             {
-                DisableExplorerIntegration(path);
+                DisableExplorerIntegration();
             }
         }
 
@@ -91,7 +91,7 @@ namespace RegManager
             }
         }
 
-        private static void DisableAutoStartup(string path)
+        private static void DisableAutoStartup()
         {
             if (Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run", "DeadLock", "").ToString() == "") return;
             using (RegistryKey key = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run", true))
@@ -108,7 +108,7 @@ namespace RegManager
             }
             else
             {
-                DisableAutoStartup(path);
+                DisableAutoStartup();
             }
         }
     }

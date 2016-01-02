@@ -15,7 +15,26 @@ namespace DeadLock
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            try
+            {
+                MetroStyleColorTable metroColorTable = new MetroStyleColorTable
+                {
+                    BorderColor = Properties.Settings.Default.MetroColor,
+                    NoButtonBackColor = Properties.Settings.Default.MetroColor,
+                    YesButtonBackColor = Properties.Settings.Default.MetroColor,
+                    OKButtonBackColor = Properties.Settings.Default.MetroColor
+                };
+                MessageBoxAdv.MetroColorTable = metroColorTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             MessageBoxAdv.MessageBoxStyle = MessageBoxAdv.Style.Metro;
+
+            //HELP
+
             Application.Run(new FrmMain(args));
         }
     }

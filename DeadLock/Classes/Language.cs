@@ -2,6 +2,14 @@
 {
     public class Language
     {
+
+        #region Author
+
+        public string Author;
+        public string Comment;
+
+        #endregion
+
         #region Main_Form
         //Main form - Menu items:
         public string BarFile;
@@ -100,6 +108,9 @@
         #region About_Form
         //About Form - Text:
         public string TxtAbout;
+
+        //About Form - About:
+        public string TxtAboutTextBox;
 
         //About Form - Buttons:
         public string BtnAboutClose;

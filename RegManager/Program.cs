@@ -4,6 +4,9 @@ using Microsoft.Win32;
 
 namespace RegManager
 {
+    /// <summary>
+    /// Enable or Disable Windows Explorer integration and auto startup.
+    /// </summary>
     internal static class Program
     {
         private static void Main(string[] args)
@@ -61,6 +64,10 @@ namespace RegManager
             Console.WriteLine("Done.");
         }
 
+        /// <summary>
+        /// Enable Windows Explorer integration.
+        /// </summary>
+        /// <param name="path">The path to the file that should be added to Windows Explorer integration.</param>
         private static void EnableExplorerIntegration(string path)
         {
             if (File.Exists(path))
@@ -79,6 +86,9 @@ namespace RegManager
             }
         }
 
+        /// <summary>
+        /// Disable Windows Explorer integration.
+        /// </summary>
         private static void DisableExplorerIntegration()
         {
             using (RegistryKey key = Registry.ClassesRoot.OpenSubKey(@"*\shell\DeadLock\command"))
@@ -98,6 +108,11 @@ namespace RegManager
             }
         }
 
+        /// <summary>
+        /// Enable or disable Windows Explorer Integration.
+        /// </summary>
+        /// <param name="value">A boolean to indicate whether or not Windows Explorer integration should be enabled.</param>
+        /// <param name="path">The path to the file that should be added to Windows Explorer integration.</param>
         private static void ChangeExplorerIntegration(bool value, string path)
         {
             if (value)
@@ -112,6 +127,10 @@ namespace RegManager
             }
         }
 
+        /// <summary>
+        /// Enable auto startup.
+        /// </summary>
+        /// <param name="path">The path that should be added to the registry in order to enable auto startup.</param>
         private static void EnableAutoStartup(string path)
         {
             if (File.Exists(path))
@@ -124,6 +143,9 @@ namespace RegManager
             }
         }
 
+        /// <summary>
+        /// Disable auto startup.
+        /// </summary>
         private static void DisableAutoStartup()
         {
             if (Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run", "DeadLock", "").ToString() == "") return;
@@ -133,6 +155,11 @@ namespace RegManager
             }
         }
 
+        /// <summary>
+        /// Enable or disable auto startup.
+        /// </summary>
+        /// <param name="value">A boolean to indicate whether or not auto startup should be enabled.</param>
+        /// <param name="path">The path that should be added to the registry in order to enable auto startup.</param>
         private static void ChangeAutoStartUp(bool value, string path)
         {
             if (value)

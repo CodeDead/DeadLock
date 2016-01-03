@@ -147,6 +147,7 @@
         public string LblAdvanced;
         public string LblAutoRunDeadLock;
         public string LblWindowsExplorerIntegration;
+        public string LblOwnership;
 
         //Settings Form - Buttons:
         public string BtnSettingsClose;

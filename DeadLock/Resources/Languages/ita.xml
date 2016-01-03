@@ -82,6 +82,7 @@
 	<LblAdvanced>Avanzato</LblAdvanced>
 	<LblAutoRunDeadLock>Avvia DeadLock automaticamente:</LblAutoRunDeadLock>
 	<LblWindowsExplorerIntegration>Integrazione Windows Explorer:</LblWindowsExplorerIntegration>
+  <LblOwnership>Assumere la proprietà:</LblOwnership>
 	<BtnSettingsClose>Chiudi</BtnSettingsClose>
 	<BtnReset>Resetta</BtnReset>
 	<BtnSave>Salva</BtnSave>

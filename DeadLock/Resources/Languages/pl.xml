@@ -82,6 +82,7 @@
 	<LblAdvanced>Zaawansowane</LblAdvanced>
 	<LblAutoRunDeadLock>Włącz DeadLock automatycznie:</LblAutoRunDeadLock>
 	<LblWindowsExplorerIntegration>Integruj w menu kontekstowym:</LblWindowsExplorerIntegration>
+  <LblOwnership>Przejąć na własność:</LblOwnership>
 	<BtnSettingsClose>Zamknij</BtnSettingsClose>
 	<BtnReset>Resetuj</BtnReset>
 	<BtnSave>Zapisz</BtnSave>

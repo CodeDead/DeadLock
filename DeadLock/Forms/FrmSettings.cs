@@ -54,6 +54,7 @@ namespace DeadLock.Forms
 
             lblAutorun.Text = _language.LblAutoRunDeadLock;
             lblWindowsExplorerIntegration.Text = _language.LblWindowsExplorerIntegration;
+            lblOwnership.Text = _language.LblOwnership;
 
             btnClose.Text = _language.BtnSettingsClose;
             btnReset.Text = _language.BtnReset;
@@ -86,6 +87,7 @@ namespace DeadLock.Forms
                 //Advanced
                 tbtnAutoRun.ToggleState = AutoStartUp() ? ToggleButtonState.Active : ToggleButtonState.Inactive;
                 _originalStartup = tbtnAutoRun.ToggleState == ToggleButtonState.Active;
+                tbtnOwnership.ToggleState = Properties.Settings.Default.TakeOwnership ? ToggleButtonState.Active : ToggleButtonState.Inactive;
 
                 tbtnWindowsExplorerIntegration.ToggleState = ExplorerIntegration() ? ToggleButtonState.Active : ToggleButtonState.Inactive;
                 _originalIntegration = tbtnWindowsExplorerIntegration.ToggleState == ToggleButtonState.Active;
@@ -166,33 +168,20 @@ namespace DeadLock.Forms
                 if(_originalStartup != (tbtnAutoRun.ToggleState == ToggleButtonState.Active))
                 {
                     _originalStartup = tbtnAutoRun.ToggleState == ToggleButtonState.Active;
-                    if (_originalStartup)
-                    {
-                        args.Add("0");
-                    }
-                    else
-                    {
-                        args.Add("1");
-                    }
+                    args.Add(_originalStartup ? "0" : "1");
                 }
 
                 if (_originalIntegration != (tbtnWindowsExplorerIntegration.ToggleState == ToggleButtonState.Active))
                 {
                     _originalIntegration = tbtnWindowsExplorerIntegration.ToggleState == ToggleButtonState.Active;
-                    if (_originalIntegration)
-                    {
-                        args.Add("2");
-                    }
-                    else
-                    {
-                        args.Add("3");
-                    }
+                    args.Add(_originalIntegration ? "2" : "3");
                 }
                 if (args.Count != 0)
                 {
                     args.Add("\"" + Application.ExecutablePath + "\"");
                     StartRegManager(args);
                 }
+                Properties.Settings.Default.TakeOwnership = tbtnOwnership.ToggleState == ToggleButtonState.Active;
 
                 Properties.Settings.Default.Save();
             }
@@ -202,7 +191,7 @@ namespace DeadLock.Forms
             }
         }
 
-        private static void StartRegManager(List<string> args)
+        private static void StartRegManager(IReadOnlyList<string> args)
         {
             string a = "";
             for (int i = 0; i < args.Count; i++)

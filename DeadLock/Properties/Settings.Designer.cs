@@ -154,5 +154,17 @@ namespace DeadLock.Properties {
                 this["LanguagePath"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool TakeOwnership {
+            get {
+                return ((bool)(this["TakeOwnership"]));
+            }
+            set {
+                this["TakeOwnership"] = value;
+            }
+        }
     }
 }

@@ -60,14 +60,18 @@ namespace DeadLock.Forms
             Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection6 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
             Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer6 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
             Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection6 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
-            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection7 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection7 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer7 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
-            Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection7 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
             Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection8 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
             Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection8 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
             Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer8 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
             Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection8 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
+            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection9 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection9 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer9 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
+            Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection9 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
+            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection7 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection7 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer7 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
+            Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection7 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSettings));
             this.pnlSettings = new System.Windows.Forms.Panel();
             this.tbcPanels = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
@@ -101,6 +105,8 @@ namespace DeadLock.Forms
             this.btnClose = new Syncfusion.Windows.Forms.ButtonAdv();
             this.btnReset = new Syncfusion.Windows.Forms.ButtonAdv();
             this.btnSave = new Syncfusion.Windows.Forms.ButtonAdv();
+            this.lblOwnership = new System.Windows.Forms.Label();
+            this.tbtnOwnership = new Syncfusion.Windows.Forms.Tools.ToggleButton();
             this.pnlSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbcPanels)).BeginInit();
             this.tbcPanels.SuspendLayout();
@@ -118,6 +124,7 @@ namespace DeadLock.Forms
             this.tpaAdvanced.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbtnWindowsExplorerIntegration)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbtnAutoRun)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbtnOwnership)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSettings
@@ -318,6 +325,7 @@ namespace DeadLock.Forms
             this.cboLanguage.Size = new System.Drawing.Size(100, 21);
             this.cboLanguage.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
             this.cboLanguage.TabIndex = 9;
+            this.cboLanguage.Text = "English";
             this.cboLanguage.UseMetroButtonColor = true;
             this.cboLanguage.UseMetroColorsInActiveMode = true;
             // 
@@ -471,6 +479,8 @@ namespace DeadLock.Forms
             // tpaAdvanced
             // 
             this.tpaAdvanced.BackColor = System.Drawing.Color.White;
+            this.tpaAdvanced.Controls.Add(this.tbtnOwnership);
+            this.tpaAdvanced.Controls.Add(this.lblOwnership);
             this.tpaAdvanced.Controls.Add(this.tbtnWindowsExplorerIntegration);
             this.tpaAdvanced.Controls.Add(this.lblWindowsExplorerIntegration);
             this.tpaAdvanced.Controls.Add(this.tbtnAutoRun);
@@ -487,23 +497,23 @@ namespace DeadLock.Forms
             // 
             // tbtnWindowsExplorerIntegration
             // 
-            this.tbtnWindowsExplorerIntegration.ActiveState = activeStateCollection7;
+            this.tbtnWindowsExplorerIntegration.ActiveState = activeStateCollection8;
             this.tbtnWindowsExplorerIntegration.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbtnWindowsExplorerIntegration.ForeColor = System.Drawing.Color.Black;
-            inactiveStateCollection7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.tbtnWindowsExplorerIntegration.InactiveState = inactiveStateCollection7;
-            this.tbtnWindowsExplorerIntegration.Location = new System.Drawing.Point(259, 102);
+            inactiveStateCollection8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.tbtnWindowsExplorerIntegration.InactiveState = inactiveStateCollection8;
+            this.tbtnWindowsExplorerIntegration.Location = new System.Drawing.Point(259, 89);
             this.tbtnWindowsExplorerIntegration.MinimumSize = new System.Drawing.Size(52, 20);
             this.tbtnWindowsExplorerIntegration.Name = "tbtnWindowsExplorerIntegration";
-            this.tbtnWindowsExplorerIntegration.Renderer = toggleButtonRenderer7;
+            this.tbtnWindowsExplorerIntegration.Renderer = toggleButtonRenderer8;
             this.tbtnWindowsExplorerIntegration.Size = new System.Drawing.Size(90, 20);
-            this.tbtnWindowsExplorerIntegration.Slider = sliderCollection7;
+            this.tbtnWindowsExplorerIntegration.Slider = sliderCollection8;
             this.tbtnWindowsExplorerIntegration.TabIndex = 3;
             // 
             // lblWindowsExplorerIntegration
             // 
             this.lblWindowsExplorerIntegration.AutoSize = true;
-            this.lblWindowsExplorerIntegration.Location = new System.Drawing.Point(51, 109);
+            this.lblWindowsExplorerIntegration.Location = new System.Drawing.Point(51, 96);
             this.lblWindowsExplorerIntegration.Name = "lblWindowsExplorerIntegration";
             this.lblWindowsExplorerIntegration.Size = new System.Drawing.Size(147, 13);
             this.lblWindowsExplorerIntegration.TabIndex = 2;
@@ -511,24 +521,24 @@ namespace DeadLock.Forms
             // 
             // tbtnAutoRun
             // 
-            this.tbtnAutoRun.ActiveState = activeStateCollection8;
+            this.tbtnAutoRun.ActiveState = activeStateCollection9;
             this.tbtnAutoRun.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbtnAutoRun.ForeColor = System.Drawing.Color.Black;
-            inactiveStateCollection8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.tbtnAutoRun.InactiveState = inactiveStateCollection8;
-            this.tbtnAutoRun.Location = new System.Drawing.Point(259, 76);
+            inactiveStateCollection9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.tbtnAutoRun.InactiveState = inactiveStateCollection9;
+            this.tbtnAutoRun.Location = new System.Drawing.Point(259, 63);
             this.tbtnAutoRun.MinimumSize = new System.Drawing.Size(52, 20);
             this.tbtnAutoRun.Name = "tbtnAutoRun";
-            this.tbtnAutoRun.Renderer = toggleButtonRenderer8;
+            this.tbtnAutoRun.Renderer = toggleButtonRenderer9;
             this.tbtnAutoRun.Size = new System.Drawing.Size(90, 20);
-            this.tbtnAutoRun.Slider = sliderCollection8;
+            this.tbtnAutoRun.Slider = sliderCollection9;
             this.tbtnAutoRun.TabIndex = 1;
             // 
             // lblAutorun
             // 
             this.lblAutorun.AutoSize = true;
             this.lblAutorun.BackColor = System.Drawing.Color.Transparent;
-            this.lblAutorun.Location = new System.Drawing.Point(51, 83);
+            this.lblAutorun.Location = new System.Drawing.Point(51, 70);
             this.lblAutorun.Name = "lblAutorun";
             this.lblAutorun.Size = new System.Drawing.Size(147, 13);
             this.lblAutorun.TabIndex = 0;
@@ -582,6 +592,30 @@ namespace DeadLock.Forms
             this.btnSave.UseVisualStyle = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // lblOwnership
+            // 
+            this.lblOwnership.AutoSize = true;
+            this.lblOwnership.Location = new System.Drawing.Point(51, 122);
+            this.lblOwnership.Name = "lblOwnership";
+            this.lblOwnership.Size = new System.Drawing.Size(86, 13);
+            this.lblOwnership.TabIndex = 4;
+            this.lblOwnership.Text = "Take ownership:";
+            // 
+            // tbtnOwnership
+            // 
+            this.tbtnOwnership.ActiveState = activeStateCollection7;
+            this.tbtnOwnership.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tbtnOwnership.ForeColor = System.Drawing.Color.Black;
+            inactiveStateCollection7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.tbtnOwnership.InactiveState = inactiveStateCollection7;
+            this.tbtnOwnership.Location = new System.Drawing.Point(259, 115);
+            this.tbtnOwnership.MinimumSize = new System.Drawing.Size(52, 20);
+            this.tbtnOwnership.Name = "tbtnOwnership";
+            this.tbtnOwnership.Renderer = toggleButtonRenderer7;
+            this.tbtnOwnership.Size = new System.Drawing.Size(90, 20);
+            this.tbtnOwnership.Slider = sliderCollection7;
+            this.tbtnOwnership.TabIndex = 5;
+            // 
             // FrmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -623,6 +657,7 @@ namespace DeadLock.Forms
             this.tpaAdvanced.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbtnWindowsExplorerIntegration)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbtnAutoRun)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbtnOwnership)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -661,5 +696,7 @@ namespace DeadLock.Forms
         private System.Windows.Forms.Label lblLanguage;
         private Syncfusion.Windows.Forms.ButtonAdv btnSelectPath;
         private Syncfusion.Windows.Forms.Tools.ComboBoxAdv cboLanguage;
+        private Syncfusion.Windows.Forms.Tools.ToggleButton tbtnOwnership;
+        private System.Windows.Forms.Label lblOwnership;
     }
 }

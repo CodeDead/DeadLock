@@ -10,7 +10,7 @@ namespace DeadLock.Classes
         private readonly List<ListViewLocker> _listViewLockers;
 
         /// <summary>
-        /// Generates a new ListViewLockerManager.
+        /// Generate a new ListViewLockerManager.
         /// </summary>
         internal ListViewLockerManager()
         {
@@ -45,7 +45,7 @@ namespace DeadLock.Classes
         }
 
         /// <summary>
-        /// Finds the ListViewLocker that is associated with a path.
+        /// Find the ListViewLocker that is associated with a path.
         /// </summary>
         /// <param name="path">The path that is supposidly associated with a ListViewLocker in the collection.</param>
         /// <returns>The ListViewLocker that is associated with the path.</returns>

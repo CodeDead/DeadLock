@@ -11,7 +11,7 @@ namespace DeadLock.Classes
         private Language _currentLanguage;
 
         /// <summary>
-        /// Define a new language manager.
+        /// Generate a new LanguageManager.
         /// </summary>
         internal LanguageManager()
         {
@@ -32,7 +32,7 @@ namespace DeadLock.Classes
         }
 
         /// <summary>
-        /// Load a language using the project resources, depending on the settings.
+        /// Load a Language using the project resources, depending on the settings.
         /// </summary>
         internal void LoadLanguage()
         {

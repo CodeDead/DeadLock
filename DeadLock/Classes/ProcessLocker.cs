@@ -18,7 +18,7 @@ namespace DeadLock.Classes
         private readonly Language _language;
 
         /// <summary>
-        /// Generates a new ProcessLocker.
+        /// Generate a new ProcessLocker.
         /// </summary>
         /// <param name="l">The Process that should be associated to the ProcessLocker.</param>
         /// <param name="language">The Language that should be associated to the ProcessLocker.</param>
@@ -76,7 +76,7 @@ namespace DeadLock.Classes
         }
 
         /// <summary>
-        /// Gets the file name that is associated with the ProcessLocker.
+        /// Get the file name that is associated with the ProcessLocker.
         /// </summary>
         /// <returns>The file name that is associated with the ProcessLocker.</returns>
         public string GetFileName()
@@ -85,7 +85,7 @@ namespace DeadLock.Classes
         }
 
         /// <summary>
-        /// Gets the file path that is associated with the ProcessLocker.
+        /// Get the file path that is associated with the ProcessLocker.
         /// </summary>
         /// <returns>The file path that is associated with the ProcessLocker.</returns>
         public string GetFilePath()
@@ -94,7 +94,7 @@ namespace DeadLock.Classes
         }
 
         /// <summary>
-        /// Gets the process ID that is associated with the Process of the ProcessLocker.
+        /// Get the process ID that is associated with the Process of the ProcessLocker.
         /// </summary>
         /// <returns>The process ID that is associated with the Process of the ProcessLocker.</returns>
         public int GetProcessId()
@@ -103,7 +103,7 @@ namespace DeadLock.Classes
         }
 
         /// <summary>
-        /// Gets the Process that is associated with the ProcessLocker.
+        /// Get the Process that is associated with the ProcessLocker.
         /// </summary>
         /// <returns>The Process that is associated with the ProcessLocker.</returns>
         public Process GetProcess()

@@ -15,7 +15,7 @@ using Syncfusion.Windows.Forms;
 namespace DeadLock.Classes
 {
     /// <summary>
-    /// Represents the collection of a path, the ProcessLockers of that path and a CancellationTokenSource to cancel a task into a single class.
+    /// Represents the collection of a path, the ProcessLockers of that path and a CancellationTokenSource to cancel a task.
     /// </summary>
     internal class ListViewLocker
     {
@@ -29,10 +29,10 @@ namespace DeadLock.Classes
         private readonly Language _language;
 
         /// <summary>
-        /// Generates a new ListViewLocker. 
+        /// Generate a new ListViewLocker. 
         /// </summary>
         /// <param name="path">The path to a file.</param>
-        /// <param name="language">The current GUI language.</param>
+        /// <param name="language">The current Language.</param>
         internal ListViewLocker(string path, Language language)
         {
             _path = path;
@@ -45,18 +45,18 @@ namespace DeadLock.Classes
         }
 
         /// <summary>
-        /// Checks if the ListViewLocker is currently executing a task.
+        /// Check if the ListViewLocker is currently executing a task.
         /// </summary>
-        /// <returns>A boolean to represent whether or not the ListViewLocker is running a task.</returns>
+        /// <returns>A boolean that represents whether or not the ListViewLocker is executing a task.</returns>
         internal bool IsRunning()
         {
             return _isRunning;
         }
 
         /// <summary>
-        /// Sets whether or not the ListViewLocker is running a task.
+        /// Set whether or not the ListViewLocker is executing a task.
         /// </summary>
-        /// <param name="running">True if the ListViewLocker is running a task and false if the ListViewLocker is not running a task.</param>
+        /// <param name="running">True if the ListViewLocker is executing a task and false if the ListViewLocker is not executing a task.</param>
         internal void SetRunning(bool running)
         {
             _isRunning = running;
@@ -73,7 +73,7 @@ namespace DeadLock.Classes
         }
 
         /// <summary>
-        /// Gets the ProcessLockers that are associated with the ListViewLocker.
+        /// Get the ProcessLockers that are associated with the ListViewLocker.
         /// </summary>
         /// <returns>A list of ProcessLockers that are associated with the ListViewLocker.</returns>
         internal IEnumerable<ProcessLocker> GetLockers()
@@ -91,7 +91,7 @@ namespace DeadLock.Classes
         }
 
         /// <summary>
-        /// Gets the CancellationToken that is associated with the ListViewLocker.
+        /// Get the CancellationToken that is associated with the ListViewLocker.
         /// </summary>
         /// <returns>The CancellationToken that is associated with the ListViewLocker.</returns>
         private CancellationToken GetCancellationToken()
@@ -100,18 +100,18 @@ namespace DeadLock.Classes
         }
 
         /// <summary>
-        /// Sets whether or not the task that is associated with the ListViewLocker has cancelled.
+        /// Set whether or not the task that is associated with the ListViewLocker has cancelled.
         /// </summary>
-        /// <param name="c">A boolean to represent if the task has cancelled or not.</param>
+        /// <param name="c">A boolean to represent whether or not the task has cancelled.</param>
         private void SetCancelled(bool c)
         {
             _hasCancelled = c;
         }
 
         /// <summary>
-        /// Checks whether or not the task that is associated with the ListViewLocker has cancelled or not.
+        /// Check whether or not the task that is associated with the ListViewLocker has cancelled or not.
         /// </summary>
-        /// <returns>A boolean to represent if the task has cancelled or not.</returns>
+        /// <returns>A boolean to represent whether or not the task has cancelled.</returns>
         internal bool HasCancelled()
         {
             return _hasCancelled;
@@ -153,31 +153,27 @@ namespace DeadLock.Classes
                         WindowsIdentity self = WindowsIdentity.GetCurrent();
                         DirectorySecurity ds = info.GetAccessControl();
                         ds.SetAccessRuleProtection(false, true);
-                        if (self?.User != null)
+                        if (self?.User == null) return;
+                        if (ds.GetOwner(typeof (NTAccount)).ToString() != self.Name)
                         {
-                            if (ds.GetOwner(typeof (NTAccount)).ToString() != self.Name)
-                            {
-                                ds.SetOwner(self.User);
-                            }
-                            ds.AddAccessRule(new FileSystemAccessRule(self.User, FileSystemRights.FullControl, InheritanceFlags.ObjectInherit | InheritanceFlags.ContainerInherit, PropagationFlags.None, AccessControlType.Allow));
-                            info.SetAccessControl(ds);
+                            ds.SetOwner(self.User);
                         }
+                        ds.AddAccessRule(new FileSystemAccessRule(self.User, FileSystemRights.FullControl, InheritanceFlags.ObjectInherit | InheritanceFlags.ContainerInherit, PropagationFlags.None, AccessControlType.Allow));
+                        info.SetAccessControl(ds);
                     }
                     else
                     {
                         WindowsIdentity self = WindowsIdentity.GetCurrent();
                         FileSecurity fs = File.GetAccessControl(GetPath());
                         fs.SetAccessRuleProtection(false, true);
-                        if (self?.User != null)
+                        if (self?.User == null) return;
+                        if (fs.GetOwner(typeof(NTAccount)).ToString() != self.Name)
                         {
-                            if (fs.GetOwner(typeof(NTAccount)).ToString() != self.Name)
-                            {
-                                fs.SetOwner(self.User);
-                            }
-                            fs.AddAccessRule(new FileSystemAccessRule(self.User, FileSystemRights.FullControl, AccessControlType.Allow));
-                            File.SetAccessControl(GetPath(), fs);
-                            File.SetAttributes(GetPath(), FileAttributes.Normal);
+                            fs.SetOwner(self.User);
                         }
+                        fs.AddAccessRule(new FileSystemAccessRule(self.User, FileSystemRights.FullControl, AccessControlType.Allow));
+                        File.SetAccessControl(GetPath(), fs);
+                        File.SetAttributes(GetPath(), FileAttributes.Normal);
                     }
                 }
                 else
@@ -214,9 +210,9 @@ namespace DeadLock.Classes
         }
 
         /// <summary>
-        /// Checks whether or not the operator has ownership rights to the file or folder that is associated with the ListViewLocker.
+        /// Check whether or not the operator has ownership rights to the file or folder that is associated with the ListViewLocker.
         /// </summary>
-        /// <returns>A boolean to represent whether or not the operator has ownership rights to the file or folder that is associated with the ListViewLocker.</returns>
+        /// <returns>A boolean that represents whether or not the operator has ownership rights to the file or folder that is associated with the ListViewLocker.</returns>
         internal bool HasOwnership()
         {
             bool isWriteAccess = false;
@@ -225,11 +221,9 @@ namespace DeadLock.Classes
                 AuthorizationRuleCollection collection = Directory.GetAccessControl(GetPath()).GetAccessRules(true, true, typeof(NTAccount));
                 foreach (FileSystemAccessRule rule in collection)
                 {
-                    if (rule.AccessControlType == AccessControlType.Allow)
-                    {
-                        isWriteAccess = true;
-                        break;
-                    }
+                    if (rule.AccessControlType != AccessControlType.Allow) continue;
+                    isWriteAccess = true;
+                    break;
                 }
             }
             catch (UnauthorizedAccessException)
@@ -319,7 +313,7 @@ namespace DeadLock.Classes
         /// <summary>
         /// Get a list of files inside a folder that are accessible to the operator.
         /// </summary>
-        /// <param name="rootPath">The root path of the folder</param>
+        /// <param name="rootPath">The root path of the folder.</param>
         /// <param name="patternMatch">The pattern that should be used to find the files.</param>
         /// <param name="searchOption">The SearchOption that should be used to find the files.</param>
         /// <returns>A list of files inside a folder that are accessible to the operator.</returns>
@@ -351,7 +345,7 @@ namespace DeadLock.Classes
         }
 
         /// <summary>
-        /// A task to unlock the file or folder that is associated with the path of the ListViewLocker.
+        /// A task to unlock the file or folder that is associated with the ListViewLocker.
         /// </summary>
         /// <returns>A boolean to represent whether the task completed successfully or not.</returns>
         internal async Task<bool> Unlock()
@@ -394,7 +388,7 @@ namespace DeadLock.Classes
         }
 
         /// <summary>
-        /// A task to remove the file or folder that is associated with the path of the ListViewLocker.
+        /// A task to remove the file or folder that is associated with the ListViewLocker.
         /// </summary>
         internal async void Remove()
         {
@@ -410,7 +404,7 @@ namespace DeadLock.Classes
         }
 
         /// <summary>
-        /// A task to move the file or folder that is associated with the path of the ListViewLocker.
+        /// A task to move the file or folder that is associated with the ListViewLocker.
         /// </summary>
         /// <returns>A boolean to represent whether the task completed successfully or not.</returns>
         internal async Task<bool> Move()

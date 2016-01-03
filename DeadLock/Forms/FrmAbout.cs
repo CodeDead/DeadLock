@@ -6,7 +6,9 @@
 // applicable laws. 
 #endregion
 using System;
+using System.ComponentModel;
 using System.Diagnostics;
+using System.IO;
 using System.Windows.Forms;
 using DeadLock.Classes;
 using Syncfusion.Windows.Forms;
@@ -44,7 +46,7 @@ namespace DeadLock.Forms
             {
                 Process.Start("http://codedead.com/");
             }
-            catch (Exception ex)
+            catch (Win32Exception ex)
             {
                 MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -56,7 +58,7 @@ namespace DeadLock.Forms
             {
                 Process.Start(Application.StartupPath + "\\gpl.pdf");
             }
-            catch (Exception ex)
+            catch (Win32Exception ex)
             {
                 MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

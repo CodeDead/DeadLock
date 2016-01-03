@@ -9,7 +9,10 @@ using System.Security.Principal;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic.FileIO;
 using Syncfusion.Windows.Forms;
+using SearchOption = System.IO.SearchOption;
+
 // ReSharper disable PossibleMultipleEnumeration
 
 namespace DeadLock.Classes
@@ -390,17 +393,35 @@ namespace DeadLock.Classes
         /// <summary>
         /// A task to remove the file or folder that is associated with the ListViewLocker.
         /// </summary>
-        internal async void Remove()
+        /// <returns>A boolean to represent whether the operation was successful or not.</returns>
+        internal async Task<bool> Remove()
         {
             await Unlock();
-            if (File.GetAttributes(GetPath()).HasFlag(FileAttributes.Directory))
+            try
             {
-                Directory.Delete(GetPath(), true);
+                if (File.GetAttributes(GetPath()).HasFlag(FileAttributes.Directory))
+                {
+                    FileSystem.DeleteDirectory(GetPath(), UIOption.OnlyErrorDialogs, RecycleOption.SendToRecycleBin);
+                }
+                else
+                {
+                    FileSystem.DeleteFile(GetPath(), UIOption.OnlyErrorDialogs, RecycleOption.SendToRecycleBin);
+                }
+                return true;
             }
-            else
+            catch (FileNotFoundException)
             {
-                File.Delete(GetPath());
+                return true;
             }
+            catch (DirectoryNotFoundException)
+            {
+                return true;
+            }
+            catch (OperationCanceledException)
+            {
+                CancelTask();
+            }
+            return false;
         }
 
         /// <summary>
@@ -483,7 +504,7 @@ namespace DeadLock.Classes
                     await Unlock();
                     await Task.Run(() =>
                     {
-                        Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory(GetPath(), fbd.SelectedPath);
+                        FileSystem.CopyDirectory(GetPath(), fbd.SelectedPath);
                     });
                 }
                 else return false;

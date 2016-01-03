@@ -360,6 +360,10 @@ namespace DeadLock.Classes
 
             try
             {
+                if (!HasOwnership())
+                {
+                    SetOwnership(true);
+                }
                 List<ProcessLocker> lockers = await GetLockerDetails();
                 await Task.Run(() =>
                 {

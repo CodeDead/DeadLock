@@ -25,7 +25,7 @@ namespace DeadLock.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
         public int Language {
             get {
                 return ((int)(this["Language"]));
@@ -152,18 +152,6 @@ namespace DeadLock.Properties {
             }
             set {
                 this["LanguagePath"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int SelectedLanguage {
-            get {
-                return ((int)(this["SelectedLanguage"]));
-            }
-            set {
-                this["SelectedLanguage"] = value;
             }
         }
     }

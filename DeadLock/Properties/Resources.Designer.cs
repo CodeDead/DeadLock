@@ -254,6 +254,26 @@ namespace DeadLock.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
+        ///&lt;Language xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+        ///	&lt;Author&gt;Nickk888&lt;/Author&gt;
+        ///	&lt;Comment&gt;Polish&lt;/Comment&gt;
+        ///	&lt;BarFile&gt;&amp;amp;Plik&lt;/BarFile&gt;
+        ///	&lt;BarEdit&gt;&amp;amp;Edytuj&lt;/BarEdit&gt;
+        ///	&lt;BarView&gt;&amp;amp;Widok&lt;/BarView&gt;
+        ///	&lt;BarTools&gt;&amp;amp;Narzędzia&lt;/BarTools&gt;
+        ///	&lt;BarHelp&gt;&amp;amp;Pomoc&lt;/BarHelp&gt;
+        ///	&lt;BarItemOpenFiles&gt;Otwórz plik(i)...&lt;/BarItemOpenFiles&gt;
+        ///	&lt;BarItemOpenFolder&gt;Otwórz folder...&lt;/BarItemOpenFolder&gt;
+        ///	&lt;BarItemRestart&gt;Zrestartuj&lt;/BarItemResta [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string pl {
+            get {
+                return ResourceManager.GetString("pl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap restart {

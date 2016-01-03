@@ -47,7 +47,7 @@
   <MsgCouldNotRemove>Could not remove the item</MsgCouldNotRemove>
   <ClhFileName>File name</ClhFileName>
   <ClhProcessId>Process ID</ClhProcessId>
-  <LblVersion>Version: </LblVersion>
+  <LblVersion>Version:</LblVersion>
   <CmiDetails>Details</CmiDetails>
   <CmiOpenInVirusTotal>Open in VirusTotal</CmiOpenInVirusTotal>
   <CmiKill>Kill</CmiKill>
@@ -56,7 +56,7 @@
   <CmiHideShow>Hide / Show</CmiHideShow>
   <MsgAdministrator>DeadLock might not function correctly without administrative rights !</MsgAdministrator>
   <MsgVersion>Version </MsgVersion>
-  <MsgAvailable> is now available !</MsgAvailable>
+  <MsgAvailable>is now available !</MsgAvailable>
   <MsgDownloadNewVersion>Would you like to download the latest version ?</MsgDownloadNewVersion>
   <MsgLatestVersionAlreadyInstalled>The latest version of DeadLock is already installed !</MsgLatestVersionAlreadyInstalled>
   <TxtAbout>About</TxtAbout>

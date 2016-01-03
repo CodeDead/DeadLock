@@ -79,7 +79,7 @@ namespace DeadLock.Forms
                 itxtBorderThickness.IntegerValue = Properties.Settings.Default.BorderThickness;
                 tbtnFormSize.ToggleState = Properties.Settings.Default.RememberFormSize ? ToggleButtonState.Active : ToggleButtonState.Inactive;
                 tbtnDetails.ToggleState = Properties.Settings.Default.ViewDetails ? ToggleButtonState.Active : ToggleButtonState.Inactive;
-                cboLanguage.SelectedIndex = Properties.Settings.Default.SelectedLanguage;
+                cboLanguage.SelectedIndex = Properties.Settings.Default.Language;
                 txtLanguagePath.Text = Properties.Settings.Default.LanguagePath;
 
                 //Advanced
@@ -157,7 +157,7 @@ namespace DeadLock.Forms
                 Properties.Settings.Default.RememberFormSize = tbtnFormSize.ToggleState == ToggleButtonState.Active;
                 Properties.Settings.Default.ViewDetails = tbtnDetails.ToggleState == ToggleButtonState.Active;
 
-                Properties.Settings.Default.SelectedLanguage = cboLanguage.SelectedIndex;
+                Properties.Settings.Default.Language = cboLanguage.SelectedIndex;
                 Properties.Settings.Default.LanguagePath = txtLanguagePath.Text;
 
                 if(_originalStartup != (tbtnAutoRun.ToggleState == ToggleButtonState.Active))

@@ -306,9 +306,11 @@ namespace DeadLock.Forms
             this.cboLanguage.Items.AddRange(new object[] {
             "English",
             "Italian",
+            "Polish",
             "Custom"});
             this.cboLanguage.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cboLanguage, "English"));
             this.cboLanguage.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cboLanguage, "Italian"));
+            this.cboLanguage.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cboLanguage, "Polish"));
             this.cboLanguage.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cboLanguage, "Custom"));
             this.cboLanguage.Location = new System.Drawing.Point(228, 129);
             this.cboLanguage.MetroColor = System.Drawing.Color.SteelBlue;
@@ -316,7 +318,6 @@ namespace DeadLock.Forms
             this.cboLanguage.Size = new System.Drawing.Size(100, 21);
             this.cboLanguage.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
             this.cboLanguage.TabIndex = 9;
-            this.cboLanguage.Text = "English";
             this.cboLanguage.UseMetroButtonColor = true;
             this.cboLanguage.UseMetroColorsInActiveMode = true;
             // 

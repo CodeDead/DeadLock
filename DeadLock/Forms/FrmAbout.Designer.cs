@@ -100,6 +100,7 @@ namespace DeadLock.Forms
             this.btnClose.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
             this.btnClose.BeforeTouchSize = new System.Drawing.Size(75, 23);
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.IsBackStageButton = false;
             this.btnClose.Location = new System.Drawing.Point(12, 145);
@@ -147,10 +148,12 @@ namespace DeadLock.Forms
             // 
             // FrmAbout
             // 
+            this.AcceptButton = this.btnCodeDead;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderColor = System.Drawing.Color.SteelBlue;
             this.BorderThickness = 3;
+            this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(343, 180);
             this.Controls.Add(this.btnCodeDead);
             this.Controls.Add(this.btnLicense);

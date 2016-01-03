@@ -8,7 +8,6 @@
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
-using System.IO;
 using System.Windows.Forms;
 using DeadLock.Classes;
 using Syncfusion.Windows.Forms;
@@ -30,7 +29,7 @@ namespace DeadLock.Forms
         private void LoadLanguage()
         {
             Text = @"DeadLock - " + _language.TxtAbout;
-            txtAbout.Text = _language.TxtAboutCreated + Environment.NewLine + _language.TxtAboutImages + Environment.NewLine + _language.TxtAboutTheme + Environment.NewLine + Environment.NewLine + _language.TxtAboutCopyright + Environment.NewLine + Environment.NewLine + _language.TxtAboutTranslation + Environment.NewLine + _language.Author;
+            txtAbout.Text = _language.TxtAboutCreated + Environment.NewLine + _language.TxtAboutImages + Environment.NewLine + _language.TxtAboutTheme + Environment.NewLine + Environment.NewLine + _language.TxtAboutCopyright + Environment.NewLine + Environment.NewLine + _language.TxtAboutTranslation + Environment.NewLine + _language.Comment + @" - " + _language.Author;
             btnClose.Text = _language.BtnAboutClose;
             btnLicense.Text = _language.BtnLicense;
         }

@@ -3,15 +3,25 @@ using System.Xml.Serialization;
 
 namespace DeadLock.Classes
 {
+    /// <summary>
+    /// The LanguageManager can be used to load or return a Language object.
+    /// </summary>
     internal class LanguageManager
     {
         private Language _currentLanguage;
 
+        /// <summary>
+        /// Define a new language manager.
+        /// </summary>
         internal LanguageManager()
         {
             _currentLanguage = new Language();
         }
 
+        /// <summary>
+        /// Load a custom language.
+        /// </summary>
+        /// <param name="path">Path to the XML language file.</param>
         internal void LoadLanguage(string path)
         {
             XmlSerializer serializer = new XmlSerializer(_currentLanguage.GetType());
@@ -21,6 +31,9 @@ namespace DeadLock.Classes
             }
         }
 
+        /// <summary>
+        /// Load a language using the project resources, depending on the settings.
+        /// </summary>
         internal void LoadLanguage()
         {
             XmlSerializer serializer = new XmlSerializer(_currentLanguage.GetType());
@@ -50,6 +63,10 @@ namespace DeadLock.Classes
             }
         }
 
+        /// <summary>
+        /// Get the current language.
+        /// </summary>
+        /// <returns>The current language.</returns>
         internal Language GetLanguage()
         {
             return _currentLanguage;

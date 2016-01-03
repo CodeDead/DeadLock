@@ -1,5 +1,8 @@
 ﻿namespace DeadLock.Classes
 {
+    /// <summary>
+    /// Collection of strings that represent the translation of DeadLock into a certain language.
+    /// </summary>
     public class Language
     {
 

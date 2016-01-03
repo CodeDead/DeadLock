@@ -681,7 +681,6 @@ namespace DeadLock.Forms
 
         private void SetCancelled(ListViewItem selected)
         {
-            //TODO: Needs LanguageManager
             if (selected == null) return;
             Language l = _languageManager.GetLanguage();
             selected.SubItems[1].ForeColor = Color.Red;
@@ -691,7 +690,6 @@ namespace DeadLock.Forms
 
         private void SetLoading(ListViewItem selected, int index)
         {
-            //TODO: Needs languageManager
             if (selected == null) return;
             Language l = _languageManager.GetLanguage();
             selected.SubItems[index].ForeColor = Color.Black;

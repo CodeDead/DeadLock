@@ -316,6 +316,7 @@ namespace DeadLock.Forms
             this.cboLanguage.Size = new System.Drawing.Size(100, 21);
             this.cboLanguage.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
             this.cboLanguage.TabIndex = 9;
+            this.cboLanguage.Text = "English";
             this.cboLanguage.UseMetroButtonColor = true;
             this.cboLanguage.UseMetroColorsInActiveMode = true;
             // 
@@ -446,6 +447,7 @@ namespace DeadLock.Forms
             this.cpbThemeStyle.ForeColor = System.Drawing.Color.White;
             this.cpbThemeStyle.IsBackStageButton = false;
             this.cpbThemeStyle.Location = new System.Drawing.Point(228, 22);
+            this.cpbThemeStyle.MetroColor = System.Drawing.Color.SteelBlue;
             this.cpbThemeStyle.Name = "cpbThemeStyle";
             this.cpbThemeStyle.SelectedAsBackcolor = true;
             this.cpbThemeStyle.SelectedAsText = true;
@@ -453,6 +455,7 @@ namespace DeadLock.Forms
             this.cpbThemeStyle.TabIndex = 1;
             this.cpbThemeStyle.Text = "0";
             this.cpbThemeStyle.UseVisualStyle = true;
+            this.cpbThemeStyle.UseVisualStyleBackColor = false;
             // 
             // lblThemeStyle
             // 

@@ -217,6 +217,7 @@ namespace DeadLock.Forms
             this.openFilesBarItem.CategoryIndex = 0;
             this.openFilesBarItem.ID = "Open file(s)...";
             this.openFilesBarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("openFilesBarItem.Image")));
+            this.openFilesBarItem.Shortcut = System.Windows.Forms.Shortcut.CtrlO;
             this.openFilesBarItem.ShowToolTipInPopUp = false;
             this.openFilesBarItem.SizeToFit = true;
             this.openFilesBarItem.Text = "Open file(s)...";
@@ -228,6 +229,7 @@ namespace DeadLock.Forms
             this.openFolderbarItem.CategoryIndex = 0;
             this.openFolderbarItem.ID = "Open folder...";
             this.openFolderbarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("openFolderbarItem.Image")));
+            this.openFolderbarItem.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftO;
             this.openFolderbarItem.ShowToolTipInPopUp = false;
             this.openFolderbarItem.SizeToFit = true;
             this.openFolderbarItem.Text = "Open folder...";

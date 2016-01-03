@@ -14,6 +14,9 @@ using Syncfusion.Windows.Forms;
 
 namespace DeadLock.Classes
 {
+    /// <summary>
+    /// Represents the collection of a path, the ProcessLockers of that path and a CancellationTokenSource to cancel a task into a single class.
+    /// </summary>
     internal class ListViewLocker
     {
         private readonly string _path;
@@ -25,6 +28,11 @@ namespace DeadLock.Classes
 
         private readonly Language _language;
 
+        /// <summary>
+        /// Generates a new ListViewLocker. 
+        /// </summary>
+        /// <param name="path">The path to a file.</param>
+        /// <param name="language">The current GUI language.</param>
         internal ListViewLocker(string path, Language language)
         {
             _path = path;
@@ -36,52 +44,90 @@ namespace DeadLock.Classes
             _language = language;
         }
 
+        /// <summary>
+        /// Checks if the ListViewLocker is currently executing a task.
+        /// </summary>
+        /// <returns>A boolean to represent whether or not the ListViewLocker is running a task.</returns>
         internal bool IsRunning()
         {
             return _isRunning;
         }
 
+        /// <summary>
+        /// Sets whether or not the ListViewLocker is running a task.
+        /// </summary>
+        /// <param name="running">True if the ListViewLocker is running a task and false if the ListViewLocker is not running a task.</param>
         internal void SetRunning(bool running)
         {
             _isRunning = running;
             _hasCancelled = !running;
         }
 
+        /// <summary>
+        /// Get the path that is associated with the ListViewLocker.
+        /// </summary>
+        /// <returns>The path to a file that is associated with the ListViewLocker.</returns>
         internal string GetPath()
         {
             return _path;
         }
 
+        /// <summary>
+        /// Gets the ProcessLockers that are associated with the ListViewLocker.
+        /// </summary>
+        /// <returns>A list of ProcessLockers that are associated with the ListViewLocker.</returns>
         internal IEnumerable<ProcessLocker> GetLockers()
         {
             return _lockers;
         }
 
+        /// <summary>
+        /// Update the list of ProcessLockers that are associated with the ListViewLocker.
+        /// </summary>
+        /// <param name="lockers">The new list of ProcessLockers that are associated with the ListViewLocker.</param>
         internal void SetLocker(List<ProcessLocker> lockers)
         {
             _lockers = lockers;
         }
 
+        /// <summary>
+        /// Gets the CancellationToken that is associated with the ListViewLocker.
+        /// </summary>
+        /// <returns>The CancellationToken that is associated with the ListViewLocker.</returns>
         private CancellationToken GetCancellationToken()
         {
             return _cts.Token;
         }
 
+        /// <summary>
+        /// Sets whether or not the task that is associated with the ListViewLocker has cancelled.
+        /// </summary>
+        /// <param name="c">A boolean to represent if the task has cancelled or not.</param>
         private void SetCancelled(bool c)
         {
             _hasCancelled = c;
         }
 
+        /// <summary>
+        /// Checks whether or not the task that is associated with the ListViewLocker has cancelled or not.
+        /// </summary>
+        /// <returns>A boolean to represent if the task has cancelled or not.</returns>
         internal bool HasCancelled()
         {
             return _hasCancelled;
         }
 
+        /// <summary>
+        /// Generate a new CancellationTokenSource if the old one has been cancelled.
+        /// </summary>
         private void ResetCancellationToken()
         {
             _cts = new CancellationTokenSource();
         }
 
+        /// <summary>
+        /// Cancel a task that is associated with the ListViewLocker.
+        /// </summary>
         internal void CancelTask()
         {
             if (!IsRunning()) return;
@@ -91,6 +137,10 @@ namespace DeadLock.Classes
             ResetCancellationToken();
         }
 
+        /// <summary>
+        /// Change the ownership of the file or folder that is associated with the ListViewLocker.
+        /// </summary>
+        /// <param name="owned">A boolean to represent wether the operator owns the file or folder that is associated with the ListViewLocker.</param>
         internal void SetOwnership(bool owned)
         {
             try
@@ -163,6 +213,10 @@ namespace DeadLock.Classes
             }
         }
 
+        /// <summary>
+        /// Checks whether or not the operator has ownership rights to the file or folder that is associated with the ListViewLocker.
+        /// </summary>
+        /// <returns>A boolean to represent whether or not the operator has ownership rights to the file or folder that is associated with the ListViewLocker.</returns>
         internal bool HasOwnership()
         {
             bool isWriteAccess = false;
@@ -190,7 +244,10 @@ namespace DeadLock.Classes
             return isWriteAccess;
         }
 
-
+        /// <summary>
+        /// A task that returns the list of ProcessLockers that are currently locking the file or folder that is associated with the path of the ListViewLocker.
+        /// </summary>
+        /// <returns>A list of ProcessLockers that are locking the file or folder that is associated with the path of the ListViewLocker.</returns>
         internal async Task<List<ProcessLocker>> GetLockerDetails()
         {
             List<ProcessLocker> lockers = new List<ProcessLocker>();
@@ -259,6 +316,13 @@ namespace DeadLock.Classes
             return lockers;
         }
 
+        /// <summary>
+        /// Get a list of files inside a folder that are accessible to the operator.
+        /// </summary>
+        /// <param name="rootPath">The root path of the folder</param>
+        /// <param name="patternMatch">The pattern that should be used to find the files.</param>
+        /// <param name="searchOption">The SearchOption that should be used to find the files.</param>
+        /// <returns>A list of files inside a folder that are accessible to the operator.</returns>
         private static IEnumerable<string> GetDirectoryFiles(string rootPath, string patternMatch, SearchOption searchOption)
         {
             IEnumerable<string> foundFiles = Enumerable.Empty<string>();
@@ -286,6 +350,10 @@ namespace DeadLock.Classes
             return foundFiles;
         }
 
+        /// <summary>
+        /// A task to unlock the file or folder that is associated with the path of the ListViewLocker.
+        /// </summary>
+        /// <returns>A boolean to represent whether the task completed successfully or not.</returns>
         internal async Task<bool> Unlock()
         {
             if (!File.Exists(GetPath()) && !Directory.Exists(GetPath())) return false;
@@ -318,6 +386,9 @@ namespace DeadLock.Classes
             return false;
         }
 
+        /// <summary>
+        /// A task to remove the file or folder that is associated with the path of the ListViewLocker.
+        /// </summary>
         internal async void Remove()
         {
             await Unlock();
@@ -331,6 +402,10 @@ namespace DeadLock.Classes
             }
         }
 
+        /// <summary>
+        /// A task to move the file or folder that is associated with the path of the ListViewLocker.
+        /// </summary>
+        /// <returns>A boolean to represent whether the task completed successfully or not.</returns>
         internal async Task<bool> Move()
         {
             if (File.GetAttributes(GetPath()).HasFlag(FileAttributes.Directory))
@@ -393,6 +468,10 @@ namespace DeadLock.Classes
             return true;
         }
 
+        /// <summary>
+        /// A task that copies the file or folder that is associated with the path of the ListViewLocker.
+        /// </summary>
+        /// <returns>A boolean to represent whether the task completed successfully or not.</returns>
         internal async Task<bool> Copy()
         {
             if (File.GetAttributes(GetPath()).HasFlag(FileAttributes.Directory))

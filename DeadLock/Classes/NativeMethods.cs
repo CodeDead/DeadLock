@@ -5,6 +5,9 @@ using System.Runtime.InteropServices;
 
 namespace DeadLock.Classes
 {
+    /// <summary>
+    /// Collection of native methods.
+    /// </summary>
     internal static class NativeMethods
     {
         [StructLayout(LayoutKind.Sequential)]
@@ -66,9 +69,13 @@ namespace DeadLock.Classes
         [DllImport("rstrtmgr.dll")]
         private static extern int RmGetList(uint dwSessionHandle, out uint pnProcInfoNeeded, ref uint pnProcInfo, [In, Out] RmProcessInfo[] rgAffectedApps, ref uint lpdwRebootReasons);
 
-
-        //TODO: Implement LanguageManager
-        internal static List<Process> FindLockingProcesses(string path, Language language)
+        /// <summary>
+        /// Find the processes that are locking a file.
+        /// </summary>
+        /// <param name="path">Path to the file.</param>
+        /// <param name="language">Current language to implement localized messages</param>
+        /// <returns>A collection of processes that are locking a file.</returns>
+        internal static IEnumerable<Process> FindLockingProcesses(string path, Language language)
         {
             uint handle;
             string key = Guid.NewGuid().ToString();

@@ -9,23 +9,54 @@ namespace RegManager
         private static void Main(string[] args)
         {
             if (args.Length == 0) return;
-            switch (args[0])
+
+            bool addAutoStartup = false;
+            bool changeAutoStartup = false;
+
+            bool addExplorerIntegration = false;
+            bool changeExplorerIntegration = false;
+
+            string path = "";
+            foreach (string s in args)
             {
-                case "0":
-                    ChangeAutoStartUp(true, args[1]);
-                    break;
-                case "1":
-                    ChangeAutoStartUp(false, "");
-                    break;
-                case "2":
-                    ChangeExplorerIntegration(true, args[1]);
-                    break;
-                case "3":
-                    ChangeExplorerIntegration(false, "");
-                    break;
-                default:
-                    Console.WriteLine("Warning: argument not supported !");
-                    break;
+                switch (s)
+                {
+                    case "0":
+                        addAutoStartup = true;
+                        changeAutoStartup = true;
+                        break;
+                    case "1":
+                        addAutoStartup = false;
+                        changeAutoStartup = true;
+                        break;
+                    case "2":
+                        addExplorerIntegration = true;
+                        changeExplorerIntegration = true;
+                        break;
+                    case "3":
+                        addExplorerIntegration = false;
+                        changeExplorerIntegration = true;
+                        break;
+                    default:
+                        if (File.Exists(s))
+                        {
+                            path = s;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Warning: Argument not supported !");
+                            return;
+                        }
+                        break;
+                }
+            }
+            if (changeAutoStartup)
+            {
+                ChangeAutoStartUp(addAutoStartup, path);
+            }
+            if (changeExplorerIntegration)
+            {
+                ChangeExplorerIntegration(addExplorerIntegration, path);
             }
             Console.WriteLine("Done.");
         }

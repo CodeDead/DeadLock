@@ -6,6 +6,7 @@
 // applicable laws. 
 #endregion
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Windows.Forms;
 using DeadLock.Classes;
@@ -160,16 +161,18 @@ namespace DeadLock.Forms
                 Properties.Settings.Default.Language = cboLanguage.SelectedIndex;
                 Properties.Settings.Default.LanguagePath = txtLanguagePath.Text;
 
+                List<string> args = new List<string>();
+
                 if(_originalStartup != (tbtnAutoRun.ToggleState == ToggleButtonState.Active))
                 {
                     _originalStartup = tbtnAutoRun.ToggleState == ToggleButtonState.Active;
                     if (_originalStartup)
                     {
-                        StartRegManager("0 " + "\"" + Application.ExecutablePath + "\"");
+                        args.Add("0");
                     }
                     else
                     {
-                        StartRegManager("1");
+                        args.Add("1");
                     }
                 }
 
@@ -178,13 +181,19 @@ namespace DeadLock.Forms
                     _originalIntegration = tbtnWindowsExplorerIntegration.ToggleState == ToggleButtonState.Active;
                     if (_originalIntegration)
                     {
-                        StartRegManager("2 " + "\"" + Application.ExecutablePath + "\"");
+                        args.Add("2");
                     }
                     else
                     {
-                        StartRegManager("3");
+                        args.Add("3");
                     }
                 }
+                if (args.Count != 0)
+                {
+                    args.Add("\"" + Application.ExecutablePath + "\"");
+                    StartRegManager(args);
+                }
+
                 Properties.Settings.Default.Save();
             }
             catch (Exception ex)
@@ -193,14 +202,23 @@ namespace DeadLock.Forms
             }
         }
 
-        private static void StartRegManager(string args)
+        private static void StartRegManager(List<string> args)
         {
+            string a = "";
+            for (int i = 0; i < args.Count; i++)
+            {
+                a += args[i];
+                if (i != args.Count -1)
+                {
+                    a += " ";
+                }
+            }
             Process process = new Process
             {
                 StartInfo =
                         {
                             FileName = Application.StartupPath + "\\RegManager.exe",
-                            Arguments = args,
+                            Arguments = a,
                             WindowStyle = ProcessWindowStyle.Hidden
                         }
             };
@@ -238,13 +256,18 @@ namespace DeadLock.Forms
         {
             try
             {
+                List<string> args = new List<string>();
                 if (ExplorerIntegration())
                 {
-                    StartRegManager("3");
+                    args.Add("3");
                 }
                 if (AutoStartUp())
                 {
-                    StartRegManager("1");
+                    args.Add("1");
+                }
+                if (args.Count != 0)
+                {
+                    StartRegManager(args);
                 }
 
                 Properties.Settings.Default.Reset();

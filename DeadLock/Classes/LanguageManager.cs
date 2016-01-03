@@ -1,5 +1,4 @@
 ﻿using System.IO;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace DeadLock.Classes
@@ -41,7 +40,7 @@ namespace DeadLock.Classes
             using (MemoryStream stream = new MemoryStream())
             {
                 StreamWriter writer = new StreamWriter(stream);
-                string res = "";
+                string res;
                 switch (Properties.Settings.Default.Language)
                 {
                     case 0:
@@ -63,12 +62,6 @@ namespace DeadLock.Classes
                 _currentLanguage = (Language)serializer.Deserialize(stream);
                 writer.Dispose();
             }
-        }
-
-        public static byte[] StringToByteArrayUtf8(string value)
-        {
-            UTF8Encoding encoding = new UTF8Encoding();
-            return encoding.GetBytes(value);
         }
 
         /// <summary>

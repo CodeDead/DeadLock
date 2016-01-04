@@ -180,7 +180,8 @@ namespace DeadLock.Forms
             // barMain
             // 
             this.barMain.BarName = "MainMenu";
-            this.barMain.BarStyle = ((Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle)((((Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.AllowQuickCustomizing | Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.IsMainMenu) 
+            this.barMain.BarStyle = ((Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle)(((((Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.AllowQuickCustomizing | Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.IsMainMenu) 
+            | Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.RotateWhenVertical) 
             | Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.Visible) 
             | Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.DrawDragBorder)));
             this.barMain.Caption = "MainMenu";
@@ -437,6 +438,7 @@ namespace DeadLock.Forms
             this.viewParentBarItem.MetroColor = System.Drawing.Color.SteelBlue;
             this.viewParentBarItem.ShowToolTipInPopUp = false;
             this.viewParentBarItem.SizeToFit = true;
+            this.viewParentBarItem.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
             this.viewParentBarItem.Text = "&View";
             this.viewParentBarItem.WrapLength = 20;
             // 
@@ -556,7 +558,8 @@ namespace DeadLock.Forms
             // barStatus
             // 
             this.barStatus.BarName = "StatusMenu";
-            this.barStatus.BarStyle = ((Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle)((((Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.AllowQuickCustomizing | Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.Visible) 
+            this.barStatus.BarStyle = ((Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle)(((((Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.AllowQuickCustomizing | Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.RotateWhenVertical) 
+            | Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.Visible) 
             | Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.DrawDragBorder) 
             | Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.IsStatusBar)));
             this.barStatus.Caption = "StatusMenu";
@@ -980,6 +983,8 @@ namespace DeadLock.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderColor = System.Drawing.Color.SteelBlue;
             this.BorderThickness = 3;
+            this.CaptionBarColor = System.Drawing.Color.SteelBlue;
+            this.CaptionButtonColor = System.Drawing.Color.White;
             this.CaptionForeColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(508, 331);
             this.Controls.Add(this.splItems);

@@ -87,6 +87,8 @@
 	<BtnReset>Resetta</BtnReset>
 	<BtnSave>Salva</BtnSave>
 	<MsgRestartRequired>Riavvio necessario per cambiare il tema !</MsgRestartRequired>
+  <TbtnOn>ACCESO</TbtnOn>
+  <TbtnOff>SPENTO</TbtnOff>
 	<TxtUpdater>Aggiornatore</TxtUpdater>
 	<LblPath>Percorso:</LblPath>
 	<LblProgress>Progresso:</LblProgress>

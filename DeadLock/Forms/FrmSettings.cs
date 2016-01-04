@@ -41,20 +41,50 @@ namespace DeadLock.Forms
             tpaAppearance.Text = _language.LblAppearance;
             tpaAdvanced.Text = _language.LblAdvanced;
 
+            //General
             lblAutoUpdate.Text = _language.ChbAutoUpdate;
             lblNotifyIcon.Text = _language.ChbShowNotifyIcon;
             lblMinimized.Text = _language.ChbStartMinimized;
             lblAdminWarning.Text = _language.ChbShowAdminWarning;
 
+            tbtnAutoUpdate.ActiveState.Text = _language.TbtnOn;
+            tbtnAutoUpdate.InactiveState.Text = _language.TbtnOff;
+
+            tbtnNotifyIcon.ActiveState.Text = _language.TbtnOn;
+            tbtnNotifyIcon.InactiveState.Text = _language.TbtnOff;
+
+            tbtnStartMinimized.ActiveState.Text = _language.TbtnOn;
+            tbtnStartMinimized.InactiveState.Text = _language.TbtnOff;
+
+            tbtnAdminWarning.ActiveState.Text = _language.TbtnOn;
+            tbtnAdminWarning.InactiveState.Text = _language.TbtnOff;
+
+            //Appearance
             lblThemeStyle.Text = _language.LblThemeStyle;
             lblBorderThickness.Text = _language.LblBorderThickness;
             lblFormSize.Text = _language.LblRememberFormSize;
             lblDetails.Text = _language.LblShowDetails;
             lblLanguage.Text = _language.LblLanguage;
 
+            tbtnFormSize.ActiveState.Text = _language.TbtnOn;
+            tbtnFormSize.InactiveState.Text = _language.TbtnOff;
+
+            tbtnDetails.ActiveState.Text = _language.TbtnOn;
+            tbtnDetails.InactiveState.Text = _language.TbtnOff;
+
+            //Advanced
             lblAutorun.Text = _language.LblAutoRunDeadLock;
             lblWindowsExplorerIntegration.Text = _language.LblWindowsExplorerIntegration;
             lblOwnership.Text = _language.LblOwnership;
+
+            tbtnAutoRun.ActiveState.Text = _language.TbtnOn;
+            tbtnAutoRun.InactiveState.Text = _language.TbtnOff;
+
+            tbtnWindowsExplorerIntegration.ActiveState.Text = _language.TbtnOn;
+            tbtnWindowsExplorerIntegration.InactiveState.Text = _language.TbtnOff;
+
+            tbtnOwnership.ActiveState.Text = _language.TbtnOn;
+            tbtnOwnership.InactiveState.Text = _language.TbtnOff;
 
             btnClose.Text = _language.BtnSettingsClose;
             btnReset.Text = _language.BtnReset;
@@ -222,12 +252,18 @@ namespace DeadLock.Forms
                 BorderThickness = Properties.Settings.Default.BorderThickness;
                 MetroColor = Properties.Settings.Default.MetroColor;
                 BorderColor = Properties.Settings.Default.MetroColor;
+                CaptionBarColor = Properties.Settings.Default.MetroColor;
 
                 btnClose.MetroColor = Properties.Settings.Default.MetroColor;
                 btnReset.MetroColor = Properties.Settings.Default.MetroColor;
                 btnSave.MetroColor = Properties.Settings.Default.MetroColor;
                 tbcPanels.FixedSingleBorderColor = Properties.Settings.Default.MetroColor;
                 tbcPanels.ActiveTabColor = Properties.Settings.Default.MetroColor;
+
+                itxtBorderThickness.Metrocolor = Properties.Settings.Default.MetroColor;
+                cboLanguage.MetroColor = Properties.Settings.Default.MetroColor;
+                btnSelectPath.MetroColor = Properties.Settings.Default.MetroColor;
+                txtLanguagePath.Metrocolor = Properties.Settings.Default.MetroColor;
             }
             catch (Exception ex)
             {

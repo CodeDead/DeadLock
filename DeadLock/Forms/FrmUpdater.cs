@@ -29,8 +29,6 @@ namespace DeadLock.Forms
 
             _webClient.DownloadFileCompleted += Completed;
             _webClient.DownloadProgressChanged += ProgressChanged;
-
-            LoadLanguage();
         }
 
         private void LoadLanguage()
@@ -109,6 +107,34 @@ namespace DeadLock.Forms
         private void btnCancel_Click(object sender, EventArgs e)
         {
             _webClient.CancelAsync();
+        }
+
+        private void LoadTheme()
+        {
+            try
+            {
+                BorderThickness = Properties.Settings.Default.BorderThickness;
+                MetroColor = Properties.Settings.Default.MetroColor;
+                BorderColor = Properties.Settings.Default.MetroColor;
+                CaptionBarColor = Properties.Settings.Default.MetroColor;
+
+                txtPath.Metrocolor = Properties.Settings.Default.MetroColor;
+                btnSelectPath.MetroColor = Properties.Settings.Default.MetroColor;
+                pgbDownload.GradientEndColor = Properties.Settings.Default.MetroColor;
+                pgbDownload.GradientStartColor = Properties.Settings.Default.MetroColor;
+                btnCancel.MetroColor = Properties.Settings.Default.MetroColor;
+                btnUpdate.MetroColor = Properties.Settings.Default.MetroColor;
+            }
+            catch (Exception ex)
+            {
+                MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void FrmUpdater_Load(object sender, EventArgs e)
+        {
+            LoadLanguage();
+            LoadTheme();
         }
     }
 }

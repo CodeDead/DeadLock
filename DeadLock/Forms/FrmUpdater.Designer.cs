@@ -173,6 +173,9 @@ namespace DeadLock.Forms
             this.BorderColor = System.Drawing.Color.SteelBlue;
             this.BorderThickness = 3;
             this.CancelButton = this.btnCancel;
+            this.CaptionBarColor = System.Drawing.Color.SteelBlue;
+            this.CaptionButtonColor = System.Drawing.Color.White;
+            this.CaptionForeColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(388, 128);
             this.Controls.Add(this.btnSelectPath);
             this.Controls.Add(this.txtPath);
@@ -188,6 +191,7 @@ namespace DeadLock.Forms
             this.Name = "FrmUpdater";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DeadLock - Updater";
+            this.Load += new System.EventHandler(this.FrmUpdater_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pgbDownload)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPath)).EndInit();
             this.ResumeLayout(false);

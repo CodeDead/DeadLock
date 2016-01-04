@@ -154,6 +154,9 @@ namespace DeadLock.Forms
             this.BorderColor = System.Drawing.Color.SteelBlue;
             this.BorderThickness = 3;
             this.CancelButton = this.btnClose;
+            this.CaptionBarColor = System.Drawing.Color.SteelBlue;
+            this.CaptionButtonColor = System.Drawing.Color.White;
+            this.CaptionForeColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(343, 180);
             this.Controls.Add(this.btnCodeDead);
             this.Controls.Add(this.btnLicense);

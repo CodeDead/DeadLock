@@ -187,8 +187,10 @@ namespace DeadLock.Forms
                 BorderThickness = Properties.Settings.Default.BorderThickness;
                 MetroColor = Properties.Settings.Default.MetroColor;
                 BorderColor = Properties.Settings.Default.MetroColor;
+                CaptionBarColor = Properties.Settings.Default.MetroColor;
 
                 mfbmMain.MetroColor = Properties.Settings.Default.MetroColor;
+                mfbmMain.RefreshCommandBarsAfterDesignerLoad(false);
             }
             catch (Exception ex)
             {
@@ -523,7 +525,7 @@ namespace DeadLock.Forms
             {
                 SetLoading(selected, 1);
                 lvl.SetRunning(true);
-                lvl.Remove();
+                await lvl.Remove();
 
                 if (!lvl.HasCancelled())
                 {

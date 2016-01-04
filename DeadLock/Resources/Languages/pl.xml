@@ -87,6 +87,8 @@
 	<BtnReset>Resetuj</BtnReset>
 	<BtnSave>Zapisz</BtnSave>
 	<MsgRestartRequired>Aby zmienić wygląd, wymagane jest ponowne uruchomienie programu!</MsgRestartRequired>
+  <TbtnOn>WŁ</TbtnOn>
+  <TbtnOff>WYŁ</TbtnOff>
 	<TxtUpdater>Aktualizator</TxtUpdater>
 	<LblPath>Ścieżka:</LblPath>
 	<LblProgress>Postęp:</LblProgress>

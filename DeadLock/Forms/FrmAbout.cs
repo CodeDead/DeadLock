@@ -63,13 +63,14 @@ namespace DeadLock.Forms
             }
         }
 
-        private void FrmAbout_Load(object sender, EventArgs e)
+        private void LoadTheme()
         {
             try
             {
                 BorderThickness = Properties.Settings.Default.BorderThickness;
                 MetroColor = Properties.Settings.Default.MetroColor;
                 BorderColor = Properties.Settings.Default.MetroColor;
+                CaptionBarColor = Properties.Settings.Default.MetroColor;
 
                 btnClose.MetroColor = Properties.Settings.Default.MetroColor;
                 btnLicense.MetroColor = Properties.Settings.Default.MetroColor;
@@ -79,6 +80,11 @@ namespace DeadLock.Forms
             {
                 MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void FrmAbout_Load(object sender, EventArgs e)
+        {
+            LoadTheme();
         }
     }
 }

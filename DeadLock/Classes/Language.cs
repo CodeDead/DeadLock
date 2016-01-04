@@ -1,4 +1,5 @@
-﻿namespace DeadLock.Classes
+﻿// ReSharper disable UnassignedField.Global
+namespace DeadLock.Classes
 {
     /// <summary>
     /// Collection of strings that represent the translation of DeadLock into a certain language.
@@ -156,6 +157,10 @@
 
         //Settins Form - Messages:
         public string MsgRestartRequired;
+
+        //Settings Form - ToggleButtons
+        public string TbtnOn;
+        public string TbtnOff;
         #endregion
 
         #region Updater_Form

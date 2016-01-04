@@ -16,6 +16,7 @@ using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 using DeadLock.Classes;
 using Syncfusion.Windows.Forms;
 using FixedPanel = Syncfusion.Windows.Forms.Tools.Enums.FixedPanel;
@@ -26,6 +27,7 @@ namespace DeadLock.Forms
     {
         private ListViewLockerManager _lvlManager;
         private readonly LanguageManager _languageManager;
+        private Update _update;
 
         public FrmMain(IReadOnlyCollection<string> args)
         {
@@ -34,6 +36,7 @@ namespace DeadLock.Forms
             {
                 _lvlManager = new ListViewLockerManager();
                 _languageManager = new LanguageManager();
+                _update = new Update();
                 if (Properties.Settings.Default.Language == 4)
                 {
                     _languageManager.LoadLanguage(Properties.Settings.Default.LanguagePath);
@@ -149,14 +152,23 @@ namespace DeadLock.Forms
             try
             {
                 WebClient wc = new WebClient();
-                string download = wc.DownloadString("http://codedead.com/Software/DeadLock/version.txt");
-                string[] version = download.Split('|');
+                string xml = wc.DownloadString("http://codedead.com/Software/DeadLock/update.xml");
 
-                if (version[0] != Application.ProductVersion)
+                XmlSerializer serializer = new XmlSerializer(_update.GetType());
+                using (MemoryStream stream = new MemoryStream())
                 {
-                    if (MessageBoxAdv.Show(l.MsgVersion + " " + version[0] + " " + l.MsgAvailable + Environment.NewLine + l.MsgDownloadNewVersion, "DeadLock", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    StreamWriter writer = new StreamWriter(stream);
+                    writer.Write(xml);
+                    writer.Flush();
+                    stream.Position = 0;
+                    _update = (Update)serializer.Deserialize(stream);
+                    writer.Dispose();
+                }
+                if (_update.CheckForUpdate())
+                {
+                    if (MessageBoxAdv.Show(l.MsgVersion + " " + _update.GetUpdateVersion() + " " + l.MsgAvailable + Environment.NewLine + l.MsgDownloadNewVersion, "DeadLock", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        new FrmUpdater(version[1], _languageManager.GetLanguage()).ShowDialog();
+                        new FrmUpdater(_update, _languageManager.GetLanguage()).ShowDialog();
                     }
                 }
                 else

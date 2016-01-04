@@ -15,7 +15,6 @@ namespace DeadLock
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
             try
             {
                 MetroStyleColorTable metroColorTable = new MetroStyleColorTable
@@ -32,9 +31,6 @@ namespace DeadLock
                 MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             MessageBoxAdv.MessageBoxStyle = MessageBoxAdv.Style.Metro;
-
-            //HELP
-
             Application.Run(new FrmMain(args));
         }
     }

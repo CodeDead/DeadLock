@@ -16,14 +16,14 @@ namespace DeadLock.Forms
 {
     public partial class FrmUpdater : MetroForm
     {
-        private readonly string _downloadLink;
+        private readonly Update _update;
         private readonly WebClient _webClient;
         private readonly Language _language;
 
-        public FrmUpdater(string link, Language language)
+        public FrmUpdater(Update update, Language language)
         {
             InitializeComponent();
-            _downloadLink = link;
+            _update = update;
             _webClient = new WebClient();
             _language = language;
 
@@ -44,7 +44,7 @@ namespace DeadLock.Forms
 
         private void btnSelectPath_Click(object sender, EventArgs e)
         {
-            string extension = _downloadLink.Substring(_downloadLink.Length - 4, 4);
+            string extension = _update.UpdateUrl.Substring(_update.UpdateUrl.Length - 4, 4);
             SaveFileDialog sfd = new SaveFileDialog {Filter = extension.ToUpper() + @" (*" + extension + @")|*" + extension};
             if (sfd.ShowDialog() == DialogResult.OK)
             {
@@ -56,7 +56,7 @@ namespace DeadLock.Forms
         {
             if (txtPath.Text.Length == 0) return;
             DisableControls();
-            _webClient.DownloadFileAsync(new Uri(_downloadLink), txtPath.Text);
+            _webClient.DownloadFileAsync(new Uri(_update.UpdateUrl), txtPath.Text);
         }
 
         private void ProgressChanged(object sender, DownloadProgressChangedEventArgs e)

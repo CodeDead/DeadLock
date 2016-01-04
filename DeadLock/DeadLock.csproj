@@ -62,6 +62,7 @@
     <Compile Include="Classes\ListViewLockerManager.cs" />
     <Compile Include="Classes\NativeMethods.cs" />
     <Compile Include="Classes\ProcessLocker.cs" />
+    <Compile Include="Classes\Update.cs" />
     <Compile Include="Forms\FrmAbout.cs">
       <SubType>Form</SubType>
     </Compile>

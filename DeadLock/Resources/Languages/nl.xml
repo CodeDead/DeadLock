@@ -10,9 +10,9 @@
   <BarItemOpenFiles>Open bestand(en)...</BarItemOpenFiles>
   <BarItemOpenFolder>Open folder...</BarItemOpenFolder>
   <BarItemRestart>Herstart</BarItemRestart>
-  <BarItemExit>Sluit</BarItemExit>
+  <BarItemExit>Sluiten</BarItemExit>
   <BarItemUnlock>Ontgrendel</BarItemUnlock>
-  <BarItemCopy>Kopiëren</BarItemCopy>
+  <BarItemCopy>Namaken</BarItemCopy>
   <BarItemMove>Verplaatsen</BarItemMove>
   <BarItemRemove>Verwijderen</BarItemRemove>
   <BarItemOwnership>Eigendomsrecht</BarItemOwnership>
@@ -40,7 +40,7 @@
   <MsgSuccessfullyUnlocked>Successvol ontgrendeld</MsgSuccessfullyUnlocked>
   <MsgCouldNotUnlock>Kon het item niet ontgrendelen</MsgCouldNotUnlock>
   <MsgSuccessfullyCopied>Successvol gekopieerd</MsgSuccessfullyCopied>
-  <MsgCouldNotCopy>Kon het item niet kopiëren</MsgCouldNotCopy>
+  <MsgCouldNotCopy>Kon het item niet namaken</MsgCouldNotCopy>
   <MsgSuccessfullyMoved>Succesvol verplaatst</MsgSuccessfullyMoved>
   <MsgCouldNotMove>Kon het item niet verplaatsen</MsgCouldNotMove>
   <MsgSuccessfullyRemoved>Successvol verwijderd</MsgSuccessfullyRemoved>
@@ -55,7 +55,7 @@
   <MsgSuccessfullyKilled>De geselecteerde processen zijn met success gesloten !</MsgSuccessfullyKilled>
   <CmiHideShow>Verberg / Toon</CmiHideShow>
   <MsgAdministrator>DeadLock zal mogelijk niet correct functioneren zonder administratieve rechten !</MsgAdministrator>
-  <MsgVersion>Versie</MsgVersion>
+  <MsgVersion>Versie </MsgVersion>
   <MsgAvailable>is nu beschikbaar !</MsgAvailable>
   <MsgDownloadNewVersion>Wil je de laatste nieuwe versie downloaden ?</MsgDownloadNewVersion>
   <MsgLatestVersionAlreadyInstalled>De laatste versie is reeds geïnstalleerd !</MsgLatestVersionAlreadyInstalled>
@@ -63,7 +63,7 @@
   <TxtAboutCreated>DeadLock werd gemaakt door DeadLine.</TxtAboutCreated>
   <TxtAboutImages>Afbeeldingen: small-n-flat door paomedia</TxtAboutImages>
   <TxtAboutTheme>Thema door: SyncFusion</TxtAboutTheme>
-  <TxtAboutCopyright>Copyright © CodeDead 2016</TxtAboutCopyright>
+  <TxtAboutCopyright>Copyright &#169; CodeDead 2016</TxtAboutCopyright>
   <TxtAboutTranslation>Vertaling:</TxtAboutTranslation>
   <BtnAboutClose>Sluiten</BtnAboutClose>
   <BtnLicense>Licentie</BtnLicense>

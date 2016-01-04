@@ -71,7 +71,7 @@
   <LblGeneral>Genel</LblGeneral>
   <ChbAutoUpdate>Güncellemeleri otomatik denetle:</ChbAutoUpdate>
   <ChbShowNotifyIcon>Uyarı simgesini göster:</ChbShowNotifyIcon>
-  <ChbStartMinimized>Küçültülmüş olarak başlat</ChbStartMinimized>
+  <ChbStartMinimized>Küçültülmüş olarak başlat:</ChbStartMinimized>
   <ChbShowAdminWarning>Yönetici izni uyarılarını  göster:</ChbShowAdminWarning>
   <LblAppearance>Görünüm</LblAppearance>
   <LblThemeStyle>Teme stili:</LblThemeStyle>

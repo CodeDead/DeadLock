@@ -71,7 +71,7 @@
   <LblGeneral>General</LblGeneral>
   <ChbAutoUpdate>Automatically check for updates:</ChbAutoUpdate>
   <ChbShowNotifyIcon>Show notifyicon:</ChbShowNotifyIcon>
-  <ChbStartMinimized>Start minimized</ChbStartMinimized>
+  <ChbStartMinimized>Start minimized:</ChbStartMinimized>
   <ChbShowAdminWarning>Show administrator warning:</ChbShowAdminWarning>
   <LblAppearance>Appearance</LblAppearance>
   <LblThemeStyle>Theme style:</LblThemeStyle>

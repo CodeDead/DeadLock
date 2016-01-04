@@ -55,7 +55,7 @@
 	<MsgSuccessfullyKilled>Pomyślnie zakończono zaznoczony(e) proces(y)!</MsgSuccessfullyKilled>
 	<CmiHideShow>Ukryj / Pokaż</CmiHideShow>
 	<MsgAdministrator>DeadLock może nie zadziałac prawidłowo bez praw administratorskich!</MsgAdministrator>
-	<MsgVersion>Wersja </MsgVersion>
+	<MsgVersion>Wersja</MsgVersion>
 	<MsgAvailable>jest już dostępna!</MsgAvailable>
 	<MsgDownloadNewVersion>Czy chciałbys sciągnąc najnowszą wersje?</MsgDownloadNewVersion>
 	<MsgLatestVersionAlreadyInstalled>Ostatnia wersja DeadLock jest już zainstalowana!</MsgLatestVersionAlreadyInstalled>

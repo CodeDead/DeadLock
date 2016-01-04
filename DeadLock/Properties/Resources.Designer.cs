@@ -144,7 +144,7 @@ namespace DeadLock.Properties {
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
         ///&lt;Language xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
         ///  &lt;Author&gt;DeadLine&lt;/Author&gt;
-        ///  &lt;Comment&gt;&lt;/Comment&gt;
+        ///  &lt;Comment&gt;English&lt;/Comment&gt;
         ///  &lt;BarFile&gt;&amp;amp;File&lt;/BarFile&gt;
         ///  &lt;BarEdit&gt;&amp;amp;Edit&lt;/BarEdit&gt;
         ///  &lt;BarView&gt;&amp;amp;View&lt;/BarView&gt;
@@ -152,8 +152,7 @@ namespace DeadLock.Properties {
         ///  &lt;BarHelp&gt;&amp;amp;Help&lt;/BarHelp&gt;
         ///  &lt;BarItemOpenFiles&gt;Open file(s)...&lt;/BarItemOpenFiles&gt;
         ///  &lt;BarItemOpenFolder&gt;Open folder...&lt;/BarItemOpenFolder&gt;
-        ///  &lt;BarItemRestart&gt;Restart&lt;/BarItemRestart&gt;
-        ///  &lt;Bar [rest of string was truncated]&quot;;.
+        ///  &lt;BarItemRestart&gt;Restart&lt;/BarItemRestart&gt;        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string eng {
             get {
@@ -205,7 +204,7 @@ namespace DeadLock.Properties {
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
         ///&lt;Language&gt;
         ///	&lt;Author&gt;Sardor Tarik&lt;/Author&gt;
-        ///	&lt;Comment&gt;&lt;/Comment&gt;
+        ///	&lt;Comment&gt;Italian&lt;/Comment&gt;
         ///	&lt;BarFile&gt;&amp;amp;File&lt;/BarFile&gt;
         ///	&lt;BarEdit&gt;&amp;amp;Modifica&lt;/BarEdit&gt;
         ///	&lt;BarView&gt;&amp;amp;Visualizza&lt;/BarView&gt;
@@ -215,7 +214,7 @@ namespace DeadLock.Properties {
         ///	&lt;BarItemOpenFolder&gt;Apri cartella...&lt;/BarItemOpenFolder&gt;
         ///	&lt;BarItemRestart&gt;Riavvia&lt;/BarItemRestart&gt;
         ///	&lt;BarItemExit&gt;Esci&lt;/BarItemExit&gt;
-        ///	&lt;BarItemUnlock&gt;Sblocca&lt;/BarIt [rest of string was truncated]&quot;;.
+        ///	&lt;BarItemUnlock&gt;Sblocca [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ita {
             get {
@@ -240,6 +239,26 @@ namespace DeadLock.Properties {
             get {
                 object obj = ResourceManager.GetObject("move", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
+        ///&lt;Language xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+        ///  &lt;Author&gt;DeadLine&lt;/Author&gt;
+        ///  &lt;Comment&gt;Dutch&lt;/Comment&gt;
+        ///  &lt;BarFile&gt;&amp;amp;Bestand&lt;/BarFile&gt;
+        ///  &lt;BarEdit&gt;&amp;amp;Aanpassen&lt;/BarEdit&gt;
+        ///  &lt;BarView&gt;&amp;amp;Beeld&lt;/BarView&gt;
+        ///  &lt;BarTools&gt;&amp;amp;Gereedschap&lt;/BarTools&gt;
+        ///  &lt;BarHelp&gt;&amp;amp;Help&lt;/BarHelp&gt;
+        ///  &lt;BarItemOpenFiles&gt;Open bestand(en)...&lt;/BarItemOpenFiles&gt;
+        ///  &lt;BarItemOpenFolder&gt;Open folder...&lt;/BarItemOpenFolder&gt;
+        ///  &lt;BarItemRestart&gt;Herstart [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string nl {
+            get {
+                return ResourceManager.GetString("nl", resourceCulture);
             }
         }
         

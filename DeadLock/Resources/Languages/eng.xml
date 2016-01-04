@@ -55,7 +55,7 @@
   <MsgSuccessfullyKilled>Successfully killed the selected process(es) !</MsgSuccessfullyKilled>
   <CmiHideShow>Hide / Show</CmiHideShow>
   <MsgAdministrator>DeadLock might not function correctly without administrative rights !</MsgAdministrator>
-  <MsgVersion>Version </MsgVersion>
+  <MsgVersion>Version</MsgVersion>
   <MsgAvailable>is now available !</MsgAvailable>
   <MsgDownloadNewVersion>Would you like to download the latest version ?</MsgDownloadNewVersion>
   <MsgLatestVersionAlreadyInstalled>The latest version of DeadLock is already installed !</MsgLatestVersionAlreadyInstalled>

@@ -34,7 +34,7 @@ namespace DeadLock.Forms
             {
                 _lvlManager = new ListViewLockerManager();
                 _languageManager = new LanguageManager();
-                if (Properties.Settings.Default.Language == 3)
+                if (Properties.Settings.Default.Language == 4)
                 {
                     _languageManager.LoadLanguage(Properties.Settings.Default.LanguagePath);
                 }
@@ -154,8 +154,7 @@ namespace DeadLock.Forms
 
                 if (version[0] != Application.ProductVersion)
                 {
-                    
-                    if (MessageBoxAdv.Show(l.MsgVersion + version[0] + " " + l.MsgAvailable + Environment.NewLine + l.MsgDownloadNewVersion, "DeadLock", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBoxAdv.Show(l.MsgVersion + " " + version[0] + " " + l.MsgAvailable + Environment.NewLine + l.MsgDownloadNewVersion, "DeadLock", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         new FrmUpdater(version[1], _languageManager.GetLanguage()).ShowDialog();
                     }

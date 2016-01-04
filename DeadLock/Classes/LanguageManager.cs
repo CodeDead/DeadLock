@@ -44,12 +44,15 @@ namespace DeadLock.Classes
                 switch (Properties.Settings.Default.Language)
                 {
                     case 0:
-                        res = Properties.Resources.eng;
+                        res = Properties.Resources.nl;
                         break;
                     case 1:
-                        res = Properties.Resources.ita;
+                        res = Properties.Resources.eng;
                         break;
                     case 2:
+                        res = Properties.Resources.ita;
+                        break;
+                    case 3:
                         res = Properties.Resources.pl;
                         break;
                     default:

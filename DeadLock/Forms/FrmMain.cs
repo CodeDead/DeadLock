@@ -810,7 +810,7 @@ namespace DeadLock.Forms
 
         private void checkForUpdatesBarItem_Click(object sender, EventArgs e)
         {
-            Update(true, false);
+            Update(true, true);
         }
 
         private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)

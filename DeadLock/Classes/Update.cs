@@ -44,7 +44,6 @@ namespace DeadLock.Classes
         {
             Version update = new Version(MajorVersion, MinorVersion, BuildVersion, RevisionVersion);
             int result = update.CompareTo(_version);
-
             return result > 0;
         }
 

@@ -47,17 +47,17 @@ namespace DeadLock.Forms
             lblMinimized.Text = _language.ChbStartMinimized;
             lblAdminWarning.Text = _language.ChbShowAdminWarning;
 
-            tbtnAutoUpdate.ActiveState.Text = _language.TbtnOn;
-            tbtnAutoUpdate.InactiveState.Text = _language.TbtnOff;
+            tbtnAutoUpdate.ActiveState.Text = _language.TbtnOff;
+            tbtnAutoUpdate.InactiveState.Text = _language.TbtnOn;
 
-            tbtnNotifyIcon.ActiveState.Text = _language.TbtnOn;
-            tbtnNotifyIcon.InactiveState.Text = _language.TbtnOff;
+            tbtnNotifyIcon.ActiveState.Text = _language.TbtnOff;
+            tbtnNotifyIcon.InactiveState.Text = _language.TbtnOn;
 
-            tbtnStartMinimized.ActiveState.Text = _language.TbtnOn;
-            tbtnStartMinimized.InactiveState.Text = _language.TbtnOff;
+            tbtnStartMinimized.ActiveState.Text = _language.TbtnOff;
+            tbtnStartMinimized.InactiveState.Text = _language.TbtnOn;
 
-            tbtnAdminWarning.ActiveState.Text = _language.TbtnOn;
-            tbtnAdminWarning.InactiveState.Text = _language.TbtnOff;
+            tbtnAdminWarning.ActiveState.Text = _language.TbtnOff;
+            tbtnAdminWarning.InactiveState.Text = _language.TbtnOn;
 
             //Appearance
             lblThemeStyle.Text = _language.LblThemeStyle;
@@ -66,25 +66,25 @@ namespace DeadLock.Forms
             lblDetails.Text = _language.LblShowDetails;
             lblLanguage.Text = _language.LblLanguage;
 
-            tbtnFormSize.ActiveState.Text = _language.TbtnOn;
-            tbtnFormSize.InactiveState.Text = _language.TbtnOff;
+            tbtnFormSize.ActiveState.Text = _language.TbtnOff;
+            tbtnFormSize.InactiveState.Text = _language.TbtnOn;
 
-            tbtnDetails.ActiveState.Text = _language.TbtnOn;
-            tbtnDetails.InactiveState.Text = _language.TbtnOff;
+            tbtnDetails.ActiveState.Text = _language.TbtnOff;
+            tbtnDetails.InactiveState.Text = _language.TbtnOn;
 
             //Advanced
             lblAutorun.Text = _language.LblAutoRunDeadLock;
             lblWindowsExplorerIntegration.Text = _language.LblWindowsExplorerIntegration;
             lblOwnership.Text = _language.LblOwnership;
 
-            tbtnAutoRun.ActiveState.Text = _language.TbtnOn;
-            tbtnAutoRun.InactiveState.Text = _language.TbtnOff;
+            tbtnAutoRun.ActiveState.Text = _language.TbtnOff;
+            tbtnAutoRun.InactiveState.Text = _language.TbtnOn;
 
-            tbtnWindowsExplorerIntegration.ActiveState.Text = _language.TbtnOn;
-            tbtnWindowsExplorerIntegration.InactiveState.Text = _language.TbtnOff;
+            tbtnWindowsExplorerIntegration.ActiveState.Text = _language.TbtnOff;
+            tbtnWindowsExplorerIntegration.InactiveState.Text = _language.TbtnOn;
 
-            tbtnOwnership.ActiveState.Text = _language.TbtnOn;
-            tbtnOwnership.InactiveState.Text = _language.TbtnOff;
+            tbtnOwnership.ActiveState.Text = _language.TbtnOff;
+            tbtnOwnership.InactiveState.Text = _language.TbtnOn;
 
             btnClose.Text = _language.BtnSettingsClose;
             btnReset.Text = _language.BtnReset;

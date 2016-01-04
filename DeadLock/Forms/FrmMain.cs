@@ -37,7 +37,7 @@ namespace DeadLock.Forms
                 _lvlManager = new ListViewLockerManager();
                 _languageManager = new LanguageManager();
                 _update = new Update();
-                if (Properties.Settings.Default.Language == 4)
+                if (Properties.Settings.Default.Language == 5)
                 {
                     _languageManager.LoadLanguage(Properties.Settings.Default.LanguagePath);
                 }

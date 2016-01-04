@@ -315,11 +315,13 @@ namespace DeadLock.Forms
             "English",
             "Italian",
             "Polish",
+            "Turkish",
             "Custom"});
             this.cboLanguage.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cboLanguage, "Dutch"));
             this.cboLanguage.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cboLanguage, "English"));
             this.cboLanguage.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cboLanguage, "Italian"));
             this.cboLanguage.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cboLanguage, "Polish"));
+            this.cboLanguage.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cboLanguage, "Turkish"));
             this.cboLanguage.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cboLanguage, "Custom"));
             this.cboLanguage.Location = new System.Drawing.Point(228, 129);
             this.cboLanguage.MetroColor = System.Drawing.Color.SteelBlue;

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0"?>
+<Language xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Author>@bkrcrc_ (Twitter)</Author>
+  <Comment>Turkish</Comment>
+  <BarFile>&amp;Dosya</BarFile>
+  <BarEdit>&amp;Düzenle</BarEdit>
+  <BarView>&amp;Göster</BarView>
+  <BarTools>&amp;Araçlar</BarTools>
+  <BarHelp>&amp;Yardım</BarHelp>
+  <BarItemOpenFiles>Dosya(ları) aç...</BarItemOpenFiles>
+  <BarItemOpenFolder>Klasör aç...</BarItemOpenFolder>
+  <BarItemRestart>Yeniden başlat</BarItemRestart>
+  <BarItemExit>Çıkış</BarItemExit>
+  <BarItemUnlock>Kilitli değil</BarItemUnlock>
+  <BarItemCopy>Kopyala</BarItemCopy>
+  <BarItemMove>Taşı</BarItemMove>
+  <BarItemRemove>Kaldır</BarItemRemove>
+  <BarItemOwnership>Sahiplik</BarItemOwnership>
+  <BarItemOwnershipTrue>Doğru</BarItemOwnershipTrue>
+  <BarItemOwnershipFalse>Yanlış</BarItemOwnershipFalse>
+  <BarItemRemoveItem>Öge Kaldır</BarItemRemoveItem>
+  <BarItemClearItems>Ögeleri temizle</BarItemClearItems>
+  <BarItemAutoSizeColumns>Sütunları otomatik boyutlandır</BarItemAutoSizeColumns>
+  <BarItemCancelTask>Görevi iptal et</BarItemCancelTask>
+  <BarItemDetails>Detaylar</BarItemDetails>
+  <BarItemSettings>Ayarlar</BarItemSettings>
+  <BarItemHelp>Yardım</BarItemHelp>
+  <BarItemCheckForUpdates>Güncellemeleri denetle</BarItemCheckForUpdates>
+  <BarItemHomePage>Anasayfa</BarItemHomePage>
+  <BarItemLicense>Lisans</BarItemLicense>
+  <BarItemAbout>Hakkında</BarItemAbout>
+  <ClhPath>Dosya yolu</ClhPath>
+  <ClhStatus>Durum</ClhStatus>
+  <ClhOwnership>Sahiplik</ClhOwnership>
+  <MsgUnknown>Bilinmeyen</MsgUnknown>
+  <MsgLocked>Kilitli</MsgLocked>
+  <MsgUnlocked>Kilitli değil</MsgUnlocked>
+  <MsgOperationCancelled>İşlem iptal edildi</MsgOperationCancelled>
+  <MsgLoading>Yükleniyor...</MsgLoading>
+  <MsgSuccessfullyUnlocked>Başarıyla kilit açıldı</MsgSuccessfullyUnlocked>
+  <MsgCouldNotUnlock>Ögenin kilidi açılamıyor</MsgCouldNotUnlock>
+  <MsgSuccessfullyCopied>Başarıyla kopyalandı</MsgSuccessfullyCopied>
+  <MsgCouldNotCopy>Öge kopyalanamadı</MsgCouldNotCopy>
+  <MsgSuccessfullyMoved>Başarıyla taşındı</MsgSuccessfullyMoved>
+  <MsgCouldNotMove>Öge taşınamadı</MsgCouldNotMove>
+  <MsgSuccessfullyRemoved>Başarıyla kaldırıldı</MsgSuccessfullyRemoved>
+  <MsgCouldNotRemove>Öge kaldırılamadı</MsgCouldNotRemove>
+  <ClhFileName>Dosya adı</ClhFileName>
+  <ClhProcessId>İşlme kimliği</ClhProcessId>
+  <LblVersion>Sürüm: </LblVersion>
+  <CmiDetails>Detaylar</CmiDetails>
+  <CmiOpenInVirusTotal>VirusTotal'de aç</CmiOpenInVirusTotal>
+  <CmiKill>Sonlandır</CmiKill>
+  <CmiOpenFileLocation>Dosya konumunu aç</CmiOpenFileLocation>
+  <MsgSuccessfullyKilled>Seçilen işlem(ler) başarıyla sonlandırıldı!</MsgSuccessfullyKilled>
+  <CmiHideShow>Gizle / Göster</CmiHideShow>
+  <MsgAdministrator>DeadLock yönetici izinleri olmadan düzgün çalışmayabilir !</MsgAdministrator>
+  <MsgVersion>Sürüm </MsgVersion>
+  <MsgAvailable> hazır !</MsgAvailable>
+  <MsgDownloadNewVersion>En son sürümü indirmek ister misiniz ?</MsgDownloadNewVersion>
+  <MsgLatestVersionAlreadyInstalled>En güncel DeadLock sürümü zaten yüklü !</MsgLatestVersionAlreadyInstalled>
+  <TxtAbout>Hakkında</TxtAbout>
+  <TxtAboutCreated>DeadLock was created by DeadLine.</TxtAboutCreated>
+  <TxtAboutImages>Images: small-n-flat by paomedia</TxtAboutImages>
+  <TxtAboutTheme>Theme by: SyncFusion</TxtAboutTheme>
+  <TxtAboutCopyright>Copyright © CodeDead 2016</TxtAboutCopyright>
+  <TxtAboutTranslation>Çeviri:</TxtAboutTranslation>
+  <BtnAboutClose>Kapat</BtnAboutClose>
+  <BtnLicense>Lisans</BtnLicense>
+  <TxtSettings>Ayarlar</TxtSettings>
+  <LblGeneral>Genel</LblGeneral>
+  <ChbAutoUpdate>Güncellemeleri otomatik denetle:</ChbAutoUpdate>
+  <ChbShowNotifyIcon>Uyarı simgesini göster:</ChbShowNotifyIcon>
+  <ChbStartMinimized>Küçültülmüş olarak başlat</ChbStartMinimized>
+  <ChbShowAdminWarning>Yönetici izni uyarılarını  göster:</ChbShowAdminWarning>
+  <LblAppearance>Görünüm</LblAppearance>
+  <LblThemeStyle>Teme stili:</LblThemeStyle>
+  <LblBorderThickness>Çerçeve kalınlığı:</LblBorderThickness>
+  <LblRememberFormSize>Form boyutunu hatırla:</LblRememberFormSize>
+  <LblShowDetails>Detayları göster:</LblShowDetails>
+  <LblLanguage>Dil:</LblLanguage>
+  <LblAdvanced>Gelişmiş</LblAdvanced>
+  <LblAutoRunDeadLock>DeadLock'ı otomatik başlat:</LblAutoRunDeadLock>
+  <LblWindowsExplorerIntegration>Windows sağtık ilişkilendirmesi:</LblWindowsExplorerIntegration>
+  <LblOwnership>Sahipliğini almak:</LblOwnership>
+  <BtnSettingsClose>Kapat</BtnSettingsClose>
+  <BtnReset>Sıfırla</BtnReset>
+  <BtnSave>Kaydet</BtnSave>
+  <MsgRestartRequired>Temayı değiştirmek için yeniden başlatmak gerekiyor !</MsgRestartRequired>
+  <TbtnOn>Açık</TbtnOn>
+  <TbtnOff>Kapalı</TbtnOff>
+  <TxtUpdater>Güncelleyici</TxtUpdater>
+  <LblPath>Dosya yolu:</LblPath>
+  <LblProgress>Süreç:</LblProgress>
+  <BtnCancel>İptal</BtnCancel>
+  <BtnUpdate>Güncelle</BtnUpdate>
+  <MsgCouldNotRestart>Oturum yeniden başlatılamadı. Kaynağı kilitleyen belirlenemedi</MsgCouldNotRestart>
+  <MsgCouldNotRegister>Kaunak kaydedilemedi.</MsgCouldNotRegister>
+  <MsgCouldNotList>Kaynağı kilitleyen işlemler listelenemedi. !</MsgCouldNotList>
+  <MsgCouldNotListResult>Kaynağı kilitleyen işlemler listelenemedi. Sonuç boyutunu alınamadı !</MsgCouldNotListResult>
+  <MsgAccessDenied>Erişim reddedildi</MsgAccessDenied>
+</Language>

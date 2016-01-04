@@ -313,6 +313,26 @@ namespace DeadLock.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
+        ///&lt;Language xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+        ///  &lt;Author&gt;@bkrcrc_ (Twitter)&lt;/Author&gt;
+        ///  &lt;Comment&gt;Turkish&lt;/Comment&gt;
+        ///  &lt;BarFile&gt;&amp;amp;Dosya&lt;/BarFile&gt;
+        ///  &lt;BarEdit&gt;&amp;amp;Düzenle&lt;/BarEdit&gt;
+        ///  &lt;BarView&gt;&amp;amp;Göster&lt;/BarView&gt;
+        ///  &lt;BarTools&gt;&amp;amp;Araçlar&lt;/BarTools&gt;
+        ///  &lt;BarHelp&gt;&amp;amp;Yardım&lt;/BarHelp&gt;
+        ///  &lt;BarItemOpenFiles&gt;Dosya(ları) aç...&lt;/BarItemOpenFiles&gt;
+        ///  &lt;BarItemOpenFolder&gt;Klasör aç...&lt;/BarItemOpenFolder&gt;
+        ///  &lt;BarItemRestart&gt;Yenid [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string tr {
+            get {
+                return ResourceManager.GetString("tr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap unlock {

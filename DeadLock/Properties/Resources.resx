@@ -196,4 +196,7 @@
   <data name="nl" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Languages\nl.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
+  <data name="tr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Languages\tr.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
 </root>

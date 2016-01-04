@@ -55,7 +55,7 @@
   <MsgSuccessfullyKilled>De geselecteerde processen zijn met success gesloten !</MsgSuccessfullyKilled>
   <CmiHideShow>Verberg / Toon</CmiHideShow>
   <MsgAdministrator>DeadLock zal mogelijk niet correct functioneren zonder administratieve rechten !</MsgAdministrator>
-  <MsgVersion>Versie </MsgVersion>
+  <MsgVersion>Versie</MsgVersion>
   <MsgAvailable>is nu beschikbaar !</MsgAvailable>
   <MsgDownloadNewVersion>Wil je de laatste nieuwe versie downloaden ?</MsgDownloadNewVersion>
   <MsgLatestVersionAlreadyInstalled>De laatste versie is reeds geïnstalleerd !</MsgLatestVersionAlreadyInstalled>

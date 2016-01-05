@@ -86,7 +86,7 @@
   <BtnSettingsClose>Kapat</BtnSettingsClose>
   <BtnReset>Sıfırla</BtnReset>
   <BtnSave>Kaydet</BtnSave>
-  <MsgRestartRequired>Temayı değiştirmek için yeniden başlatmak gerekiyor !</MsgRestartRequired>
+  <MsgRestartRequired>Bir yeniden başlatma belirli ayarları değiştirmek için gereklidir !</MsgRestartRequired>
   <TbtnOn>Açık</TbtnOn>
   <TbtnOff>Kapalı</TbtnOff>
   <TxtUpdater>Güncelleyici</TxtUpdater>

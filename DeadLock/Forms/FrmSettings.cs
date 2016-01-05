@@ -181,10 +181,11 @@ namespace DeadLock.Forms
                 Properties.Settings.Default.StartMinimized = tbtnStartMinimized.ToggleState == ToggleButtonState.Active;
                 Properties.Settings.Default.ShowAdminWarning = tbtnAdminWarning.ToggleState == ToggleButtonState.Active;
 
-                if ((cpbThemeStyle.MetroColor != Properties.Settings.Default.MetroColor) || (Properties.Settings.Default.BorderThickness != (int)itxtBorderThickness.IntegerValue))
+                if ((cpbThemeStyle.MetroColor != Properties.Settings.Default.MetroColor) || (Properties.Settings.Default.BorderThickness != (int)itxtBorderThickness.IntegerValue) || (tbtnDetails.ToggleState == ToggleButtonState.Active) != Properties.Settings.Default.ViewDetails || cboLanguage.SelectedIndex != Properties.Settings.Default.Language || txtLanguagePath.Text != Properties.Settings.Default.LanguagePath)
                 {
                     MessageBoxAdv.Show(_language.MsgRestartRequired, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+
                 Properties.Settings.Default.MetroColor = cpbThemeStyle.SelectedColor;
                 Properties.Settings.Default.BorderThickness = (int)itxtBorderThickness.IntegerValue;
                 Properties.Settings.Default.RememberFormSize = tbtnFormSize.ToggleState == ToggleButtonState.Active;

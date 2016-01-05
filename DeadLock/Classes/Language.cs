@@ -7,10 +7,8 @@ namespace DeadLock.Classes
     public class Language
     {
         #region Author
-
         public string Author;
         public string Comment;
-
         #endregion
 
         #region Main_Form
@@ -105,7 +103,6 @@ namespace DeadLock.Classes
         public string MsgAvailable;
         public string MsgDownloadNewVersion;
         public string MsgLatestVersionAlreadyInstalled;
-
         #endregion
 
         #region About_Form
@@ -176,18 +173,14 @@ namespace DeadLock.Classes
         #endregion
 
         #region NativeMethods
-
         public string MsgCouldNotRestart;
         public string MsgCouldNotRegister;
         public string MsgCouldNotList;
         public string MsgCouldNotListResult;
-
         #endregion
 
         #region ProcessLocker
-
         public string MsgAccessDenied;
-
         #endregion
     }
 }

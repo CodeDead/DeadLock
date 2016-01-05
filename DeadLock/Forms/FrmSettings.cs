@@ -18,12 +18,18 @@ namespace DeadLock.Forms
 {
     public partial class FrmSettings : MetroForm
     {
-
+        #region Variables
         private readonly NotifyIcon _nfi;
         private bool _originalIntegration;
         private bool _originalStartup;
         private readonly Language _language;
+        #endregion
 
+        /// <summary>
+        /// Generate a new FrmSettings form.
+        /// </summary>
+        /// <param name="nfi">The NotifyIcon that is associated with the Main form.</param>
+        /// <param name="l">The current Language.</param>
         public FrmSettings(NotifyIcon nfi, Language l)
         {
             InitializeComponent();
@@ -33,6 +39,9 @@ namespace DeadLock.Forms
             LoadLanguage();
         }
 
+        /// <summary>
+        /// Change the GUI to match the current Language.
+        /// </summary>
         private void LoadLanguage()
         {
             Text = @"DeadLock - " + _language.TxtSettings;
@@ -96,6 +105,9 @@ namespace DeadLock.Forms
             Close();
         }
 
+        /// <summary>
+        /// Load the current settings.
+        /// </summary>
         private void LoadSettings()
         {
             try
@@ -119,7 +131,7 @@ namespace DeadLock.Forms
                 _originalStartup = tbtnAutoRun.ToggleState == ToggleButtonState.Active;
                 tbtnOwnership.ToggleState = Properties.Settings.Default.TakeOwnership ? ToggleButtonState.Active : ToggleButtonState.Inactive;
 
-                tbtnWindowsExplorerIntegration.ToggleState = ExplorerIntegration() ? ToggleButtonState.Active : ToggleButtonState.Inactive;
+                tbtnWindowsExplorerIntegration.ToggleState = WindowsExplorerIntegration() ? ToggleButtonState.Active : ToggleButtonState.Inactive;
                 _originalIntegration = tbtnWindowsExplorerIntegration.ToggleState == ToggleButtonState.Active;
             }
             catch (Exception ex)
@@ -128,12 +140,20 @@ namespace DeadLock.Forms
             }
         }
 
+        /// <summary>
+        /// Check if the program starts automatically.
+        /// </summary>
+        /// <returns>A boolean to represent whether the program starts automatically or not.</returns>
         private static bool AutoStartUp()
         {
             return Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run", "DeadLock", "").ToString() == Application.ExecutablePath;
         }
 
-        private static bool ExplorerIntegration()
+        /// <summary>
+        /// Check if Windows Explorer integration is enabled for the program.
+        /// </summary>
+        /// <returns>A boolean to represent whether Windows Explorer integration is enabled for the program.</returns>
+        private static bool WindowsExplorerIntegration()
         {
             bool fileExplorerIntegration = false;
             bool folderExplorerIntegration = false;
@@ -157,6 +177,9 @@ namespace DeadLock.Forms
             return folderExplorerIntegration && fileExplorerIntegration;
         }
 
+        /// <summary>
+        /// Save the new settings.
+        /// </summary>
         private void SaveSettings()
         {
             try
@@ -222,6 +245,10 @@ namespace DeadLock.Forms
             }
         }
 
+        /// <summary>
+        /// Start the RegManager with a list of arguments.
+        /// </summary>
+        /// <param name="args">A list of arguments.</param>
         private static void StartRegManager(IReadOnlyList<string> args)
         {
             string a = "";
@@ -246,6 +273,9 @@ namespace DeadLock.Forms
             process.WaitForExit();
         }
 
+        /// <summary>
+        /// Change the GUI to match the theme.
+        /// </summary>
         private void LoadTheme()
         {
             try
@@ -283,7 +313,7 @@ namespace DeadLock.Forms
             try
             {
                 List<string> args = new List<string>();
-                if (ExplorerIntegration())
+                if (WindowsExplorerIntegration())
                 {
                     args.Add("3");
                 }

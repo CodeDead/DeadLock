@@ -16,8 +16,14 @@ namespace DeadLock.Forms
 {
     public partial class FrmAbout : MetroForm
     {
+        #region Variables
         private readonly Language _language;
+        #endregion
 
+        /// <summary>
+        /// Generate a new FrmAbout form.
+        /// </summary>
+        /// <param name="language">The current Language.</param>
         public FrmAbout(Language language)
         {
             InitializeComponent();
@@ -26,6 +32,9 @@ namespace DeadLock.Forms
             LoadLanguage();
         }
 
+        /// <summary>
+        /// Change the GUI to match the current Language.
+        /// </summary>
         private void LoadLanguage()
         {
             Text = @"DeadLock - " + _language.TxtAbout;
@@ -63,6 +72,9 @@ namespace DeadLock.Forms
             }
         }
 
+        /// <summary>
+        /// Change the GUI to match the theme.
+        /// </summary>
         private void LoadTheme()
         {
             try

@@ -6,7 +6,6 @@ namespace DeadLock.Classes
     /// </summary>
     public class Language
     {
-
         #region Author
 
         public string Author;

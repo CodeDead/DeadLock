@@ -25,10 +25,16 @@ namespace DeadLock.Forms
 {
     public partial class FrmMain : MetroForm
     {
+        #region Variables
         private ListViewLockerManager _lvlManager;
         private readonly LanguageManager _languageManager;
         private Update _update;
+        #endregion
 
+        /// <summary>
+        /// Generate a new FrmMain form.
+        /// </summary>
+        /// <param name="args">A collection of arguments.</param>
         public FrmMain(IReadOnlyCollection<string> args)
         {
             InitializeComponent();
@@ -59,6 +65,9 @@ namespace DeadLock.Forms
             }
         }
 
+        /// <summary>
+        /// Change the GUI to match the current Language.
+        /// </summary>
         private void LanguageSwitch()
         {
             Language l = _languageManager.GetLanguage();
@@ -114,7 +123,6 @@ namespace DeadLock.Forms
             clhProcessPath.Text = l.ClhPath;
             clhProcessID.Text = l.ClhProcessId;
 
-
             //Main Form - Status bar:
             versionStaticBarItem.Text = l.LblVersion;
 
@@ -147,6 +155,11 @@ namespace DeadLock.Forms
             exitToolStripMenuItem.Text = l.BarItemExit;
         }
 
+        /// <summary>
+        /// Check if there are updates available for the program.
+        /// </summary>
+        /// <param name="showError">Show errors.</param>
+        /// <param name="showNoUpdates">Show a MessageBox when there are no updates available.</param>
         private void Update(bool showError, bool showNoUpdates)
         {
             Language l = _languageManager.GetLanguage();
@@ -189,6 +202,9 @@ namespace DeadLock.Forms
             }
         }
 
+        /// <summary>
+        /// Change the GUI to match the current theme.
+        /// </summary>
         private void LoadTheme()
         {
             try
@@ -253,6 +269,10 @@ namespace DeadLock.Forms
             }
         }
 
+        /// <summary>
+        /// Open a file or folder into DeadLock.
+        /// </summary>
+        /// <param name="path">The path to the file or folder.</param>
         private void OpenPath(string path)
         {
             if (!File.Exists(path) && !Directory.Exists(path)) return;
@@ -561,6 +581,11 @@ namespace DeadLock.Forms
             }
         }
 
+        /// <summary>
+        /// Cancel a ListViewLocker task, if applicable.
+        /// </summary>
+        /// <param name="lvi">The ListViewItem that is associated with a ListViewLocker.</param>
+        /// <returns>A boolean to represent whether the task was cancelled or not.</returns>
         private bool CancelSelectedTask(ListViewItem lvi)
         {
             ListViewLocker lvl = _lvlManager.FindListViewLocker(lvi.Text);
@@ -671,6 +696,9 @@ namespace DeadLock.Forms
             _lvlManager = new ListViewLockerManager();
         }
 
+        /// <summary>
+        /// Change the GUI when the Details setting has changed.
+        /// </summary>
         private void DetailsChange()
         {
             if (detailsBarItem.Checked)
@@ -693,6 +721,10 @@ namespace DeadLock.Forms
             DetailsChange();
         }
 
+        /// <summary>
+        /// Change the ListViewItem to notify the user that the task has cancelled.
+        /// </summary>
+        /// <param name="selected">The ListViewItem that should be updated.</param>
         private void SetCancelled(ListViewItem selected)
         {
             if (selected == null) return;
@@ -702,6 +734,11 @@ namespace DeadLock.Forms
             selected.SubItems[2].Text = l.MsgOperationCancelled;
         }
 
+        /// <summary>
+        /// Change the ListViewItem to notify the user that the task is loading.
+        /// </summary>
+        /// <param name="selected">The ListViewItem that should be updated.</param>
+        /// <param name="index">The index of the ListViewItem that should be updated.</param>
         private void SetLoading(ListViewItem selected, int index)
         {
             if (selected == null) return;
@@ -735,6 +772,11 @@ namespace DeadLock.Forms
             }
         }
 
+        /// <summary>
+        /// Get the SHA-256 value of a file.
+        /// </summary>
+        /// <param name="path">The path to a file.</param>
+        /// <returns>The SHA-256 value of a file.</returns>
         private static string GetSha256FromFile(string path)
         {
             using (FileStream fs = File.OpenRead(path))
@@ -844,6 +886,11 @@ namespace DeadLock.Forms
             SetOwnership(lsvItems.SelectedItems[0], false);
         }
 
+        /// <summary>
+        /// Change the ownership of the ListViewLocker that is associated with the ListViewItem.
+        /// </summary>
+        /// <param name="lvi">The ListViewItem that should be updated.</param>
+        /// <param name="ownership">A boolean to represent whether the user has ownership rights or not.</param>
         private void SetOwnership(ListViewItem lvi, bool ownership)
         {
             ListViewLocker lvl = _lvlManager.FindListViewLocker(lvi.Text);

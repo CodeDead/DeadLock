@@ -22,14 +22,16 @@ namespace DeadLock.Classes
     /// </summary>
     internal class ListViewLocker
     {
+        #region Variables
         private readonly string _path;
         private List<ProcessLocker> _lockers;
-        private CancellationTokenSource _cts;
 
+        private CancellationTokenSource _cts;
         private bool _hasCancelled;
         private bool _isRunning;
 
         private readonly Language _language;
+        #endregion
 
         /// <summary>
         /// Generate a new ListViewLocker. 

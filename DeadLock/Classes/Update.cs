@@ -31,7 +31,7 @@ namespace DeadLock.Classes
         /// <summary>
         /// Generate a new Update object.
         /// </summary>
-        internal Update()
+        public Update()
         {
             _version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
         }

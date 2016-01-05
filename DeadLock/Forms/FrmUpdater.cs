@@ -16,10 +16,17 @@ namespace DeadLock.Forms
 {
     public partial class FrmUpdater : MetroForm
     {
+        #region Variables
         private readonly Update _update;
         private readonly WebClient _webClient;
         private readonly Language _language;
+        #endregion
 
+        /// <summary>
+        /// Generate a new FrmUpdater form.
+        /// </summary>
+        /// <param name="update">The Update that should be loaded.</param>
+        /// <param name="language">The current Language.</param>
         public FrmUpdater(Update update, Language language)
         {
             InitializeComponent();
@@ -31,6 +38,9 @@ namespace DeadLock.Forms
             _webClient.DownloadProgressChanged += ProgressChanged;
         }
 
+        /// <summary>
+        /// Change the GUI to match the current Language.
+        /// </summary>
         private void LoadLanguage()
         {
             Text = @"DeadLock - " + _language.TxtUpdater;
@@ -64,6 +74,9 @@ namespace DeadLock.Forms
             pgbDownload.Value = e.ProgressPercentage;
         }
 
+        /// <summary>
+        /// Enable the controls to allow the user to customize how the update proceeds.
+        /// </summary>
         private void EnableControls()
         {
             txtPath.Enabled = true;
@@ -72,6 +85,9 @@ namespace DeadLock.Forms
             pgbDownload.Value = 0;
         }
 
+        /// <summary>
+        /// Disable the controls to disallow the user to customize how the update proceeds.
+        /// </summary>
         private void DisableControls()
         {
             txtPath.Enabled = false;
@@ -109,6 +125,9 @@ namespace DeadLock.Forms
             _webClient.CancelAsync();
         }
 
+        /// <summary>
+        /// Change the GUI to match the theme.
+        /// </summary>
         private void LoadTheme()
         {
             try

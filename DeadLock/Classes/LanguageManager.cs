@@ -8,7 +8,9 @@ namespace DeadLock.Classes
     /// </summary>
     internal class LanguageManager
     {
+        #region Variables
         private Language _currentLanguage;
+        #endregion
 
         /// <summary>
         /// Generate a new LanguageManager.

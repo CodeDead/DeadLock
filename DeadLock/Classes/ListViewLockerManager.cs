@@ -7,7 +7,9 @@ namespace DeadLock.Classes
     /// </summary>
     internal class ListViewLockerManager
     {
+        #region Variables
         private readonly List<ListViewLocker> _listViewLockers;
+        #endregion
 
         /// <summary>
         /// Generate a new ListViewLockerManager.

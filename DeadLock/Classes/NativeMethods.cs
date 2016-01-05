@@ -10,16 +10,19 @@ namespace DeadLock.Classes
     /// </summary>
     internal static class NativeMethods
     {
+        #region Variables
+        private const int RmRebootReasonNone = 0;
+        private const int CchRmMaxAppName = 255;
+        private const int CchRmMaxSvcName = 63;
+        #endregion
+
+        #region Enum_Struct
         [StructLayout(LayoutKind.Sequential)]
         private struct RmUniqueProcess
         {
             internal readonly int dwProcessId;
             private readonly System.Runtime.InteropServices.ComTypes.FILETIME ProcessStartTime;
         }
-
-        private const int RmRebootReasonNone = 0;
-        private const int CchRmMaxAppName = 255;
-        private const int CchRmMaxSvcName = 63;
 
         private enum RmAppType
         {
@@ -56,7 +59,9 @@ namespace DeadLock.Classes
             [MarshalAs(UnmanagedType.Bool)]
             private readonly bool bRestartable;
         }
+        #endregion
 
+        #region DllImport
         [DllImport("rstrtmgr.dll", CharSet = CharSet.Unicode)]
         private static extern int RmRegisterResources(uint pSessionHandle, uint nFiles, string[] rgsFilenames, uint nApplications, [In] RmUniqueProcess[] rgApplications, uint nServices, string[] rgsServiceNames);
 
@@ -68,6 +73,7 @@ namespace DeadLock.Classes
 
         [DllImport("rstrtmgr.dll")]
         private static extern int RmGetList(uint dwSessionHandle, out uint pnProcInfoNeeded, ref uint pnProcInfo, [In, Out] RmProcessInfo[] rgAffectedApps, ref uint lpdwRebootReasons);
+        #endregion
 
         /// <summary>
         /// Find the processes that are locking a file.

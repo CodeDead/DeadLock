@@ -111,6 +111,7 @@ namespace DeadLock.Forms
 
             //Main Form - ListView Details:
             clhFileName.Text = l.ClhFileName;
+            clhProcessPath.Text = l.ClhPath;
             clhProcessID.Text = l.ClhProcessId;
 
 
@@ -276,7 +277,7 @@ namespace DeadLock.Forms
             img.Dispose();
 
             ListViewLocker lvl = new ListViewLocker(path, _languageManager.GetLanguage());
-            lvi.SubItems.Add(lvl.HasOwnership().ToString());
+            lvi.SubItems.Add(lvl.HasOwnership() ? l.BarItemOwnershipTrue : l.BarItemOwnershipFalse);
             lsvItems.Items.Add(lvi);
 
             _lvlManager.AddListViewLocker(lvl);
@@ -613,7 +614,7 @@ namespace DeadLock.Forms
                         selected.SubItems[1].Text = l.MsgLocked;
                         selected.SubItems[1].ForeColor = Color.Red;
                     }
-                    selected.SubItems[2].Text = lvl.HasOwnership().ToString();
+                    selected.SubItems[2].Text = lvl.HasOwnership() ? l.BarItemOwnershipTrue : l.BarItemOwnershipFalse;
 
                     foreach (ProcessLocker p in lockers)
                     {
@@ -847,7 +848,7 @@ namespace DeadLock.Forms
         {
             ListViewLocker lvl = _lvlManager.FindListViewLocker(lvi.Text);
             lvl.SetOwnership(ownership);
-            lvi.SubItems[2].Text = lvl.HasOwnership().ToString();
+            lvi.SubItems[2].Text = lvl.HasOwnership() ? _languageManager.GetLanguage().BarItemOwnershipTrue : _languageManager.GetLanguage().BarItemOwnershipFalse;
         }
 
         private void FrmMain_DragEnter(object sender, DragEventArgs e)

@@ -11,7 +11,7 @@
   <BarItemOpenFolder>Klasör aç...</BarItemOpenFolder>
   <BarItemRestart>Yeniden başlat</BarItemRestart>
   <BarItemExit>Çıkış</BarItemExit>
-  <BarItemUnlock>Kilitli değil</BarItemUnlock>
+  <BarItemUnlock>Kilit Aç</BarItemUnlock>
   <BarItemCopy>Kopyala</BarItemCopy>
   <BarItemMove>Taşı</BarItemMove>
   <BarItemRemove>Kaldır</BarItemRemove>
@@ -46,8 +46,8 @@
   <MsgSuccessfullyRemoved>Başarıyla kaldırıldı</MsgSuccessfullyRemoved>
   <MsgCouldNotRemove>Öge kaldırılamadı</MsgCouldNotRemove>
   <ClhFileName>Dosya adı</ClhFileName>
-  <ClhProcessId>İşlme kimliği</ClhProcessId>
-  <LblVersion>Sürüm: </LblVersion>
+  <ClhProcessId>İşlem kimliği</ClhProcessId>
+  <LblVersion>Sürüm:</LblVersion>
   <CmiDetails>Detaylar</CmiDetails>
   <CmiOpenInVirusTotal>VirusTotal'de aç</CmiOpenInVirusTotal>
   <CmiKill>Sonlandır</CmiKill>
@@ -55,15 +55,15 @@
   <MsgSuccessfullyKilled>Seçilen işlem(ler) başarıyla sonlandırıldı!</MsgSuccessfullyKilled>
   <CmiHideShow>Gizle / Göster</CmiHideShow>
   <MsgAdministrator>DeadLock yönetici izinleri olmadan düzgün çalışmayabilir !</MsgAdministrator>
-  <MsgVersion>Sürüm </MsgVersion>
-  <MsgAvailable> hazır !</MsgAvailable>
+  <MsgVersion>Sürüm</MsgVersion>
+  <MsgAvailable>hazır !</MsgAvailable>
   <MsgDownloadNewVersion>En son sürümü indirmek ister misiniz ?</MsgDownloadNewVersion>
   <MsgLatestVersionAlreadyInstalled>En güncel DeadLock sürümü zaten yüklü !</MsgLatestVersionAlreadyInstalled>
   <TxtAbout>Hakkında</TxtAbout>
-  <TxtAboutCreated>DeadLock was created by DeadLine.</TxtAboutCreated>
-  <TxtAboutImages>Images: small-n-flat by paomedia</TxtAboutImages>
-  <TxtAboutTheme>Theme by: SyncFusion</TxtAboutTheme>
-  <TxtAboutCopyright>Copyright &#169; CodeDead 2016</TxtAboutCopyright>
+  <TxtAboutCreated>DeadLock, DeadLine tarafından üretilmiştir.</TxtAboutCreated>
+  <TxtAboutImages>Resimler: small-n-flat by paomedia</TxtAboutImages>
+  <TxtAboutTheme>Tema: SyncFusion</TxtAboutTheme>
+  <TxtAboutCopyright>Telif Hakları © CodeDead 2016</TxtAboutCopyright>
   <TxtAboutTranslation>Çeviri:</TxtAboutTranslation>
   <BtnAboutClose>Kapat</BtnAboutClose>
   <BtnLicense>Lisans</BtnLicense>
@@ -72,9 +72,9 @@
   <ChbAutoUpdate>Güncellemeleri otomatik denetle:</ChbAutoUpdate>
   <ChbShowNotifyIcon>Uyarı simgesini göster:</ChbShowNotifyIcon>
   <ChbStartMinimized>Küçültülmüş olarak başlat:</ChbStartMinimized>
-  <ChbShowAdminWarning>Yönetici izni uyarılarını  göster:</ChbShowAdminWarning>
+  <ChbShowAdminWarning>Yönetici izni uyarılarını göster:</ChbShowAdminWarning>
   <LblAppearance>Görünüm</LblAppearance>
-  <LblThemeStyle>Teme stili:</LblThemeStyle>
+  <LblThemeStyle>Tema stili:</LblThemeStyle>
   <LblBorderThickness>Çerçeve kalınlığı:</LblBorderThickness>
   <LblRememberFormSize>Form boyutunu hatırla:</LblRememberFormSize>
   <LblShowDetails>Detayları göster:</LblShowDetails>
@@ -82,7 +82,7 @@
   <LblAdvanced>Gelişmiş</LblAdvanced>
   <LblAutoRunDeadLock>DeadLock'ı otomatik başlat:</LblAutoRunDeadLock>
   <LblWindowsExplorerIntegration>Windows sağtık ilişkilendirmesi:</LblWindowsExplorerIntegration>
-  <LblOwnership>Sahipliğini almak:</LblOwnership>
+  <LblOwnership>Sahiplik alma:</LblOwnership>
   <BtnSettingsClose>Kapat</BtnSettingsClose>
   <BtnReset>Sıfırla</BtnReset>
   <BtnSave>Kaydet</BtnSave>
@@ -96,7 +96,7 @@
   <BtnUpdate>Güncelle</BtnUpdate>
   <MsgCouldNotRestart>Oturum yeniden başlatılamadı. Kaynağı kilitleyen belirlenemedi</MsgCouldNotRestart>
   <MsgCouldNotRegister>Kaunak kaydedilemedi.</MsgCouldNotRegister>
-  <MsgCouldNotList>Kaynağı kilitleyen işlemler listelenemedi. !</MsgCouldNotList>
+  <MsgCouldNotList>Kaynağı kilitleyen işlemler listelenemedi !</MsgCouldNotList>
   <MsgCouldNotListResult>Kaynağı kilitleyen işlemler listelenemedi. Sonuç boyutunu alınamadı !</MsgCouldNotListResult>
   <MsgAccessDenied>Erişim reddedildi</MsgAccessDenied>
 </Language>

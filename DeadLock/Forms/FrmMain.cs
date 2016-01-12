@@ -29,13 +29,15 @@ namespace DeadLock.Forms
         private ListViewLockerManager _lvlManager;
         private readonly LanguageManager _languageManager;
         private Update _update;
+
+        private readonly string[] _args;
         #endregion
 
         /// <summary>
         /// Generate a new FrmMain form.
         /// </summary>
         /// <param name="args">A collection of arguments.</param>
-        public FrmMain(IReadOnlyCollection<string> args)
+        public FrmMain(string[] args)
         {
             InitializeComponent();
             try
@@ -57,12 +59,7 @@ namespace DeadLock.Forms
             {
                 MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            if (args.Count == 0) return;
-            foreach (string s in args)
-            {
-                OpenPath(s);
-            }
+            _args = args;
         }
 
         /// <summary>
@@ -475,8 +472,15 @@ namespace DeadLock.Forms
                     }
                 }
 
-                if (Properties.Settings.Default.AutoUpdate) Update(false, false);
+                if (Properties.Settings.Default.AutoUpdate)
+                    Update(false, false);
                 Visible = !Properties.Settings.Default.StartMinimized;
+
+                if (_args.Length == 0) return;
+                foreach (string s in _args)
+                {
+                    OpenPath(s);
+                }
             }
             catch (Exception ex)
             {

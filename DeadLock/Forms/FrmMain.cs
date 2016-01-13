@@ -40,6 +40,7 @@ namespace DeadLock.Forms
         public FrmMain(string[] args)
         {
             InitializeComponent();
+            LoadTheme();
             try
             {
                 _lvlManager = new ListViewLockerManager();
@@ -157,46 +158,49 @@ namespace DeadLock.Forms
         /// </summary>
         /// <param name="showError">Show errors.</param>
         /// <param name="showNoUpdates">Show a MessageBox when there are no updates available.</param>
-        private void Update(bool showError, bool showNoUpdates)
+        private async void Update(bool showError, bool showNoUpdates)
         {
             Language l = _languageManager.GetLanguage();
-            try
+            await Task.Run(() =>
             {
-                WebClient wc = new WebClient();
-                string xml = wc.DownloadString("http://codedead.com/Software/DeadLock/update.xml");
+                try
+                {
+                    WebClient wc = new WebClient();
+                    string xml = wc.DownloadString("http://codedead.com/Software/DeadLock/update.xml");
 
-                XmlSerializer serializer = new XmlSerializer(_update.GetType());
-                using (MemoryStream stream = new MemoryStream())
-                {
-                    StreamWriter writer = new StreamWriter(stream);
-                    writer.Write(xml);
-                    writer.Flush();
-                    stream.Position = 0;
-                    _update = (Update)serializer.Deserialize(stream);
-                    writer.Dispose();
-                }
-                if (_update.CheckForUpdate())
-                {
-                    if (MessageBoxAdv.Show(l.MsgVersion + " " + _update.GetUpdateVersion() + " " + l.MsgAvailable + Environment.NewLine + l.MsgDownloadNewVersion, "DeadLock", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    XmlSerializer serializer = new XmlSerializer(_update.GetType());
+                    using (MemoryStream stream = new MemoryStream())
                     {
-                        new FrmUpdater(_update, _languageManager.GetLanguage()).ShowDialog();
+                        StreamWriter writer = new StreamWriter(stream);
+                        writer.Write(xml);
+                        writer.Flush();
+                        stream.Position = 0;
+                        _update = (Update)serializer.Deserialize(stream);
+                        writer.Dispose();
+                    }
+                    if (_update.CheckForUpdate())
+                    {
+                        if (MessageBoxAdv.Show(l.MsgVersion + " " + _update.GetUpdateVersion() + " " + l.MsgAvailable + Environment.NewLine + l.MsgDownloadNewVersion, "DeadLock", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            new FrmUpdater(_update, _languageManager.GetLanguage()).ShowDialog();
+                        }
+                    }
+                    else
+                    {
+                        if (showNoUpdates)
+                        {
+                            MessageBoxAdv.Show(l.MsgLatestVersionAlreadyInstalled, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                 }
-                else
+                catch (Exception ex)
                 {
-                    if (showNoUpdates)
+                    if (showError)
                     {
-                        MessageBoxAdv.Show(l.MsgLatestVersionAlreadyInstalled, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                if (showError)
-                {
-                    MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            });
         }
 
         /// <summary>
@@ -214,7 +218,22 @@ namespace DeadLock.Forms
                 BorderColor = Properties.Settings.Default.MetroColor;
                 CaptionBarColor = Properties.Settings.Default.MetroColor;
 
+                cmsItems.MetroColor = Properties.Settings.Default.MetroColor;
+                cmsDetails.MetroColor = Properties.Settings.Default.MetroColor;
+                cmsTray.MetroColor = Properties.Settings.Default.MetroColor;
+
                 mfbmMain.MetroColor = Properties.Settings.Default.MetroColor;
+                mfbmMain.ResetCustomization = false;
+                mfbmMain.Style = VisualStyle.Metro;
+
+                fileParentBarItem.MetroColor = Properties.Settings.Default.MetroColor;
+                editParentBarItem.MetroColor = Properties.Settings.Default.MetroColor;
+                unlockParentBarItem.MetroColor = Properties.Settings.Default.MetroColor;
+                ownershipParentBarItem.MetroColor = Properties.Settings.Default.MetroColor;
+                viewParentBarItem.MetroColor = Properties.Settings.Default.MetroColor;
+                toolsParentBarItem.MetroColor = Properties.Settings.Default.MetroColor;
+                helpParentBarItem.MetroColor = Properties.Settings.Default.MetroColor;
+
                 mfbmMain.RefreshCommandBarsAfterDesignerLoad(false);
             }
             catch (Exception ex)
@@ -234,7 +253,6 @@ namespace DeadLock.Forms
                     Size = Properties.Settings.Default.FormSize;
                     CenterToScreen();
                 }
-                LoadTheme();
             }
             catch (Exception ex)
             {
@@ -472,8 +490,7 @@ namespace DeadLock.Forms
                     }
                 }
 
-                if (Properties.Settings.Default.AutoUpdate)
-                    Update(false, false);
+                if (Properties.Settings.Default.AutoUpdate) Update(false, false);
                 Visible = !Properties.Settings.Default.StartMinimized;
 
                 if (_args.Length == 0) return;

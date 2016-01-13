@@ -288,6 +288,7 @@ namespace DeadLock.Forms
                 btnClose.MetroColor = Properties.Settings.Default.MetroColor;
                 btnReset.MetroColor = Properties.Settings.Default.MetroColor;
                 btnSave.MetroColor = Properties.Settings.Default.MetroColor;
+
                 tbcPanels.FixedSingleBorderColor = Properties.Settings.Default.MetroColor;
                 tbcPanels.ActiveTabColor = Properties.Settings.Default.MetroColor;
 
@@ -295,6 +296,33 @@ namespace DeadLock.Forms
                 cboLanguage.MetroColor = Properties.Settings.Default.MetroColor;
                 btnSelectPath.MetroColor = Properties.Settings.Default.MetroColor;
                 txtLanguagePath.Metrocolor = Properties.Settings.Default.MetroColor;
+
+                tbtnAutoUpdate.ActiveState.BackColor = Properties.Settings.Default.MetroColor;
+                tbtnAutoUpdate.ActiveState.HoverColor = Properties.Settings.Default.MetroColor;
+
+                tbtnNotifyIcon.ActiveState.BackColor = Properties.Settings.Default.MetroColor;
+                tbtnNotifyIcon.ActiveState.HoverColor = Properties.Settings.Default.MetroColor;
+
+                tbtnStartMinimized.ActiveState.BackColor = Properties.Settings.Default.MetroColor;
+                tbtnStartMinimized.ActiveState.HoverColor = Properties.Settings.Default.MetroColor;
+
+                tbtnAdminWarning.ActiveState.BackColor = Properties.Settings.Default.MetroColor;
+                tbtnAdminWarning.ActiveState.HoverColor = Properties.Settings.Default.MetroColor;
+
+                tbtnFormSize.ActiveState.BackColor = Properties.Settings.Default.MetroColor;
+                tbtnFormSize.ActiveState.HoverColor = Properties.Settings.Default.MetroColor;
+
+                tbtnDetails.ActiveState.BackColor = Properties.Settings.Default.MetroColor;
+                tbtnDetails.ActiveState.HoverColor = Properties.Settings.Default.MetroColor;
+
+                tbtnAutoRun.ActiveState.BackColor = Properties.Settings.Default.MetroColor;
+                tbtnAutoRun.ActiveState.HoverColor = Properties.Settings.Default.MetroColor;
+
+                tbtnWindowsExplorerIntegration.ActiveState.BackColor = Properties.Settings.Default.MetroColor;
+                tbtnWindowsExplorerIntegration.ActiveState.HoverColor = Properties.Settings.Default.MetroColor;
+
+                tbtnOwnership.ActiveState.BackColor = Properties.Settings.Default.MetroColor;
+                tbtnOwnership.ActiveState.HoverColor = Properties.Settings.Default.MetroColor;
             }
             catch (Exception ex)
             {
@@ -328,6 +356,10 @@ namespace DeadLock.Forms
 
                 Properties.Settings.Default.Reset();
                 Properties.Settings.Default.Save();
+                if ((cpbThemeStyle.MetroColor != Properties.Settings.Default.MetroColor) || (Properties.Settings.Default.BorderThickness != (int)itxtBorderThickness.IntegerValue) || (tbtnDetails.ToggleState == ToggleButtonState.Active) != Properties.Settings.Default.ViewDetails || cboLanguage.SelectedIndex != Properties.Settings.Default.Language || txtLanguagePath.Text != Properties.Settings.Default.LanguagePath)
+                {
+                    MessageBoxAdv.Show(_language.MsgRestartRequired, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
                 LoadSettings();
             }
             catch (Exception ex)

@@ -20,7 +20,7 @@ namespace DeadLock.Classes
     /// <summary>
     /// Represents the collection of a path, the ProcessLockers of that path and a CancellationTokenSource to cancel a task.
     /// </summary>
-    internal class ListViewLocker
+    internal class ListViewLocker : ListViewItem
     {
         #region Variables
         private readonly string _path;
@@ -38,8 +38,13 @@ namespace DeadLock.Classes
         /// </summary>
         /// <param name="path">The path to a file.</param>
         /// <param name="language">The current Language.</param>
-        internal ListViewLocker(string path, Language language)
+        /// <param name="imageIndex">ListViewLocker image index.</param>
+        internal ListViewLocker(string path, Language language, int imageIndex)
         {
+            Text = path;
+            UseItemStyleForSubItems = false;
+            ImageIndex = imageIndex;
+
             _path = path;
             _lockers = new List<ProcessLocker>();
             _cts = new CancellationTokenSource();
@@ -396,7 +401,7 @@ namespace DeadLock.Classes
         /// A task to remove the file or folder that is associated with the ListViewLocker.
         /// </summary>
         /// <returns>A boolean to represent whether the operation was successful or not.</returns>
-        internal async Task<bool> Remove()
+        internal async Task<bool> RemoveItem()
         {
             await Unlock();
             try

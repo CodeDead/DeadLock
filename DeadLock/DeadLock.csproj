@@ -61,7 +61,6 @@
     <Compile Include="Classes\Language.cs" />
     <Compile Include="Classes\LanguageManager.cs" />
     <Compile Include="Classes\ListViewLocker.cs" />
-    <Compile Include="Classes\ListViewLockerManager.cs" />
     <Compile Include="Classes\NativeMethods.cs" />
     <Compile Include="Classes\ProcessLocker.cs" />
     <Compile Include="Classes\Update.cs" />

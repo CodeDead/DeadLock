@@ -26,7 +26,6 @@ namespace DeadLock.Forms
     public partial class FrmMain : MetroForm
     {
         #region Variables
-        private ListViewLockerManager _lvlManager;
         private readonly LanguageManager _languageManager;
         private Update _update;
 
@@ -43,7 +42,6 @@ namespace DeadLock.Forms
             LoadTheme();
             try
             {
-                _lvlManager = new ListViewLockerManager();
                 _languageManager = new LanguageManager();
                 _update = new Update();
                 if (Properties.Settings.Default.Language == 5)
@@ -291,10 +289,9 @@ namespace DeadLock.Forms
         private void OpenPath(string path)
         {
             if (!File.Exists(path) && !Directory.Exists(path)) return;
-            if (_lvlManager.FindListViewLocker(path) != null) return;
             Language l = _languageManager.GetLanguage();
             int index = lsvItems.Items.Count;
-            ListViewItem lvi = new ListViewItem { Text = path, UseItemStyleForSubItems = false, ImageIndex = index };
+            ListViewLocker lvi = new ListViewLocker(path, l, index);
 
             lvi.SubItems.Add(l.MsgUnknown);
 
@@ -311,11 +308,8 @@ namespace DeadLock.Forms
             imgFileIcons.Images.Add(img);
             img.Dispose();
 
-            ListViewLocker lvl = new ListViewLocker(path, _languageManager.GetLanguage());
-            lvi.SubItems.Add(lvl.HasOwnership() ? l.BarItemOwnershipTrue : l.BarItemOwnershipFalse);
+            lvi.SubItems.Add(lvi.HasOwnership() ? l.BarItemOwnershipTrue : l.BarItemOwnershipFalse);
             lsvItems.Items.Add(lvi);
-
-            _lvlManager.AddListViewLocker(lvl);
 
             lsvItems.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
             lsvItems.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
@@ -343,9 +337,7 @@ namespace DeadLock.Forms
         {
             if (lsvItems.SelectedItems.Count == 0) return;
 
-            CancelSelectedTask(lsvItems.SelectedItems[0]);
-
-            _lvlManager.DeleteListViewLocker(_lvlManager.FindListViewLocker(lsvItems.SelectedItems[0].Text));
+            CancelSelectedTask((ListViewLocker)lsvItems.SelectedItems[0]);
 
             int iImageIndex = lsvItems.SelectedItems[0].ImageIndex;
             int iIndex = lsvItems.SelectedItems[0].Index;
@@ -376,10 +368,9 @@ namespace DeadLock.Forms
             if (lsvItems.SelectedItems.Count == 0) return;
 
             Language l = _languageManager.GetLanguage();
-            ListViewItem selected = lsvItems.SelectedItems[0];
-            ListViewLocker lvl = _lvlManager.FindListViewLocker(selected.Text);
+            ListViewLocker lvl = (ListViewLocker)lsvItems.SelectedItems[0];
 
-            CancelSelectedTask(selected);
+            CancelSelectedTask(lvl);
             await Task.Run(() =>
             {
                 while (lvl.IsRunning()) { }
@@ -387,26 +378,26 @@ namespace DeadLock.Forms
 
             try
             {
-                SetLoading(selected, 1);
+                SetLoading(lvl, 1);
 
                 lvl.SetRunning(true);
                 await lvl.Unlock();
 
                 if (!lvl.HasCancelled())
                 {
-                    selected.SubItems[1].ForeColor = Color.Green;
-                    selected.SubItems[1].Text = l.MsgSuccessfullyUnlocked;
+                    lvl.SubItems[1].ForeColor = Color.Green;
+                    lvl.SubItems[1].Text = l.MsgSuccessfullyUnlocked;
                 }
                 else
                 {
-                    SetCancelled(selected);
+                    SetCancelled(lvl);
                 }
             }
             catch (Exception ex)
             {
                 MessageBoxAdv.Show(ex.Message + Environment.NewLine + ex.StackTrace, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                selected.SubItems[1].ForeColor = Color.Red;
-                selected.SubItems[1].Text = l.MsgCouldNotUnlock;
+                lvl.SubItems[1].ForeColor = Color.Red;
+                lvl.SubItems[1].Text = l.MsgCouldNotUnlock;
             }
             finally
             {
@@ -433,11 +424,10 @@ namespace DeadLock.Forms
         {
             if (lsvItems.SelectedItems.Count == 0) return;
 
-            ListViewItem selected = lsvItems.SelectedItems[0];
-            ListViewLocker lvl = _lvlManager.FindListViewLocker(selected.Text);
+            ListViewLocker lvl = (ListViewLocker)lsvItems.SelectedItems[0];
             Language l = _languageManager.GetLanguage();
 
-            CancelSelectedTask(selected);
+            CancelSelectedTask(lvl);
             await Task.Run(() =>
             {
                 while (lvl.IsRunning()) { }
@@ -445,26 +435,26 @@ namespace DeadLock.Forms
 
             try
             {
-                SetLoading(selected, 1);
+                SetLoading(lvl, 1);
 
                 lvl.SetRunning(true);
                 await lvl.Copy();
 
                 if (!lvl.HasCancelled())
                 {
-                    selected.SubItems[1].ForeColor = Color.Green;
-                    selected.SubItems[1].Text = l.MsgSuccessfullyCopied;
+                    lvl.SubItems[1].ForeColor = Color.Green;
+                    lvl.SubItems[1].Text = l.MsgSuccessfullyCopied;
                 }
                 else
                 {
-                    SetCancelled(selected);
+                    SetCancelled(lvl);
                 }
             }
             catch (Exception ex)
             {
                 MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                selected.SubItems[1].ForeColor = Color.Red;
-                selected.SubItems[1].Text = l.MsgCouldNotCopy;
+                lvl.SubItems[1].ForeColor = Color.Red;
+                lvl.SubItems[1].Text = l.MsgCouldNotCopy;
             }
             finally
             {
@@ -521,11 +511,10 @@ namespace DeadLock.Forms
         {
             if (lsvItems.SelectedItems.Count == 0) return;
 
-            ListViewItem selected = lsvItems.SelectedItems[0];
-            ListViewLocker lvl = _lvlManager.FindListViewLocker(selected.Text);
+            ListViewLocker lvl = (ListViewLocker) lsvItems.SelectedItems[0];
             Language l = _languageManager.GetLanguage();
 
-            CancelSelectedTask(selected);
+            CancelSelectedTask(lvl);
             await Task.Run(() =>
             {
                 while (lvl.IsRunning()) { }
@@ -533,26 +522,26 @@ namespace DeadLock.Forms
 
             try
             {
-                SetLoading(selected, 1);
+                SetLoading(lvl, 1);
 
                 lvl.SetRunning(true);
                 await lvl.Move();
 
                 if (!lvl.HasCancelled())
                 {
-                    selected.SubItems[1].ForeColor = Color.Green;
-                    selected.SubItems[1].Text = l.MsgSuccessfullyMoved;
+                    lvl.SubItems[1].ForeColor = Color.Green;
+                    lvl.SubItems[1].Text = l.MsgSuccessfullyMoved;
                 }
                 else
                 {
-                    SetCancelled(selected);
+                    SetCancelled(lvl);
                 }
             }
             catch (Exception ex)
             {
                 MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                selected.SubItems[1].ForeColor = Color.Red;
-                selected.SubItems[1].Text = l.MsgCouldNotMove;
+                lvl.SubItems[1].ForeColor = Color.Red;
+                lvl.SubItems[1].Text = l.MsgCouldNotMove;
             }
             finally
             {
@@ -564,11 +553,10 @@ namespace DeadLock.Forms
         {
             if (lsvItems.SelectedItems.Count == 0) return;
 
-            ListViewItem selected = lsvItems.SelectedItems[0];
-            ListViewLocker lvl = _lvlManager.FindListViewLocker(selected.Text);
+            ListViewLocker lvl = (ListViewLocker) lsvItems.SelectedItems[0];
             Language l = _languageManager.GetLanguage();
 
-            CancelSelectedTask(selected);
+            CancelSelectedTask(lvl);
             await Task.Run(() =>
             {
                 while (lvl.IsRunning()) { }
@@ -576,25 +564,25 @@ namespace DeadLock.Forms
 
             try
             {
-                SetLoading(selected, 1);
+                SetLoading(lvl, 1);
                 lvl.SetRunning(true);
-                await lvl.Remove();
+                await lvl.RemoveItem();
 
                 if (!lvl.HasCancelled())
                 {
-                    selected.SubItems[1].ForeColor = Color.Green;
-                    selected.SubItems[1].Text = l.MsgSuccessfullyRemoved;
+                    lvl.SubItems[1].ForeColor = Color.Green;
+                    lvl.SubItems[1].Text = l.MsgSuccessfullyRemoved;
                 }
                 else
                 {
-                    SetCancelled(selected);
+                    SetCancelled(lvl);
                 }
             }
             catch (Exception ex)
             {
                 MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                selected.SubItems[1].ForeColor = Color.Red;
-                selected.SubItems[1].Text = l.MsgCouldNotRemove;
+                lvl.SubItems[1].ForeColor = Color.Red;
+                lvl.SubItems[1].Text = l.MsgCouldNotRemove;
             }
             finally
             {
@@ -603,16 +591,15 @@ namespace DeadLock.Forms
         }
 
         /// <summary>
-        /// Cancel a ListViewLocker task, if applicable.
+        /// Cancel the ListViewLocker task, if applicable.
         /// </summary>
-        /// <param name="lvi">The ListViewItem that is associated with a ListViewLocker.</param>
-        /// <returns>A boolean to represent whether the task was cancelled or not.</returns>
-        private bool CancelSelectedTask(ListViewItem lvi)
+        /// <param name="lvi">The ListViewLocker that should be updated.</param>
+        /// <returns></returns>
+        private static bool CancelSelectedTask(ListViewLocker lvi)
         {
-            ListViewLocker lvl = _lvlManager.FindListViewLocker(lvi.Text);
-            if (lvl == null) return false;
-            if (!lvl.IsRunning()) return false;
-            lvl.CancelTask();
+            if (lvi == null) return false;
+            if (!lvi.IsRunning()) return false;
+            lvi.CancelTask();
             return true;
         }
 
@@ -621,29 +608,27 @@ namespace DeadLock.Forms
             if (lsvItems.SelectedItems.Count == 0) return;
             lsvDetails.Items.Clear();
 
-            ListViewItem selected = lsvItems.SelectedItems[0];
-            ListViewLocker lvl = _lvlManager.FindListViewLocker(selected.Text);
+            ListViewLocker lvl = (ListViewLocker) lsvItems.SelectedItems[0];
             Language l = _languageManager.GetLanguage();
 
             try
             {
-                CancelSelectedTask(selected);
+                CancelSelectedTask(lvl);
                 await Task.Run(() =>
                 {
                     while (lvl.IsRunning()){ }
                 });
                 lvl.SetLocker(new List<ProcessLocker>());
 
-                if (!File.Exists(selected.Text) && !Directory.Exists(selected.Text))
+                if (!File.Exists(lvl.Text) && !Directory.Exists(lvl.Text))
                 {
-                    imgFileIcons.Images.RemoveByKey(selected.Text);
-                    lsvItems.Items.Remove(selected);
-                    _lvlManager.DeleteListViewLocker(lvl);
+                    imgFileIcons.Images.RemoveByKey(lvl.Text);
+                    lsvItems.Items.Remove(lvl);
                     return;
                 }
 
-                SetLoading(selected, 1);
-                SetLoading(selected, 2);
+                SetLoading(lvl, 1);
+                SetLoading(lvl, 2);
 
                 lvl.SetRunning(true);
                 List<ProcessLocker> lockers = await lvl.GetLockerDetails();
@@ -652,15 +637,15 @@ namespace DeadLock.Forms
                 {
                     if (lockers.Count == 0)
                     {
-                        selected.SubItems[1].Text = l.MsgUnlocked;
-                        selected.SubItems[1].ForeColor = Color.Green;
+                        lvl.SubItems[1].Text = l.MsgUnlocked;
+                        lvl.SubItems[1].ForeColor = Color.Green;
                     }
                     else
                     {
-                        selected.SubItems[1].Text = l.MsgLocked;
-                        selected.SubItems[1].ForeColor = Color.Red;
+                        lvl.SubItems[1].Text = l.MsgLocked;
+                        lvl.SubItems[1].ForeColor = Color.Red;
                     }
-                    selected.SubItems[2].Text = lvl.HasOwnership() ? l.BarItemOwnershipTrue : l.BarItemOwnershipFalse;
+                    lvl.SubItems[2].Text = lvl.HasOwnership() ? l.BarItemOwnershipTrue : l.BarItemOwnershipFalse;
 
                     foreach (ProcessLocker p in lockers)
                     {
@@ -678,7 +663,7 @@ namespace DeadLock.Forms
                 else
                 {
                     lvl.SetLocker(new List<ProcessLocker>());
-                    SetCancelled(selected);
+                    SetCancelled(lvl);
                 }
             }
             catch (Exception ex)
@@ -696,7 +681,7 @@ namespace DeadLock.Forms
             lsvDetails.Items.Clear();
             if (lsvItems.SelectedItems.Count == 0) return;
 
-            ListViewLocker lvl = _lvlManager.FindListViewLocker(lsvItems.SelectedItems[0].Text);
+            ListViewLocker lvl = (ListViewLocker) lsvItems.SelectedItems[0];
             foreach (ProcessLocker p in lvl.GetLockers())
             {
                 ListViewItem lvi = new ListViewItem { Text = p.GetFileName() };
@@ -708,13 +693,14 @@ namespace DeadLock.Forms
 
         private void clearItemsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _lvlManager = new ListViewLockerManager();
+            foreach (ListViewItem lvi in lsvItems.Items)
+            {
+                ListViewLocker lvl = (ListViewLocker) lvi;
+                lvl.CancelTask();
+            }
             lsvItems.Items.Clear();
             lsvDetails.Items.Clear();
             imgFileIcons.Images.Clear();
-
-            _lvlManager.CancelAllTasks();
-            _lvlManager = new ListViewLockerManager();
         }
 
         /// <summary>
@@ -772,7 +758,7 @@ namespace DeadLock.Forms
         {
             if (lsvItems.SelectedItems.Count == 0) return;
 
-            ListViewItem selected = lsvItems.SelectedItems[0];
+            ListViewLocker selected = (ListViewLocker) lsvItems.SelectedItems[0];
             if (CancelSelectedTask(selected))
             {
                 SetCancelled(selected);
@@ -898,25 +884,24 @@ namespace DeadLock.Forms
         private void trueOwnershipToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (lsvItems.SelectedItems.Count == 0) return;
-            SetOwnership(lsvItems.SelectedItems[0], true);
+            SetOwnership((ListViewLocker)lsvItems.SelectedItems[0], true);
         }
 
         private void falseOwnershipToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (lsvItems.SelectedItems.Count == 0) return;
-            SetOwnership(lsvItems.SelectedItems[0], false);
+            SetOwnership((ListViewLocker)lsvItems.SelectedItems[0], false);
         }
 
         /// <summary>
-        /// Change the ownership of the ListViewLocker that is associated with the ListViewItem.
+        /// Change the ownership of the ListViewLocker.
         /// </summary>
-        /// <param name="lvi">The ListViewItem that should be updated.</param>
+        /// <param name="lvi">The ListViewLocker that should be updated.</param>
         /// <param name="ownership">A boolean to represent whether the user has ownership rights or not.</param>
-        private void SetOwnership(ListViewItem lvi, bool ownership)
+        private void SetOwnership(ListViewLocker lvi, bool ownership)
         {
-            ListViewLocker lvl = _lvlManager.FindListViewLocker(lvi.Text);
-            lvl.SetOwnership(ownership);
-            lvi.SubItems[2].Text = lvl.HasOwnership() ? _languageManager.GetLanguage().BarItemOwnershipTrue : _languageManager.GetLanguage().BarItemOwnershipFalse;
+            lvi.SetOwnership(ownership);
+            lvi.SubItems[2].Text = lvi.HasOwnership() ? _languageManager.GetLanguage().BarItemOwnershipTrue : _languageManager.GetLanguage().BarItemOwnershipFalse;
         }
 
         private void FrmMain_DragEnter(object sender, DragEventArgs e)

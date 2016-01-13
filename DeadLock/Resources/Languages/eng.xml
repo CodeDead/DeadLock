@@ -52,13 +52,13 @@
   <CmiOpenInVirusTotal>Open in VirusTotal</CmiOpenInVirusTotal>
   <CmiKill>Kill</CmiKill>
   <CmiOpenFileLocation>Open file location</CmiOpenFileLocation>
-  <MsgSuccessfullyKilled>Successfully killed the selected process(es) !</MsgSuccessfullyKilled>
+  <MsgSuccessfullyKilled>Successfully killed the selected process(es)!</MsgSuccessfullyKilled>
   <CmiHideShow>Hide / Show</CmiHideShow>
-  <MsgAdministrator>DeadLock might not function correctly without administrative rights !</MsgAdministrator>
+  <MsgAdministrator>DeadLock might not function correctly without administrative rights!</MsgAdministrator>
   <MsgVersion>Version</MsgVersion>
-  <MsgAvailable>is now available !</MsgAvailable>
-  <MsgDownloadNewVersion>Would you like to download the latest version ?</MsgDownloadNewVersion>
-  <MsgLatestVersionAlreadyInstalled>The latest version of DeadLock is already installed !</MsgLatestVersionAlreadyInstalled>
+  <MsgAvailable>is now available!</MsgAvailable>
+  <MsgDownloadNewVersion>Would you like to download the latest version?</MsgDownloadNewVersion>
+  <MsgLatestVersionAlreadyInstalled>The latest version of DeadLock is already installed!</MsgLatestVersionAlreadyInstalled>
   <TxtAbout>About</TxtAbout>
   <TxtAboutCreated>DeadLock was created by DeadLine.</TxtAboutCreated>
   <TxtAboutImages>Images: small-n-flat by paomedia</TxtAboutImages>
@@ -86,7 +86,7 @@
   <BtnSettingsClose>Close</BtnSettingsClose>
   <BtnReset>Reset</BtnReset>
   <BtnSave>Save</BtnSave>
-  <MsgRestartRequired>A restart is required in order to change certain settings !</MsgRestartRequired>
+  <MsgRestartRequired>A restart is required in order to change certain settings!</MsgRestartRequired>
   <TbtnOn>ON</TbtnOn>
   <TbtnOff>OFF</TbtnOff>
   <TxtUpdater>Updater</TxtUpdater>
@@ -96,7 +96,7 @@
   <BtnUpdate>Update</BtnUpdate>
   <MsgCouldNotRestart>Could not begin restart session. Unable to determine resource locker.</MsgCouldNotRestart>
   <MsgCouldNotRegister>Could not register resource.</MsgCouldNotRegister>
-  <MsgCouldNotList>Could not list the processes that are locking the resource !</MsgCouldNotList>
-  <MsgCouldNotListResult>Could not list the processes that are locking the resource. Failed to get size of result !</MsgCouldNotListResult>
+  <MsgCouldNotList>Could not list the processes that are locking the resource!</MsgCouldNotList>
+  <MsgCouldNotListResult>Could not list the processes that are locking the resource. Failed to get size of result!</MsgCouldNotListResult>
   <MsgAccessDenied>Access denied</MsgAccessDenied>
 </Language>

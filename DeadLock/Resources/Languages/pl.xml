@@ -52,13 +52,13 @@
 	<CmiOpenInVirusTotal>Otwórz w VirusTotal</CmiOpenInVirusTotal>
 	<CmiKill>Zakończ</CmiKill>
 	<CmiOpenFileLocation>Otwórz lokalizację pliku</CmiOpenFileLocation>
-	<MsgSuccessfullyKilled>Pomyślnie zakończono zaznoczony(e) proces(y) !</MsgSuccessfullyKilled>
+	<MsgSuccessfullyKilled>Pomyślnie zakończono zaznoczony(e) proces(y)!</MsgSuccessfullyKilled>
 	<CmiHideShow>Ukryj / Pokaż</CmiHideShow>
-	<MsgAdministrator>DeadLock może nie zadziałac prawidłowo bez praw administratorskich !</MsgAdministrator>
+	<MsgAdministrator>DeadLock może nie zadziałac prawidłowo bez praw administratorskich!</MsgAdministrator>
 	<MsgVersion>Wersja</MsgVersion>
-	<MsgAvailable>jest już dostępna !</MsgAvailable>
-	<MsgDownloadNewVersion>Czy chciałbys sciągnąc najnowszą wersje ?</MsgDownloadNewVersion>
-	<MsgLatestVersionAlreadyInstalled>Ostatnia wersja DeadLock jest już zainstalowana !</MsgLatestVersionAlreadyInstalled>
+	<MsgAvailable>jest już dostępna!</MsgAvailable>
+	<MsgDownloadNewVersion>Czy chciałbys sciągnąc najnowszą wersje?</MsgDownloadNewVersion>
+	<MsgLatestVersionAlreadyInstalled>Ostatnia wersja DeadLock jest już zainstalowana!</MsgLatestVersionAlreadyInstalled>
 	<TxtAbout>O programie</TxtAbout>
 	<TxtAboutCreated>DeadLock został stworzony przez DeadLine.</TxtAboutCreated>
 	<TxtAboutImages>Obrazy: small-n-flat przez paomedia</TxtAboutImages>
@@ -86,7 +86,7 @@
 	<BtnSettingsClose>Zamknij</BtnSettingsClose>
 	<BtnReset>Resetuj</BtnReset>
 	<BtnSave>Zapisz</BtnSave>
-	<MsgRestartRequired>Wymagane jest Ponowne uruchomienie w celu zmiany niektórych ustawień !</MsgRestartRequired>
+	<MsgRestartRequired>Wymagane jest Ponowne uruchomienie w celu zmiany niektórych ustawień!</MsgRestartRequired>
   <TbtnOn>WŁ</TbtnOn>
   <TbtnOff>WYŁ</TbtnOff>
 	<TxtUpdater>Aktualizator</TxtUpdater>
@@ -96,7 +96,7 @@
 	<BtnUpdate>Aktualizuj</BtnUpdate>
 	<MsgCouldNotRestart>Nie można zrestartować sesji. Nie można ustalić blokady zasóbów.</MsgCouldNotRestart>
 	<MsgCouldNotRegister>Nie można rejestrowac zasoby.</MsgCouldNotRegister>
-	<MsgCouldNotList>Nie można ustalić procesów ktore blokują zasoby !</MsgCouldNotList>
-	<MsgCouldNotListResult>Nie można ustalić procesów ktore blokują zasobu. Nie udało się pobrać wielkości wyniku !</MsgCouldNotListResult>
+	<MsgCouldNotList>Nie można ustalić procesów ktore blokują zasoby!</MsgCouldNotList>
+	<MsgCouldNotListResult>Nie można ustalić procesów ktore blokują zasobu. Nie udało się pobrać wielkości wyniku!</MsgCouldNotListResult>
 	<MsgAccessDenied>Odmowa dostępu</MsgAccessDenied>
 </Language>

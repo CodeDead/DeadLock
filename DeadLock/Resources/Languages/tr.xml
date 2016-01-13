@@ -54,11 +54,11 @@
   <CmiOpenFileLocation>Dosya konumunu aç</CmiOpenFileLocation>
   <MsgSuccessfullyKilled>Seçilen işlem(ler) başarıyla sonlandırıldı!</MsgSuccessfullyKilled>
   <CmiHideShow>Gizle / Göster</CmiHideShow>
-  <MsgAdministrator>DeadLock yönetici izinleri olmadan düzgün çalışmayabilir !</MsgAdministrator>
+  <MsgAdministrator>DeadLock yönetici izinleri olmadan düzgün çalışmayabilir!</MsgAdministrator>
   <MsgVersion>Sürüm</MsgVersion>
-  <MsgAvailable>hazır !</MsgAvailable>
-  <MsgDownloadNewVersion>En son sürümü indirmek ister misiniz ?</MsgDownloadNewVersion>
-  <MsgLatestVersionAlreadyInstalled>En güncel DeadLock sürümü zaten yüklü !</MsgLatestVersionAlreadyInstalled>
+  <MsgAvailable>hazır!</MsgAvailable>
+  <MsgDownloadNewVersion>En son sürümü indirmek ister misiniz?</MsgDownloadNewVersion>
+  <MsgLatestVersionAlreadyInstalled>En güncel DeadLock sürümü zaten yüklü!</MsgLatestVersionAlreadyInstalled>
   <TxtAbout>Hakkında</TxtAbout>
   <TxtAboutCreated>DeadLock, DeadLine tarafından üretilmiştir.</TxtAboutCreated>
   <TxtAboutImages>Resimler: small-n-flat by paomedia</TxtAboutImages>
@@ -86,7 +86,7 @@
   <BtnSettingsClose>Kapat</BtnSettingsClose>
   <BtnReset>Sıfırla</BtnReset>
   <BtnSave>Kaydet</BtnSave>
-  <MsgRestartRequired>Bir yeniden başlatma belirli ayarları değiştirmek için gereklidir !</MsgRestartRequired>
+  <MsgRestartRequired>Bir yeniden başlatma belirli ayarları değiştirmek için gereklidir!</MsgRestartRequired>
   <TbtnOn>Açık</TbtnOn>
   <TbtnOff>Kapalı</TbtnOff>
   <TxtUpdater>Güncelleyici</TxtUpdater>
@@ -96,7 +96,7 @@
   <BtnUpdate>Güncelle</BtnUpdate>
   <MsgCouldNotRestart>Oturum yeniden başlatılamadı. Kaynağı kilitleyen belirlenemedi</MsgCouldNotRestart>
   <MsgCouldNotRegister>Kaunak kaydedilemedi.</MsgCouldNotRegister>
-  <MsgCouldNotList>Kaynağı kilitleyen işlemler listelenemedi !</MsgCouldNotList>
-  <MsgCouldNotListResult>Kaynağı kilitleyen işlemler listelenemedi. Sonuç boyutunu alınamadı !</MsgCouldNotListResult>
+  <MsgCouldNotList>Kaynağı kilitleyen işlemler listelenemedi!</MsgCouldNotList>
+  <MsgCouldNotListResult>Kaynağı kilitleyen işlemler listelenemedi. Sonuç boyutunu alınamadı!</MsgCouldNotListResult>
   <MsgAccessDenied>Erişim reddedildi</MsgAccessDenied>
 </Language>

@@ -52,13 +52,13 @@
   <CmiOpenInVirusTotal>Openen in VirusTotal</CmiOpenInVirusTotal>
   <CmiKill>Sluiten</CmiKill>
   <CmiOpenFileLocation>Open bestandslocatie</CmiOpenFileLocation>
-  <MsgSuccessfullyKilled>De geselecteerde processen zijn met success gesloten !</MsgSuccessfullyKilled>
+  <MsgSuccessfullyKilled>De geselecteerde processen zijn met success gesloten!</MsgSuccessfullyKilled>
   <CmiHideShow>Verberg / Toon</CmiHideShow>
-  <MsgAdministrator>DeadLock zal mogelijk niet correct functioneren zonder administratieve rechten !</MsgAdministrator>
+  <MsgAdministrator>DeadLock zal mogelijk niet correct functioneren zonder administratieve rechten!</MsgAdministrator>
   <MsgVersion>Versie</MsgVersion>
-  <MsgAvailable>is nu beschikbaar !</MsgAvailable>
-  <MsgDownloadNewVersion>Wil je de laatste nieuwe versie downloaden ?</MsgDownloadNewVersion>
-  <MsgLatestVersionAlreadyInstalled>De laatste versie is reeds geïnstalleerd !</MsgLatestVersionAlreadyInstalled>
+  <MsgAvailable>is nu beschikbaar!</MsgAvailable>
+  <MsgDownloadNewVersion>Wil je de laatste nieuwe versie downloaden?</MsgDownloadNewVersion>
+  <MsgLatestVersionAlreadyInstalled>U heeft de meest recente versie!</MsgLatestVersionAlreadyInstalled>
   <TxtAbout>Over</TxtAbout>
   <TxtAboutCreated>DeadLock werd gemaakt door DeadLine.</TxtAboutCreated>
   <TxtAboutImages>Afbeeldingen: small-n-flat door paomedia</TxtAboutImages>
@@ -86,7 +86,7 @@
   <BtnSettingsClose>Sluiten</BtnSettingsClose>
   <BtnReset>Resetten</BtnReset>
   <BtnSave>Opslaan</BtnSave>
-  <MsgRestartRequired>Het programma moet opnieuw opgestart worden om de instellingen te wijzigen !</MsgRestartRequired>
+  <MsgRestartRequired>Het programma moet opnieuw opgestart worden om de instellingen te wijzigen!</MsgRestartRequired>
   <TbtnOn>AAN</TbtnOn>
   <TbtnOff>UIT</TbtnOff>
   <TxtUpdater>Updater</TxtUpdater>
@@ -96,7 +96,7 @@
   <BtnUpdate>Update</BtnUpdate>
   <MsgCouldNotRestart>Kon de restart sessie niet beginnen. Kon de resource lockers niet vinden.</MsgCouldNotRestart>
   <MsgCouldNotRegister>Kon de bronnen niet registreren.</MsgCouldNotRegister>
-  <MsgCouldNotList>Kon de processen niet opsommen die de bron vergrendelen !</MsgCouldNotList>
-  <MsgCouldNotListResult>Kon de processen niet opsommen die de bron vergrendelen. Kon de grootte van het resultaat niet bepalen !</MsgCouldNotListResult>
+  <MsgCouldNotList>Kon de processen niet opsommen die de bron vergrendelen!</MsgCouldNotList>
+  <MsgCouldNotListResult>Kon de processen niet opsommen die de bron vergrendelen. Kon de grootte van het resultaat niet bepalen!</MsgCouldNotListResult>
   <MsgAccessDenied>Toegang geweigerd</MsgAccessDenied>
 </Language>

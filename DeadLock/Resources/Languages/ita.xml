@@ -52,13 +52,13 @@
 	<CmiOpenInVirusTotal>Apri in VirusTotal</CmiOpenInVirusTotal>
 	<CmiKill>Arresta</CmiKill>
 	<CmiOpenFileLocation>Apri posizione del File</CmiOpenFileLocation>
-	<MsgSuccessfullyKilled>Processo/i selezionato/i arrestato/i con successo !</MsgSuccessfullyKilled>
+	<MsgSuccessfullyKilled>Processo/i selezionato/i arrestato/i con successo!</MsgSuccessfullyKilled>
 	<CmiHideShow>Nascondi / Mostra</CmiHideShow>
-	<MsgAdministrator>DeadLock potrebbe non funzionare correttamente senza i diritti d´amministratore !</MsgAdministrator>
+	<MsgAdministrator>DeadLock potrebbe non funzionare correttamente senza i diritti d´amministratore!</MsgAdministrator>
 	<MsgVersion>Versione</MsgVersion>
-	<MsgAvailable>e´ora disponibile !</MsgAvailable>
-	<MsgDownloadNewVersion>Scaricare la versione piu recente ?</MsgDownloadNewVersion>
-	<MsgLatestVersionAlreadyInstalled>La versione di DeadLock piu recente e´stata gia´installata !</MsgLatestVersionAlreadyInstalled>
+	<MsgAvailable>e´ora disponibile!</MsgAvailable>
+	<MsgDownloadNewVersion>Scaricare la versione piu recente?</MsgDownloadNewVersion>
+	<MsgLatestVersionAlreadyInstalled>La versione di DeadLock piu recente e´stata gia´installata!</MsgLatestVersionAlreadyInstalled>
 	<TxtAbout>Informazioni</TxtAbout>
 	<TxtAboutCreated>DeadLock è stato creato da DeadLine.</TxtAboutCreated>
 	<TxtAboutImages>Immagini: small-n-flat da paomedia</TxtAboutImages>
@@ -86,7 +86,7 @@
 	<BtnSettingsClose>Chiudi</BtnSettingsClose>
 	<BtnReset>Resetta</BtnReset>
 	<BtnSave>Salva</BtnSave>
-	<MsgRestartRequired>È necessario un riavvio per modificare alcune impostazioni !</MsgRestartRequired>
+	<MsgRestartRequired>È necessario un riavvio per modificare alcune impostazioni!</MsgRestartRequired>
   <TbtnOn>ACCESO</TbtnOn>
   <TbtnOff>SPENTO</TbtnOff>
 	<TxtUpdater>Aggiornatore</TxtUpdater>
@@ -96,7 +96,7 @@
 	<BtnUpdate>Aggiorna</BtnUpdate>
 	<MsgCouldNotRestart>Non e´stato possibile riavviare la sessione. Impossibile identificare blocco risorsa.</MsgCouldNotRestart>
 	<MsgCouldNotRegister>Non e´stato possibile registrare la risorsa.</MsgCouldNotRegister>
-	<MsgCouldNotList>Non e´stato possibile determinare i processi che bloccano la risorsa !</MsgCouldNotList>
-	<MsgCouldNotListResult>Non e´stato possibile determinare i processi che bloccano la risorsa. Impossibile ottenere le dimensione del risultato !</MsgCouldNotListResult>
+	<MsgCouldNotList>Non e´stato possibile determinare i processi che bloccano la risorsa!</MsgCouldNotList>
+	<MsgCouldNotListResult>Non e´stato possibile determinare i processi che bloccano la risorsa. Impossibile ottenere le dimensione del risultato!</MsgCouldNotListResult>
 	<MsgAccessDenied>Accesso negato</MsgAccessDenied>
 </Language>

@@ -673,14 +673,14 @@ namespace DeadLock.Forms
             this.unlockToolStripMenuItem1.Name = "unlockToolStripMenuItem1";
             this.unlockToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
             | System.Windows.Forms.Keys.U)));
-            this.unlockToolStripMenuItem1.Size = new System.Drawing.Size(200, 22);
+            this.unlockToolStripMenuItem1.Size = new System.Drawing.Size(224, 22);
             this.unlockToolStripMenuItem1.Text = "Unlock";
             this.unlockToolStripMenuItem1.Click += new System.EventHandler(this.unlockToolStripMenuItem1_Click);
             // 
             // splitToolStripMenuItem4
             // 
             this.splitToolStripMenuItem4.Name = "splitToolStripMenuItem4";
-            this.splitToolStripMenuItem4.Size = new System.Drawing.Size(197, 6);
+            this.splitToolStripMenuItem4.Size = new System.Drawing.Size(221, 6);
             // 
             // copyToolStripMenuItem
             // 
@@ -688,7 +688,7 @@ namespace DeadLock.Forms
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
             this.copyToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
             | System.Windows.Forms.Keys.C)));
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.copyToolStripMenuItem.Text = "Copy";
             this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
@@ -698,14 +698,14 @@ namespace DeadLock.Forms
             this.moveToolStripMenuItem.Name = "moveToolStripMenuItem";
             this.moveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
             | System.Windows.Forms.Keys.M)));
-            this.moveToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.moveToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.moveToolStripMenuItem.Text = "Move";
             this.moveToolStripMenuItem.Click += new System.EventHandler(this.moveToolStripMenuItem_Click);
             // 
             // splitToolStripMenuItem5
             // 
             this.splitToolStripMenuItem5.Name = "splitToolStripMenuItem5";
-            this.splitToolStripMenuItem5.Size = new System.Drawing.Size(197, 6);
+            this.splitToolStripMenuItem5.Size = new System.Drawing.Size(221, 6);
             // 
             // removeToolStripMenuItem
             // 
@@ -713,7 +713,7 @@ namespace DeadLock.Forms
             this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
             this.removeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.Delete)));
-            this.removeToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.removeToolStripMenuItem.Text = "RemoveItem";
             this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
             // 

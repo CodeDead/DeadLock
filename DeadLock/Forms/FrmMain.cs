@@ -289,6 +289,14 @@ namespace DeadLock.Forms
         private void OpenPath(string path)
         {
             if (!File.Exists(path) && !Directory.Exists(path)) return;
+
+            bool add = true;
+            foreach (ListViewItem lv in lsvItems.Items)
+            {
+                if (lv.Text == path) add = false;
+            }
+            if (!add) return;
+
             Language l = _languageManager.GetLanguage();
             int index = lsvItems.Items.Count;
             ListViewLocker lvi = new ListViewLocker(path, l, index);

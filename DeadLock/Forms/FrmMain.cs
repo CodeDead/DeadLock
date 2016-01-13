@@ -602,7 +602,7 @@ namespace DeadLock.Forms
         /// Cancel the ListViewLocker task, if applicable.
         /// </summary>
         /// <param name="lvi">The ListViewLocker that should be updated.</param>
-        /// <returns>A boolean to indicate whether the operation was successful or not.</returns>
+        /// <returns>A boolean to represent whether the task was cancelled or not.</returns>
         private static bool CancelSelectedTask(ListViewLocker lvi)
         {
             if (lvi == null) return false;

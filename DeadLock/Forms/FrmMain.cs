@@ -91,7 +91,7 @@ namespace DeadLock.Forms
             trueBarItem.Text = l.BarItemOwnershipTrue;
             falseBarItem.Text = l.BarItemOwnershipFalse;
 
-            removeItemBarItem.Text = l.BarItemRemoveItem;
+            removeBarItem.Text = l.BarItemRemoveItem;
             clearItemsbarItem.Text = l.BarItemClearItems;
             autoSizeColumnsBarItem.Text = l.BarItemAutoSizeColumns;
             cancelOperationBarItem.Text = l.BarItemCancelTask;

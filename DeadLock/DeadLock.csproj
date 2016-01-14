@@ -44,11 +44,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="Syncfusion.Shared.Base, Version=13.3460.0.18, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89">
-      <Private>True</Private>
+    <Reference Include="Syncfusion.Shared.Base, Version=13.4460.0.53, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>G:\Program Files (x86)\SyncFusion\Essential Studio\13.4.0.53\Assemblies\4.6\Syncfusion.Shared.Base.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.Tools.Windows, Version=13.3460.0.18, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
-      <Private>True</Private>
+    <Reference Include="Syncfusion.Tools.Windows, Version=13.4460.0.53, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>G:\Program Files (x86)\SyncFusion\Essential Studio\13.4.0.53\Assemblies\4.6\Syncfusion.Tools.Windows.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

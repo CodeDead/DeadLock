@@ -53,7 +53,6 @@ namespace DeadLock.Forms
             this.ownershipParentBarItem = new Syncfusion.Windows.Forms.Tools.XPMenus.ParentBarItem();
             this.trueBarItem = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.falseBarItem = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
-            this.removeItemBarItem = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.clearItemsbarItem = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.autoSizeColumnsBarItem = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.cancelOperationBarItem = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
@@ -148,15 +147,14 @@ namespace DeadLock.Forms
             this.ownershipParentBarItem,
             this.trueBarItem,
             this.falseBarItem,
-            this.removeItemBarItem,
+            this.removeBarItem,
             this.clearItemsbarItem,
-            this.fileParentBarItem,
             this.autoSizeColumnsBarItem,
+            this.cancelOperationBarItem,
+            this.fileParentBarItem,
             this.unlockBarItem,
             this.copyBarItem,
             this.moveBarItem,
-            this.removeBarItem,
-            this.cancelOperationBarItem,
             this.openFilesBarItem,
             this.openFolderbarItem,
             this.restartBarItem,
@@ -266,7 +264,7 @@ namespace DeadLock.Forms
             this.editParentBarItem.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] {
             this.unlockParentBarItem,
             this.ownershipParentBarItem,
-            this.removeItemBarItem,
+            this.removeBarItem,
             this.clearItemsbarItem,
             this.autoSizeColumnsBarItem,
             this.cancelOperationBarItem});
@@ -343,7 +341,7 @@ namespace DeadLock.Forms
             this.removeBarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("removeBarItem.Image")));
             this.removeBarItem.ShowToolTipInPopUp = false;
             this.removeBarItem.SizeToFit = true;
-            this.removeBarItem.Text = "RemoveItem";
+            this.removeBarItem.Text = "Remove item";
             this.removeBarItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
             // 
             // ownershipParentBarItem
@@ -383,17 +381,6 @@ namespace DeadLock.Forms
             this.falseBarItem.SizeToFit = true;
             this.falseBarItem.Text = "False";
             this.falseBarItem.Click += new System.EventHandler(this.falseOwnershipToolStripMenuItem_Click);
-            // 
-            // removeItemBarItem
-            // 
-            this.removeItemBarItem.BarName = "removeItemBarItem";
-            this.removeItemBarItem.CategoryIndex = 1;
-            this.removeItemBarItem.ID = "RemoveItem item";
-            this.removeItemBarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("removeItemBarItem.Image")));
-            this.removeItemBarItem.ShowToolTipInPopUp = false;
-            this.removeItemBarItem.SizeToFit = true;
-            this.removeItemBarItem.Text = "RemoveItem item";
-            this.removeItemBarItem.Click += new System.EventHandler(this.removeItemToolStripMenuItem_Click);
             // 
             // clearItemsbarItem
             // 
@@ -1021,7 +1008,6 @@ namespace DeadLock.Forms
         private Syncfusion.Windows.Forms.Tools.XPMenus.BarItem openFolderbarItem;
         private Syncfusion.Windows.Forms.Tools.XPMenus.BarItem exitBarItem;
         private Syncfusion.Windows.Forms.Tools.XPMenus.ParentBarItem editParentBarItem;
-        private Syncfusion.Windows.Forms.Tools.XPMenus.BarItem removeItemBarItem;
         private Syncfusion.Windows.Forms.Tools.XPMenus.BarItem clearItemsbarItem;
         private Syncfusion.Windows.Forms.Tools.XPMenus.ParentBarItem toolsParentBarItem;
         private Syncfusion.Windows.Forms.Tools.XPMenus.BarItem settingsBarItem;

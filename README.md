@@ -4,7 +4,12 @@ Unlock files and folders !
 This GitHub repository has been created to allow user to view, edit and share the code behind DeadLock. DeadLock is licensed under
 the GPL V3, so please follow the rules ;).
 
-In order to build DeadLock, we suggest turning off the 'Prefer 32-bit' option in Visual Studio as this might cause anomalies.
+Requirements in order to build DeadLock:
+* Turn of 'Prefer 32-bit'
+* SyncFusion for Windows Forms (https://www.syncfusion.com/)
+* .NET Framework 4.6.1
+* Visual Studio 2015
+
 You can find our company on the web:
 http://codedead.com/
 

@@ -11,6 +11,12 @@ namespace DeadLock.Classes
         public string Comment;
         #endregion
 
+        #region Shared
+        public string BtnClose;
+        public string BarItemSettings;
+        public string BarItemAbout;
+        #endregion
+
         #region Main_Form
         //Main form - Menu items:
         public string BarFile;
@@ -43,15 +49,11 @@ namespace DeadLock.Classes
         //Main Form - View menu - Items:
         public string BarItemDetails;
 
-        //Main Form - Tools menu - Items:
-        public string BarItemSettings;
-
         //Main Form - Help menu - Items:
         public string BarItemHelp;
         public string BarItemCheckForUpdates;
         public string BarItemHomePage;
         public string BarItemLicense;
-        public string BarItemAbout;
 
         //Main Form - ListView Items:
         public string ClhPath;
@@ -106,9 +108,6 @@ namespace DeadLock.Classes
         #endregion
 
         #region About_Form
-        //About Form - Text:
-        public string TxtAbout;
-
         //About Form - About:
         public string TxtAboutCreated;
         public string TxtAboutImages;
@@ -116,15 +115,11 @@ namespace DeadLock.Classes
         public string TxtAboutCopyright;
         public string TxtAboutTranslation;
 
-        //About Form - Buttons:
-        public string BtnAboutClose;
+        //About Form - Button:
         public string BtnLicense;
         #endregion
 
         #region Settings_Form
-        //Settings Form - Text:
-        public string TxtSettings;
-
         //Settings Form - General Tab:
         public string LblGeneral;
         public string ChbAutoUpdate;
@@ -147,7 +142,6 @@ namespace DeadLock.Classes
         public string LblOwnership;
 
         //Settings Form - Buttons:
-        public string BtnSettingsClose;
         public string BtnReset;
         public string BtnSave;
 

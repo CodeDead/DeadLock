@@ -59,15 +59,13 @@
 	<MsgAvailable>jest już dostępna!</MsgAvailable>
 	<MsgDownloadNewVersion>Czy chciałbys sciągnąc najnowszą wersje?</MsgDownloadNewVersion>
 	<MsgLatestVersionAlreadyInstalled>Ostatnia wersja DeadLock jest już zainstalowana!</MsgLatestVersionAlreadyInstalled>
-	<TxtAbout>O programie</TxtAbout>
 	<TxtAboutCreated>DeadLock został stworzony przez DeadLine.</TxtAboutCreated>
 	<TxtAboutImages>Obrazy: small-n-flat przez paomedia</TxtAboutImages>
 	<TxtAboutTheme>Tematu przez: SyncFusion</TxtAboutTheme>
 	<TxtAboutCopyright>Copyright &#169; CodeDead 2016</TxtAboutCopyright>
 	<TxtAboutTranslation>Tłumaczenie:</TxtAboutTranslation>
-	<BtnAboutClose>Zamknij</BtnAboutClose>
+	<BtnClose>Zamknij</BtnClose>
 	<BtnLicense>Licencja</BtnLicense>
-	<TxtSettings>Ustawienia</TxtSettings>
 	<LblGeneral>Ogólne</LblGeneral>
 	<ChbAutoUpdate>Automatycznie sprawdzaj aktualizacje:</ChbAutoUpdate>
 	<ChbShowNotifyIcon>Wyświetl dymki informacyji:</ChbShowNotifyIcon>
@@ -83,7 +81,6 @@
 	<LblAutoRunDeadLock>Włącz DeadLock automatycznie:</LblAutoRunDeadLock>
 	<LblWindowsExplorerIntegration>Integruj w menu kontekstowym:</LblWindowsExplorerIntegration>
   <LblOwnership>Przejąć na własność:</LblOwnership>
-	<BtnSettingsClose>Zamknij</BtnSettingsClose>
 	<BtnReset>Resetuj</BtnReset>
 	<BtnSave>Zapisz</BtnSave>
 	<MsgRestartRequired>Wymagane jest Ponowne uruchomienie w celu zmiany niektórych ustawień!</MsgRestartRequired>

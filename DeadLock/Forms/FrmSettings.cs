@@ -44,7 +44,7 @@ namespace DeadLock.Forms
         /// </summary>
         private void LoadLanguage()
         {
-            Text = @"DeadLock - " + _language.TxtSettings;
+            Text = @"DeadLock - " + _language.BarItemSettings;
 
             tpaGeneral.Text = _language.LblGeneral;
             tpaAppearance.Text = _language.LblAppearance;
@@ -95,7 +95,7 @@ namespace DeadLock.Forms
             tbtnOwnership.ActiveState.Text = _language.TbtnOff;
             tbtnOwnership.InactiveState.Text = _language.TbtnOn;
 
-            btnClose.Text = _language.BtnSettingsClose;
+            btnClose.Text = _language.BtnClose;
             btnReset.Text = _language.BtnReset;
             btnSave.Text = _language.BtnSave;
         }

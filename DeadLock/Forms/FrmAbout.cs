@@ -37,9 +37,9 @@ namespace DeadLock.Forms
         /// </summary>
         private void LoadLanguage()
         {
-            Text = @"DeadLock - " + _language.TxtAbout;
+            Text = @"DeadLock - " + _language.BarItemAbout;
             txtAbout.Text = _language.TxtAboutCreated + Environment.NewLine + _language.TxtAboutImages + Environment.NewLine + _language.TxtAboutTheme + Environment.NewLine + Environment.NewLine + _language.TxtAboutCopyright + Environment.NewLine + Environment.NewLine + _language.TxtAboutTranslation + Environment.NewLine + _language.Comment + @" - " + _language.Author;
-            btnClose.Text = _language.BtnAboutClose;
+            btnClose.Text = _language.BtnClose;
             btnLicense.Text = _language.BtnLicense;
         }
 

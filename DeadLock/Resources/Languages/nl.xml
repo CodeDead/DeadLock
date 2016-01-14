@@ -59,15 +59,13 @@
   <MsgAvailable>is nu beschikbaar!</MsgAvailable>
   <MsgDownloadNewVersion>Wil je de laatste nieuwe versie downloaden?</MsgDownloadNewVersion>
   <MsgLatestVersionAlreadyInstalled>U heeft de meest recente versie!</MsgLatestVersionAlreadyInstalled>
-  <TxtAbout>Over</TxtAbout>
   <TxtAboutCreated>DeadLock werd gemaakt door DeadLine.</TxtAboutCreated>
   <TxtAboutImages>Afbeeldingen: small-n-flat door paomedia</TxtAboutImages>
   <TxtAboutTheme>Thema door: SyncFusion</TxtAboutTheme>
   <TxtAboutCopyright>Copyright &#169; CodeDead 2016</TxtAboutCopyright>
   <TxtAboutTranslation>Vertaling:</TxtAboutTranslation>
-  <BtnAboutClose>Sluiten</BtnAboutClose>
+  <BtnClose>Sluiten</BtnClose>
   <BtnLicense>Licentie</BtnLicense>
-  <TxtSettings>Instellingen</TxtSettings>
   <LblGeneral>Algemeen</LblGeneral>
   <ChbAutoUpdate>Controleer automatisch op updates:</ChbAutoUpdate>
   <ChbShowNotifyIcon>Toon notifyicon:</ChbShowNotifyIcon>
@@ -83,7 +81,6 @@
   <LblAutoRunDeadLock>Start DeadLock automatisch:</LblAutoRunDeadLock>
   <LblWindowsExplorerIntegration>Windows Explorer integratie:</LblWindowsExplorerIntegration>
   <LblOwnership>Neem eigendomsrecht:</LblOwnership>
-  <BtnSettingsClose>Sluiten</BtnSettingsClose>
   <BtnReset>Resetten</BtnReset>
   <BtnSave>Opslaan</BtnSave>
   <MsgRestartRequired>Het programma moet opnieuw opgestart worden om de instellingen te wijzigen!</MsgRestartRequired>

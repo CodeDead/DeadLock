@@ -59,15 +59,13 @@
   <MsgAvailable>is now available!</MsgAvailable>
   <MsgDownloadNewVersion>Would you like to download the latest version?</MsgDownloadNewVersion>
   <MsgLatestVersionAlreadyInstalled>The latest version of DeadLock is already installed!</MsgLatestVersionAlreadyInstalled>
-  <TxtAbout>About</TxtAbout>
   <TxtAboutCreated>DeadLock was created by DeadLine.</TxtAboutCreated>
   <TxtAboutImages>Images: small-n-flat by paomedia</TxtAboutImages>
   <TxtAboutTheme>Theme by: SyncFusion</TxtAboutTheme>
   <TxtAboutCopyright>Copyright &#169; CodeDead 2016</TxtAboutCopyright>
   <TxtAboutTranslation>Translation:</TxtAboutTranslation>
-  <BtnAboutClose>Close</BtnAboutClose>
+  <BtnClose>Close</BtnClose>
   <BtnLicense>License</BtnLicense>
-  <TxtSettings>Settings</TxtSettings>
   <LblGeneral>General</LblGeneral>
   <ChbAutoUpdate>Automatically check for updates:</ChbAutoUpdate>
   <ChbShowNotifyIcon>Show notifyicon:</ChbShowNotifyIcon>
@@ -83,7 +81,6 @@
   <LblAutoRunDeadLock>Run DeadLock automatically:</LblAutoRunDeadLock>
   <LblWindowsExplorerIntegration>Windows Explorer integration:</LblWindowsExplorerIntegration>
   <LblOwnership>Take ownership:</LblOwnership>
-  <BtnSettingsClose>Close</BtnSettingsClose>
   <BtnReset>Reset</BtnReset>
   <BtnSave>Save</BtnSave>
   <MsgRestartRequired>A restart is required in order to change certain settings!</MsgRestartRequired>

@@ -59,15 +59,13 @@
   <MsgAvailable>hazır!</MsgAvailable>
   <MsgDownloadNewVersion>En son sürümü indirmek ister misiniz?</MsgDownloadNewVersion>
   <MsgLatestVersionAlreadyInstalled>En güncel DeadLock sürümü zaten yüklü!</MsgLatestVersionAlreadyInstalled>
-  <TxtAbout>Hakkında</TxtAbout>
   <TxtAboutCreated>DeadLock, DeadLine tarafından üretilmiştir.</TxtAboutCreated>
   <TxtAboutImages>Resimler: small-n-flat by paomedia</TxtAboutImages>
   <TxtAboutTheme>Tema: SyncFusion</TxtAboutTheme>
   <TxtAboutCopyright>Telif Hakları © CodeDead 2016</TxtAboutCopyright>
   <TxtAboutTranslation>Çeviri:</TxtAboutTranslation>
-  <BtnAboutClose>Kapat</BtnAboutClose>
+  <BtnClose>Kapat</BtnClose>
   <BtnLicense>Lisans</BtnLicense>
-  <TxtSettings>Ayarlar</TxtSettings>
   <LblGeneral>Genel</LblGeneral>
   <ChbAutoUpdate>Güncellemeleri otomatik denetle:</ChbAutoUpdate>
   <ChbShowNotifyIcon>Uyarı simgesini göster:</ChbShowNotifyIcon>
@@ -83,7 +81,6 @@
   <LblAutoRunDeadLock>DeadLock'ı otomatik başlat:</LblAutoRunDeadLock>
   <LblWindowsExplorerIntegration>Windows sağtık ilişkilendirmesi:</LblWindowsExplorerIntegration>
   <LblOwnership>Sahiplik alma:</LblOwnership>
-  <BtnSettingsClose>Kapat</BtnSettingsClose>
   <BtnReset>Sıfırla</BtnReset>
   <BtnSave>Kaydet</BtnSave>
   <MsgRestartRequired>Bir yeniden başlatma belirli ayarları değiştirmek için gereklidir!</MsgRestartRequired>

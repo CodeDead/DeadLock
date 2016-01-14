@@ -309,7 +309,7 @@ namespace DeadLock.Forms
             // cboLanguage
             // 
             this.cboLanguage.BackColor = System.Drawing.Color.White;
-            this.cboLanguage.BeforeTouchSize = new System.Drawing.Size(100, 21);
+            this.cboLanguage.BeforeTouchSize = new System.Drawing.Size(100, 19);
             this.cboLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboLanguage.Items.AddRange(new object[] {
@@ -328,7 +328,7 @@ namespace DeadLock.Forms
             this.cboLanguage.Location = new System.Drawing.Point(227, 128);
             this.cboLanguage.MetroColor = System.Drawing.Color.SteelBlue;
             this.cboLanguage.Name = "cboLanguage";
-            this.cboLanguage.Size = new System.Drawing.Size(100, 21);
+            this.cboLanguage.Size = new System.Drawing.Size(100, 19);
             this.cboLanguage.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
             this.cboLanguage.TabIndex = 9;
             this.cboLanguage.Text = "Dutch";
@@ -354,7 +354,7 @@ namespace DeadLock.Forms
             // txtLanguagePath
             // 
             this.txtLanguagePath.BackColor = System.Drawing.Color.White;
-            this.txtLanguagePath.BeforeTouchSize = new System.Drawing.Size(305, 20);
+            this.txtLanguagePath.BeforeTouchSize = new System.Drawing.Size(243, 139);
             this.txtLanguagePath.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtLanguagePath.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLanguagePath.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -429,7 +429,7 @@ namespace DeadLock.Forms
             // itxtBorderThickness
             // 
             this.itxtBorderThickness.BackGroundColor = System.Drawing.SystemColors.Window;
-            this.itxtBorderThickness.BeforeTouchSize = new System.Drawing.Size(305, 20);
+            this.itxtBorderThickness.BeforeTouchSize = new System.Drawing.Size(243, 139);
             this.itxtBorderThickness.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.itxtBorderThickness.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.itxtBorderThickness.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -580,6 +580,7 @@ namespace DeadLock.Forms
             this.btnClose.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
             this.btnClose.BackColor = System.Drawing.Color.SteelBlue;
             this.btnClose.BeforeTouchSize = new System.Drawing.Size(75, 23);
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.IsBackStageButton = false;
             this.btnClose.Location = new System.Drawing.Point(12, 230);
@@ -625,10 +626,12 @@ namespace DeadLock.Forms
             // 
             // FrmSettings
             // 
+            this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderColor = System.Drawing.Color.SteelBlue;
             this.BorderThickness = 3;
+            this.CancelButton = this.btnClose;
             this.CaptionBarColor = System.Drawing.Color.SteelBlue;
             this.CaptionButtonColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(403, 265);

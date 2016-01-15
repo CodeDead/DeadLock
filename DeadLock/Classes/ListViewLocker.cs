@@ -236,10 +236,6 @@ namespace DeadLock.Classes
                     break;
                 }
             }
-            catch (UnauthorizedAccessException)
-            {
-                isWriteAccess = false;
-            }
             catch (Exception)
             {
                 isWriteAccess = false;

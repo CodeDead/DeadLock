@@ -477,7 +477,7 @@ namespace DeadLock.Classes
             {
                 if (File.Exists(GetPath()))
                 {
-                    SaveFileDialog sfd = new SaveFileDialog { Filter = @"|*" + Path.GetExtension(GetPath()) };
+                    SaveFileDialog sfd = new SaveFileDialog { Filter = "|*" + Path.GetExtension(GetPath()) };
                     if (sfd.ShowDialog() == DialogResult.OK)
                     {
                         await Unlock();
@@ -514,7 +514,7 @@ namespace DeadLock.Classes
             }
             else
             {
-                SaveFileDialog sfd = new SaveFileDialog { Filter = @"|*" + Path.GetExtension(GetPath()) };
+                SaveFileDialog sfd = new SaveFileDialog { Filter = "|*" + Path.GetExtension(GetPath()) };
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
                     await Unlock();

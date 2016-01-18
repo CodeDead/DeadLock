@@ -247,7 +247,7 @@ namespace DeadLock.Forms
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            versionStaticBarItem.Text += @" " + Application.ProductVersion;
+            versionStaticBarItem.Text += " " + Application.ProductVersion;
             try
             {
                 nfiTray.Visible = Properties.Settings.Default.ShowNotifyIcon;
@@ -862,7 +862,7 @@ namespace DeadLock.Forms
                 foreach (ListViewItem l in lsvDetails.SelectedItems)
                 {
                     if (!File.Exists(l.SubItems[1].Text)) continue;
-                    Process.Start("explorer.exe", @"/select, " + l.SubItems[1].Text);
+                    Process.Start("explorer.exe", "/select, " + l.SubItems[1].Text);
                 }
             }
             catch (Exception ex)

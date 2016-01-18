@@ -44,7 +44,7 @@ namespace DeadLock.Forms
         /// </summary>
         private void LoadLanguage()
         {
-            Text = @"DeadLock - " + _language.BarItemSettings;
+            Text = "DeadLock - " + _language.BarItemSettings;
 
             tpaGeneral.Text = _language.LblGeneral;
             tpaAppearance.Text = _language.LblAppearance;
@@ -159,7 +159,7 @@ namespace DeadLock.Forms
             bool folderExplorerIntegration = false;
             using (RegistryKey key = Registry.ClassesRoot.OpenSubKey(@"*\shell\DeadLock\command"))
             {
-                if (key != null && key.GetValue(@"", "").ToString() == Application.ExecutablePath + " %1")
+                if (key != null && key.GetValue("", "").ToString() == Application.ExecutablePath + " %1")
                 {
                     fileExplorerIntegration = true;
                 }
@@ -168,7 +168,7 @@ namespace DeadLock.Forms
 
             using (RegistryKey key = Registry.ClassesRoot.OpenSubKey(@"Directory\shell\DeadLock\command"))
             {
-                if (key != null && key.GetValue(@"", "").ToString() == Application.ExecutablePath + " %1")
+                if (key != null && key.GetValue("", "").ToString() == Application.ExecutablePath + " %1")
                 {
                     folderExplorerIntegration = true;
                 }
@@ -376,7 +376,7 @@ namespace DeadLock.Forms
         private void btnSelectPath_Click(object sender, EventArgs e)
         {
             cboLanguage.SelectedIndex = 2;
-            OpenFileDialog ofd = new OpenFileDialog {Filter = @"XML (*.xml)|*.xml"};
+            OpenFileDialog ofd = new OpenFileDialog {Filter = "XML (*.xml)|*.xml"};
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 txtLanguagePath.Text = ofd.FileName;

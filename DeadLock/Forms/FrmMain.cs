@@ -166,46 +166,47 @@ namespace DeadLock.Forms
         private async void Update(bool showError, bool showNoUpdates)
         {
             Language l = _languageManager.GetLanguage();
-            await Task.Run(() =>
-            {
-                try
-                {
-                    WebClient wc = new WebClient();
-                    string xml = wc.DownloadString("http://codedead.com/Software/DeadLock/update.xml");
 
-                    XmlSerializer serializer = new XmlSerializer(_update.GetType());
-                    using (MemoryStream stream = new MemoryStream())
+            try
+            {
+                WebClient wc = new WebClient();
+                string xml = await wc.DownloadStringTaskAsync("http://codedead.com/Software/DeadLock/update.xml");
+
+                XmlSerializer serializer = new XmlSerializer(_update.GetType());
+                using (MemoryStream stream = new MemoryStream())
+                {
+                    StreamWriter writer = new StreamWriter(stream);
+                    writer.Write(xml);
+                    writer.Flush();
+                    stream.Position = 0;
+                    _update = (Update)serializer.Deserialize(stream);
+                    writer.Dispose();
+                }
+                if (_update.CheckForUpdate())
+                {
+                    if (MessageBoxAdv.Show(l.MsgVersion + " " + _update.GetUpdateVersion() + " " + l.MsgAvailable + Environment.NewLine + l.MsgDownloadNewVersion, "DeadLock", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        StreamWriter writer = new StreamWriter(stream);
-                        writer.Write(xml);
-                        writer.Flush();
-                        stream.Position = 0;
-                        _update = (Update)serializer.Deserialize(stream);
-                        writer.Dispose();
-                    }
-                    if (_update.CheckForUpdate())
-                    {
-                        if (MessageBoxAdv.Show(l.MsgVersion + " " + _update.GetUpdateVersion() + " " + l.MsgAvailable + Environment.NewLine + l.MsgDownloadNewVersion, "DeadLock", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        await Task.Run(() =>
                         {
                             new FrmUpdater(_update, _languageManager.GetLanguage()).ShowDialog();
-                        }
-                    }
-                    else
-                    {
-                        if (showNoUpdates)
-                        {
-                            MessageBoxAdv.Show(l.MsgLatestVersionAlreadyInstalled, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
+                        });
                     }
                 }
-                catch (Exception ex)
+                else
                 {
-                    if (showError)
+                    if (showNoUpdates)
                     {
-                        MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBoxAdv.Show(l.MsgLatestVersionAlreadyInstalled, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
-            });
+            }
+            catch (Exception ex)
+            {
+                if (showError)
+                {
+                    MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         /// <summary>

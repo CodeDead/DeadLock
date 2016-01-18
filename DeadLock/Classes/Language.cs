@@ -15,6 +15,7 @@ namespace DeadLock.Classes
         public string BtnClose;
         public string BarItemSettings;
         public string BarItemAbout;
+        public string BtnLicense;
         #endregion
 
         #region Main_Form
@@ -53,7 +54,6 @@ namespace DeadLock.Classes
         public string BarItemHelp;
         public string BarItemCheckForUpdates;
         public string BarItemHomePage;
-        public string BarItemLicense;
 
         //Main Form - ListView Items:
         public string ClhPath;
@@ -114,9 +114,6 @@ namespace DeadLock.Classes
         public string TxtAboutTheme;
         public string TxtAboutCopyright;
         public string TxtAboutTranslation;
-
-        //About Form - Button:
-        public string BtnLicense;
         #endregion
 
         #region Settings_Form

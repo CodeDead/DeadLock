@@ -34,16 +34,17 @@ namespace DeadLock.Classes
         }
 
         /// <summary>
-        /// Load a Language using the project resources, depending on the settings.
+        /// Load a language using the Resources, depending on the index.
         /// </summary>
-        internal void LoadLanguage()
+        /// <param name="index">The index of the language that should be loaded.</param>
+        internal void LoadLanguage(int index)
         {
             XmlSerializer serializer = new XmlSerializer(_currentLanguage.GetType());
             using (MemoryStream stream = new MemoryStream())
             {
                 StreamWriter writer = new StreamWriter(stream);
                 string res;
-                switch (Properties.Settings.Default.Language)
+                switch (index)
                 {
                     case 0:
                         res = Properties.Resources.nl;
@@ -52,12 +53,21 @@ namespace DeadLock.Classes
                         res = Properties.Resources.eng;
                         break;
                     case 2:
-                        res = Properties.Resources.ita;
+                        res = Properties.Resources.fr;
                         break;
                     case 3:
-                        res = Properties.Resources.pl;
+                        res = Properties.Resources.ita;
                         break;
                     case 4:
+                        res = Properties.Resources.kor;
+                        break;
+                    case 5:
+                        res = Properties.Resources.pl;
+                        break;
+                    case 6:
+                        res = Properties.Resources.sr;
+                        break;
+                    case 7:
                         res = Properties.Resources.tr;
                         break;
                     default:

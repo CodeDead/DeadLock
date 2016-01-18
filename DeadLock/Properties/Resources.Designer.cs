@@ -191,6 +191,26 @@ namespace DeadLock.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
+        ///&lt;Language xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+        ///  &lt;Author&gt;pouemes&lt;/Author&gt;
+        ///  &lt;Comment&gt;Français&lt;/Comment&gt;
+        ///  &lt;BarFile&gt;&amp;amp;Fichier&lt;/BarFile&gt;
+        ///  &lt;BarEdit&gt;&amp;amp;Editer&lt;/BarEdit&gt;
+        ///  &lt;BarView&gt;&amp;amp;Voir&lt;/BarView&gt;
+        ///  &lt;BarTools&gt;&amp;amp;Outils&lt;/BarTools&gt;
+        ///  &lt;BarHelp&gt;&amp;amp;Aide&lt;/BarHelp&gt;
+        ///  &lt;BarItemOpenFiles&gt;Ouvrir fichier(s)...&lt;/BarItemOpenFiles&gt;
+        ///  &lt;BarItemOpenFolder&gt;Ouvrir répertoire...&lt;/BarItemOpenFolder&gt;
+        ///  &lt;BarItemRestart&gt;Redémarr [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string fr {
+            get {
+                return ResourceManager.GetString("fr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap help {
@@ -219,6 +239,27 @@ namespace DeadLock.Properties {
         internal static string ita {
             get {
                 return ResourceManager.GetString("ita", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
+        ///&lt;Language xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+        ///  &lt;Author&gt;Jaehyung Lee&lt;/Author&gt;
+        ///  &lt;Comment&gt;한국어&lt;/Comment&gt;
+        ///  &lt;BarFile&gt;&amp;amp;파일&lt;/BarFile&gt;
+        ///  &lt;BarEdit&gt;&amp;amp;편집&lt;/BarEdit&gt;
+        ///  &lt;BarView&gt;&amp;amp;보기&lt;/BarView&gt;
+        ///  &lt;BarTools&gt;&amp;amp;도구&lt;/BarTools&gt;
+        ///  &lt;BarHelp&gt;&amp;amp;도움말&lt;/BarHelp&gt;
+        ///  &lt;BarItemOpenFiles&gt;파일 열기...&lt;/BarItemOpenFiles&gt;
+        ///  &lt;BarItemOpenFolder&gt;폴더 열기...&lt;/BarItemOpenFolder&gt;
+        ///  &lt;BarItemRestart&gt;재시작&lt;/BarItemRestart&gt;
+        ///  &lt;BarItemExit&gt;끝내기&lt;/BarIte [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string kor {
+            get {
+                return ResourceManager.GetString("kor", resourceCulture);
             }
         }
         
@@ -315,6 +356,26 @@ namespace DeadLock.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
         ///&lt;Language xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+        ///  &lt;Author&gt;Nikola Janković&lt;/Author&gt;
+        ///  &lt;Comment&gt;Srpski&lt;/Comment&gt;
+        ///  &lt;BarFile&gt;&amp;amp;Datoteka&lt;/BarFile&gt;
+        ///  &lt;BarEdit&gt;&amp;amp;Uredi&lt;/BarEdit&gt;
+        ///  &lt;BarView&gt;&amp;amp;Pregled&lt;/BarView&gt;
+        ///  &lt;BarTools&gt;&amp;amp;Alati&lt;/BarTools&gt;
+        ///  &lt;BarHelp&gt;&amp;amp;Pomoć&lt;/BarHelp&gt;
+        ///  &lt;BarItemOpenFiles&gt;Otvori fajl(ove)...&lt;/BarItemOpenFiles&gt;
+        ///  &lt;BarItemOpenFolder&gt;Otvori folder...&lt;/BarItemOpenFolder&gt;
+        ///  &lt;BarItemRestart&gt;Rest [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string sr {
+            get {
+                return ResourceManager.GetString("sr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
+        ///&lt;Language xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
         ///  &lt;Author&gt;@bkrcrc_ (Twitter)&lt;/Author&gt;
         ///  &lt;Comment&gt;Turkish&lt;/Comment&gt;
         ///  &lt;BarFile&gt;&amp;amp;Dosya&lt;/BarFile&gt;
@@ -324,7 +385,7 @@ namespace DeadLock.Properties {
         ///  &lt;BarHelp&gt;&amp;amp;Yardım&lt;/BarHelp&gt;
         ///  &lt;BarItemOpenFiles&gt;Dosya(ları) aç...&lt;/BarItemOpenFiles&gt;
         ///  &lt;BarItemOpenFolder&gt;Klasör aç...&lt;/BarItemOpenFolder&gt;
-        ///  &lt;BarItemRestart&gt;Yenid [rest of string was truncated]&quot;;.
+        ///  &lt;BarItemRestart&gt;Yeniden başlat&lt;/ [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string tr {
             get {

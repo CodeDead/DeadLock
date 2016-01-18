@@ -309,29 +309,34 @@ namespace DeadLock.Forms
             // cboLanguage
             // 
             this.cboLanguage.BackColor = System.Drawing.Color.White;
-            this.cboLanguage.BeforeTouchSize = new System.Drawing.Size(100, 19);
+            this.cboLanguage.BeforeTouchSize = new System.Drawing.Size(100, 21);
             this.cboLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboLanguage.Items.AddRange(new object[] {
             "Dutch",
             "English",
+            "French",
             "Italian",
+            "Korean",
             "Polish",
+            "Serbian",
             "Turkish",
             "Custom"});
             this.cboLanguage.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cboLanguage, "Dutch"));
             this.cboLanguage.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cboLanguage, "English"));
+            this.cboLanguage.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cboLanguage, "French"));
             this.cboLanguage.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cboLanguage, "Italian"));
+            this.cboLanguage.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cboLanguage, "Korean"));
             this.cboLanguage.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cboLanguage, "Polish"));
+            this.cboLanguage.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cboLanguage, "Serbian"));
             this.cboLanguage.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cboLanguage, "Turkish"));
             this.cboLanguage.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cboLanguage, "Custom"));
             this.cboLanguage.Location = new System.Drawing.Point(227, 128);
             this.cboLanguage.MetroColor = System.Drawing.Color.SteelBlue;
             this.cboLanguage.Name = "cboLanguage";
-            this.cboLanguage.Size = new System.Drawing.Size(100, 19);
+            this.cboLanguage.Size = new System.Drawing.Size(100, 21);
             this.cboLanguage.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
             this.cboLanguage.TabIndex = 9;
-            this.cboLanguage.Text = "Dutch";
             this.cboLanguage.UseMetroButtonColor = true;
             this.cboLanguage.UseMetroColorsInActiveMode = true;
             // 

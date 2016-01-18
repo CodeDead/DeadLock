@@ -1,0 +1,97 @@
+﻿<?xml version="1.0"?>
+<Language xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Author>Nikola Janković</Author>
+  <Comment>Srpski</Comment>
+  <BarFile>&amp;Datoteka</BarFile>
+  <BarEdit>&amp;Uredi</BarEdit>
+  <BarView>&amp;Pregled</BarView>
+  <BarTools>&amp;Alati</BarTools>
+  <BarHelp>&amp;Pomoć</BarHelp>
+  <BarItemOpenFiles>Otvori fajl(ove)...</BarItemOpenFiles>
+  <BarItemOpenFolder>Otvori folder...</BarItemOpenFolder>
+  <BarItemRestart>Restart</BarItemRestart>
+  <BarItemExit>Izlaz</BarItemExit>
+  <BarItemUnlock>Otključaj</BarItemUnlock>
+  <BarItemCopy>Kopiraj</BarItemCopy>
+  <BarItemMove>Premesti</BarItemMove>
+  <BarItemRemove>Ukloni</BarItemRemove>
+  <BarItemOwnership>Vlasništvo</BarItemOwnership>
+  <BarItemOwnershipTrue>Istina</BarItemOwnershipTrue>
+  <BarItemOwnershipFalse>Laž</BarItemOwnershipFalse>
+  <BarItemRemoveItem>Ukloni stavku</BarItemRemoveItem>
+  <BarItemClearItems>Očistiti stavke</BarItemClearItems>
+  <BarItemAutoSizeColumns>Automatski prilagodi kolone</BarItemAutoSizeColumns>
+  <BarItemCancelTask>Otkaži zadatak</BarItemCancelTask>
+  <BarItemDetails>Detalji</BarItemDetails>
+  <BarItemSettings>Podešavanja</BarItemSettings>
+  <BarItemHelp>Pomoć</BarItemHelp>
+  <BarItemCheckForUpdates>Provera za nadogradnju</BarItemCheckForUpdates>
+  <BarItemHomePage>Početna stranica</BarItemHomePage>
+  <BarItemAbout>O DeadLock</BarItemAbout>
+  <ClhPath>Putanja</ClhPath>
+  <ClhStatus>Status</ClhStatus>
+  <ClhOwnership>Vlasništvo</ClhOwnership>
+  <MsgUnknown>Nepoznato</MsgUnknown>
+  <MsgLocked>Zaključano</MsgLocked>
+  <MsgUnlocked>Otključano</MsgUnlocked>
+  <MsgOperationCancelled>Zadatak je otkazan</MsgOperationCancelled>
+  <MsgLoading>Učitavanje...</MsgLoading>
+  <MsgSuccessfullyUnlocked>Uspešno otključan</MsgSuccessfullyUnlocked>
+  <MsgCouldNotUnlock>Nije moguće otključati stavku</MsgCouldNotUnlock>
+  <MsgSuccessfullyCopied>Uspešno kopiranje</MsgSuccessfullyCopied>
+  <MsgCouldNotCopy>Nije moguće kopirati stavku</MsgCouldNotCopy>
+  <MsgSuccessfullyMoved>Uspešno prebačen</MsgSuccessfullyMoved>
+  <MsgCouldNotMove>Nije moguće premestiti stavku</MsgCouldNotMove>
+  <MsgSuccessfullyRemoved>Uspešno uklonjeno</MsgSuccessfullyRemoved>
+  <MsgCouldNotRemove>Nije moguće ukloniti stavku</MsgCouldNotRemove>
+  <ClhFileName>Ime datoteke</ClhFileName>
+  <ClhProcessId>ID procesa</ClhProcessId>
+  <LblVersion>Verzija:</LblVersion>
+  <CmiDetails>Detalji</CmiDetails>
+  <CmiOpenInVirusTotal>Otvori u VirusTotal</CmiOpenInVirusTotal>
+  <CmiKill>Ubij</CmiKill>
+  <CmiOpenFileLocation>Otvori lokaciju datoteke</CmiOpenFileLocation>
+  <MsgSuccessfullyKilled>Uspešno je ubijen izabrani proces(i)!</MsgSuccessfullyKilled>
+  <CmiHideShow>Sakrij / Prikaži</CmiHideShow>
+  <MsgAdministrator>DeadLock možda neće ispravno funkcionisati bez administratorskih prava!</MsgAdministrator>
+  <MsgVersion>Verzija</MsgVersion>
+  <MsgAvailable>sada je dostupan</MsgAvailable>
+  <MsgDownloadNewVersion>Želite li da preuzmete najnoviju verziju?</MsgDownloadNewVersion>
+  <MsgLatestVersionAlreadyInstalled>Najnovija verzija DeadLock je već instalirana!</MsgLatestVersionAlreadyInstalled>
+  <TxtAboutCreated>DeadLock je kodiran od DeadLine.</TxtAboutCreated>
+  <TxtAboutImages>Slika: small-n-flat by paomedia</TxtAboutImages>
+  <TxtAboutTheme>Tema: SyncFusion</TxtAboutTheme>
+  <TxtAboutCopyright>Autorska prava &#169; CodeDead 2016</TxtAboutCopyright>
+  <TxtAboutTranslation>Prevod:</TxtAboutTranslation>
+  <BtnClose>Zatvori</BtnClose>
+  <BtnLicense>Licenca</BtnLicense>
+  <LblGeneral>Opšte</LblGeneral>
+  <ChbAutoUpdate>Automatski proveri za nadogradnju:</ChbAutoUpdate>
+  <ChbShowNotifyIcon>Pokaži notifyicon:</ChbShowNotifyIcon>
+  <ChbStartMinimized>Pokreni na umanjeno:</ChbStartMinimized>
+  <ChbShowAdminWarning>Prikaži administratorska upozorenja:</ChbShowAdminWarning>
+  <LblAppearance>Izgled</LblAppearance>
+  <LblThemeStyle>Tema:</LblThemeStyle>
+  <LblBorderThickness>Debljina ivica:</LblBorderThickness>
+  <LblRememberFormSize>Zapamti obrazac veličine:</LblRememberFormSize>
+  <LblShowDetails>Prikaži detalje:</LblShowDetails>
+  <LblLanguage>Jezik:</LblLanguage>
+  <LblAutoRunDeadLock>Pokreni DeadLock automatski:</LblAutoRunDeadLock>  <LblAdvanced>Napredan</LblAdvanced>
+  <LblWindowsExplorerIntegration>Windows Explorer integracija:</LblWindowsExplorerIntegration>
+  <LblOwnership>Preuzmi vlasništvo:</LblOwnership>
+  <BtnReset>Ресет</BtnReset>
+  <BtnSave>Sačuvaj</BtnSave>
+  <MsgRestartRequired>Ponovno pokretanje programa je potrebno da bi se primenile određene postavke!</MsgRestartRequired>
+  <TbtnOn>Ukljući</TbtnOn>
+  <TbtnOff>Iskljući</TbtnOff>
+  <TxtUpdater>Updater</TxtUpdater>
+  <LblPath>Putanja:</LblPath>
+  <LblProgress>Napredak:</LblProgress>
+  <BtnCancel>Otkaži</BtnCancel>
+  <BtnUpdate>Nadogradnja</BtnUpdate>
+  <MsgCouldNotRestart>Nije moguće početi sesiju restarta. Nedostupno je utvrditi resursni ormarić.</MsgCouldNotRestart>
+  <MsgCouldNotRegister>Ne mogu da registrujem resurse.</MsgCouldNotRegister>
+  <MsgCouldNotList>Nije moguće navesti procese koji su zaključani.</MsgCouldNotList>
+  <MsgCouldNotListResult>Nije moguće navesti procese koji su zaključani. Nemoguće je dobiti veličinu rezultata!</MsgCouldNotListResult>
+  <MsgAccessDenied>Zabranjen pristup</MsgAccessDenied>
+</Language>

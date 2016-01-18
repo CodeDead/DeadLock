@@ -253,7 +253,7 @@ namespace DeadLock.Forms
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            versionStaticBarItem.Text += " " + Application.ProductVersion;
+            versionStaticBarItem.Text += @" " + Application.ProductVersion;
         }
 
         private void aboutBarItem_Click(object sender, EventArgs e)

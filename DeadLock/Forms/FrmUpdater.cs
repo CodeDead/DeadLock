@@ -43,7 +43,7 @@ namespace DeadLock.Forms
         /// </summary>
         private void LoadLanguage()
         {
-            Text = "DeadLock - " + _language.TxtUpdater;
+            Text = @"DeadLock - " + _language.TxtUpdater;
 
             lblPath.Text = _language.LblPath;
             lblProgress.Text = _language.LblProgress;
@@ -55,7 +55,7 @@ namespace DeadLock.Forms
         private void btnSelectPath_Click(object sender, EventArgs e)
         {
             string extension = _update.UpdateUrl.Substring(_update.UpdateUrl.Length - 4, 4);
-            SaveFileDialog sfd = new SaveFileDialog {Filter = extension.ToUpper() + " (*" + extension + ")|*" + extension};
+            SaveFileDialog sfd = new SaveFileDialog {Filter = extension.ToUpper() + @" (*" + extension + @")|*" + extension};
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 txtPath.Text = sfd.FileName;

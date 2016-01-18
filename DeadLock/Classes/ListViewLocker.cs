@@ -77,7 +77,7 @@ namespace DeadLock.Classes
         /// Get the path that is associated with the ListViewLocker.
         /// </summary>
         /// <returns>The path to a file that is associated with the ListViewLocker.</returns>
-        internal string GetPath()
+        private string GetPath()
         {
             return _path;
         }
@@ -477,7 +477,7 @@ namespace DeadLock.Classes
             {
                 if (File.Exists(GetPath()))
                 {
-                    SaveFileDialog sfd = new SaveFileDialog { Filter = "|*" + Path.GetExtension(GetPath()) };
+                    SaveFileDialog sfd = new SaveFileDialog { Filter = @"|*" + Path.GetExtension(GetPath()) };
                     if (sfd.ShowDialog() == DialogResult.OK)
                     {
                         await Unlock();
@@ -514,7 +514,7 @@ namespace DeadLock.Classes
             }
             else
             {
-                SaveFileDialog sfd = new SaveFileDialog { Filter = "|*" + Path.GetExtension(GetPath()) };
+                SaveFileDialog sfd = new SaveFileDialog { Filter = @"|*" + Path.GetExtension(GetPath()) };
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
                     await Unlock();

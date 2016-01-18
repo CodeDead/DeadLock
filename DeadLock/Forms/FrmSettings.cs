@@ -219,7 +219,7 @@ namespace DeadLock.Forms
 
                 List<string> args = new List<string>();
 
-                if(_originalStartup != (tbtnAutoRun.ToggleState == ToggleButtonState.Active))
+                if (_originalStartup != (tbtnAutoRun.ToggleState == ToggleButtonState.Active))
                 {
                     _originalStartup = tbtnAutoRun.ToggleState == ToggleButtonState.Active;
                     args.Add(_originalStartup ? "0" : "1");
@@ -255,7 +255,7 @@ namespace DeadLock.Forms
             for (int i = 0; i < args.Count; i++)
             {
                 a += args[i];
-                if (i != args.Count -1)
+                if (i != args.Count - 1)
                 {
                     a += " ";
                 }
@@ -376,7 +376,7 @@ namespace DeadLock.Forms
         private void btnSelectPath_Click(object sender, EventArgs e)
         {
             cboLanguage.SelectedIndex = 2;
-            OpenFileDialog ofd = new OpenFileDialog {Filter = "XML (*.xml)|*.xml"};
+            OpenFileDialog ofd = new OpenFileDialog { Filter = "XML (*.xml)|*.xml" };
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 txtLanguagePath.Text = ofd.FileName;

@@ -186,10 +186,7 @@ namespace DeadLock.Forms
                 {
                     if (MessageBoxAdv.Show(l.MsgVersion + " " + _update.GetUpdateVersion() + " " + l.MsgAvailable + Environment.NewLine + l.MsgDownloadNewVersion, "DeadLock", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        await Task.Run(() =>
-                        {
-                            new FrmUpdater(_update, _languageManager.GetLanguage()).ShowDialog();
-                        });
+                        new FrmUpdater(_update, _languageManager.GetLanguage()).Show();
                     }
                 }
                 else
@@ -527,7 +524,7 @@ namespace DeadLock.Forms
         {
             if (lsvItems.SelectedItems.Count == 0) return;
 
-            ListViewLocker lvl = (ListViewLocker) lsvItems.SelectedItems[0];
+            ListViewLocker lvl = (ListViewLocker)lsvItems.SelectedItems[0];
             Language l = _languageManager.GetLanguage();
 
             CancelSelectedTask(lvl);
@@ -569,7 +566,7 @@ namespace DeadLock.Forms
         {
             if (lsvItems.SelectedItems.Count == 0) return;
 
-            ListViewLocker lvl = (ListViewLocker) lsvItems.SelectedItems[0];
+            ListViewLocker lvl = (ListViewLocker)lsvItems.SelectedItems[0];
             Language l = _languageManager.GetLanguage();
 
             CancelSelectedTask(lvl);
@@ -624,7 +621,7 @@ namespace DeadLock.Forms
             if (lsvItems.SelectedItems.Count == 0) return;
             lsvDetails.Items.Clear();
 
-            ListViewLocker lvl = (ListViewLocker) lsvItems.SelectedItems[0];
+            ListViewLocker lvl = (ListViewLocker)lsvItems.SelectedItems[0];
             Language l = _languageManager.GetLanguage();
 
             try
@@ -632,7 +629,7 @@ namespace DeadLock.Forms
                 CancelSelectedTask(lvl);
                 await Task.Run(() =>
                 {
-                    while (lvl.IsRunning()){ }
+                    while (lvl.IsRunning()) { }
                 });
                 lvl.SetLocker(new List<ProcessLocker>());
 
@@ -648,7 +645,7 @@ namespace DeadLock.Forms
 
                 lvl.SetRunning(true);
                 List<ProcessLocker> lockers = await lvl.GetLockerDetails();
-                
+
                 if (!lvl.HasCancelled())
                 {
                     if (lockers.Count == 0)
@@ -665,7 +662,7 @@ namespace DeadLock.Forms
 
                     foreach (ProcessLocker p in lockers)
                     {
-                        ListViewItem lvi = new ListViewItem {Text = p.GetFileName()};
+                        ListViewItem lvi = new ListViewItem { Text = p.GetFileName() };
                         lvi.SubItems.Add(p.GetFilePath());
                         lvi.SubItems.Add(p.GetProcessId().ToString());
 
@@ -697,7 +694,7 @@ namespace DeadLock.Forms
             lsvDetails.Items.Clear();
             if (lsvItems.SelectedItems.Count == 0) return;
 
-            ListViewLocker lvl = (ListViewLocker) lsvItems.SelectedItems[0];
+            ListViewLocker lvl = (ListViewLocker)lsvItems.SelectedItems[0];
             foreach (ProcessLocker p in lvl.GetLockers())
             {
                 ListViewItem lvi = new ListViewItem { Text = p.GetFileName() };
@@ -711,7 +708,7 @@ namespace DeadLock.Forms
         {
             foreach (ListViewItem lvi in lsvItems.Items)
             {
-                ListViewLocker lvl = (ListViewLocker) lvi;
+                ListViewLocker lvl = (ListViewLocker)lvi;
                 lvl.CancelTask();
             }
             lsvItems.Items.Clear();
@@ -774,7 +771,7 @@ namespace DeadLock.Forms
         {
             if (lsvItems.SelectedItems.Count == 0) return;
 
-            ListViewLocker selected = (ListViewLocker) lsvItems.SelectedItems[0];
+            ListViewLocker selected = (ListViewLocker)lsvItems.SelectedItems[0];
             if (CancelSelectedTask(selected))
             {
                 SetCancelled(selected);

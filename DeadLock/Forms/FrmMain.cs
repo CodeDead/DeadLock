@@ -60,6 +60,12 @@ namespace DeadLock.Forms
                     _languageManager.LoadLanguage(Properties.Settings.Default.Language);
                 }
                 LanguageSwitch();
+
+                nfiTray.Visible = Properties.Settings.Default.ShowNotifyIcon;
+                if (Properties.Settings.Default.RememberFormSize)
+                {
+                    Size = Properties.Settings.Default.FormSize;
+                }
             }
             catch (Exception ex)
             {
@@ -248,19 +254,6 @@ namespace DeadLock.Forms
         private void FrmMain_Load(object sender, EventArgs e)
         {
             versionStaticBarItem.Text += " " + Application.ProductVersion;
-            try
-            {
-                nfiTray.Visible = Properties.Settings.Default.ShowNotifyIcon;
-                if (Properties.Settings.Default.RememberFormSize)
-                {
-                    Size = Properties.Settings.Default.FormSize;
-                    CenterToScreen();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         private void aboutBarItem_Click(object sender, EventArgs e)

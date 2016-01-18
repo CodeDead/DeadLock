@@ -7,6 +7,7 @@
 #endregion
 using System;
 using System.ComponentModel;
+using System.IO;
 using System.Net;
 using System.Windows.Forms;
 using DeadLock.Classes;
@@ -20,6 +21,8 @@ namespace DeadLock.Forms
         private readonly Update _update;
         private readonly WebClient _webClient;
         private readonly Language _language;
+
+        private readonly string _extension;
         #endregion
 
         /// <summary>
@@ -36,6 +39,8 @@ namespace DeadLock.Forms
 
             _webClient.DownloadFileCompleted += Completed;
             _webClient.DownloadProgressChanged += ProgressChanged;
+
+            _extension = _update.UpdateUrl.Substring(_update.UpdateUrl.Length - 4, 4);
         }
 
         /// <summary>
@@ -54,8 +59,12 @@ namespace DeadLock.Forms
 
         private void btnSelectPath_Click(object sender, EventArgs e)
         {
-            string extension = _update.UpdateUrl.Substring(_update.UpdateUrl.Length - 4, 4);
-            SaveFileDialog sfd = new SaveFileDialog {Filter = extension.ToUpper() + @" (*" + extension + @")|*" + extension};
+            SaveFileDialog sfd = new SaveFileDialog { Filter = _extension.ToUpper() + @" (*" + _extension + @")|*" + _extension };
+            if (Directory.Exists(txtPath.Text))
+            {
+                sfd.InitialDirectory = txtPath.Text;
+            }
+
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 txtPath.Text = sfd.FileName;
@@ -154,6 +163,8 @@ namespace DeadLock.Forms
         {
             LoadLanguage();
             LoadTheme();
+
+            txtPath.Text = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\dl_setup" + _extension;
         }
     }
 }

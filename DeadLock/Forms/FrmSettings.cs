@@ -251,15 +251,7 @@ namespace DeadLock.Forms
         /// <param name="args">A list of arguments.</param>
         private static void StartRegManager(IReadOnlyList<string> args)
         {
-            string a = "";
-            for (int i = 0; i < args.Count; i++)
-            {
-                a += args[i];
-                if (i != args.Count - 1)
-                {
-                    a += " ";
-                }
-            }
+            string a = string.Join(" ", args);
             Process process = new Process
             {
                 StartInfo =

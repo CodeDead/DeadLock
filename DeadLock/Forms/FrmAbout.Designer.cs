@@ -58,7 +58,7 @@ namespace DeadLock.Forms
             this.pnlAbout.Location = new System.Drawing.Point(0, 0);
             this.pnlAbout.Name = "pnlAbout";
             this.pnlAbout.Size = new System.Drawing.Size(343, 139);
-            this.pnlAbout.TabIndex = 0;
+            this.pnlAbout.TabIndex = 1;
             // 
             // txtAbout
             // 
@@ -74,6 +74,7 @@ namespace DeadLock.Forms
             this.txtAbout.Size = new System.Drawing.Size(243, 139);
             this.txtAbout.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
             this.txtAbout.TabIndex = 1;
+            this.txtAbout.TabStop = false;
             // 
             // pnlImage
             // 
@@ -107,7 +108,7 @@ namespace DeadLock.Forms
             this.btnClose.MetroColor = System.Drawing.Color.SteelBlue;
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 1;
+            this.btnClose.TabIndex = 0;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyle = true;
             this.btnClose.UseVisualStyleBackColor = false;
@@ -124,7 +125,7 @@ namespace DeadLock.Forms
             this.btnLicense.MetroColor = System.Drawing.Color.SteelBlue;
             this.btnLicense.Name = "btnLicense";
             this.btnLicense.Size = new System.Drawing.Size(75, 23);
-            this.btnLicense.TabIndex = 2;
+            this.btnLicense.TabIndex = 1;
             this.btnLicense.Text = "License";
             this.btnLicense.UseVisualStyle = true;
             this.btnLicense.UseVisualStyleBackColor = false;
@@ -141,7 +142,7 @@ namespace DeadLock.Forms
             this.btnCodeDead.MetroColor = System.Drawing.Color.SteelBlue;
             this.btnCodeDead.Name = "btnCodeDead";
             this.btnCodeDead.Size = new System.Drawing.Size(75, 23);
-            this.btnCodeDead.TabIndex = 3;
+            this.btnCodeDead.TabIndex = 2;
             this.btnCodeDead.Text = "CodeDead";
             this.btnCodeDead.UseVisualStyle = true;
             this.btnCodeDead.Click += new System.EventHandler(this.btnCodeDead_Click);

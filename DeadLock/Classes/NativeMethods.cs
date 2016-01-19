@@ -167,7 +167,7 @@ namespace DeadLock.Classes
         /// </summary>
         /// <param name="path">The path of the file.</param>
         /// <returns></returns>
-        internal static bool ShowFileProperties(string path)
+        internal static void ShowFileProperties(string path)
         {
             Shellexecuteinfo info = new Shellexecuteinfo();
             info.cbSize = Marshal.SizeOf(info);
@@ -175,7 +175,7 @@ namespace DeadLock.Classes
             info.lpFile = path;
             info.nShow = 5;
             info.fMask = 12;
-            return ShellExecuteEx(ref info);
+            ShellExecuteEx(ref info);
         }
     }
 }

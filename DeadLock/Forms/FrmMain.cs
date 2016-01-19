@@ -155,6 +155,7 @@ namespace DeadLock.Forms
             //Main Form - ContextMenu Details:
             killToolStripMenuItem.Text = l.CmiKill;
             openFileLocationToolStripMenuItem.Text = l.CmiOpenFileLocation;
+            propertiesToolStripMenuItem.Text = l.CmiProperties;
 
             //Main Form - NotifyIcon:
             hideShowToolStripMenuItem.Text = l.CmiHideShow;

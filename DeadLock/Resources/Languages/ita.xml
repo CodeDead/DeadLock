@@ -51,6 +51,7 @@
 	<CmiOpenInVirusTotal>Apri in VirusTotal</CmiOpenInVirusTotal>
 	<CmiKill>Arresta</CmiKill>
 	<CmiOpenFileLocation>Apri posizione del File</CmiOpenFileLocation>
+  <CmiProperties>Proprietà</CmiProperties>
 	<MsgSuccessfullyKilled>Processo/i selezionato/i arrestato/i con successo!</MsgSuccessfullyKilled>
 	<CmiHideShow>Nascondi / Mostra</CmiHideShow>
 	<MsgAdministrator>DeadLock potrebbe non funzionare correttamente senza i diritti d´amministratore!</MsgAdministrator>

@@ -51,6 +51,7 @@
   <CmiOpenInVirusTotal>VirusTotal'de aç</CmiOpenInVirusTotal>
   <CmiKill>Sonlandır</CmiKill>
   <CmiOpenFileLocation>Dosya konumunu aç</CmiOpenFileLocation>
+  <CmiProperties>Özellikleri</CmiProperties>
   <MsgSuccessfullyKilled>Seçilen işlem(ler) başarıyla sonlandırıldı!</MsgSuccessfullyKilled>
   <CmiHideShow>Gizle / Göster</CmiHideShow>
   <MsgAdministrator>DeadLock yönetici izinleri olmadan düzgün çalışmayabilir!</MsgAdministrator>

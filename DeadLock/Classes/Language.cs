@@ -92,6 +92,7 @@ namespace DeadLock.Classes
         //Main Form - ContextMenu Details:
         public string CmiKill;
         public string CmiOpenFileLocation;
+        public string CmiProperties;
 
         public string MsgSuccessfullyKilled;
 

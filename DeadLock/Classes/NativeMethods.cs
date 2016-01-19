@@ -42,7 +42,7 @@ namespace DeadLock.Classes
             RmCritical = 1000
         }
 
-        [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
+        [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Auto)]
         private struct RmProcessInfo
         {
             internal RmUniqueProcess Process;
@@ -59,6 +59,32 @@ namespace DeadLock.Classes
             [MarshalAs(UnmanagedType.Bool)]
             private readonly bool bRestartable;
         }
+
+        [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Auto)]
+        private struct Shellexecuteinfo
+        {
+            public int cbSize;
+            public uint fMask;
+            private readonly IntPtr hwnd;
+            [MarshalAs(UnmanagedType.LPTStr)]
+            public string lpVerb;
+            [MarshalAs(UnmanagedType.LPTStr)]
+            public string lpFile;
+            [MarshalAs(UnmanagedType.LPTStr)]
+            private readonly string lpParameters;
+            [MarshalAs(UnmanagedType.LPTStr)]
+            private readonly string lpDirectory;
+            public int nShow;
+            private readonly IntPtr hInstApp;
+            private readonly IntPtr lpIDList;
+            [MarshalAs(UnmanagedType.LPTStr)]
+            private readonly string lpClass;
+
+            private readonly IntPtr hkeyClass;
+            private readonly uint dwHotKey;
+            private readonly IntPtr hIcon;
+            private readonly IntPtr hProcess;
+        }
         #endregion
 
         #region DllImport
@@ -73,6 +99,9 @@ namespace DeadLock.Classes
 
         [DllImport("rstrtmgr.dll")]
         private static extern int RmGetList(uint dwSessionHandle, out uint pnProcInfoNeeded, ref uint pnProcInfo, [In, Out] RmProcessInfo[] rgAffectedApps, ref uint lpdwRebootReasons);
+
+        [DllImport("shell32.dll", CharSet = CharSet.Auto)]
+        private static extern bool ShellExecuteEx(ref Shellexecuteinfo lpExecInfo);
         #endregion
 
         /// <summary>
@@ -131,6 +160,22 @@ namespace DeadLock.Classes
                 RmEndSession(handle);
             }
             return processes;
+        }
+
+        /// <summary>
+        /// Show the properties dialog of a file.
+        /// </summary>
+        /// <param name="path">The path of the file.</param>
+        /// <returns></returns>
+        internal static bool ShowFileProperties(string path)
+        {
+            Shellexecuteinfo info = new Shellexecuteinfo();
+            info.cbSize = Marshal.SizeOf(info);
+            info.lpVerb = "properties";
+            info.lpFile = path;
+            info.nShow = 5;
+            info.fMask = 12;
+            return ShellExecuteEx(ref info);
         }
     }
 }

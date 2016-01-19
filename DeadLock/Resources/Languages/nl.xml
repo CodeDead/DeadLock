@@ -51,6 +51,7 @@
   <CmiOpenInVirusTotal>Openen in VirusTotal</CmiOpenInVirusTotal>
   <CmiKill>Sluiten</CmiKill>
   <CmiOpenFileLocation>Open bestandslocatie</CmiOpenFileLocation>
+  <CmiProperties>Eigenschappen</CmiProperties>
   <MsgSuccessfullyKilled>De geselecteerde processen zijn met success gesloten!</MsgSuccessfullyKilled>
   <CmiHideShow>Verberg / Toon</CmiHideShow>
   <MsgAdministrator>DeadLock zal mogelijk niet correct functioneren zonder administratieve rechten!</MsgAdministrator>

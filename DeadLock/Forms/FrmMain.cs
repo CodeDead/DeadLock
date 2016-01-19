@@ -923,5 +923,14 @@ namespace DeadLock.Forms
                 OpenPath(f);
             }
         }
+
+        private void lsvDetails_DoubleClick(object sender, EventArgs e)
+        {
+            if (lsvDetails.SelectedItems.Count == 0) return;
+            foreach (ListViewItem lvi in lsvDetails.SelectedItems)
+            {
+                NativeMethods.ShowFileProperties(lvi.SubItems[1].Text);
+            }
+        }
     }
 }

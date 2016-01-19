@@ -51,6 +51,7 @@
   <CmiOpenInVirusTotal>Otvori u VirusTotal</CmiOpenInVirusTotal>
   <CmiKill>Ubij</CmiKill>
   <CmiOpenFileLocation>Otvori lokaciju datoteke</CmiOpenFileLocation>
+  <CmiProperties>Пропертиес</CmiProperties>
   <MsgSuccessfullyKilled>Uspešno je ubijen izabrani proces(i)!</MsgSuccessfullyKilled>
   <CmiHideShow>Sakrij / Prikaži</CmiHideShow>
   <MsgAdministrator>DeadLock možda neće ispravno funkcionisati bez administratorskih prava!</MsgAdministrator>

@@ -21,7 +21,6 @@ namespace DeadLock.Forms
         private readonly Update _update;
         private readonly WebClient _webClient;
         private readonly Language _language;
-
         private readonly string _extension;
         #endregion
 

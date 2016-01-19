@@ -99,6 +99,8 @@ namespace DeadLock.Forms
             this.clhProcessPath = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhProcessID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cmsDetails = new Syncfusion.Windows.Forms.Tools.ContextMenuStripEx();
+            this.propertiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.splitToolStripMenuItem12 = new System.Windows.Forms.ToolStripSeparator();
             this.killToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitToolStripMenuItem6 = new System.Windows.Forms.ToolStripSeparator();
             this.openFileLocationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -819,6 +821,7 @@ namespace DeadLock.Forms
             this.lsvDetails.TabIndex = 0;
             this.lsvDetails.UseCompatibleStateImageBehavior = false;
             this.lsvDetails.View = System.Windows.Forms.View.Details;
+            this.lsvDetails.DoubleClick += new System.EventHandler(this.lsvDetails_DoubleClick);
             // 
             // clhFileName
             // 
@@ -836,6 +839,8 @@ namespace DeadLock.Forms
             // 
             this.cmsDetails.DropShadowEnabled = false;
             this.cmsDetails.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.propertiesToolStripMenuItem,
+            this.splitToolStripMenuItem12,
             this.killToolStripMenuItem,
             this.splitToolStripMenuItem6,
             this.openFileLocationToolStripMenuItem,
@@ -843,8 +848,21 @@ namespace DeadLock.Forms
             this.openInVirusTotalToolStripMenuItem1});
             this.cmsDetails.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(236)))), ((int)(((byte)(249)))));
             this.cmsDetails.Name = "cmsDetails";
-            this.cmsDetails.Size = new System.Drawing.Size(213, 82);
+            this.cmsDetails.Size = new System.Drawing.Size(213, 132);
             this.cmsDetails.Style = Syncfusion.Windows.Forms.Tools.ContextMenuStripEx.ContextMenuStyle.Metro;
+            // 
+            // propertiesToolStripMenuItem
+            // 
+            this.propertiesToolStripMenuItem.Image = global::DeadLock.Properties.Resources.details;
+            this.propertiesToolStripMenuItem.Name = "propertiesToolStripMenuItem";
+            this.propertiesToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
+            this.propertiesToolStripMenuItem.Text = "Properties";
+            this.propertiesToolStripMenuItem.Click += new System.EventHandler(this.lsvDetails_DoubleClick);
+            // 
+            // splitToolStripMenuItem12
+            // 
+            this.splitToolStripMenuItem12.Name = "splitToolStripMenuItem12";
+            this.splitToolStripMenuItem12.Size = new System.Drawing.Size(209, 6);
             // 
             // killToolStripMenuItem
             // 
@@ -1078,5 +1096,7 @@ namespace DeadLock.Forms
         private Syncfusion.Windows.Forms.Tools.XPMenus.ParentBarItem ownershipParentBarItem;
         private Syncfusion.Windows.Forms.Tools.XPMenus.BarItem trueBarItem;
         private Syncfusion.Windows.Forms.Tools.XPMenus.BarItem falseBarItem;
+        private System.Windows.Forms.ToolStripMenuItem propertiesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator splitToolStripMenuItem12;
     }
 }

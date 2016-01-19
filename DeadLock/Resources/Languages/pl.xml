@@ -51,6 +51,7 @@
 	<CmiOpenInVirusTotal>Otwórz w VirusTotal</CmiOpenInVirusTotal>
 	<CmiKill>Zakończ</CmiKill>
 	<CmiOpenFileLocation>Otwórz lokalizację pliku</CmiOpenFileLocation>
+  <CmiProperties>Właściwości</CmiProperties>
 	<MsgSuccessfullyKilled>Pomyślnie zakończono zaznoczony(e) proces(y)!</MsgSuccessfullyKilled>
 	<CmiHideShow>Ukryj / Pokaż</CmiHideShow>
 	<MsgAdministrator>DeadLock może nie zadziałac prawidłowo bez praw administratorskich!</MsgAdministrator>

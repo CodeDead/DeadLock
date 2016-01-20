@@ -104,6 +104,8 @@ namespace DeadLock.Forms
             trueBarItem.Text = l.BarItemOwnershipTrue;
             falseBarItem.Text = l.BarItemOwnershipFalse;
 
+            propertiesBarItem.Text = l.CmiProperties;
+
             removeBarItem.Text = l.BarItemRemoveItem;
             clearItemsbarItem.Text = l.BarItemClearItems;
             autoSizeColumnsBarItem.Text = l.BarItemAutoSizeColumns;
@@ -148,6 +150,7 @@ namespace DeadLock.Forms
             ownershipToolStripMenuItem.Text = l.BarItemOwnership;
             trueOwnershipToolStripMenuItem.Text = l.BarItemOwnershipTrue;
             falseOwnershipToolStripMenuItem.Text = l.BarItemOwnershipFalse;
+            propertiesToolStripMenuItemItems.Text = l.CmiProperties;
             removeItemToolStripMenuItem.Text = l.BarItemRemoveItem;
             clearItemsToolStripMenuItem.Text = l.BarItemClearItems;
             cancelCurrentOperationToolStripMenuItem.Text = l.BarItemCancelTask;
@@ -155,7 +158,7 @@ namespace DeadLock.Forms
             //Main Form - ContextMenu Details:
             killToolStripMenuItem.Text = l.CmiKill;
             openFileLocationToolStripMenuItem.Text = l.CmiOpenFileLocation;
-            propertiesToolStripMenuItem.Text = l.CmiProperties;
+            propertiesToolStripMenuItemDetails.Text = l.CmiProperties;
 
             //Main Form - NotifyIcon:
             hideShowToolStripMenuItem.Text = l.CmiHideShow;
@@ -932,6 +935,12 @@ namespace DeadLock.Forms
             {
                 NativeMethods.ShowFileProperties(lvi.SubItems[1].Text);
             }
+        }
+
+        private void propertiesToolStripMenuItemItems_Click(object sender, EventArgs e)
+        {
+            if (lsvItems.SelectedItems.Count == 0) return;
+            NativeMethods.ShowFileProperties(lsvItems.SelectedItems[0].Text);
         }
     }
 }

@@ -99,7 +99,7 @@ namespace DeadLock.Forms
             this.clhProcessPath = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhProcessID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cmsDetails = new Syncfusion.Windows.Forms.Tools.ContextMenuStripEx();
-            this.propertiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.propertiesToolStripMenuItemDetails = new System.Windows.Forms.ToolStripMenuItem();
             this.splitToolStripMenuItem12 = new System.Windows.Forms.ToolStripSeparator();
             this.killToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitToolStripMenuItem6 = new System.Windows.Forms.ToolStripSeparator();
@@ -116,6 +116,8 @@ namespace DeadLock.Forms
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitToolStripMenuItem11 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.propertiesToolStripMenuItemItems = new System.Windows.Forms.ToolStripMenuItem();
+            this.propertiesBarItem = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             ((System.ComponentModel.ISupportInitialize)(this.mfbmMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splItems)).BeginInit();
             this.splItems.Panel1.SuspendLayout();
@@ -171,7 +173,8 @@ namespace DeadLock.Forms
             this.aboutBarItem,
             this.versionStaticBarItem,
             this.viewParentBarItem,
-            this.detailsBarItem});
+            this.detailsBarItem,
+            this.propertiesBarItem});
             this.mfbmMain.MetroColor = System.Drawing.Color.Lime;
             this.mfbmMain.ResetCustomization = false;
             this.mfbmMain.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
@@ -266,6 +269,7 @@ namespace DeadLock.Forms
             this.editParentBarItem.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] {
             this.unlockParentBarItem,
             this.ownershipParentBarItem,
+            this.propertiesBarItem,
             this.removeBarItem,
             this.clearItemsbarItem,
             this.autoSizeColumnsBarItem,
@@ -273,8 +277,9 @@ namespace DeadLock.Forms
             this.editParentBarItem.MetroColor = System.Drawing.Color.Lime;
             this.editParentBarItem.SeparatorIndices.AddRange(new int[] {
             2,
-            4,
-            5});
+            3,
+            5,
+            6});
             this.editParentBarItem.ShowToolTipInPopUp = false;
             this.editParentBarItem.SizeToFit = true;
             this.editParentBarItem.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
@@ -630,6 +635,7 @@ namespace DeadLock.Forms
             this.ownershipToolStripMenuItem,
             this.splitToolStripMenuItem1,
             this.detailsToolStripMenuItem,
+            this.propertiesToolStripMenuItemItems,
             this.splitToolStripMenuItem2,
             this.removeItemToolStripMenuItem,
             this.clearItemsToolStripMenuItem,
@@ -639,7 +645,7 @@ namespace DeadLock.Forms
             this.cancelCurrentOperationToolStripMenuItem});
             this.cmsItems.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(236)))), ((int)(((byte)(249)))));
             this.cmsItems.Name = "cmsItems";
-            this.cmsItems.Size = new System.Drawing.Size(213, 182);
+            this.cmsItems.Size = new System.Drawing.Size(213, 204);
             this.cmsItems.Style = Syncfusion.Windows.Forms.Tools.ContextMenuStripEx.ContextMenuStyle.Metro;
             // 
             // unlockToolStripMenuItem
@@ -839,7 +845,7 @@ namespace DeadLock.Forms
             // 
             this.cmsDetails.DropShadowEnabled = false;
             this.cmsDetails.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.propertiesToolStripMenuItem,
+            this.propertiesToolStripMenuItemDetails,
             this.splitToolStripMenuItem12,
             this.killToolStripMenuItem,
             this.splitToolStripMenuItem6,
@@ -848,16 +854,16 @@ namespace DeadLock.Forms
             this.openInVirusTotalToolStripMenuItem1});
             this.cmsDetails.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(236)))), ((int)(((byte)(249)))));
             this.cmsDetails.Name = "cmsDetails";
-            this.cmsDetails.Size = new System.Drawing.Size(213, 132);
+            this.cmsDetails.Size = new System.Drawing.Size(213, 110);
             this.cmsDetails.Style = Syncfusion.Windows.Forms.Tools.ContextMenuStripEx.ContextMenuStyle.Metro;
             // 
-            // propertiesToolStripMenuItem
+            // propertiesToolStripMenuItemDetails
             // 
-            this.propertiesToolStripMenuItem.Image = global::DeadLock.Properties.Resources.details;
-            this.propertiesToolStripMenuItem.Name = "propertiesToolStripMenuItem";
-            this.propertiesToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
-            this.propertiesToolStripMenuItem.Text = "Properties";
-            this.propertiesToolStripMenuItem.Click += new System.EventHandler(this.lsvDetails_DoubleClick);
+            this.propertiesToolStripMenuItemDetails.Image = global::DeadLock.Properties.Resources.details;
+            this.propertiesToolStripMenuItemDetails.Name = "propertiesToolStripMenuItemDetails";
+            this.propertiesToolStripMenuItemDetails.Size = new System.Drawing.Size(212, 22);
+            this.propertiesToolStripMenuItemDetails.Text = "Properties";
+            this.propertiesToolStripMenuItemDetails.Click += new System.EventHandler(this.lsvDetails_DoubleClick);
             // 
             // splitToolStripMenuItem12
             // 
@@ -981,6 +987,26 @@ namespace DeadLock.Forms
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitBarItem_Click);
             // 
+            // propertiesToolStripMenuItemItems
+            // 
+            this.propertiesToolStripMenuItemItems.Image = global::DeadLock.Properties.Resources.details;
+            this.propertiesToolStripMenuItemItems.Name = "propertiesToolStripMenuItemItems";
+            this.propertiesToolStripMenuItemItems.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F5)));
+            this.propertiesToolStripMenuItemItems.Size = new System.Drawing.Size(212, 22);
+            this.propertiesToolStripMenuItemItems.Text = "Properties";
+            this.propertiesToolStripMenuItemItems.Click += new System.EventHandler(this.propertiesToolStripMenuItemItems_Click);
+            // 
+            // propertiesBarItem
+            // 
+            this.propertiesBarItem.BarName = "propertiesBarItem";
+            this.propertiesBarItem.CategoryIndex = 1;
+            this.propertiesBarItem.ID = "Properties";
+            this.propertiesBarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("propertiesBarItem.Image")));
+            this.propertiesBarItem.ShowToolTipInPopUp = false;
+            this.propertiesBarItem.SizeToFit = true;
+            this.propertiesBarItem.Text = "Properties";
+            this.propertiesBarItem.Click += new System.EventHandler(this.propertiesToolStripMenuItemItems_Click);
+            // 
             // FrmMain
             // 
             this.AllowDrop = true;
@@ -1096,7 +1122,9 @@ namespace DeadLock.Forms
         private Syncfusion.Windows.Forms.Tools.XPMenus.ParentBarItem ownershipParentBarItem;
         private Syncfusion.Windows.Forms.Tools.XPMenus.BarItem trueBarItem;
         private Syncfusion.Windows.Forms.Tools.XPMenus.BarItem falseBarItem;
-        private System.Windows.Forms.ToolStripMenuItem propertiesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem propertiesToolStripMenuItemDetails;
         private System.Windows.Forms.ToolStripSeparator splitToolStripMenuItem12;
+        private System.Windows.Forms.ToolStripMenuItem propertiesToolStripMenuItemItems;
+        private Syncfusion.Windows.Forms.Tools.XPMenus.BarItem propertiesBarItem;
     }
 }

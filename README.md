@@ -6,7 +6,7 @@ the GPL V3, so please follow the rules ;).
 
 Requirements in order to build DeadLock:
 * Turn off 'Prefer 32-bit'
-* SyncFusion for Windows Forms (https://www.syncfusion.com/)
+* SyncFusion for Windows Forms (https://www.syncfusion.com/) (Can be downloaded for free)
 * .NET Framework 4.6.1
 * Visual Studio 2015
 

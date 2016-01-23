@@ -376,6 +376,26 @@ namespace DeadLock.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
         ///&lt;Language xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+        ///  &lt;Author&gt;Mats Arvendal&lt;/Author&gt;
+        ///  &lt;Comment&gt;Swedish&lt;/Comment&gt;
+        ///  &lt;BarFile&gt;&amp;amp;Arkiv&lt;/BarFile&gt;
+        ///  &lt;BarEdit&gt;&amp;amp;Redigera&lt;/BarEdit&gt;
+        ///  &lt;BarView&gt;&amp;amp;Visa&lt;/BarView&gt;
+        ///  &lt;BarTools&gt;&amp;amp;Verktyg&lt;/BarTools&gt;
+        ///  &lt;BarHelp&gt;&amp;amp;Hjälp&lt;/BarHelp&gt;
+        ///  &lt;BarItemOpenFiles&gt;Öppna fil(er)...&lt;/BarItemOpenFiles&gt;
+        ///  &lt;BarItemOpenFolder&gt;Öppna mapp...&lt;/BarItemOpenFolder&gt;
+        ///  &lt;BarItemRestart&gt;Starta om&lt;/B [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string swe {
+            get {
+                return ResourceManager.GetString("swe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
+        ///&lt;Language xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
         ///  &lt;Author&gt;@bkrcrc_ (Twitter)&lt;/Author&gt;
         ///  &lt;Comment&gt;Turkish&lt;/Comment&gt;
         ///  &lt;BarFile&gt;&amp;amp;Dosya&lt;/BarFile&gt;

@@ -53,6 +53,7 @@ namespace DeadLock.Forms
             this.ownershipParentBarItem = new Syncfusion.Windows.Forms.Tools.XPMenus.ParentBarItem();
             this.trueBarItem = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.falseBarItem = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
+            this.propertiesBarItem = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.clearItemsbarItem = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.autoSizeColumnsBarItem = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.cancelOperationBarItem = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
@@ -86,6 +87,7 @@ namespace DeadLock.Forms
             this.falseOwnershipToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitToolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.detailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.propertiesToolStripMenuItemItems = new System.Windows.Forms.ToolStripMenuItem();
             this.splitToolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.removeItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clearItemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -116,8 +118,6 @@ namespace DeadLock.Forms
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitToolStripMenuItem11 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.propertiesToolStripMenuItemItems = new System.Windows.Forms.ToolStripMenuItem();
-            this.propertiesBarItem = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             ((System.ComponentModel.ISupportInitialize)(this.mfbmMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splItems)).BeginInit();
             this.splItems.Panel1.SuspendLayout();
@@ -388,6 +388,17 @@ namespace DeadLock.Forms
             this.falseBarItem.SizeToFit = true;
             this.falseBarItem.Text = "False";
             this.falseBarItem.Click += new System.EventHandler(this.falseOwnershipToolStripMenuItem_Click);
+            // 
+            // propertiesBarItem
+            // 
+            this.propertiesBarItem.BarName = "propertiesBarItem";
+            this.propertiesBarItem.CategoryIndex = 1;
+            this.propertiesBarItem.ID = "Properties";
+            this.propertiesBarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("propertiesBarItem.Image")));
+            this.propertiesBarItem.ShowToolTipInPopUp = false;
+            this.propertiesBarItem.SizeToFit = true;
+            this.propertiesBarItem.Text = "Properties";
+            this.propertiesBarItem.Click += new System.EventHandler(this.propertiesToolStripMenuItemItems_Click);
             // 
             // clearItemsbarItem
             // 
@@ -754,6 +765,15 @@ namespace DeadLock.Forms
             this.detailsToolStripMenuItem.Text = "Details";
             this.detailsToolStripMenuItem.Click += new System.EventHandler(this.lsvItems_DoubleClick);
             // 
+            // propertiesToolStripMenuItemItems
+            // 
+            this.propertiesToolStripMenuItemItems.Image = global::DeadLock.Properties.Resources.details;
+            this.propertiesToolStripMenuItemItems.Name = "propertiesToolStripMenuItemItems";
+            this.propertiesToolStripMenuItemItems.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F5)));
+            this.propertiesToolStripMenuItemItems.Size = new System.Drawing.Size(212, 22);
+            this.propertiesToolStripMenuItemItems.Text = "Properties";
+            this.propertiesToolStripMenuItemItems.Click += new System.EventHandler(this.propertiesToolStripMenuItemItems_Click);
+            // 
             // splitToolStripMenuItem2
             // 
             this.splitToolStripMenuItem2.Name = "splitToolStripMenuItem2";
@@ -986,26 +1006,6 @@ namespace DeadLock.Forms
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitBarItem_Click);
-            // 
-            // propertiesToolStripMenuItemItems
-            // 
-            this.propertiesToolStripMenuItemItems.Image = global::DeadLock.Properties.Resources.details;
-            this.propertiesToolStripMenuItemItems.Name = "propertiesToolStripMenuItemItems";
-            this.propertiesToolStripMenuItemItems.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F5)));
-            this.propertiesToolStripMenuItemItems.Size = new System.Drawing.Size(212, 22);
-            this.propertiesToolStripMenuItemItems.Text = "Properties";
-            this.propertiesToolStripMenuItemItems.Click += new System.EventHandler(this.propertiesToolStripMenuItemItems_Click);
-            // 
-            // propertiesBarItem
-            // 
-            this.propertiesBarItem.BarName = "propertiesBarItem";
-            this.propertiesBarItem.CategoryIndex = 1;
-            this.propertiesBarItem.ID = "Properties";
-            this.propertiesBarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("propertiesBarItem.Image")));
-            this.propertiesBarItem.ShowToolTipInPopUp = false;
-            this.propertiesBarItem.SizeToFit = true;
-            this.propertiesBarItem.Text = "Properties";
-            this.propertiesBarItem.Click += new System.EventHandler(this.propertiesToolStripMenuItemItems_Click);
             // 
             // FrmMain
             // 

@@ -49,9 +49,6 @@ namespace DeadLock.Classes
                     case 0:
                         res = Properties.Resources.nl;
                         break;
-                    case 1:
-                        res = Properties.Resources.eng;
-                        break;
                     case 2:
                         res = Properties.Resources.fr;
                         break;
@@ -68,6 +65,9 @@ namespace DeadLock.Classes
                         res = Properties.Resources.sr;
                         break;
                     case 7:
+                        res = Properties.Resources.swe;
+                        break;
+                    case 8:
                         res = Properties.Resources.tr;
                         break;
                     default:

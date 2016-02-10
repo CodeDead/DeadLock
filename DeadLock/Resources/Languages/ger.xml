@@ -1,0 +1,99 @@
+﻿<?xml version="1.0"?>
+<Language xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Author>Ced999</Author>
+  <Comment>German</Comment>
+  <BarFile>&amp;Datei</BarFile>
+  <BarEdit>&amp;Bearbeiten</BarEdit>
+  <BarView>&amp;Ansicht</BarView>
+  <BarTools>&amp;Werkzeuge</BarTools>
+  <BarHelp>&amp;Hilfe</BarHelp>
+  <BarItemOpenFiles>Datei öffnen...</BarItemOpenFiles>
+  <BarItemOpenFolder>Ordner öffnen...</BarItemOpenFolder>
+  <BarItemRestart>Neustart</BarItemRestart>
+  <BarItemExit>Beenden</BarItemExit>
+  <BarItemUnlock>Entsperren</BarItemUnlock>
+  <BarItemCopy>Kopieren</BarItemCopy>
+  <BarItemMove>Verschieben</BarItemMove>
+  <BarItemRemove>Entfernen</BarItemRemove>
+  <BarItemOwnership>Eigentum</BarItemOwnership>
+  <BarItemOwnershipTrue>Wahr</BarItemOwnershipTrue>
+  <BarItemOwnershipFalse>Falsch</BarItemOwnershipFalse>
+  <BarItemRemoveItem>Item entfernen</BarItemRemoveItem>
+  <BarItemClearItems>Alle items entfernen</BarItemClearItems>
+  <BarItemAutoSizeColumns>Spalten automatisch anpassen</BarItemAutoSizeColumns>
+  <BarItemCancelTask>Beende Aufgabe</BarItemCancelTask>
+  <BarItemDetails>Details</BarItemDetails>
+  <BarItemSettings>Einstellungen</BarItemSettings>
+  <BarItemHelp>Hilfe</BarItemHelp>
+  <BarItemCheckForUpdates>Auf Updates überprüfen</BarItemCheckForUpdates>
+  <BarItemHomePage>Homepage</BarItemHomePage>
+  <BarItemAbout>Über</BarItemAbout>
+  <ClhPath>Pfad</ClhPath>
+  <ClhStatus>Status</ClhStatus>
+  <ClhOwnership>Eigentum</ClhOwnership>
+  <MsgUnknown>Unbekannt</MsgUnknown>
+  <MsgLocked>Gesperrt</MsgLocked>
+  <MsgUnlocked>Entsperrt</MsgUnlocked>
+  <MsgOperationCancelled>Operation abgebrochen</MsgOperationCancelled>
+  <MsgLoading>Laden...</MsgLoading>
+  <MsgSuccessfullyUnlocked>Erflogreich entsperrt</MsgSuccessfullyUnlocked>
+  <MsgCouldNotUnlock>Item konnte nicht entsperrt werden</MsgCouldNotUnlock>
+  <MsgSuccessfullyCopied>Erflogreich kopiert</MsgSuccessfullyCopied>
+  <MsgCouldNotCopy>Item konnte nich kopiert werden</MsgCouldNotCopy>
+  <MsgSuccessfullyMoved>Erflogreich verschoben</MsgSuccessfullyMoved>
+  <MsgCouldNotMove>Item konnte nicht verschoben werden</MsgCouldNotMove>
+  <MsgSuccessfullyRemoved>Erflogreich gelöscht</MsgSuccessfullyRemoved>
+  <MsgCouldNotRemove>Item konnte nicht gelöscht werden</MsgCouldNotRemove>
+  <ClhFileName>Datei Name</ClhFileName>
+  <ClhProcessId>Prozess ID</ClhProcessId>
+  <LblVersion>Version:</LblVersion>
+  <CmiDetails>Details</CmiDetails>
+  <CmiOpenInVirusTotal>Öffnen in VirusTotal</CmiOpenInVirusTotal>
+  <CmiKill>Stoppen</CmiKill>
+  <CmiOpenFileLocation>Dateipfad öffnen</CmiOpenFileLocation>
+  <CmiProperties>Eigenschaftem</CmiProperties>
+  <MsgSuccessfullyKilled>Erflogreich die ausgewählten Prozesse gestoppt!</MsgSuccessfullyKilled>
+  <CmiHideShow>Ausblenden / Einblenden</CmiHideShow>
+  <MsgAdministrator>DeadLock könnte ohne Administratorrechte nicht richtig funktionieren!</MsgAdministrator>
+  <MsgVersion>Version</MsgVersion>
+  <MsgAvailable>ist nun verfügbar!</MsgAvailable>
+  <MsgDownloadNewVersion>Möchtest du die aktuelle Version herunterladen?</MsgDownloadNewVersion>
+  <MsgLatestVersionAlreadyInstalled>Die aktuelle Version von DeadLock ist bereits installiert!</MsgLatestVersionAlreadyInstalled>
+  <TxtAboutCreated>DeadLock wurde von DeadLine erstellt.</TxtAboutCreated>
+  <TxtAboutImages>Bilder: small-n-flat von paomedia</TxtAboutImages>
+  <TxtAboutTheme>Theme von: SyncFusion</TxtAboutTheme>
+  <TxtAboutCopyright>Copyright &#169; CodeDead 2016</TxtAboutCopyright>
+  <TxtAboutTranslation>Übersetzung:</TxtAboutTranslation>
+  <BtnClose>Schließen</BtnClose>
+  <BtnLicense>Lizenz</BtnLicense>
+  <LblGeneral>Allgemein</LblGeneral>
+  <ChbAutoUpdate>Automatisch auf Updates überprüfen:</ChbAutoUpdate>
+  <ChbShowNotifyIcon>Benachrichtigung anzeigen:</ChbShowNotifyIcon>
+  <ChbStartMinimized>Minimiert starten:</ChbStartMinimized>
+  <ChbShowAdminWarning>Administratorwarnung anzeigen:</ChbShowAdminWarning>
+  <LblAppearance>Erscheinung</LblAppearance>
+  <LblThemeStyle>Theme style:</LblThemeStyle>
+  <LblBorderThickness>Randdicke:</LblBorderThickness>
+  <LblRememberFormSize>Fenstergröße merken:</LblRememberFormSize>
+  <LblShowDetails>Details anzeigen:</LblShowDetails>
+  <LblLanguage>Sprache:</LblLanguage>
+  <LblAdvanced>Erweitert</LblAdvanced>
+  <LblAutoRunDeadLock>Deadblock automatisch ausführen:</LblAutoRunDeadLock>
+  <LblWindowsExplorerIntegration>In Windows Exploren integrieren:</LblWindowsExplorerIntegration>
+  <LblOwnership>Besit ergreifen:</LblOwnership>
+  <BtnReset>Reset</BtnReset>
+  <BtnSave>Speichern</BtnSave>
+  <MsgRestartRequired>Ein Neustart ist nötig um bestimmte Aänderungen wirksam zu machen!</MsgRestartRequired>
+  <TbtnOn>AN</TbtnOn>
+  <TbtnOff>AUS</TbtnOff>
+  <TxtUpdater>Updater</TxtUpdater>
+  <LblPath>Pfad:</LblPath>
+  <LblProgress>Prozess:</LblProgress>
+  <BtnCancel>Abbrechen</BtnCancel>
+  <BtnUpdate>Update</BtnUpdate>
+  <MsgCouldNotRestart>Konnte keine neustart session erstellen. Es war nicht möglich einen resource locker festzulegen.</MsgCouldNotRestart>
+  <MsgCouldNotRegister>Konnte resource nicht registrieren.</MsgCouldNotRegister>
+  <MsgCouldNotList>Konnte die Prozesse nicht auflisten!</MsgCouldNotList>
+  <MsgCouldNotListResult>Konnte die Prozesse nicht auflisten! Auslesen der Größe des Ergebnisses nicht möglich!</MsgCouldNotListResult>
+  <MsgAccessDenied>Zugriff verweigert</MsgAccessDenied>
+</Language>

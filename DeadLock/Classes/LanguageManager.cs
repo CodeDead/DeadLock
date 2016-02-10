@@ -53,21 +53,24 @@ namespace DeadLock.Classes
                         res = Properties.Resources.fr;
                         break;
                     case 3:
-                        res = Properties.Resources.ita;
+                        res = Properties.Resources.ger;
                         break;
                     case 4:
-                        res = Properties.Resources.kor;
+                        res = Properties.Resources.ita;
                         break;
                     case 5:
-                        res = Properties.Resources.pl;
+                        res = Properties.Resources.kor;
                         break;
                     case 6:
-                        res = Properties.Resources.sr;
+                        res = Properties.Resources.pl;
                         break;
                     case 7:
-                        res = Properties.Resources.swe;
+                        res = Properties.Resources.sr;
                         break;
                     case 8:
+                        res = Properties.Resources.swe;
+                        break;
+                    case 9:
                         res = Properties.Resources.tr;
                         break;
                     default:

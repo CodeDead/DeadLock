@@ -316,6 +316,7 @@ namespace DeadLock.Forms
             "Dutch",
             "English",
             "French",
+            "German",
             "Italian",
             "Korean",
             "Polish",
@@ -326,6 +327,7 @@ namespace DeadLock.Forms
             this.cboLanguage.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cboLanguage, "Dutch"));
             this.cboLanguage.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cboLanguage, "English"));
             this.cboLanguage.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cboLanguage, "French"));
+            this.cboLanguage.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cboLanguage, "German"));
             this.cboLanguage.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cboLanguage, "Italian"));
             this.cboLanguage.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cboLanguage, "Korean"));
             this.cboLanguage.ItemsImageIndexes.Add(new Syncfusion.Windows.Forms.Tools.ComboBoxAdv.ImageIndexItem(this.cboLanguage, "Polish"));

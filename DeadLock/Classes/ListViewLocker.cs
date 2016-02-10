@@ -164,7 +164,7 @@ namespace DeadLock.Classes
                         DirectorySecurity ds = info.GetAccessControl();
                         ds.SetAccessRuleProtection(false, true);
                         if (self?.User == null) return;
-                        if (ds.GetOwner(typeof (NTAccount)).ToString() != self.Name)
+                        if (ds.GetOwner(typeof(NTAccount)).ToString() != self.Name)
                         {
                             ds.SetOwner(self.User);
                         }
@@ -204,7 +204,7 @@ namespace DeadLock.Classes
                     {
                         FileSecurity fs = File.GetAccessControl(GetPath());
                         fs.SetAccessRuleProtection(true, false);
-                        AuthorizationRuleCollection rules = fs.GetAccessRules(true, true, typeof (NTAccount));
+                        AuthorizationRuleCollection rules = fs.GetAccessRules(true, true, typeof(NTAccount));
                         foreach (FileSystemAccessRule rule in rules)
                         {
                             fs.RemoveAccessRule(rule);

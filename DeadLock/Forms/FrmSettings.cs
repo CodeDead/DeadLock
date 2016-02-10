@@ -367,7 +367,7 @@ namespace DeadLock.Forms
 
         private void btnSelectPath_Click(object sender, EventArgs e)
         {
-            cboLanguage.SelectedIndex = cboLanguage.Items.Count -1;
+            cboLanguage.SelectedIndex = cboLanguage.Items.Count - 1;
             OpenFileDialog ofd = new OpenFileDialog { Filter = @"XML (*.xml)|*.xml" };
             if (ofd.ShowDialog() == DialogResult.OK)
             {

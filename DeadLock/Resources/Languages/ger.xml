@@ -78,7 +78,7 @@
   <LblShowDetails>Details anzeigen:</LblShowDetails>
   <LblLanguage>Sprache:</LblLanguage>
   <LblAdvanced>Erweitert</LblAdvanced>
-  <LblAutoRunDeadLock>Deadblock automatisch ausführen:</LblAutoRunDeadLock>
+  <LblAutoRunDeadLock>DeadLock automatisch ausführen:</LblAutoRunDeadLock>
   <LblWindowsExplorerIntegration>In Windows Exploren integrieren:</LblWindowsExplorerIntegration>
   <LblOwnership>Besit ergreifen:</LblOwnership>
   <BtnReset>Reset</BtnReset>

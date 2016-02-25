@@ -8,7 +8,7 @@ Requirements in order to build DeadLock:
 * Turn off 'Prefer 32-bit'
 * SyncFusion for Windows Forms (https://www.syncfusion.com/products/communitylicense)
 * .NET Framework 4.6.1
-* Visual Studio 2015
+* Visual Studio 2015 Update 1
 
 You can find our company on the web:
 http://codedead.com/

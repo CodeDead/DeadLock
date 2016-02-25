@@ -183,6 +183,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Paomedia-Small-N-Flat-Lock.ico" />
+    <None Include="Resources\Languages\esp.xml" />
     <None Include="Resources\Languages\ger.xml" />
     <None Include="Resources\Languages\swe.xml" />
     <None Include="Resources\Languages\kor.xml" />

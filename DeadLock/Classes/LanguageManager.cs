@@ -68,9 +68,12 @@ namespace DeadLock.Classes
                         res = Properties.Resources.sr;
                         break;
                     case 8:
-                        res = Properties.Resources.swe;
+                        res = Properties.Resources.esp;
                         break;
                     case 9:
+                        res = Properties.Resources.swe;
+                        break;
+                    case 10:
                         res = Properties.Resources.tr;
                         break;
                     default:

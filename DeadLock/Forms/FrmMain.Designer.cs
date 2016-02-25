@@ -149,14 +149,15 @@ namespace DeadLock.Forms
             this.editParentBarItem,
             this.unlockParentBarItem,
             this.ownershipParentBarItem,
+            this.propertiesBarItem,
             this.trueBarItem,
             this.falseBarItem,
             this.removeBarItem,
             this.clearItemsbarItem,
             this.autoSizeColumnsBarItem,
             this.cancelOperationBarItem,
-            this.fileParentBarItem,
             this.unlockBarItem,
+            this.fileParentBarItem,
             this.copyBarItem,
             this.moveBarItem,
             this.openFilesBarItem,
@@ -173,8 +174,7 @@ namespace DeadLock.Forms
             this.aboutBarItem,
             this.versionStaticBarItem,
             this.viewParentBarItem,
-            this.detailsBarItem,
-            this.propertiesBarItem});
+            this.detailsBarItem});
             this.mfbmMain.MetroColor = System.Drawing.Color.Lime;
             this.mfbmMain.ResetCustomization = false;
             this.mfbmMain.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;

@@ -106,7 +106,7 @@ namespace DeadLock.Forms
 
             propertiesBarItem.Text = l.CmiProperties;
 
-            removeBarItem.Text = l.BarItemRemoveItem;
+            removeItemBarItem.Text = l.BarItemRemoveItem;
             clearItemsbarItem.Text = l.BarItemClearItems;
             autoSizeColumnsBarItem.Text = l.BarItemAutoSizeColumns;
             cancelOperationBarItem.Text = l.BarItemCancelTask;

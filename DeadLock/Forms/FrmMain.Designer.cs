@@ -184,6 +184,7 @@ namespace DeadLock.Forms
             // 
             // barMain
             // 
+            this.barMain.AllowCustomizing = false;
             this.barMain.BarName = "MainMenu";
             this.barMain.BarStyle = ((Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle)(((((Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.AllowQuickCustomizing | Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.IsMainMenu) 
             | Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.RotateWhenVertical) 
@@ -346,7 +347,7 @@ namespace DeadLock.Forms
             // 
             this.removeBarItem.BarName = "removeBarItem";
             this.removeBarItem.CategoryIndex = 1;
-            this.removeBarItem.ID = "removeBarItem_1";
+            this.removeBarItem.ID = "removeBarItem";
             this.removeBarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("removeBarItem.Image")));
             this.removeBarItem.ShowToolTipInPopUp = false;
             this.removeBarItem.SizeToFit = true;
@@ -406,7 +407,7 @@ namespace DeadLock.Forms
             // 
             this.removeItemBarItem.BarName = "removeItemBarItem";
             this.removeItemBarItem.CategoryIndex = 1;
-            this.removeItemBarItem.ID = "removeBarItem";
+            this.removeItemBarItem.ID = "removeItemBarItem";
             this.removeItemBarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("removeItemBarItem.Image")));
             this.removeItemBarItem.ShowToolTipInPopUp = false;
             this.removeItemBarItem.SizeToFit = true;

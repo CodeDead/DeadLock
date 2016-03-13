@@ -54,6 +54,7 @@ namespace DeadLock.Forms
             this.trueBarItem = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.falseBarItem = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.propertiesBarItem = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
+            this.removeItemBarItem = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.clearItemsbarItem = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.autoSizeColumnsBarItem = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
             this.cancelOperationBarItem = new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem();
@@ -152,7 +153,6 @@ namespace DeadLock.Forms
             this.propertiesBarItem,
             this.trueBarItem,
             this.falseBarItem,
-            this.removeBarItem,
             this.clearItemsbarItem,
             this.autoSizeColumnsBarItem,
             this.cancelOperationBarItem,
@@ -174,7 +174,9 @@ namespace DeadLock.Forms
             this.aboutBarItem,
             this.versionStaticBarItem,
             this.viewParentBarItem,
-            this.detailsBarItem});
+            this.detailsBarItem,
+            this.removeItemBarItem,
+            this.removeBarItem});
             this.mfbmMain.MetroColor = System.Drawing.Color.Lime;
             this.mfbmMain.ResetCustomization = false;
             this.mfbmMain.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
@@ -270,7 +272,7 @@ namespace DeadLock.Forms
             this.unlockParentBarItem,
             this.ownershipParentBarItem,
             this.propertiesBarItem,
-            this.removeBarItem,
+            this.removeItemBarItem,
             this.clearItemsbarItem,
             this.autoSizeColumnsBarItem,
             this.cancelOperationBarItem});
@@ -344,11 +346,11 @@ namespace DeadLock.Forms
             // 
             this.removeBarItem.BarName = "removeBarItem";
             this.removeBarItem.CategoryIndex = 1;
-            this.removeBarItem.ID = "RemoveItem";
+            this.removeBarItem.ID = "removeBarItem_1";
             this.removeBarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("removeBarItem.Image")));
             this.removeBarItem.ShowToolTipInPopUp = false;
             this.removeBarItem.SizeToFit = true;
-            this.removeBarItem.Text = "Remove item";
+            this.removeBarItem.Text = "Remove";
             this.removeBarItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
             // 
             // ownershipParentBarItem
@@ -399,6 +401,17 @@ namespace DeadLock.Forms
             this.propertiesBarItem.SizeToFit = true;
             this.propertiesBarItem.Text = "Properties";
             this.propertiesBarItem.Click += new System.EventHandler(this.propertiesToolStripMenuItemItems_Click);
+            // 
+            // removeItemBarItem
+            // 
+            this.removeItemBarItem.BarName = "removeItemBarItem";
+            this.removeItemBarItem.CategoryIndex = 1;
+            this.removeItemBarItem.ID = "removeBarItem";
+            this.removeItemBarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("removeItemBarItem.Image")));
+            this.removeItemBarItem.ShowToolTipInPopUp = false;
+            this.removeItemBarItem.SizeToFit = true;
+            this.removeItemBarItem.Text = "Remove item";
+            this.removeItemBarItem.Click += new System.EventHandler(this.removeItemToolStripMenuItem_Click);
             // 
             // clearItemsbarItem
             // 
@@ -679,14 +692,14 @@ namespace DeadLock.Forms
             this.unlockToolStripMenuItem1.Name = "unlockToolStripMenuItem1";
             this.unlockToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
             | System.Windows.Forms.Keys.U)));
-            this.unlockToolStripMenuItem1.Size = new System.Drawing.Size(224, 22);
+            this.unlockToolStripMenuItem1.Size = new System.Drawing.Size(200, 22);
             this.unlockToolStripMenuItem1.Text = "Unlock";
             this.unlockToolStripMenuItem1.Click += new System.EventHandler(this.unlockToolStripMenuItem1_Click);
             // 
             // splitToolStripMenuItem4
             // 
             this.splitToolStripMenuItem4.Name = "splitToolStripMenuItem4";
-            this.splitToolStripMenuItem4.Size = new System.Drawing.Size(221, 6);
+            this.splitToolStripMenuItem4.Size = new System.Drawing.Size(197, 6);
             // 
             // copyToolStripMenuItem
             // 
@@ -694,7 +707,7 @@ namespace DeadLock.Forms
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
             this.copyToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
             | System.Windows.Forms.Keys.C)));
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.copyToolStripMenuItem.Text = "Copy";
             this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
@@ -704,14 +717,14 @@ namespace DeadLock.Forms
             this.moveToolStripMenuItem.Name = "moveToolStripMenuItem";
             this.moveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
             | System.Windows.Forms.Keys.M)));
-            this.moveToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.moveToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.moveToolStripMenuItem.Text = "Move";
             this.moveToolStripMenuItem.Click += new System.EventHandler(this.moveToolStripMenuItem_Click);
             // 
             // splitToolStripMenuItem5
             // 
             this.splitToolStripMenuItem5.Name = "splitToolStripMenuItem5";
-            this.splitToolStripMenuItem5.Size = new System.Drawing.Size(221, 6);
+            this.splitToolStripMenuItem5.Size = new System.Drawing.Size(197, 6);
             // 
             // removeToolStripMenuItem
             // 
@@ -719,8 +732,8 @@ namespace DeadLock.Forms
             this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
             this.removeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.Delete)));
-            this.removeToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
-            this.removeToolStripMenuItem.Text = "RemoveItem";
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.removeToolStripMenuItem.Text = "Remove";
             this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
             // 
             // ownershipToolStripMenuItem
@@ -785,7 +798,7 @@ namespace DeadLock.Forms
             this.removeItemToolStripMenuItem.Name = "removeItemToolStripMenuItem";
             this.removeItemToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Delete;
             this.removeItemToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
-            this.removeItemToolStripMenuItem.Text = "RemoveItem item";
+            this.removeItemToolStripMenuItem.Text = "Remove item";
             this.removeItemToolStripMenuItem.Click += new System.EventHandler(this.removeItemToolStripMenuItem_Click);
             // 
             // clearItemsToolStripMenuItem
@@ -1089,7 +1102,6 @@ namespace DeadLock.Forms
         private Syncfusion.Windows.Forms.Tools.XPMenus.BarItem unlockBarItem;
         private Syncfusion.Windows.Forms.Tools.XPMenus.BarItem copyBarItem;
         private Syncfusion.Windows.Forms.Tools.XPMenus.BarItem moveBarItem;
-        private Syncfusion.Windows.Forms.Tools.XPMenus.BarItem removeBarItem;
         private System.Windows.Forms.ToolStripMenuItem unlockToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem unlockToolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator splitToolStripMenuItem4;
@@ -1126,5 +1138,7 @@ namespace DeadLock.Forms
         private System.Windows.Forms.ToolStripSeparator splitToolStripMenuItem12;
         private System.Windows.Forms.ToolStripMenuItem propertiesToolStripMenuItemItems;
         private Syncfusion.Windows.Forms.Tools.XPMenus.BarItem propertiesBarItem;
+        private Syncfusion.Windows.Forms.Tools.XPMenus.BarItem removeItemBarItem;
+        private Syncfusion.Windows.Forms.Tools.XPMenus.BarItem removeBarItem;
     }
 }

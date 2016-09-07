@@ -37,7 +37,7 @@ namespace DeadLock.Forms
             {
                 _languageManager = new LanguageManager();
                 _update = new Update();
-                if (Properties.Settings.Default.Language == 11)
+                if (Properties.Settings.Default.Language == 12)
                 {
                     if (Properties.Settings.Default.LanguagePath.Length != 0)
                     {

@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Text;
 using System.Xml.Serialization;
 
 namespace DeadLock.Classes
@@ -65,15 +66,18 @@ namespace DeadLock.Classes
                         res = Properties.Resources.pl;
                         break;
                     case 7:
-                        res = Properties.Resources.sr;
+                        res = Properties.Resources.rus;
                         break;
                     case 8:
-                        res = Properties.Resources.esp;
+                        res = Properties.Resources.sr;
                         break;
                     case 9:
-                        res = Properties.Resources.swe;
+                        res = Properties.Resources.esp;
                         break;
                     case 10:
+                        res = Properties.Resources.swe;
+                        break;
+                    case 11:
                         res = Properties.Resources.tr;
                         break;
                     default:

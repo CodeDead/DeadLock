@@ -68,7 +68,7 @@
   <BtnLicense>Licentie</BtnLicense>
   <LblGeneral>Algemeen</LblGeneral>
   <ChbAutoUpdate>Controleer automatisch op updates:</ChbAutoUpdate>
-  <ChbShowNotifyIcon>Toon notifyicon:</ChbShowNotifyIcon>
+  <ChbShowNotifyIcon>Toon notificatie icoon:</ChbShowNotifyIcon>
   <ChbStartMinimized>Start geminimaliseerd:</ChbStartMinimized>
   <ChbShowAdminWarning>Toon administratieve waarschuwing:</ChbShowAdminWarning>
   <LblAppearance>Uiterlijk</LblAppearance>

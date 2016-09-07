@@ -19,12 +19,9 @@ namespace DeadLock.Forms
     public partial class FrmMain : MetroForm
     {
         #region Variables
-
-        private readonly LanguageManager _languageManager;
+        internal readonly LanguageManager LanguageManager;
         private Update _update;
-
         private readonly string[] _args;
-
         #endregion
 
         /// <summary>
@@ -35,32 +32,10 @@ namespace DeadLock.Forms
         {
             InitializeComponent();
             LoadTheme();
+            LanguageManager = new LanguageManager();
+            _update = new Update();
             try
             {
-                _languageManager = new LanguageManager();
-                _update = new Update();
-                if (Properties.Settings.Default.Language == 12)
-                {
-                    if (Properties.Settings.Default.LanguagePath.Length != 0)
-                    {
-                        _languageManager.LoadLanguage(Properties.Settings.Default.LanguagePath);
-                    }
-                    else
-                    {
-                        _languageManager.LoadLanguage(1);
-                    }
-                }
-                else
-                {
-                    try
-                    {
-                        _languageManager.LoadLanguage(Properties.Settings.Default.Language);
-                    }
-                    catch (Exception)
-                    {
-                        _languageManager.LoadLanguage(1);
-                    }
-                }
                 LanguageSwitch();
 
                 nfiTray.Visible = Properties.Settings.Default.ShowNotifyIcon;
@@ -79,9 +54,32 @@ namespace DeadLock.Forms
         /// <summary>
         /// Change the GUI to match the current Language.
         /// </summary>
-        private void LanguageSwitch()
+        internal void LanguageSwitch()
         {
-            Language l = _languageManager.GetLanguage();
+            if (Properties.Settings.Default.Language == 12)
+            {
+                if (Properties.Settings.Default.LanguagePath.Length != 0)
+                {
+                    LanguageManager.LoadLanguage(Properties.Settings.Default.LanguagePath);
+                }
+                else
+                {
+                    LanguageManager.LoadLanguage(1);
+                }
+            }
+            else
+            {
+                try
+                {
+                    LanguageManager.LoadLanguage(Properties.Settings.Default.Language);
+                }
+                catch (Exception)
+                {
+                    LanguageManager.LoadLanguage(1);
+                }
+            }
+
+            Language l = LanguageManager.GetLanguage();
             //Main form - Menu items:
             fileParentBarItem.Text = l.BarFile;
             editParentBarItem.Text = l.BarEdit;
@@ -177,7 +175,7 @@ namespace DeadLock.Forms
         /// <param name="showNoUpdates">Show a MessageBox when there are no updates available.</param>
         private async void Update(bool showError, bool showNoUpdates)
         {
-            Language l = _languageManager.GetLanguage();
+            Language l = LanguageManager.GetLanguage();
 
             try
             {
@@ -198,7 +196,7 @@ namespace DeadLock.Forms
                 {
                     if (MessageBoxAdv.Show(l.MsgVersion + " " + _update.GetUpdateVersion() + " " + l.MsgAvailable + Environment.NewLine + l.MsgDownloadNewVersion, "DeadLock", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        new FrmUpdater(_update, _languageManager.GetLanguage()).Show();
+                        new FrmUpdater(_update, LanguageManager.GetLanguage()).Show();
                     }
                 }
                 else
@@ -264,7 +262,7 @@ namespace DeadLock.Forms
 
         private void aboutBarItem_Click(object sender, EventArgs e)
         {
-            new FrmAbout(_languageManager.GetLanguage()).ShowDialog();
+            new FrmAbout(LanguageManager.GetLanguage()).ShowDialog();
         }
 
         private void exitBarItem_Click(object sender, EventArgs e)
@@ -301,7 +299,7 @@ namespace DeadLock.Forms
             }
             if (!add) return;
 
-            Language l = _languageManager.GetLanguage();
+            Language l = LanguageManager.GetLanguage();
             int index = lsvItems.Items.Count;
             ListViewLocker lvi = new ListViewLocker(path, l, index);
 
@@ -379,7 +377,7 @@ namespace DeadLock.Forms
         {
             if (lsvItems.SelectedItems.Count == 0) return;
 
-            Language l = _languageManager.GetLanguage();
+            Language l = LanguageManager.GetLanguage();
             ListViewLocker lvl = (ListViewLocker)lsvItems.SelectedItems[0];
 
             CancelSelectedTask(lvl);
@@ -437,7 +435,7 @@ namespace DeadLock.Forms
             if (lsvItems.SelectedItems.Count == 0) return;
 
             ListViewLocker lvl = (ListViewLocker)lsvItems.SelectedItems[0];
-            Language l = _languageManager.GetLanguage();
+            Language l = LanguageManager.GetLanguage();
 
             CancelSelectedTask(lvl);
             await Task.Run(() =>
@@ -476,7 +474,7 @@ namespace DeadLock.Forms
 
         private void FrmMain_Shown(object sender, EventArgs e)
         {
-            Language l = _languageManager.GetLanguage();
+            Language l = LanguageManager.GetLanguage();
             try
             {
                 if (Properties.Settings.Default.ShowAdminWarning)
@@ -489,7 +487,10 @@ namespace DeadLock.Forms
                     }
                 }
 
-                if (Properties.Settings.Default.AutoUpdate) Update(false, false);
+                if (Properties.Settings.Default.AutoUpdate)
+                {
+                    Update(false, false);
+                }
                 Visible = !Properties.Settings.Default.StartMinimized;
 
                 if (_args.Length == 0) return;
@@ -521,7 +522,7 @@ namespace DeadLock.Forms
             if (lsvItems.SelectedItems.Count == 0) return;
 
             ListViewLocker lvl = (ListViewLocker)lsvItems.SelectedItems[0];
-            Language l = _languageManager.GetLanguage();
+            Language l = LanguageManager.GetLanguage();
 
             CancelSelectedTask(lvl);
             await Task.Run(() =>
@@ -563,7 +564,7 @@ namespace DeadLock.Forms
             if (lsvItems.SelectedItems.Count == 0) return;
 
             ListViewLocker lvl = (ListViewLocker)lsvItems.SelectedItems[0];
-            Language l = _languageManager.GetLanguage();
+            Language l = LanguageManager.GetLanguage();
 
             CancelSelectedTask(lvl);
             await Task.Run(() =>
@@ -618,7 +619,7 @@ namespace DeadLock.Forms
             lsvDetails.Items.Clear();
 
             ListViewLocker lvl = (ListViewLocker)lsvItems.SelectedItems[0];
-            Language l = _languageManager.GetLanguage();
+            Language l = LanguageManager.GetLanguage();
 
             try
             {
@@ -744,7 +745,7 @@ namespace DeadLock.Forms
         private void SetCancelled(ListViewItem selected)
         {
             if (selected == null) return;
-            Language l = _languageManager.GetLanguage();
+            Language l = LanguageManager.GetLanguage();
             selected.SubItems[1].ForeColor = Color.Red;
             selected.SubItems[1].Text = l.MsgOperationCancelled;
             selected.SubItems[2].Text = l.MsgOperationCancelled;
@@ -758,7 +759,7 @@ namespace DeadLock.Forms
         private void SetLoading(ListViewItem selected, int index)
         {
             if (selected == null) return;
-            Language l = _languageManager.GetLanguage();
+            Language l = LanguageManager.GetLanguage();
             selected.SubItems[index].ForeColor = Color.Black;
             selected.SubItems[index].Text = l.MsgLoading;
         }
@@ -829,13 +830,13 @@ namespace DeadLock.Forms
 
         private void settingsBarItem_Click(object sender, EventArgs e)
         {
-            new FrmSettings(nfiTray, _languageManager.GetLanguage()).ShowDialog();
+            new FrmSettings(this).ShowDialog();
         }
 
         private void killToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (lsvDetails.SelectedItems.Count == 0) return;
-            Language lang = _languageManager.GetLanguage();
+            Language lang = LanguageManager.GetLanguage();
             try
             {
                 foreach (ListViewItem l in lsvDetails.SelectedItems)
@@ -910,7 +911,7 @@ namespace DeadLock.Forms
         private void SetOwnership(ListViewLocker lvi, bool ownership)
         {
             lvi.SetOwnership(ownership);
-            lvi.SubItems[2].Text = lvi.HasOwnership() ? _languageManager.GetLanguage().BarItemOwnershipTrue : _languageManager.GetLanguage().BarItemOwnershipFalse;
+            lvi.SubItems[2].Text = lvi.HasOwnership() ? LanguageManager.GetLanguage().BarItemOwnershipTrue : LanguageManager.GetLanguage().BarItemOwnershipFalse;
         }
 
         private void FrmMain_DragEnter(object sender, DragEventArgs e)

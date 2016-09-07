@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Windows.Forms;
-using DeadLock.Classes;
 using Microsoft.Win32;
 using Syncfusion.Windows.Forms;
 using Syncfusion.Windows.Forms.Tools;
@@ -12,23 +11,19 @@ namespace DeadLock.Forms
     public partial class FrmSettings : MetroForm
     {
         #region Variables
-        private readonly NotifyIcon _nfi;
+        private readonly FrmMain _main;
         private bool _originalIntegration;
         private bool _originalStartup;
-        private readonly Language _language;
         #endregion
 
         /// <summary>
         /// Generate a new FrmSettings form.
         /// </summary>
-        /// <param name="nfi">The NotifyIcon that is associated with the Main form.</param>
-        /// <param name="l">The current Language.</param>
-        public FrmSettings(NotifyIcon nfi, Language l)
+        /// <param name="main">The main form.</param>
+        public FrmSettings(FrmMain main)
         {
             InitializeComponent();
-            _nfi = nfi;
-            _language = l;
-
+            _main = main;
             LoadLanguage();
         }
 
@@ -37,60 +32,60 @@ namespace DeadLock.Forms
         /// </summary>
         private void LoadLanguage()
         {
-            Text = @"DeadLock - " + _language.BarItemSettings;
+            Text = @"DeadLock - " + _main.LanguageManager.GetLanguage().BarItemSettings;
 
-            tpaGeneral.Text = _language.LblGeneral;
-            tpaAppearance.Text = _language.LblAppearance;
-            tpaAdvanced.Text = _language.LblAdvanced;
+            tpaGeneral.Text = _main.LanguageManager.GetLanguage().LblGeneral;
+            tpaAppearance.Text = _main.LanguageManager.GetLanguage().LblAppearance;
+            tpaAdvanced.Text = _main.LanguageManager.GetLanguage().LblAdvanced;
 
             //General
-            lblAutoUpdate.Text = _language.ChbAutoUpdate;
-            lblNotifyIcon.Text = _language.ChbShowNotifyIcon;
-            lblMinimized.Text = _language.ChbStartMinimized;
-            lblAdminWarning.Text = _language.ChbShowAdminWarning;
+            lblAutoUpdate.Text = _main.LanguageManager.GetLanguage().ChbAutoUpdate;
+            lblNotifyIcon.Text = _main.LanguageManager.GetLanguage().ChbShowNotifyIcon;
+            lblMinimized.Text = _main.LanguageManager.GetLanguage().ChbStartMinimized;
+            lblAdminWarning.Text = _main.LanguageManager.GetLanguage().ChbShowAdminWarning;
 
-            tbtnAutoUpdate.ActiveState.Text = _language.TbtnOn;
-            tbtnAutoUpdate.InactiveState.Text = _language.TbtnOff;
+            tbtnAutoUpdate.ActiveState.Text = _main.LanguageManager.GetLanguage().TbtnOn;
+            tbtnAutoUpdate.InactiveState.Text = _main.LanguageManager.GetLanguage().TbtnOff;
 
-            tbtnNotifyIcon.ActiveState.Text = _language.TbtnOn;
-            tbtnNotifyIcon.InactiveState.Text = _language.TbtnOff;
+            tbtnNotifyIcon.ActiveState.Text = _main.LanguageManager.GetLanguage().TbtnOn;
+            tbtnNotifyIcon.InactiveState.Text = _main.LanguageManager.GetLanguage().TbtnOff;
 
-            tbtnStartMinimized.ActiveState.Text = _language.TbtnOn;
-            tbtnStartMinimized.InactiveState.Text = _language.TbtnOff;
+            tbtnStartMinimized.ActiveState.Text = _main.LanguageManager.GetLanguage().TbtnOn;
+            tbtnStartMinimized.InactiveState.Text = _main.LanguageManager.GetLanguage().TbtnOff;
 
-            tbtnAdminWarning.ActiveState.Text = _language.TbtnOn;
-            tbtnAdminWarning.InactiveState.Text = _language.TbtnOff;
+            tbtnAdminWarning.ActiveState.Text = _main.LanguageManager.GetLanguage().TbtnOn;
+            tbtnAdminWarning.InactiveState.Text = _main.LanguageManager.GetLanguage().TbtnOff;
 
             //Appearance
-            lblThemeStyle.Text = _language.LblThemeStyle;
-            lblBorderThickness.Text = _language.LblBorderThickness;
-            lblFormSize.Text = _language.LblRememberFormSize;
-            lblDetails.Text = _language.LblShowDetails;
-            lblLanguage.Text = _language.LblLanguage;
+            lblThemeStyle.Text = _main.LanguageManager.GetLanguage().LblThemeStyle;
+            lblBorderThickness.Text = _main.LanguageManager.GetLanguage().LblBorderThickness;
+            lblFormSize.Text = _main.LanguageManager.GetLanguage().LblRememberFormSize;
+            lblDetails.Text = _main.LanguageManager.GetLanguage().LblShowDetails;
+            lblLanguage.Text = _main.LanguageManager.GetLanguage().LblLanguage;
 
-            tbtnFormSize.ActiveState.Text = _language.TbtnOn;
-            tbtnFormSize.InactiveState.Text = _language.TbtnOff;
+            tbtnFormSize.ActiveState.Text = _main.LanguageManager.GetLanguage().TbtnOn;
+            tbtnFormSize.InactiveState.Text = _main.LanguageManager.GetLanguage().TbtnOff;
 
-            tbtnDetails.ActiveState.Text = _language.TbtnOn;
-            tbtnDetails.InactiveState.Text = _language.TbtnOff;
+            tbtnDetails.ActiveState.Text = _main.LanguageManager.GetLanguage().TbtnOn;
+            tbtnDetails.InactiveState.Text = _main.LanguageManager.GetLanguage().TbtnOff;
 
             //Advanced
-            lblAutorun.Text = _language.LblAutoRunDeadLock;
-            lblWindowsExplorerIntegration.Text = _language.LblWindowsExplorerIntegration;
-            lblOwnership.Text = _language.LblOwnership;
+            lblAutorun.Text = _main.LanguageManager.GetLanguage().LblAutoRunDeadLock;
+            lblWindowsExplorerIntegration.Text = _main.LanguageManager.GetLanguage().LblWindowsExplorerIntegration;
+            lblOwnership.Text = _main.LanguageManager.GetLanguage().LblOwnership;
 
-            tbtnAutoRun.ActiveState.Text = _language.TbtnOn;
-            tbtnAutoRun.InactiveState.Text = _language.TbtnOff;
+            tbtnAutoRun.ActiveState.Text = _main.LanguageManager.GetLanguage().TbtnOn;
+            tbtnAutoRun.InactiveState.Text = _main.LanguageManager.GetLanguage().TbtnOff;
 
-            tbtnWindowsExplorerIntegration.ActiveState.Text = _language.TbtnOn;
-            tbtnWindowsExplorerIntegration.InactiveState.Text = _language.TbtnOff;
+            tbtnWindowsExplorerIntegration.ActiveState.Text = _main.LanguageManager.GetLanguage().TbtnOn;
+            tbtnWindowsExplorerIntegration.InactiveState.Text = _main.LanguageManager.GetLanguage().TbtnOff;
 
-            tbtnOwnership.ActiveState.Text = _language.TbtnOn;
-            tbtnOwnership.InactiveState.Text = _language.TbtnOff;
+            tbtnOwnership.ActiveState.Text = _main.LanguageManager.GetLanguage().TbtnOn;
+            tbtnOwnership.InactiveState.Text = _main.LanguageManager.GetLanguage().TbtnOff;
 
-            btnClose.Text = _language.BtnClose;
-            btnReset.Text = _language.BtnReset;
-            btnSave.Text = _language.BtnSave;
+            btnClose.Text = _main.LanguageManager.GetLanguage().BtnClose;
+            btnReset.Text = _main.LanguageManager.GetLanguage().BtnReset;
+            btnSave.Text = _main.LanguageManager.GetLanguage().BtnSave;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -187,19 +182,19 @@ namespace DeadLock.Forms
                 if (tbtnNotifyIcon.ToggleState == ToggleButtonState.Active)
                 {
                     Properties.Settings.Default.ShowNotifyIcon = true;
-                    _nfi.Visible = true;
+                    _main.nfiTray.Visible = true;
                 }
                 else
                 {
                     Properties.Settings.Default.ShowNotifyIcon = false;
-                    _nfi.Visible = false;
+                    _main.nfiTray.Visible = false;
                 }
                 Properties.Settings.Default.StartMinimized = tbtnStartMinimized.ToggleState == ToggleButtonState.Active;
                 Properties.Settings.Default.ShowAdminWarning = tbtnAdminWarning.ToggleState == ToggleButtonState.Active;
 
-                if ((cpbThemeStyle.MetroColor != Properties.Settings.Default.MetroColor) || (Properties.Settings.Default.BorderThickness != (int)itxtBorderThickness.IntegerValue) || (tbtnDetails.ToggleState == ToggleButtonState.Active) != Properties.Settings.Default.ViewDetails || cboLanguage.SelectedIndex != Properties.Settings.Default.Language || txtLanguagePath.Text != Properties.Settings.Default.LanguagePath)
+                if ((cpbThemeStyle.MetroColor != Properties.Settings.Default.MetroColor) || (Properties.Settings.Default.BorderThickness != (int)itxtBorderThickness.IntegerValue) || (tbtnDetails.ToggleState == ToggleButtonState.Active) != Properties.Settings.Default.ViewDetails)
                 {
-                    MessageBoxAdv.Show(_language.MsgRestartRequired, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBoxAdv.Show(_main.LanguageManager.GetLanguage().MsgRestartRequired, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
                 Properties.Settings.Default.MetroColor = cpbThemeStyle.SelectedColor;
@@ -207,8 +202,14 @@ namespace DeadLock.Forms
                 Properties.Settings.Default.RememberFormSize = tbtnFormSize.ToggleState == ToggleButtonState.Active;
                 Properties.Settings.Default.ViewDetails = tbtnDetails.ToggleState == ToggleButtonState.Active;
 
-                Properties.Settings.Default.Language = cboLanguage.SelectedIndex;
-                Properties.Settings.Default.LanguagePath = txtLanguagePath.Text;
+                if (cboLanguage.SelectedIndex != Properties.Settings.Default.Language || txtLanguagePath.Text != Properties.Settings.Default.LanguagePath)
+                {
+                    Properties.Settings.Default.Language = cboLanguage.SelectedIndex;
+                    Properties.Settings.Default.LanguagePath = txtLanguagePath.Text;
+
+                    _main.LanguageSwitch();
+                    LoadLanguage();
+                }
 
                 List<string> args = new List<string>();
 
@@ -341,9 +342,14 @@ namespace DeadLock.Forms
 
                 Properties.Settings.Default.Reset();
                 Properties.Settings.Default.Save();
-                if ((cpbThemeStyle.MetroColor != Properties.Settings.Default.MetroColor) || (Properties.Settings.Default.BorderThickness != (int)itxtBorderThickness.IntegerValue) || (tbtnDetails.ToggleState == ToggleButtonState.Active) != Properties.Settings.Default.ViewDetails || cboLanguage.SelectedIndex != Properties.Settings.Default.Language || txtLanguagePath.Text != Properties.Settings.Default.LanguagePath)
+                if ((cpbThemeStyle.MetroColor != Properties.Settings.Default.MetroColor) || (Properties.Settings.Default.BorderThickness != (int)itxtBorderThickness.IntegerValue) || (tbtnDetails.ToggleState == ToggleButtonState.Active) != Properties.Settings.Default.ViewDetails)
                 {
-                    MessageBoxAdv.Show(_language.MsgRestartRequired, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBoxAdv.Show(_main.LanguageManager.GetLanguage().MsgRestartRequired, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                if (cboLanguage.SelectedIndex != Properties.Settings.Default.Language || txtLanguagePath.Text != Properties.Settings.Default.LanguagePath)
+                {
+                    _main.LanguageSwitch();
+                    LoadLanguage();
                 }
                 LoadSettings();
             }

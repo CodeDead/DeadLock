@@ -177,7 +177,7 @@ namespace DeadLock.Forms
             this.detailsBarItem,
             this.removeItemBarItem,
             this.removeBarItem});
-            this.mfbmMain.MetroColor = System.Drawing.Color.Lime;
+            this.mfbmMain.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(201)))), ((int)(((byte)(232)))));
             this.mfbmMain.ResetCustomization = false;
             this.mfbmMain.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
             this.mfbmMain.UseBackwardCompatiblity = false;
@@ -209,7 +209,7 @@ namespace DeadLock.Forms
             this.openFolderbarItem,
             this.restartBarItem,
             this.exitBarItem});
-            this.fileParentBarItem.MetroColor = System.Drawing.Color.Lime;
+            this.fileParentBarItem.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(201)))), ((int)(((byte)(232)))));
             this.fileParentBarItem.SeparatorIndices.AddRange(new int[] {
             2});
             this.fileParentBarItem.ShowToolTipInPopUp = false;
@@ -277,7 +277,7 @@ namespace DeadLock.Forms
             this.clearItemsbarItem,
             this.autoSizeColumnsBarItem,
             this.cancelOperationBarItem});
-            this.editParentBarItem.MetroColor = System.Drawing.Color.Lime;
+            this.editParentBarItem.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(201)))), ((int)(((byte)(232)))));
             this.editParentBarItem.SeparatorIndices.AddRange(new int[] {
             2,
             3,
@@ -300,7 +300,7 @@ namespace DeadLock.Forms
             this.copyBarItem,
             this.moveBarItem,
             this.removeBarItem});
-            this.unlockParentBarItem.MetroColor = System.Drawing.Color.Lime;
+            this.unlockParentBarItem.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(201)))), ((int)(((byte)(232)))));
             this.unlockParentBarItem.SeparatorIndices.AddRange(new int[] {
             1,
             3});
@@ -363,7 +363,7 @@ namespace DeadLock.Forms
             this.ownershipParentBarItem.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] {
             this.trueBarItem,
             this.falseBarItem});
-            this.ownershipParentBarItem.MetroColor = System.Drawing.Color.Lime;
+            this.ownershipParentBarItem.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(201)))), ((int)(((byte)(232)))));
             this.ownershipParentBarItem.ShowToolTipInPopUp = false;
             this.ownershipParentBarItem.SizeToFit = true;
             this.ownershipParentBarItem.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
@@ -454,7 +454,7 @@ namespace DeadLock.Forms
             this.viewParentBarItem.ID = "&View";
             this.viewParentBarItem.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] {
             this.detailsBarItem});
-            this.viewParentBarItem.MetroColor = System.Drawing.Color.Lime;
+            this.viewParentBarItem.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(201)))), ((int)(((byte)(232)))));
             this.viewParentBarItem.ShowToolTipInPopUp = false;
             this.viewParentBarItem.SizeToFit = true;
             this.viewParentBarItem.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
@@ -479,7 +479,7 @@ namespace DeadLock.Forms
             this.toolsParentBarItem.ID = "&Tools";
             this.toolsParentBarItem.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] {
             this.settingsBarItem});
-            this.toolsParentBarItem.MetroColor = System.Drawing.Color.Lime;
+            this.toolsParentBarItem.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(201)))), ((int)(((byte)(232)))));
             this.toolsParentBarItem.ShowToolTipInPopUp = false;
             this.toolsParentBarItem.SizeToFit = true;
             this.toolsParentBarItem.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
@@ -508,7 +508,7 @@ namespace DeadLock.Forms
             this.homePageBarItem,
             this.licenseBarItem,
             this.aboutBarItem});
-            this.helpParentBarItem.MetroColor = System.Drawing.Color.Lime;
+            this.helpParentBarItem.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(201)))), ((int)(((byte)(232)))));
             this.helpParentBarItem.SeparatorIndices.AddRange(new int[] {
             1,
             3,

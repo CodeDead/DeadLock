@@ -135,7 +135,7 @@ namespace DeadLock.Forms
             clhProcessID.Text = l.ClhProcessId;
 
             //Main Form - Status bar:
-            versionStaticBarItem.Text = l.LblVersion;
+            versionStaticBarItem.Text = l.LblVersion + @" " + Application.ProductVersion;
 
             //Main Form - ContextMenu Items:
             detailsToolStripMenuItem.Text = l.CmiDetails;
@@ -235,6 +235,7 @@ namespace DeadLock.Forms
                 cmsDetails.MetroColor = Properties.Settings.Default.MetroColor;
                 cmsTray.MetroColor = Properties.Settings.Default.MetroColor;
 
+                mfbmMain.BeginInit();
                 mfbmMain.MetroColor = Properties.Settings.Default.MetroColor;
                 mfbmMain.ResetCustomization = false;
                 mfbmMain.Style = VisualStyle.Metro;
@@ -253,11 +254,6 @@ namespace DeadLock.Forms
             {
                 MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void FrmMain_Load(object sender, EventArgs e)
-        {
-            versionStaticBarItem.Text += @" " + Application.ProductVersion;
         }
 
         private void aboutBarItem_Click(object sender, EventArgs e)

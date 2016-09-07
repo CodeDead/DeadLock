@@ -1,5 +1,8 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
+using System.Windows.Forms;
 using System.Xml.Serialization;
+using Syncfusion.Windows.Forms;
 
 namespace DeadLock.Classes
 {
@@ -9,7 +12,9 @@ namespace DeadLock.Classes
     internal class LanguageManager
     {
         #region Variables
+
         private Language _currentLanguage;
+
         #endregion
 
         /// <summary>
@@ -26,10 +31,18 @@ namespace DeadLock.Classes
         /// <param name="path">Path to the XML language file.</param>
         internal void LoadLanguage(string path)
         {
-            XmlSerializer serializer = new XmlSerializer(_currentLanguage.GetType());
-            using (StreamReader reader = new StreamReader(path))
+            try
             {
-                _currentLanguage = (Language)serializer.Deserialize(reader);
+                XmlSerializer serializer = new XmlSerializer(_currentLanguage.GetType());
+                using (StreamReader reader = new StreamReader(path))
+                {
+                    _currentLanguage = (Language)serializer.Deserialize(reader);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                LoadLanguage(1);
             }
         }
 

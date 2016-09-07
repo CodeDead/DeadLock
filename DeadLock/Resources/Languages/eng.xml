@@ -68,7 +68,7 @@
   <BtnLicense>License</BtnLicense>
   <LblGeneral>General</LblGeneral>
   <ChbAutoUpdate>Automatically check for updates:</ChbAutoUpdate>
-  <ChbShowNotifyIcon>Show notifyicon:</ChbShowNotifyIcon>
+  <ChbShowNotifyIcon>Show notify icon:</ChbShowNotifyIcon>
   <ChbStartMinimized>Start minimized:</ChbStartMinimized>
   <ChbShowAdminWarning>Show administrator warning:</ChbShowAdminWarning>
   <LblAppearance>Appearance</LblAppearance>

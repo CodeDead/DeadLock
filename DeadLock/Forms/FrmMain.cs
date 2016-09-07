@@ -19,10 +19,12 @@ namespace DeadLock.Forms
     public partial class FrmMain : MetroForm
     {
         #region Variables
+
         private readonly LanguageManager _languageManager;
         private Update _update;
 
         private readonly string[] _args;
+
         #endregion
 
         /// <summary>
@@ -50,7 +52,14 @@ namespace DeadLock.Forms
                 }
                 else
                 {
-                    _languageManager.LoadLanguage(Properties.Settings.Default.Language);
+                    try
+                    {
+                        _languageManager.LoadLanguage(Properties.Settings.Default.Language);
+                    }
+                    catch (Exception)
+                    {
+                        _languageManager.LoadLanguage(1);
+                    }
                 }
                 LanguageSwitch();
 

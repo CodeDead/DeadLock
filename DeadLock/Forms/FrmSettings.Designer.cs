@@ -254,9 +254,9 @@ namespace DeadLock.Forms
             this.lblNotifyIcon.BackColor = System.Drawing.Color.Transparent;
             this.lblNotifyIcon.Location = new System.Drawing.Point(46, 82);
             this.lblNotifyIcon.Name = "lblNotifyIcon";
-            this.lblNotifyIcon.Size = new System.Drawing.Size(85, 13);
+            this.lblNotifyIcon.Size = new System.Drawing.Size(88, 13);
             this.lblNotifyIcon.TabIndex = 2;
-            this.lblNotifyIcon.Text = "Show notifyicon:";
+            this.lblNotifyIcon.Text = "Show notify icon:";
             // 
             // tbtnAutoUpdate
             // 
@@ -335,6 +335,7 @@ namespace DeadLock.Forms
             this.cboLanguage.Size = new System.Drawing.Size(100, 21);
             this.cboLanguage.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
             this.cboLanguage.TabIndex = 9;
+            this.cboLanguage.Text = "Dutch";
             this.cboLanguage.UseMetroButtonColor = true;
             this.cboLanguage.UseMetroColorsInActiveMode = true;
             // 

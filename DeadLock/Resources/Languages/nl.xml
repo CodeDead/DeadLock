@@ -83,7 +83,6 @@
   <LblOwnership>Neem eigendomsrecht:</LblOwnership>
   <BtnReset>Resetten</BtnReset>
   <BtnSave>Opslaan</BtnSave>
-  <MsgRestartRequired>Het programma moet opnieuw opgestart worden om de instellingen te wijzigen!</MsgRestartRequired>
   <TbtnOn>AAN</TbtnOn>
   <TbtnOff>UIT</TbtnOff>
   <TxtUpdater>Updater</TxtUpdater>

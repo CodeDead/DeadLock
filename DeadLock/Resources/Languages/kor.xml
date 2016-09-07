@@ -83,7 +83,6 @@
   <LblOwnership>관리자 권한 얻기:</LblOwnership>
   <BtnReset>재설정</BtnReset>
   <BtnSave>저장</BtnSave>
-  <MsgRestartRequired>변경된 설정을 적용하려면 프로그램의 재시작이 필요합니다!</MsgRestartRequired>
   <TbtnOn>켜짐</TbtnOn>
   <TbtnOff>꺼짐</TbtnOff>
   <TxtUpdater>업데이터</TxtUpdater>

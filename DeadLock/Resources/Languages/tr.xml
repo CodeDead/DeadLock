@@ -83,7 +83,6 @@
   <LblOwnership>Sahiplik alma:</LblOwnership>
   <BtnReset>Sıfırla</BtnReset>
   <BtnSave>Kaydet</BtnSave>
-  <MsgRestartRequired>Bir yeniden başlatma belirli ayarları değiştirmek için gereklidir!</MsgRestartRequired>
   <TbtnOn>Açık</TbtnOn>
   <TbtnOff>Kapalı</TbtnOff>
   <TxtUpdater>Güncelleyici</TxtUpdater>

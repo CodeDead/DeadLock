@@ -67,7 +67,7 @@
   <BtnClose>Закрыть</BtnClose>
   <BtnLicense>Лицензия</BtnLicense>
   <LblGeneral>Главная</LblGeneral>
-  <ChbAutoUpdate>Автоматически проверять наличие обновлений:</ChbAutoUpdate>
+  <ChbAutoUpdate>Проверить наличие обновлений:</ChbAutoUpdate>
   <ChbShowNotifyIcon>Показать значок в Панели задач:</ChbShowNotifyIcon>
   <ChbStartMinimized>Запустить минимизированно:</ChbStartMinimized>
   <ChbShowAdminWarning>Показать предупреждение администратора:</ChbShowAdminWarning>
@@ -83,7 +83,6 @@
   <LblOwnership>Получить права:</LblOwnership>
   <BtnReset>Перезапуск</BtnReset>
   <BtnSave>Сохранить</BtnSave>
-  <MsgRestartRequired>Перезапуск необходим для того, чтобы изменить некоторые настройки!</MsgRestartRequired>
   <TbtnOn>ON</TbtnOn>
   <TbtnOff>OFF</TbtnOff>
   <TxtUpdater>Центр обновлений</TxtUpdater>

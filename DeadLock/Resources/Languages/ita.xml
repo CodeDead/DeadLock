@@ -83,7 +83,6 @@
 	<BtnClose>Chiudi</BtnClose>
 	<BtnReset>Resetta</BtnReset>
 	<BtnSave>Salva</BtnSave>
-	<MsgRestartRequired>È necessario un riavvio per modificare alcune impostazioni!</MsgRestartRequired>
   <TbtnOn>ACCESO</TbtnOn>
   <TbtnOff>SPENTO</TbtnOff>
 	<TxtUpdater>Aggiornatore</TxtUpdater>

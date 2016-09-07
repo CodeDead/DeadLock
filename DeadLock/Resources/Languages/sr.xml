@@ -82,7 +82,6 @@
   <LblOwnership>Preuzmi vlasništvo:</LblOwnership>
   <BtnReset>Ресет</BtnReset>
   <BtnSave>Sačuvaj</BtnSave>
-  <MsgRestartRequired>Ponovno pokretanje programa je potrebno da bi se primenile određene postavke!</MsgRestartRequired>
   <TbtnOn>Ukljući</TbtnOn>
   <TbtnOff>Iskljući</TbtnOff>
   <TxtUpdater>Updater</TxtUpdater>

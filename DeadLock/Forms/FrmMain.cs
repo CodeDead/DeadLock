@@ -219,7 +219,7 @@ namespace DeadLock.Forms
         /// <summary>
         /// Change the GUI to match the current theme.
         /// </summary>
-        private void LoadTheme()
+        internal void LoadTheme()
         {
             try
             {

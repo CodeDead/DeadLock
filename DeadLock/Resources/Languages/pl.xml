@@ -83,7 +83,6 @@
   <LblOwnership>Przejąć na własność:</LblOwnership>
 	<BtnReset>Resetuj</BtnReset>
 	<BtnSave>Zapisz</BtnSave>
-	<MsgRestartRequired>Wymagane jest Ponowne uruchomienie w celu zmiany niektórych ustawień!</MsgRestartRequired>
   <TbtnOn>WŁ</TbtnOn>
   <TbtnOff>WYŁ</TbtnOff>
 	<TxtUpdater>Aktualizator</TxtUpdater>

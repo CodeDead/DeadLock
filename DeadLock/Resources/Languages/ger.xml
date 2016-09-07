@@ -83,7 +83,6 @@
   <LblOwnership>Besit ergreifen:</LblOwnership>
   <BtnReset>Reset</BtnReset>
   <BtnSave>Speichern</BtnSave>
-  <MsgRestartRequired>Ein Neustart ist nötig um bestimmte Aänderungen wirksam zu machen!</MsgRestartRequired>
   <TbtnOn>AN</TbtnOn>
   <TbtnOff>AUS</TbtnOff>
   <TxtUpdater>Updater</TxtUpdater>

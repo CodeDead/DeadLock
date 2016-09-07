@@ -143,9 +143,6 @@ namespace DeadLock.Classes
         public string BtnReset;
         public string BtnSave;
 
-        //Settins Form - Messages:
-        public string MsgRestartRequired;
-
         //Settings Form - ToggleButtons
         public string TbtnOn;
         public string TbtnOff;

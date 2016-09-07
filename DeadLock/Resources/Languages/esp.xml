@@ -83,7 +83,6 @@
   <LblOwnership>Tomar posesión:</LblOwnership>
   <BtnReset>Predefinidos</BtnReset>
   <BtnSave>Guardar</BtnSave>
-  <MsgRestartRequired>¡Es necesario reiniciar para cambiar ciertos ajustes!</MsgRestartRequired>
   <TbtnOn>Sí</TbtnOn>
   <TbtnOff>No</TbtnOff>
   <TxtUpdater>Actualizador</TxtUpdater>

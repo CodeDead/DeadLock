@@ -192,24 +192,19 @@ namespace DeadLock.Forms
                 Properties.Settings.Default.StartMinimized = tbtnStartMinimized.ToggleState == ToggleButtonState.Active;
                 Properties.Settings.Default.ShowAdminWarning = tbtnAdminWarning.ToggleState == ToggleButtonState.Active;
 
-                if ((cpbThemeStyle.MetroColor != Properties.Settings.Default.MetroColor) || (Properties.Settings.Default.BorderThickness != (int)itxtBorderThickness.IntegerValue) || (tbtnDetails.ToggleState == ToggleButtonState.Active) != Properties.Settings.Default.ViewDetails)
-                {
-                    MessageBoxAdv.Show(_main.LanguageManager.GetLanguage().MsgRestartRequired, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-
                 Properties.Settings.Default.MetroColor = cpbThemeStyle.SelectedColor;
                 Properties.Settings.Default.BorderThickness = (int)itxtBorderThickness.IntegerValue;
                 Properties.Settings.Default.RememberFormSize = tbtnFormSize.ToggleState == ToggleButtonState.Active;
                 Properties.Settings.Default.ViewDetails = tbtnDetails.ToggleState == ToggleButtonState.Active;
 
-                if (cboLanguage.SelectedIndex != Properties.Settings.Default.Language || txtLanguagePath.Text != Properties.Settings.Default.LanguagePath)
-                {
-                    Properties.Settings.Default.Language = cboLanguage.SelectedIndex;
-                    Properties.Settings.Default.LanguagePath = txtLanguagePath.Text;
+                _main.LoadTheme();
+                LoadTheme();
 
-                    _main.LanguageSwitch();
-                    LoadLanguage();
-                }
+                Properties.Settings.Default.Language = cboLanguage.SelectedIndex;
+                Properties.Settings.Default.LanguagePath = txtLanguagePath.Text;
+
+                _main.LanguageSwitch();
+                LoadLanguage();
 
                 List<string> args = new List<string>();
 
@@ -230,7 +225,6 @@ namespace DeadLock.Forms
                     StartRegManager(args);
                 }
                 Properties.Settings.Default.TakeOwnership = tbtnOwnership.ToggleState == ToggleButtonState.Active;
-
                 Properties.Settings.Default.Save();
             }
             catch (Exception ex)
@@ -243,7 +237,7 @@ namespace DeadLock.Forms
         /// Start the RegManager with a list of arguments.
         /// </summary>
         /// <param name="args">A list of arguments.</param>
-        private static void StartRegManager(IReadOnlyList<string> args)
+        private static void StartRegManager(IEnumerable<string> args)
         {
             string a = string.Join(" ", args);
             Process process = new Process
@@ -342,15 +336,10 @@ namespace DeadLock.Forms
 
                 Properties.Settings.Default.Reset();
                 Properties.Settings.Default.Save();
-                if ((cpbThemeStyle.MetroColor != Properties.Settings.Default.MetroColor) || (Properties.Settings.Default.BorderThickness != (int)itxtBorderThickness.IntegerValue) || (tbtnDetails.ToggleState == ToggleButtonState.Active) != Properties.Settings.Default.ViewDetails)
-                {
-                    MessageBoxAdv.Show(_main.LanguageManager.GetLanguage().MsgRestartRequired, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                if (cboLanguage.SelectedIndex != Properties.Settings.Default.Language || txtLanguagePath.Text != Properties.Settings.Default.LanguagePath)
-                {
-                    _main.LanguageSwitch();
-                    LoadLanguage();
-                }
+                _main.LoadTheme();
+                LoadTheme();
+                _main.LanguageSwitch();
+                LoadLanguage();
                 LoadSettings();
             }
             catch (Exception ex)

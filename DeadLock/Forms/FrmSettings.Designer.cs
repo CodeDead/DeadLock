@@ -194,7 +194,7 @@ namespace DeadLock.Forms
             this.tbtnAdminWarning.ForeColor = System.Drawing.Color.Black;
             inactiveStateCollection1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.tbtnAdminWarning.InactiveState = inactiveStateCollection1;
-            this.tbtnAdminWarning.Location = new System.Drawing.Point(251, 125);
+            this.tbtnAdminWarning.Location = new System.Drawing.Point(268, 125);
             this.tbtnAdminWarning.MinimumSize = new System.Drawing.Size(52, 20);
             this.tbtnAdminWarning.Name = "tbtnAdminWarning";
             this.tbtnAdminWarning.Renderer = toggleButtonRenderer1;
@@ -206,7 +206,7 @@ namespace DeadLock.Forms
             // 
             this.lblAdminWarning.AutoSize = true;
             this.lblAdminWarning.BackColor = System.Drawing.Color.Transparent;
-            this.lblAdminWarning.Location = new System.Drawing.Point(44, 132);
+            this.lblAdminWarning.Location = new System.Drawing.Point(27, 132);
             this.lblAdminWarning.Name = "lblAdminWarning";
             this.lblAdminWarning.Size = new System.Drawing.Size(139, 13);
             this.lblAdminWarning.TabIndex = 6;
@@ -219,7 +219,7 @@ namespace DeadLock.Forms
             this.tbtnStartMinimized.ForeColor = System.Drawing.Color.Black;
             inactiveStateCollection2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.tbtnStartMinimized.InactiveState = inactiveStateCollection2;
-            this.tbtnStartMinimized.Location = new System.Drawing.Point(251, 99);
+            this.tbtnStartMinimized.Location = new System.Drawing.Point(268, 99);
             this.tbtnStartMinimized.MinimumSize = new System.Drawing.Size(52, 20);
             this.tbtnStartMinimized.Name = "tbtnStartMinimized";
             this.tbtnStartMinimized.Renderer = toggleButtonRenderer2;
@@ -232,7 +232,7 @@ namespace DeadLock.Forms
             // 
             this.lblMinimized.AutoSize = true;
             this.lblMinimized.BackColor = System.Drawing.Color.Transparent;
-            this.lblMinimized.Location = new System.Drawing.Point(44, 106);
+            this.lblMinimized.Location = new System.Drawing.Point(27, 106);
             this.lblMinimized.Name = "lblMinimized";
             this.lblMinimized.Size = new System.Drawing.Size(80, 13);
             this.lblMinimized.TabIndex = 4;
@@ -245,7 +245,7 @@ namespace DeadLock.Forms
             this.tbtnNotifyIcon.ForeColor = System.Drawing.Color.Black;
             inactiveStateCollection3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.tbtnNotifyIcon.InactiveState = inactiveStateCollection3;
-            this.tbtnNotifyIcon.Location = new System.Drawing.Point(251, 73);
+            this.tbtnNotifyIcon.Location = new System.Drawing.Point(268, 73);
             this.tbtnNotifyIcon.MinimumSize = new System.Drawing.Size(52, 20);
             this.tbtnNotifyIcon.Name = "tbtnNotifyIcon";
             this.tbtnNotifyIcon.Renderer = toggleButtonRenderer3;
@@ -257,7 +257,7 @@ namespace DeadLock.Forms
             // 
             this.lblNotifyIcon.AutoSize = true;
             this.lblNotifyIcon.BackColor = System.Drawing.Color.Transparent;
-            this.lblNotifyIcon.Location = new System.Drawing.Point(44, 80);
+            this.lblNotifyIcon.Location = new System.Drawing.Point(27, 80);
             this.lblNotifyIcon.Name = "lblNotifyIcon";
             this.lblNotifyIcon.Size = new System.Drawing.Size(88, 13);
             this.lblNotifyIcon.TabIndex = 2;
@@ -270,7 +270,7 @@ namespace DeadLock.Forms
             this.tbtnAutoUpdate.ForeColor = System.Drawing.Color.Black;
             inactiveStateCollection4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.tbtnAutoUpdate.InactiveState = inactiveStateCollection4;
-            this.tbtnAutoUpdate.Location = new System.Drawing.Point(251, 47);
+            this.tbtnAutoUpdate.Location = new System.Drawing.Point(268, 47);
             this.tbtnAutoUpdate.MinimumSize = new System.Drawing.Size(52, 20);
             this.tbtnAutoUpdate.Name = "tbtnAutoUpdate";
             this.tbtnAutoUpdate.Renderer = toggleButtonRenderer4;
@@ -282,7 +282,7 @@ namespace DeadLock.Forms
             // 
             this.lblAutoUpdate.AutoSize = true;
             this.lblAutoUpdate.BackColor = System.Drawing.Color.Transparent;
-            this.lblAutoUpdate.Location = new System.Drawing.Point(44, 54);
+            this.lblAutoUpdate.Location = new System.Drawing.Point(27, 54);
             this.lblAutoUpdate.Name = "lblAutoUpdate";
             this.lblAutoUpdate.Size = new System.Drawing.Size(161, 13);
             this.lblAutoUpdate.TabIndex = 0;
@@ -318,7 +318,7 @@ namespace DeadLock.Forms
             // cboLanguage
             // 
             this.cboLanguage.BackColor = System.Drawing.Color.White;
-            this.cboLanguage.BeforeTouchSize = new System.Drawing.Size(100, 21);
+            this.cboLanguage.BeforeTouchSize = new System.Drawing.Size(100, 19);
             this.cboLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboLanguage.Items.AddRange(new object[] {
@@ -335,10 +335,10 @@ namespace DeadLock.Forms
             "Swedish",
             "Turkish",
             "Custom"});
-            this.cboLanguage.Location = new System.Drawing.Point(225, 126);
+            this.cboLanguage.Location = new System.Drawing.Point(240, 126);
             this.cboLanguage.MetroColor = System.Drawing.Color.SteelBlue;
             this.cboLanguage.Name = "cboLanguage";
-            this.cboLanguage.Size = new System.Drawing.Size(100, 21);
+            this.cboLanguage.Size = new System.Drawing.Size(100, 19);
             this.cboLanguage.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
             this.cboLanguage.TabIndex = 9;
             this.cboLanguage.Text = "Dutch";
@@ -349,13 +349,13 @@ namespace DeadLock.Forms
             // 
             this.btnSelectPath.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
             this.btnSelectPath.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnSelectPath.BeforeTouchSize = new System.Drawing.Size(56, 20);
+            this.btnSelectPath.BeforeTouchSize = new System.Drawing.Size(41, 20);
             this.btnSelectPath.ForeColor = System.Drawing.Color.White;
             this.btnSelectPath.IsBackStageButton = false;
-            this.btnSelectPath.Location = new System.Drawing.Point(331, 153);
+            this.btnSelectPath.Location = new System.Drawing.Point(346, 153);
             this.btnSelectPath.MetroColor = System.Drawing.Color.SteelBlue;
             this.btnSelectPath.Name = "btnSelectPath";
-            this.btnSelectPath.Size = new System.Drawing.Size(56, 20);
+            this.btnSelectPath.Size = new System.Drawing.Size(41, 20);
             this.btnSelectPath.TabIndex = 11;
             this.btnSelectPath.Text = "...";
             this.btnSelectPath.UseVisualStyle = true;
@@ -368,7 +368,7 @@ namespace DeadLock.Forms
             this.txtLanguagePath.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtLanguagePath.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLanguagePath.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtLanguagePath.Location = new System.Drawing.Point(225, 153);
+            this.txtLanguagePath.Location = new System.Drawing.Point(240, 153);
             this.txtLanguagePath.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtLanguagePath.Name = "txtLanguagePath";
             this.txtLanguagePath.ReadOnly = true;
@@ -380,7 +380,7 @@ namespace DeadLock.Forms
             // lblLanguage
             // 
             this.lblLanguage.AutoSize = true;
-            this.lblLanguage.Location = new System.Drawing.Point(69, 134);
+            this.lblLanguage.Location = new System.Drawing.Point(54, 134);
             this.lblLanguage.Name = "lblLanguage";
             this.lblLanguage.Size = new System.Drawing.Size(58, 13);
             this.lblLanguage.TabIndex = 8;
@@ -393,7 +393,7 @@ namespace DeadLock.Forms
             this.tbtnDetails.ForeColor = System.Drawing.Color.Black;
             inactiveStateCollection5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.tbtnDetails.InactiveState = inactiveStateCollection5;
-            this.tbtnDetails.Location = new System.Drawing.Point(225, 100);
+            this.tbtnDetails.Location = new System.Drawing.Point(240, 100);
             this.tbtnDetails.MinimumSize = new System.Drawing.Size(52, 20);
             this.tbtnDetails.Name = "tbtnDetails";
             this.tbtnDetails.Renderer = toggleButtonRenderer5;
@@ -405,7 +405,7 @@ namespace DeadLock.Forms
             // 
             this.lblDetails.AutoSize = true;
             this.lblDetails.BackColor = System.Drawing.Color.Transparent;
-            this.lblDetails.Location = new System.Drawing.Point(69, 107);
+            this.lblDetails.Location = new System.Drawing.Point(54, 107);
             this.lblDetails.Name = "lblDetails";
             this.lblDetails.Size = new System.Drawing.Size(70, 13);
             this.lblDetails.TabIndex = 6;
@@ -418,7 +418,7 @@ namespace DeadLock.Forms
             this.tbtnFormSize.ForeColor = System.Drawing.Color.Black;
             inactiveStateCollection6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.tbtnFormSize.InactiveState = inactiveStateCollection6;
-            this.tbtnFormSize.Location = new System.Drawing.Point(225, 74);
+            this.tbtnFormSize.Location = new System.Drawing.Point(240, 74);
             this.tbtnFormSize.MinimumSize = new System.Drawing.Size(52, 20);
             this.tbtnFormSize.Name = "tbtnFormSize";
             this.tbtnFormSize.Renderer = toggleButtonRenderer6;
@@ -430,7 +430,7 @@ namespace DeadLock.Forms
             // 
             this.lblFormSize.AutoSize = true;
             this.lblFormSize.BackColor = System.Drawing.Color.Transparent;
-            this.lblFormSize.Location = new System.Drawing.Point(69, 81);
+            this.lblFormSize.Location = new System.Drawing.Point(54, 81);
             this.lblFormSize.Name = "lblFormSize";
             this.lblFormSize.Size = new System.Drawing.Size(105, 13);
             this.lblFormSize.TabIndex = 4;
@@ -444,7 +444,7 @@ namespace DeadLock.Forms
             this.itxtBorderThickness.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.itxtBorderThickness.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.itxtBorderThickness.IntegerValue = ((long)(1));
-            this.itxtBorderThickness.Location = new System.Drawing.Point(225, 48);
+            this.itxtBorderThickness.Location = new System.Drawing.Point(240, 48);
             this.itxtBorderThickness.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.itxtBorderThickness.MinValue = ((long)(1));
             this.itxtBorderThickness.Name = "itxtBorderThickness";
@@ -458,7 +458,7 @@ namespace DeadLock.Forms
             // 
             this.lblBorderThickness.AutoSize = true;
             this.lblBorderThickness.BackColor = System.Drawing.Color.Transparent;
-            this.lblBorderThickness.Location = new System.Drawing.Point(69, 55);
+            this.lblBorderThickness.Location = new System.Drawing.Point(54, 55);
             this.lblBorderThickness.Name = "lblBorderThickness";
             this.lblBorderThickness.Size = new System.Drawing.Size(89, 13);
             this.lblBorderThickness.TabIndex = 2;
@@ -471,7 +471,7 @@ namespace DeadLock.Forms
             this.cpbThemeStyle.ColorUISize = new System.Drawing.Size(208, 230);
             this.cpbThemeStyle.ForeColor = System.Drawing.Color.White;
             this.cpbThemeStyle.IsBackStageButton = false;
-            this.cpbThemeStyle.Location = new System.Drawing.Point(225, 19);
+            this.cpbThemeStyle.Location = new System.Drawing.Point(240, 19);
             this.cpbThemeStyle.MetroColor = System.Drawing.Color.SteelBlue;
             this.cpbThemeStyle.Name = "cpbThemeStyle";
             this.cpbThemeStyle.SelectedAsBackcolor = true;
@@ -486,7 +486,7 @@ namespace DeadLock.Forms
             // 
             this.lblThemeStyle.AutoSize = true;
             this.lblThemeStyle.BackColor = System.Drawing.Color.Transparent;
-            this.lblThemeStyle.Location = new System.Drawing.Point(69, 29);
+            this.lblThemeStyle.Location = new System.Drawing.Point(54, 29);
             this.lblThemeStyle.Name = "lblThemeStyle";
             this.lblThemeStyle.Size = new System.Drawing.Size(67, 13);
             this.lblThemeStyle.TabIndex = 0;
@@ -520,7 +520,7 @@ namespace DeadLock.Forms
             this.tbtnOwnership.ForeColor = System.Drawing.Color.Black;
             inactiveStateCollection7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.tbtnOwnership.InactiveState = inactiveStateCollection7;
-            this.tbtnOwnership.Location = new System.Drawing.Point(256, 112);
+            this.tbtnOwnership.Location = new System.Drawing.Point(262, 112);
             this.tbtnOwnership.MinimumSize = new System.Drawing.Size(52, 20);
             this.tbtnOwnership.Name = "tbtnOwnership";
             this.tbtnOwnership.Renderer = toggleButtonRenderer7;
@@ -531,7 +531,7 @@ namespace DeadLock.Forms
             // lblOwnership
             // 
             this.lblOwnership.AutoSize = true;
-            this.lblOwnership.Location = new System.Drawing.Point(48, 119);
+            this.lblOwnership.Location = new System.Drawing.Point(42, 119);
             this.lblOwnership.Name = "lblOwnership";
             this.lblOwnership.Size = new System.Drawing.Size(86, 13);
             this.lblOwnership.TabIndex = 4;
@@ -544,7 +544,7 @@ namespace DeadLock.Forms
             this.tbtnWindowsExplorerIntegration.ForeColor = System.Drawing.Color.Black;
             inactiveStateCollection8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.tbtnWindowsExplorerIntegration.InactiveState = inactiveStateCollection8;
-            this.tbtnWindowsExplorerIntegration.Location = new System.Drawing.Point(256, 86);
+            this.tbtnWindowsExplorerIntegration.Location = new System.Drawing.Point(262, 86);
             this.tbtnWindowsExplorerIntegration.MinimumSize = new System.Drawing.Size(52, 20);
             this.tbtnWindowsExplorerIntegration.Name = "tbtnWindowsExplorerIntegration";
             this.tbtnWindowsExplorerIntegration.Renderer = toggleButtonRenderer8;
@@ -555,7 +555,7 @@ namespace DeadLock.Forms
             // lblWindowsExplorerIntegration
             // 
             this.lblWindowsExplorerIntegration.AutoSize = true;
-            this.lblWindowsExplorerIntegration.Location = new System.Drawing.Point(48, 93);
+            this.lblWindowsExplorerIntegration.Location = new System.Drawing.Point(42, 93);
             this.lblWindowsExplorerIntegration.Name = "lblWindowsExplorerIntegration";
             this.lblWindowsExplorerIntegration.Size = new System.Drawing.Size(147, 13);
             this.lblWindowsExplorerIntegration.TabIndex = 2;
@@ -568,7 +568,7 @@ namespace DeadLock.Forms
             this.tbtnAutoRun.ForeColor = System.Drawing.Color.Black;
             inactiveStateCollection9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.tbtnAutoRun.InactiveState = inactiveStateCollection9;
-            this.tbtnAutoRun.Location = new System.Drawing.Point(256, 60);
+            this.tbtnAutoRun.Location = new System.Drawing.Point(262, 60);
             this.tbtnAutoRun.MinimumSize = new System.Drawing.Size(52, 20);
             this.tbtnAutoRun.Name = "tbtnAutoRun";
             this.tbtnAutoRun.Renderer = toggleButtonRenderer9;
@@ -580,7 +580,7 @@ namespace DeadLock.Forms
             // 
             this.lblAutorun.AutoSize = true;
             this.lblAutorun.BackColor = System.Drawing.Color.Transparent;
-            this.lblAutorun.Location = new System.Drawing.Point(48, 67);
+            this.lblAutorun.Location = new System.Drawing.Point(42, 67);
             this.lblAutorun.Name = "lblAutorun";
             this.lblAutorun.Size = new System.Drawing.Size(147, 13);
             this.lblAutorun.TabIndex = 0;

@@ -83,7 +83,6 @@
   <LblOwnership>Take ownership:</LblOwnership>
   <BtnReset>Reset</BtnReset>
   <BtnSave>Save</BtnSave>
-  <MsgRestartRequired>A restart is required in order to change certain settings!</MsgRestartRequired>
   <TbtnOn>ON</TbtnOn>
   <TbtnOff>OFF</TbtnOff>
   <TxtUpdater>Updater</TxtUpdater>

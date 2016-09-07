@@ -83,7 +83,6 @@
   <LblOwnership>Prend la propriété:</LblOwnership>
   <BtnReset>Reset</BtnReset>
   <BtnSave>Sauver</BtnSave>
-  <MsgRestartRequired>Un redémarrage est requis pour changer certains réglages!</MsgRestartRequired>
   <TbtnOn>ON</TbtnOn>
   <TbtnOff>OFF</TbtnOff>
   <TxtUpdater>Mise à jour</TxtUpdater>

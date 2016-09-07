@@ -163,7 +163,7 @@ namespace DeadLock.Classes
                         WindowsIdentity self = WindowsIdentity.GetCurrent();
                         DirectorySecurity ds = info.GetAccessControl();
                         ds.SetAccessRuleProtection(false, true);
-                        if (self?.User == null) return;
+                        if (self.User == null) return;
                         if (ds.GetOwner(typeof(NTAccount)).ToString() != self.Name)
                         {
                             ds.SetOwner(self.User);
@@ -176,7 +176,7 @@ namespace DeadLock.Classes
                         WindowsIdentity self = WindowsIdentity.GetCurrent();
                         FileSecurity fs = File.GetAccessControl(GetPath());
                         fs.SetAccessRuleProtection(false, true);
-                        if (self?.User == null) return;
+                        if (self.User == null) return;
                         if (fs.GetOwner(typeof(NTAccount)).ToString() != self.Name)
                         {
                             fs.SetOwner(self.User);

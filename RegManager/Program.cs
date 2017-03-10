@@ -12,6 +12,7 @@ namespace RegManager
         private static void Main(string[] args)
         {
             if (args.Length == 0) return;
+            Console.WriteLine("Beginning operations...");
 
             bool addAutoStartup = false;
             bool changeAutoStartup = false;
@@ -47,7 +48,7 @@ namespace RegManager
                         }
                         else
                         {
-                            Console.WriteLine("Warning: Argument not supported !");
+                            Console.WriteLine("Warning: Argument not supported!");
                             return;
                         }
                         break;
@@ -61,7 +62,7 @@ namespace RegManager
             {
                 ChangeExplorerIntegration(addExplorerIntegration, path);
             }
-            Console.WriteLine("Done.");
+            Console.WriteLine("Operation completed.");
         }
 
         /// <summary>
@@ -82,7 +83,7 @@ namespace RegManager
             }
             else
             {
-                Console.Write("Warning: path does not exist !");
+                Console.Write("Warning: path does not exist!");
             }
         }
 
@@ -139,7 +140,7 @@ namespace RegManager
             }
             else
             {
-                Console.WriteLine("Warning: path does not exist !");
+                Console.WriteLine("Warning: path does not exist!");
             }
         }
 

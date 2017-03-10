@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Net;
+using System.Reflection;
 using System.Security.Cryptography;
 using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Serialization;
 using DeadLock.Classes;
 using Syncfusion.Windows.Forms;
 using FixedPanel = Syncfusion.Windows.Forms.Tools.Enums.FixedPanel;
@@ -20,7 +19,7 @@ namespace DeadLock.Forms
     {
         #region Variables
         internal readonly LanguageManager LanguageManager;
-        private Update _update;
+        private readonly UpdateManager.UpdateManager _updateManager;
         private readonly string[] _args;
         #endregion
 
@@ -32,8 +31,10 @@ namespace DeadLock.Forms
         {
             InitializeComponent();
             LoadTheme();
+
             LanguageManager = new LanguageManager();
-            _update = new Update();
+            _updateManager = new UpdateManager.UpdateManager(Assembly.GetExecutingAssembly().GetName().Version, "http://codedead.com/Software/DeadLock/update.xml", "DeadLock");
+
             try
             {
                 LanguageSwitch();
@@ -169,50 +170,19 @@ namespace DeadLock.Forms
         }
 
         /// <summary>
-        /// Check if there are updates available for the program.
+        /// Check for application updates.
         /// </summary>
-        /// <param name="showError">Show errors.</param>
-        /// <param name="showNoUpdates">Show a MessageBox when there are no updates available.</param>
-        private async void Update(bool showError, bool showNoUpdates)
+        /// <param name="showErrors">Show a message if an error occurs or not.</param>
+        /// <param name="showNoUpdates">Show a message if no updates are available.</param>
+        private void Update(bool showErrors, bool showNoUpdates)
         {
-            Language l = LanguageManager.GetLanguage();
-
             try
             {
-                WebClient wc = new WebClient();
-                string xml = await wc.DownloadStringTaskAsync("http://codedead.com/Software/DeadLock/update.xml");
-
-                XmlSerializer serializer = new XmlSerializer(_update.GetType());
-                using (MemoryStream stream = new MemoryStream())
-                {
-                    StreamWriter writer = new StreamWriter(stream);
-                    writer.Write(xml);
-                    writer.Flush();
-                    stream.Position = 0;
-                    _update = (Update)serializer.Deserialize(stream);
-                    writer.Dispose();
-                }
-                if (_update.CheckForUpdate())
-                {
-                    if (MessageBoxAdv.Show(l.MsgVersion + " " + _update.GetUpdateVersion() + " " + l.MsgAvailable + Environment.NewLine + l.MsgDownloadNewVersion, "DeadLock", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        new FrmUpdater(_update, LanguageManager.GetLanguage()).Show();
-                    }
-                }
-                else
-                {
-                    if (showNoUpdates)
-                    {
-                        MessageBoxAdv.Show(l.MsgLatestVersionAlreadyInstalled, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
+                _updateManager.CheckForUpdate(showErrors, showNoUpdates);
             }
             catch (Exception ex)
             {
-                if (showError)
-                {
-                    MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

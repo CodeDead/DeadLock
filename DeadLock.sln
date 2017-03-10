@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeadLock", "DeadLock\DeadLock.csproj", "{2D51E2BE-E9BF-4808-905A-EB7BB16D1EBA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegManager", "RegManager\RegManager.csproj", "{2AB04B89-903C-4D53-BD1D-9C8C5C4F7AEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeadLock-WPF", "DeadLock-WPF\DeadLock-WPF.csproj", "{263003C2-68DB-4AB4-BA0B-F97897EEF540}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{2AB04B89-903C-4D53-BD1D-9C8C5C4F7AEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AB04B89-903C-4D53-BD1D-9C8C5C4F7AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AB04B89-903C-4D53-BD1D-9C8C5C4F7AEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{263003C2-68DB-4AB4-BA0B-F97897EEF540}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{263003C2-68DB-4AB4-BA0B-F97897EEF540}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{263003C2-68DB-4AB4-BA0B-F97897EEF540}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{263003C2-68DB-4AB4-BA0B-F97897EEF540}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

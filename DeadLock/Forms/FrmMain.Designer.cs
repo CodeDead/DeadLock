@@ -223,7 +223,6 @@ namespace DeadLock.Forms
             this.openFilesBarItem.BarName = "openFilesBarItem";
             this.openFilesBarItem.CategoryIndex = 0;
             this.openFilesBarItem.ID = "Open file(s)...";
-            this.openFilesBarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("openFilesBarItem.Image")));
             this.openFilesBarItem.Shortcut = System.Windows.Forms.Shortcut.CtrlO;
             this.openFilesBarItem.ShowToolTipInPopUp = false;
             this.openFilesBarItem.SizeToFit = true;
@@ -235,7 +234,6 @@ namespace DeadLock.Forms
             this.openFolderbarItem.BarName = "openFolderbarItem";
             this.openFolderbarItem.CategoryIndex = 0;
             this.openFolderbarItem.ID = "Open folder...";
-            this.openFolderbarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("openFolderbarItem.Image")));
             this.openFolderbarItem.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftO;
             this.openFolderbarItem.ShowToolTipInPopUp = false;
             this.openFolderbarItem.SizeToFit = true;
@@ -247,7 +245,6 @@ namespace DeadLock.Forms
             this.restartBarItem.BarName = "restartBarItem";
             this.restartBarItem.CategoryIndex = 0;
             this.restartBarItem.ID = "Restart";
-            this.restartBarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("restartBarItem.Image")));
             this.restartBarItem.ShowToolTipInPopUp = false;
             this.restartBarItem.SizeToFit = true;
             this.restartBarItem.Text = "Restart";
@@ -258,7 +255,6 @@ namespace DeadLock.Forms
             this.exitBarItem.BarName = "exitBarItem";
             this.exitBarItem.CategoryIndex = 0;
             this.exitBarItem.ID = "Exit";
-            this.exitBarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("exitBarItem.Image")));
             this.exitBarItem.ShowToolTipInPopUp = false;
             this.exitBarItem.SizeToFit = true;
             this.exitBarItem.Text = "Exit";
@@ -294,7 +290,6 @@ namespace DeadLock.Forms
             this.unlockParentBarItem.BarName = "unlockParentBarItem";
             this.unlockParentBarItem.CategoryIndex = 1;
             this.unlockParentBarItem.ID = "Unlock";
-            this.unlockParentBarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("unlockParentBarItem.Image")));
             this.unlockParentBarItem.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] {
             this.unlockBarItem,
             this.copyBarItem,
@@ -315,7 +310,6 @@ namespace DeadLock.Forms
             this.unlockBarItem.BarName = "unlockBarItem";
             this.unlockBarItem.CategoryIndex = 1;
             this.unlockBarItem.ID = "Unlock_1";
-            this.unlockBarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("unlockBarItem.Image")));
             this.unlockBarItem.ShowToolTipInPopUp = false;
             this.unlockBarItem.SizeToFit = true;
             this.unlockBarItem.Text = "Unlock";
@@ -326,7 +320,6 @@ namespace DeadLock.Forms
             this.copyBarItem.BarName = "copyBarItem";
             this.copyBarItem.CategoryIndex = 1;
             this.copyBarItem.ID = "Copy";
-            this.copyBarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("copyBarItem.Image")));
             this.copyBarItem.ShowToolTipInPopUp = false;
             this.copyBarItem.SizeToFit = true;
             this.copyBarItem.Text = "Copy";
@@ -337,7 +330,6 @@ namespace DeadLock.Forms
             this.moveBarItem.BarName = "moveBarItem";
             this.moveBarItem.CategoryIndex = 1;
             this.moveBarItem.ID = "Move";
-            this.moveBarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("moveBarItem.Image")));
             this.moveBarItem.ShowToolTipInPopUp = false;
             this.moveBarItem.SizeToFit = true;
             this.moveBarItem.Text = "Move";
@@ -348,7 +340,6 @@ namespace DeadLock.Forms
             this.removeBarItem.BarName = "removeBarItem";
             this.removeBarItem.CategoryIndex = 1;
             this.removeBarItem.ID = "removeBarItem";
-            this.removeBarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("removeBarItem.Image")));
             this.removeBarItem.ShowToolTipInPopUp = false;
             this.removeBarItem.SizeToFit = true;
             this.removeBarItem.Text = "Remove";
@@ -359,7 +350,6 @@ namespace DeadLock.Forms
             this.ownershipParentBarItem.BarName = "ownershipParentBarItem";
             this.ownershipParentBarItem.CategoryIndex = 1;
             this.ownershipParentBarItem.ID = "Ownership";
-            this.ownershipParentBarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("ownershipParentBarItem.Image")));
             this.ownershipParentBarItem.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] {
             this.trueBarItem,
             this.falseBarItem});
@@ -375,7 +365,6 @@ namespace DeadLock.Forms
             this.trueBarItem.BarName = "trueBarItem";
             this.trueBarItem.CategoryIndex = 1;
             this.trueBarItem.ID = "True";
-            this.trueBarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("trueBarItem.Image")));
             this.trueBarItem.ShowToolTipInPopUp = false;
             this.trueBarItem.SizeToFit = true;
             this.trueBarItem.Text = "True";
@@ -386,7 +375,6 @@ namespace DeadLock.Forms
             this.falseBarItem.BarName = "falseBarItem";
             this.falseBarItem.CategoryIndex = 1;
             this.falseBarItem.ID = "False";
-            this.falseBarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("falseBarItem.Image")));
             this.falseBarItem.ShowToolTipInPopUp = false;
             this.falseBarItem.SizeToFit = true;
             this.falseBarItem.Text = "False";
@@ -397,7 +385,6 @@ namespace DeadLock.Forms
             this.propertiesBarItem.BarName = "propertiesBarItem";
             this.propertiesBarItem.CategoryIndex = 1;
             this.propertiesBarItem.ID = "Properties";
-            this.propertiesBarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("propertiesBarItem.Image")));
             this.propertiesBarItem.ShowToolTipInPopUp = false;
             this.propertiesBarItem.SizeToFit = true;
             this.propertiesBarItem.Text = "Properties";
@@ -408,7 +395,6 @@ namespace DeadLock.Forms
             this.removeItemBarItem.BarName = "removeItemBarItem";
             this.removeItemBarItem.CategoryIndex = 1;
             this.removeItemBarItem.ID = "removeItemBarItem";
-            this.removeItemBarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("removeItemBarItem.Image")));
             this.removeItemBarItem.ShowToolTipInPopUp = false;
             this.removeItemBarItem.SizeToFit = true;
             this.removeItemBarItem.Text = "Remove item";
@@ -419,7 +405,6 @@ namespace DeadLock.Forms
             this.clearItemsbarItem.BarName = "clearItemsbarItem";
             this.clearItemsbarItem.CategoryIndex = 1;
             this.clearItemsbarItem.ID = "Clear items";
-            this.clearItemsbarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("clearItemsbarItem.Image")));
             this.clearItemsbarItem.ShowToolTipInPopUp = false;
             this.clearItemsbarItem.SizeToFit = true;
             this.clearItemsbarItem.Text = "Clear items";
@@ -430,7 +415,6 @@ namespace DeadLock.Forms
             this.autoSizeColumnsBarItem.BarName = "autoSizeColumnsBarItem";
             this.autoSizeColumnsBarItem.CategoryIndex = 1;
             this.autoSizeColumnsBarItem.ID = "Auto size columns";
-            this.autoSizeColumnsBarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("autoSizeColumnsBarItem.Image")));
             this.autoSizeColumnsBarItem.ShowToolTipInPopUp = false;
             this.autoSizeColumnsBarItem.SizeToFit = true;
             this.autoSizeColumnsBarItem.Text = "Auto size columns";
@@ -441,7 +425,6 @@ namespace DeadLock.Forms
             this.cancelOperationBarItem.BarName = "cancelOperationBarItem";
             this.cancelOperationBarItem.CategoryIndex = 1;
             this.cancelOperationBarItem.ID = "Cancel current operation";
-            this.cancelOperationBarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("cancelOperationBarItem.Image")));
             this.cancelOperationBarItem.ShowToolTipInPopUp = false;
             this.cancelOperationBarItem.SizeToFit = true;
             this.cancelOperationBarItem.Text = "Cancel task";
@@ -491,7 +474,6 @@ namespace DeadLock.Forms
             this.settingsBarItem.BarName = "settingsBarItem";
             this.settingsBarItem.CategoryIndex = 3;
             this.settingsBarItem.ID = "Settings";
-            this.settingsBarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("settingsBarItem.Image")));
             this.settingsBarItem.ShowToolTipInPopUp = false;
             this.settingsBarItem.SizeToFit = true;
             this.settingsBarItem.Text = "Settings";
@@ -524,7 +506,6 @@ namespace DeadLock.Forms
             this.helpBarItem.BarName = "helpBarItem";
             this.helpBarItem.CategoryIndex = 4;
             this.helpBarItem.ID = "Help";
-            this.helpBarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("helpBarItem.Image")));
             this.helpBarItem.ShowToolTipInPopUp = false;
             this.helpBarItem.SizeToFit = true;
             this.helpBarItem.Text = "Help";
@@ -535,7 +516,6 @@ namespace DeadLock.Forms
             this.checkForUpdatesBarItem.BarName = "checkForUpdatesBarItem";
             this.checkForUpdatesBarItem.CategoryIndex = 4;
             this.checkForUpdatesBarItem.ID = "Check for updates";
-            this.checkForUpdatesBarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("checkForUpdatesBarItem.Image")));
             this.checkForUpdatesBarItem.ShowToolTipInPopUp = false;
             this.checkForUpdatesBarItem.SizeToFit = true;
             this.checkForUpdatesBarItem.Text = "Check for updates";
@@ -546,7 +526,6 @@ namespace DeadLock.Forms
             this.homePageBarItem.BarName = "homePageBarItem";
             this.homePageBarItem.CategoryIndex = 4;
             this.homePageBarItem.ID = "Homepage";
-            this.homePageBarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("homePageBarItem.Image")));
             this.homePageBarItem.ShowToolTipInPopUp = false;
             this.homePageBarItem.SizeToFit = true;
             this.homePageBarItem.Text = "Homepage";
@@ -557,7 +536,6 @@ namespace DeadLock.Forms
             this.licenseBarItem.BarName = "licenseBarItem";
             this.licenseBarItem.CategoryIndex = 4;
             this.licenseBarItem.ID = "License";
-            this.licenseBarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("licenseBarItem.Image")));
             this.licenseBarItem.ShowToolTipInPopUp = false;
             this.licenseBarItem.SizeToFit = true;
             this.licenseBarItem.Text = "License";
@@ -568,7 +546,6 @@ namespace DeadLock.Forms
             this.aboutBarItem.BarName = "aboutBarItem";
             this.aboutBarItem.CategoryIndex = 4;
             this.aboutBarItem.ID = "About";
-            this.aboutBarItem.Image = ((Syncfusion.Windows.Forms.Tools.XPMenus.ImageExt)(resources.GetObject("aboutBarItem.Image")));
             this.aboutBarItem.ShowToolTipInPopUp = false;
             this.aboutBarItem.SizeToFit = true;
             this.aboutBarItem.Text = "About";

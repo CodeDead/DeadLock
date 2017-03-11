@@ -49,6 +49,9 @@
                 <MenuItem Header="Cancel operation">
                 </MenuItem>
             </MenuItem>
+            <MenuItem Header="View">
+                <MenuItem Header="Details"></MenuItem>
+            </MenuItem>
             <MenuItem Header="Tools">
                 <MenuItem Header="Settings"></MenuItem>
                 <MenuItem Header="Properties"></MenuItem>

@@ -1,12 +1,13 @@
 ﻿<syncfusion:ChromelessWindow
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:DeadLock.Windows"
-        xmlns:syncfusion="http://schemas.syncfusion.com/wpf" x:Class="DeadLock.Windows.MainWindow"
-        mc:Ignorable="d"
-        Title="DeadLock" Height="300" Width="300" WindowStartupLocation="CenterScreen" Icon="pack://siteoforigin:,,,/Resources/deadlock.png">
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:DeadLock.Windows"
+    AllowsTransparency="True"
+    xmlns:syncfusion="http://schemas.syncfusion.com/wpf" x:Class="DeadLock.Windows.MainWindow"
+    mc:Ignorable="d"
+    Title="DeadLock" Height="300" Width="300" WindowStartupLocation="CenterScreen" Icon="/DeadLock;component/Paomedia-Small-N-Flat-Lock.ico">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -53,8 +54,9 @@
                 <MenuItem Header="Details"></MenuItem>
             </MenuItem>
             <MenuItem Header="Tools">
-                <MenuItem Header="Settings"></MenuItem>
                 <MenuItem Header="Properties"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="Settings"></MenuItem>
             </MenuItem>
             <MenuItem Header="Help">
                 <MenuItem Header="Help"></MenuItem>
@@ -67,5 +69,17 @@
                 <MenuItem Header="About"></MenuItem>
             </MenuItem>
         </Menu>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <ListView Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <GridSplitter Background="DarkGray"  ResizeDirection="Rows" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ResizeBehavior="PreviousAndNext" />
+            <ListView Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+        </Grid>
+        
     </Grid>
 </syncfusion:ChromelessWindow>

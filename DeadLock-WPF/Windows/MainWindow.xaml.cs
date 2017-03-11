@@ -10,10 +10,9 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DeadLock_WPF
+namespace DeadLock.Windows
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

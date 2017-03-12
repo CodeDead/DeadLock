@@ -11,7 +11,7 @@ Do not hesitate to contact us if you have a question or if you need support with
 
 # Requirements in order to build DeadLock:
 * Turn off 'Prefer 32-bit'
-* [SyncFusion](https://www.syncfusion.com/products/communitylicense)
+* [Syncfusion](https://www.syncfusion.com/products/communitylicense)
 * [.NET Framework 4.6.2](https://www.microsoft.com/en-us/download/details.aspx?id=53344)
 * [Visual Studio](https://visualstudio.com)
 

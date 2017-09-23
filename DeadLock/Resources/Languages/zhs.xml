@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<Language xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Author>Krasnaya Ploshchad’</Author>
+  <Comment>Chinese Simplefied</Comment>
+  <BarFile>文件(&amp;F)</BarFile>
+  <BarEdit>编辑(&amp;E)</BarEdit>
+  <BarView>查看(&amp;V)</BarView>
+  <BarTools>工具(&amp;T)</BarTools>
+  <BarHelp>帮助(&amp;H)</BarHelp>
+  <BarItemOpenFiles>打开文件...</BarItemOpenFiles>
+  <BarItemOpenFolder>打开文件夹...</BarItemOpenFolder>
+  <BarItemRestart>重启</BarItemRestart>
+  <BarItemExit>退出</BarItemExit>
+  <BarItemUnlock>解锁</BarItemUnlock>
+  <BarItemCopy>复制</BarItemCopy>
+  <BarItemMove>移动</BarItemMove>
+  <BarItemRemove>移除</BarItemRemove>
+  <BarItemOwnership>所有者</BarItemOwnership>
+  <BarItemOwnershipTrue>是</BarItemOwnershipTrue>
+  <BarItemOwnershipFalse>否</BarItemOwnershipFalse>
+  <BarItemRemoveItem>移除项目</BarItemRemoveItem>
+  <BarItemClearItems>清理项目</BarItemClearItems>
+  <BarItemAutoSizeColumns>自动缩放列宽</BarItemAutoSizeColumns>
+  <BarItemCancelTask>取消任务</BarItemCancelTask>
+  <BarItemDetails>详情</BarItemDetails>
+  <BarItemSettings>设置</BarItemSettings>
+  <BarItemHelp>帮助</BarItemHelp>
+  <BarItemCheckForUpdates>检查更新</BarItemCheckForUpdates>
+  <BarItemHomePage>主页</BarItemHomePage>
+  <BarItemAbout>关于</BarItemAbout>
+  <ClhPath>位置</ClhPath>
+  <ClhStatus>状态</ClhStatus>
+  <ClhOwnership>所有权</ClhOwnership>
+  <MsgUnknown>未知</MsgUnknown>
+  <MsgLocked>已锁定</MsgLocked>
+  <MsgUnlocked>已解锁</MsgUnlocked>
+  <MsgOperationCancelled>操作已取消</MsgOperationCancelled>
+  <MsgLoading>加载中...</MsgLoading>
+  <MsgSuccessfullyUnlocked>解锁成功</MsgSuccessfullyUnlocked>
+  <MsgCouldNotUnlock>无法解锁项目</MsgCouldNotUnlock>
+  <MsgSuccessfullyCopied>复制成功</MsgSuccessfullyCopied>
+  <MsgCouldNotCopy>无法复制项目</MsgCouldNotCopy>
+  <MsgSuccessfullyMoved>移动成功</MsgSuccessfullyMoved>
+  <MsgCouldNotMove>无法移动项目</MsgCouldNotMove>
+  <MsgSuccessfullyRemoved>移除成功</MsgSuccessfullyRemoved>
+  <MsgCouldNotRemove>无法移除项目</MsgCouldNotRemove>
+  <ClhFileName>文件名</ClhFileName>
+  <ClhProcessId>进程 ID</ClhProcessId>
+  <LblVersion>版本:</LblVersion>
+  <CmiDetails>详情</CmiDetails>
+  <CmiOpenInVirusTotal>用 VirusTotal 打开</CmiOpenInVirusTotal>
+  <CmiKill>结束</CmiKill>
+  <CmiOpenFileLocation>打开文件位置</CmiOpenFileLocation>
+  <CmiProperties>属性</CmiProperties>
+  <MsgSuccessfullyKilled>成功结束所选进程！</MsgSuccessfullyKilled>
+  <CmiHideShow>显示 / 隐藏</CmiHideShow>
+  <MsgAdministrator>DeadLock 可能无法不以管理员身份正常运行！</MsgAdministrator>
+  <MsgVersion>版本</MsgVersion>
+  <MsgAvailable>现已推送！</MsgAvailable>
+  <MsgDownloadNewVersion>您是否愿意下载最新版本？</MsgDownloadNewVersion>
+  <MsgLatestVersionAlreadyInstalled>DeadLock 最新版本已安装！</MsgLatestVersionAlreadyInstalled>
+  <TxtAboutCreated>DeadLock 由 DeadLine 创建。</TxtAboutCreated>
+  <TxtAboutImages>图像: small-n-flat by paomedia</TxtAboutImages>
+  <TxtAboutTheme>主题: SyncFusion</TxtAboutTheme>
+  <TxtAboutCopyright>Copyright &#169; CodeDead 2016</TxtAboutCopyright>
+  <TxtAboutTranslation>翻译:</TxtAboutTranslation>
+  <BtnClose>关闭</BtnClose>
+  <BtnLicense>许可证</BtnLicense>
+  <LblGeneral>常规</LblGeneral>
+  <ChbAutoUpdate>自动检查更新:</ChbAutoUpdate>
+  <ChbShowNotifyIcon>显示通知图标:</ChbShowNotifyIcon>
+  <ChbStartMinimized>最小化启动:</ChbStartMinimized>
+  <ChbShowAdminWarning>显示管理员警告:</ChbShowAdminWarning>
+  <LblAppearance>外观</LblAppearance>
+  <LblThemeStyle>主题样式:</LblThemeStyle>
+  <LblBorderThickness>边框厚度:</LblBorderThickness>
+  <LblRememberFormSize>记住窗口大小:</LblRememberFormSize>
+  <LblShowDetails>显示详情:</LblShowDetails>
+  <LblLanguage>语言:</LblLanguage>
+  <LblAdvanced>高级</LblAdvanced>
+  <LblAutoRunDeadLock>自动运行 DeadLock:</LblAutoRunDeadLock>
+  <LblWindowsExplorerIntegration>集成到 Windows 文件资源管理器:</LblWindowsExplorerIntegration>
+  <LblOwnership>取得所有权:</LblOwnership>
+  <BtnReset>重置</BtnReset>
+  <BtnSave>保存</BtnSave>
+  <TbtnOn>开启</TbtnOn>
+  <TbtnOff>关闭</TbtnOff>
+  <TxtUpdater>更新</TxtUpdater>
+  <LblPath>位置:</LblPath>
+  <LblProgress>进程:</LblProgress>
+  <BtnCancel>取消</BtnCancel>
+  <BtnUpdate>更新</BtnUpdate>
+  <MsgCouldNotRestart>无法开始重启会话。不能查出资源锁定方。</MsgCouldNotRestart>
+  <MsgCouldNotRegister>无法注册资源。</MsgCouldNotRegister>
+  <MsgCouldNotList>无法列举锁定资源的进程！</MsgCouldNotList>
+  <MsgCouldNotListResult>无法列举锁定资源的进程。获取结果长度失败！</MsgCouldNotListResult>
+  <MsgAccessDenied>访问被拒绝</MsgAccessDenied>
+</Language>

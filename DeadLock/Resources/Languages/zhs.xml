@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Language xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Author>Krasnaya Ploshchad’</Author>
-  <Comment>Chinese Simplefied</Comment>
+  <Comment>Chinese Simlplified</Comment>
   <BarFile>文件(&amp;F)</BarFile>
   <BarEdit>编辑(&amp;E)</BarEdit>
   <BarView>查看(&amp;V)</BarView>

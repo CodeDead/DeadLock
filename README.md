@@ -20,4 +20,4 @@ DeadLock is licensed under the GPLv3.
 
 # Updates?
 **07/11/2017 (DD-MM-YYYY): The Windows Forms version will be deprecated. Please do not commit any changes to the Windows Forms version.**  
-We're currently working on a WPF version of DeadLock. This might take some time but please have a look at the WPF branch to become a tester!
+We're currently working on a WPF version of DeadLock. This might take some time but please have a look at the WPF branch to become a tester! Ofcourse, translation fixes and updates are still as welcome as ever!

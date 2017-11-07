@@ -17,3 +17,7 @@ Do not hesitate to contact us if you have a question or if you need support with
 
 # License
 DeadLock is licensed under the GPLv3.
+
+# Updates?
+**07/11/2017 (DD-MM-YYYY)**  
+We're currently working on a WPF version of DeadLock. This might take some time but please have a look at the WPF branch to become a tester!

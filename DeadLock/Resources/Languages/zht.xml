@@ -2,11 +2,11 @@
 <Language xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Author>fricyo(GitHub)</Author>
   <Comment>繁體中文</Comment>
-  <BarFile>&amp;檔案</BarFile>
-  <BarEdit>&amp;編輯</BarEdit>
-  <BarView>&amp;瀏覽</BarView>
-  <BarTools>&amp;工具</BarTools>
-  <BarHelp>&amp;幫助</BarHelp>
+  <BarFile>檔案(&amp;F)</BarFile>
+  <BarEdit>編輯(&amp;E)</BarEdit>
+  <BarView>瀏覽(&amp;V)</BarView>
+  <BarTools>工具(&amp;T)</BarTools>
+  <BarHelp>幫助(&amp;H)</BarHelp>
   <BarItemOpenFiles>開啟檔案...</BarItemOpenFiles>
   <BarItemOpenFolder>開啟資料夾...</BarItemOpenFolder>
   <BarItemRestart>重新開始</BarItemRestart>
@@ -45,49 +45,49 @@
   <MsgSuccessfullyRemoved>成功移除</MsgSuccessfullyRemoved>
   <MsgCouldNotRemove>無法移除此項目</MsgCouldNotRemove>
   <ClhFileName>檔案名稱</ClhFileName>
-  <ClhProcessId>進程ID</ClhProcessId>
-  <LblVersion>版本:</LblVersion>
+  <ClhProcessId>進程 ID</ClhProcessId>
+  <LblVersion>版本：</LblVersion>
   <CmiDetails>內容</CmiDetails>
-  <CmiOpenInVirusTotal>以VirusTotal開啟</CmiOpenInVirusTotal>
+  <CmiOpenInVirusTotal>以 VirusTotal 開啟</CmiOpenInVirusTotal>
   <CmiKill>殺死</CmiKill>
   <CmiOpenFileLocation>開啟檔案位置</CmiOpenFileLocation>
   <CmiProperties>屬性</CmiProperties>
-  <MsgSuccessfullyKilled>成功終止所選的進程!</MsgSuccessfullyKilled>
+  <MsgSuccessfullyKilled>成功終止所選的進程！</MsgSuccessfullyKilled>
   <CmiHideShow>隱藏 / 顯示</CmiHideShow>
-  <MsgAdministrator>沒有管理權限，DeadLock可能無法正常運作!</MsgAdministrator>
+  <MsgAdministrator>沒有管理權限，DeadLock 可能無法正常運作！</MsgAdministrator>
   <MsgVersion>版本</MsgVersion>
-  <MsgAvailable>現已可用!</MsgAvailable>
-  <MsgDownloadNewVersion>您想要下載最新版本嗎?</MsgDownloadNewVersion>
-  <MsgLatestVersionAlreadyInstalled>DeadLock最新版本已經安裝!</MsgLatestVersionAlreadyInstalled>
-  <TxtAboutCreated>DeadLine創建了DeadLock。</TxtAboutCreated>
-  <TxtAboutImages>圖片: small-n-flat by paomedia</TxtAboutImages>
-  <TxtAboutTheme>主題: SyncFusion</TxtAboutTheme>
+  <MsgAvailable>現已可用！</MsgAvailable>
+  <MsgDownloadNewVersion>您想要下載最新版本嗎？</MsgDownloadNewVersion>
+  <MsgLatestVersionAlreadyInstalled>DeadLock 最新版本已經安裝！</MsgLatestVersionAlreadyInstalled>
+  <TxtAboutCreated>DeadLine 創建了 DeadLock。</TxtAboutCreated>
+  <TxtAboutImages>圖片：small-n-flat by paomedia</TxtAboutImages>
+  <TxtAboutTheme>主題：SyncFusion</TxtAboutTheme>
   <TxtAboutCopyright>Copyright &#169; CodeDead 2016</TxtAboutCopyright>
-  <TxtAboutTranslation>翻譯:</TxtAboutTranslation>
+  <TxtAboutTranslation>翻譯：</TxtAboutTranslation>
   <BtnClose>關閉</BtnClose>
   <BtnLicense>授權</BtnLicense>
   <LblGeneral>正常</LblGeneral>
-  <ChbAutoUpdate>自動檢查更新:</ChbAutoUpdate>
-  <ChbShowNotifyIcon>顯示通知圖示:</ChbShowNotifyIcon>
-  <ChbStartMinimized>最小化啟動:</ChbStartMinimized>
-  <ChbShowAdminWarning>顯示管理員警告:</ChbShowAdminWarning>
+  <ChbAutoUpdate>自動檢查更新：</ChbAutoUpdate>
+  <ChbShowNotifyIcon>顯示通知圖示：</ChbShowNotifyIcon>
+  <ChbStartMinimized>最小化啟動：</ChbStartMinimized>
+  <ChbShowAdminWarning>顯示管理員警告：</ChbShowAdminWarning>
   <LblAppearance>外貌</LblAppearance>
-  <LblThemeStyle>主題風格:</LblThemeStyle>
-  <LblBorderThickness>邊框粗細:</LblBorderThickness>
-  <LblRememberFormSize>記住視窗大小:</LblRememberFormSize>
-  <LblShowDetails>顯示內容:</LblShowDetails>
-  <LblLanguage>語言:</LblLanguage>
+  <LblThemeStyle>主題風格：</LblThemeStyle>
+  <LblBorderThickness>邊框粗細：</LblBorderThickness>
+  <LblRememberFormSize>記住視窗大小：</LblRememberFormSize>
+  <LblShowDetails>顯示內容：</LblShowDetails>
+  <LblLanguage>語言：</LblLanguage>
   <LblAdvanced>進階</LblAdvanced>
   <LblAutoRunDeadLock>自動運行DeadLock:</LblAutoRunDeadLock>
-  <LblWindowsExplorerIntegration>Windows檔案總管整合:</LblWindowsExplorerIntegration>
-  <LblOwnership>取得所有權:</LblOwnership>
+  <LblWindowsExplorerIntegration>Windows 檔案總管整合：</LblWindowsExplorerIntegration>
+  <LblOwnership>取得所有權：</LblOwnership>
   <BtnReset>重置</BtnReset>
   <BtnSave>儲存</BtnSave>
   <TbtnOn>開</TbtnOn>
   <TbtnOff>關</TbtnOff>
   <TxtUpdater>更新</TxtUpdater>
-  <LblPath>路徑:</LblPath>
-  <LblProgress>進程:</LblProgress>
+  <LblPath>路徑：</LblPath>
+  <LblProgress>進程：</LblProgress>
   <BtnCancel>取消</BtnCancel>
   <BtnUpdate>更新</BtnUpdate>
   <MsgCouldNotRestart>無法開始重新啟動會話。未能確定何者鎖定了資源。</MsgCouldNotRestart>

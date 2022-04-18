@@ -1,11 +1,11 @@
 # DeadLock
-DeadLock can be used to remove or unlock files and folders that cannot be removed because they're in use by another process.
+DeadLock is a tool for Windows that will remove or unlock files and folders that cannot be removed because they're in use by another process.
 
 # About
 DeadLock was created by DeadLine. This GitHub repository has been created to allow user to view, edit, improve and share the code behind DeadLock.
 
 You can find our company on the web:
-http://codedead.com/
+https://codedead.com/
 
 Do not hesitate to contact us if you have a question or if you need support with DeadLock.
 

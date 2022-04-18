@@ -1,40 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2D51E2BE-E9BF-4808-905A-EB7BB16D1EBA}</ProjectGuid>
+    <TargetFramework>net462</TargetFramework>
+    <TargetFrameworks>net462; net6.0-windows</TargetFrameworks>
     <OutputType>WinExe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DeadLock</RootNamespace>
-    <AssemblyName>DeadLock</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <TargetFrameworkProfile />
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup>
@@ -44,7 +15,6 @@
     <ApplicationIcon>Paomedia-Small-N-Flat-Lock.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Syncfusion.Shared.Base, Version=13.4460.0.53, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>G:\Program Files (x86)\SyncFusion\Essential Studio\13.4.0.53\Assemblies\4.6\Syncfusion.Shared.Base.dll</HintPath>
@@ -53,155 +23,19 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>G:\Program Files (x86)\SyncFusion\Essential Studio\13.4.0.53\Assemblies\4.6\Syncfusion.Tools.Windows.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Management" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
     <Reference Include="UpdateManager">
       <HintPath>..\..\UpdateManager\UpdateManager\bin\Release\UpdateManager.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Language.cs" />
-    <Compile Include="Classes\LanguageManager.cs" />
-    <Compile Include="Classes\ListViewLocker.cs" />
-    <Compile Include="Classes\NativeMethods.cs" />
-    <Compile Include="Classes\ProcessLocker.cs" />
-    <Compile Include="Classes\Update.cs" />
-    <Compile Include="Forms\FrmAbout.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FrmAbout.Designer.cs">
-      <DependentUpon>FrmAbout.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FrmMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FrmMain.Designer.cs">
-      <DependentUpon>FrmMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FrmSettings.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FrmSettings.Designer.cs">
-      <DependentUpon>FrmSettings.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\FrmAbout.resx">
-      <DependentUpon>FrmAbout.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmMain.resx">
-      <DependentUpon>FrmMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmSettings.resx">
-      <DependentUpon>FrmSettings.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Images\about.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Images\advancedsettings.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Images\copy.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Images\delete.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Images\details.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Images\exit.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Images\file.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Images\folder.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Images\help.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Images\license.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Images\lock.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Images\move.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Images\settings.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Images\unlock.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Images\update.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Images\VirusTotal.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Images\visibility.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Images\website.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Paomedia-Small-N-Flat-Lock.ico" />
-    <None Include="Resources\Languages\rus.xml" />
-    <None Include="Resources\Languages\esp.xml" />
-    <None Include="Resources\Languages\ger.xml" />
-    <None Include="Resources\Languages\swe.xml" />
-    <None Include="Resources\Languages\kor.xml" />
-    <None Include="Resources\Languages\sr.xml" />
-    <None Include="Resources\Languages\fr.xml" />
-    <None Include="Resources\Languages\tr.xml" />
-    <None Include="Resources\Languages\nl.xml" />
-    <None Include="Resources\Languages\pl.xml" />
-    <None Include="Resources\Languages\ita.xml" />
-    <None Include="Resources\Languages\eng.xml" />
-    <None Include="Resources\Images\allow.png" />
     <Content Include="Resources\Images\autosize.png" />
-    <None Include="Resources\Images\ownership.png" />
-    <None Include="Resources\Images\restart.png" />
   </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualBasic" Version="10.3.0" />
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.3.310801">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="6.0.0" />
+  </ItemGroup>
 </Project>

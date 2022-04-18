@@ -14,6 +14,7 @@ namespace DeadLock
         private static void Main(string[] args)
         {
             Application.EnableVisualStyles();
+            Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.SetCompatibleTextRenderingDefault(false);
             try
             {

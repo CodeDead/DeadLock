@@ -9,6 +9,7 @@ using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CodeDead.UpdateManager.Classes;
 using DeadLock.Classes;
 using Syncfusion.Windows.Forms;
 using FixedPanel = Syncfusion.Windows.Forms.Tools.Enums.FixedPanel;
@@ -19,7 +20,7 @@ namespace DeadLock.Forms
     {
         #region Variables
         internal readonly LanguageManager LanguageManager;
-        private readonly UpdateManager.UpdateManager _updateManager;
+        private readonly UpdateManager _updateManager;
         private readonly string[] _args;
         #endregion
 
@@ -33,7 +34,7 @@ namespace DeadLock.Forms
             LoadTheme();
 
             LanguageManager = new LanguageManager();
-            _updateManager = new UpdateManager.UpdateManager(Assembly.GetExecutingAssembly().GetName().Version, "http://codedead.com/Software/DeadLock/update.xml", "DeadLock");
+            _updateManager = new UpdateManager(Assembly.GetExecutingAssembly().GetName().Version, "http://codedead.com/Software/DeadLock/update.xml", DataType.Xml);
 
             try
             {

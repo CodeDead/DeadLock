@@ -19,7 +19,7 @@ namespace DeadLock.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -395,7 +395,7 @@ namespace DeadLock.Properties {
         ///  &lt;BarHelp&gt;&amp;amp;Помощь&lt;/BarHelp&gt;
         ///  &lt;BarItemOpenFiles&gt;Открыть файл(ы)...&lt;/BarItemOpenFiles&gt;
         ///  &lt;BarItemOpenFolder&gt;Открыть папку...&lt;/BarItemOpenFolder&gt;
-        ///  &lt;BarItemRestart&gt;Зано [rest of string was truncated]&quot;;.
+        ///  &lt;BarItemRestart&gt;Пере [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string rus {
             get {
@@ -465,7 +465,7 @@ namespace DeadLock.Properties {
         ///  &lt;BarHelp&gt;&amp;amp;Yardım&lt;/BarHelp&gt;
         ///  &lt;BarItemOpenFiles&gt;Dosya(ları) aç...&lt;/BarItemOpenFiles&gt;
         ///  &lt;BarItemOpenFolder&gt;Klasör aç...&lt;/BarItemOpenFolder&gt;
-        ///  &lt;BarItemRestart&gt;Yeniden başlat&lt;/ [rest of string was truncated]&quot;;.
+        ///  &lt;BarItemRestart&gt;Yenid [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string tr {
             get {

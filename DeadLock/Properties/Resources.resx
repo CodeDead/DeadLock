@@ -205,6 +205,12 @@
   <data name="kor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Languages\kor.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="zhs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Languages\zhs.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="zht" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Languages\zht.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="_lock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\lock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

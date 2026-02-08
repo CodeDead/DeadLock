@@ -90,9 +90,8 @@
   <LblProgress>Progress:</LblProgress>
   <BtnCancel>Cancel</BtnCancel>
   <BtnUpdate>Update</BtnUpdate>
-  <NoNewVersion>You are using the latest version</NoNewVersion>
   <BtnInformation>Information</BtnInformation>
-  
+  <NoNewVersion>You are using the latest version</NoNewVersion>
   <MsgCouldNotRestart>Could not begin restart session. Unable to determine resource locker.</MsgCouldNotRestart>
   <MsgCouldNotRegister>Could not register resource.</MsgCouldNotRegister>
   <MsgCouldNotList>Could not list the processes that are locking the resource!</MsgCouldNotList>

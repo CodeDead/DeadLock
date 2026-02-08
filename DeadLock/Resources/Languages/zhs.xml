@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<Language xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Language>
   <Author>Krasnaya Ploshchad’</Author>
   <Comment>Chinese Simplified</Comment>
   <BarFile>文件(&amp;F)</BarFile>
@@ -90,6 +90,8 @@
   <LblProgress>进程:</LblProgress>
   <BtnCancel>取消</BtnCancel>
   <BtnUpdate>更新</BtnUpdate>
+  <BtnInformation>信息</BtnInformation>
+  <NoNewVersion>您正在使用最新版本</NoNewVersion>
   <MsgCouldNotRestart>无法开始重启会话。不能查出资源锁定方。</MsgCouldNotRestart>
   <MsgCouldNotRegister>无法注册资源。</MsgCouldNotRegister>
   <MsgCouldNotList>无法列举锁定资源的进程！</MsgCouldNotList>

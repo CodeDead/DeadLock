@@ -51,7 +51,7 @@
 	<CmiOpenInVirusTotal>Apri in VirusTotal</CmiOpenInVirusTotal>
 	<CmiKill>Arresta</CmiKill>
 	<CmiOpenFileLocation>Apri posizione del File</CmiOpenFileLocation>
-  <CmiProperties>Proprietà</CmiProperties>
+	<CmiProperties>Proprietà</CmiProperties>
 	<MsgSuccessfullyKilled>Processo/i selezionato/i arrestato/i con successo!</MsgSuccessfullyKilled>
 	<CmiHideShow>Nascondi / Mostra</CmiHideShow>
 	<MsgAdministrator>DeadLock potrebbe non funzionare correttamente senza i diritti d´amministratore!</MsgAdministrator>
@@ -79,17 +79,19 @@
 	<LblAdvanced>Avanzato</LblAdvanced>
 	<LblAutoRunDeadLock>Avvia DeadLock automaticamente:</LblAutoRunDeadLock>
 	<LblWindowsExplorerIntegration>Integrazione Windows Explorer:</LblWindowsExplorerIntegration>
-  <LblOwnership>Assumere la proprietà:</LblOwnership>
+	<LblOwnership>Assumere la proprietà:</LblOwnership>
 	<BtnClose>Chiudi</BtnClose>
 	<BtnReset>Resetta</BtnReset>
 	<BtnSave>Salva</BtnSave>
-  <TbtnOn>ACCESO</TbtnOn>
-  <TbtnOff>SPENTO</TbtnOff>
+	<TbtnOn>ACCESO</TbtnOn>
+	<TbtnOff>SPENTO</TbtnOff>
 	<TxtUpdater>Aggiornatore</TxtUpdater>
 	<LblPath>Percorso:</LblPath>
 	<LblProgress>Progresso:</LblProgress>
 	<BtnCancel>Cancella</BtnCancel>
 	<BtnUpdate>Aggiorna</BtnUpdate>
+	<BtnInformation>Informazione</BtnInformation>
+	<NoNewVersion>Non sono state trovate nuove versioni!</NoNewVersion>
 	<MsgCouldNotRestart>Non e´stato possibile riavviare la sessione. Impossibile identificare blocco risorsa.</MsgCouldNotRestart>
 	<MsgCouldNotRegister>Non e´stato possibile registrare la risorsa.</MsgCouldNotRegister>
 	<MsgCouldNotList>Non e´stato possibile determinare i processi che bloccano la risorsa!</MsgCouldNotList>

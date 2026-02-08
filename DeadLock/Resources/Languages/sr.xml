@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0"?>
-<Language xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Language>
   <Author>Nikola Janković</Author>
   <Comment>Srpski</Comment>
   <BarFile>&amp;Datoteka</BarFile>
@@ -89,6 +89,8 @@
   <LblProgress>Napredak:</LblProgress>
   <BtnCancel>Otkaži</BtnCancel>
   <BtnUpdate>Nadogradnja</BtnUpdate>
+  <BtnInformation>Informacije</BtnInformation>
+  <NoNewVersion>Ne postoji nova verzija.</NoNewVersion>
   <MsgCouldNotRestart>Nije moguće početi sesiju restarta. Nedostupno je utvrditi resursni ormarić.</MsgCouldNotRestart>
   <MsgCouldNotRegister>Ne mogu da registrujem resurse.</MsgCouldNotRegister>
   <MsgCouldNotList>Nije moguće navesti procese koji su zaključani.</MsgCouldNotList>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0"?>
-<Language xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Language>
   <Author>pouemes</Author>
   <Comment>Français</Comment>
   <BarFile>&amp;Fichier</BarFile>
@@ -90,6 +90,8 @@
   <LblProgress>Progression:</LblProgress>
   <BtnCancel>Annuler</BtnCancel>
   <BtnUpdate>Mise à jour</BtnUpdate>
+  <BtnInformation>Information</BtnInformation>
+  <NoNewVersion>Pas de nouvelle version disponible.</NoNewVersion>
   <MsgCouldNotRestart>Ne peut commencer à redémarrer la session. Incapable de déterminer la ressource bloquée.</MsgCouldNotRestart>
   <MsgCouldNotRegister>Ne peut enregistrer la resource.</MsgCouldNotRegister>
   <MsgCouldNotList>Ne peut lister les processus qui bloquent la resource!</MsgCouldNotList>

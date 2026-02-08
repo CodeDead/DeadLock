@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0"?>
-<Language xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Language>
   <Author>Pedro Cortés Díaz</Author>
   <Comment>Spanish</Comment>
   <BarFile>&amp;Archivo</BarFile>
@@ -90,6 +90,8 @@
   <LblProgress>Progreso:</LblProgress>
   <BtnCancel>Cancelar</BtnCancel>
   <BtnUpdate>Actualizar</BtnUpdate>
+  <BtnInformation>Información</BtnInformation>
+  <NoNewVersion>No hay una nueva versión disponible.</NoNewVersion>
   <MsgCouldNotRestart>No se pudo iniciar el reinicio de sesión. No se puede determinar el armario de recursos.</MsgCouldNotRestart>
   <MsgCouldNotRegister>No se pudo registrar el recurso.</MsgCouldNotRegister>
   <MsgCouldNotList>¡No se pudo enlistar los procesos que bloquean el recurso!</MsgCouldNotList>

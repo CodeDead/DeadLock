@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0"?>
-<Language xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Language>
   <Author>DeadLine</Author>
   <Comment>English</Comment>
   <BarFile>&amp;File</BarFile>
@@ -54,7 +54,7 @@
   <CmiProperties>Properties</CmiProperties>
   <MsgSuccessfullyKilled>Successfully killed the selected process(es)!</MsgSuccessfullyKilled>
   <CmiHideShow>Hide / Show</CmiHideShow>
-  <MsgAdministrator>DeadLock might not function correctly without administrative rights!</MsgAdministrator>
+  <MsgAdministrator>DeadLock might not function correctly without administrator rights!</MsgAdministrator>
   <MsgVersion>Version</MsgVersion>
   <MsgAvailable>is now available!</MsgAvailable>
   <MsgDownloadNewVersion>Would you like to download the latest version?</MsgDownloadNewVersion>
@@ -90,6 +90,9 @@
   <LblProgress>Progress:</LblProgress>
   <BtnCancel>Cancel</BtnCancel>
   <BtnUpdate>Update</BtnUpdate>
+  <NoNewVersion>You are using the latest version</NoNewVersion>
+  <BtnInformation>Information</BtnInformation>
+  
   <MsgCouldNotRestart>Could not begin restart session. Unable to determine resource locker.</MsgCouldNotRestart>
   <MsgCouldNotRegister>Could not register resource.</MsgCouldNotRegister>
   <MsgCouldNotList>Could not list the processes that are locking the resource!</MsgCouldNotList>

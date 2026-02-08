@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<Language xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Language>
   <Author>Leonid Gorokhov</Author>
   <Comment>Russian</Comment>
   <BarFile>&amp;Файл</BarFile>
@@ -90,6 +90,8 @@
   <LblProgress>Прогресс:</LblProgress>
   <BtnCancel>Отмена</BtnCancel>
   <BtnUpdate>Обновление</BtnUpdate>
+  <BtnInformation>Информация</BtnInformation>
+  <NoNewVersion>Вы используете последнюю версию</NoNewVersion>
   <MsgCouldNotRestart>Не удалось начать перезапуск сеанса. Невозможно определить блокировщик ресурсов.</MsgCouldNotRestart>
   <MsgCouldNotRegister>Не удалось определить ресурсы.</MsgCouldNotRegister>
   <MsgCouldNotList>Не удалось получить список процессов, блокирующих ресурс!</MsgCouldNotList>

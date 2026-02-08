@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0"?>
-<Language xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Language>
   <Author>Ced999</Author>
   <Comment>German</Comment>
   <BarFile>&amp;Datei</BarFile>
@@ -90,6 +90,8 @@
   <LblProgress>Prozess:</LblProgress>
   <BtnCancel>Abbrechen</BtnCancel>
   <BtnUpdate>Update</BtnUpdate>
+  <BtnInformation>Information</BtnInformation>
+  <NoNewVersion>Keine neue Version verfügbar!</NoNewVersion>
   <MsgCouldNotRestart>Konnte keine neustart session erstellen. Es war nicht möglich einen resource locker festzulegen.</MsgCouldNotRestart>
   <MsgCouldNotRegister>Konnte resource nicht registrieren.</MsgCouldNotRegister>
   <MsgCouldNotList>Konnte die Prozesse nicht auflisten!</MsgCouldNotList>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0"?>
-<Language xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Language>
   <Author>Mats Arvendal</Author>
   <Comment>Swedish</Comment>
   <BarFile>&amp;Arkiv</BarFile>
@@ -90,6 +90,8 @@
   <LblProgress>Förlopp:</LblProgress>
   <BtnCancel>Avbryt</BtnCancel>
   <BtnUpdate>Uppdatera</BtnUpdate>
+  <BtnInformation>Information</BtnInformation>
+  <NoNewVersion>Ingen ny version tillgänglig.</NoNewVersion>
   <MsgCouldNotRestart>Kan inte påbörja återstartsession. Omöjligt att avgöra vad som låser källan.</MsgCouldNotRestart>
   <MsgCouldNotRegister>Kan inte registrera källan.</MsgCouldNotRegister>
   <MsgCouldNotList>Kan inte lista processerna som låser källan!</MsgCouldNotList>

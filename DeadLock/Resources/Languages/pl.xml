@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0"?>
-<Language xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Language>
 	<Author>Nickk888</Author>
 	<Comment>Polish</Comment>
 	<BarFile>&amp;Plik</BarFile>
@@ -51,7 +51,7 @@
 	<CmiOpenInVirusTotal>Otwórz w VirusTotal</CmiOpenInVirusTotal>
 	<CmiKill>Zakończ</CmiKill>
 	<CmiOpenFileLocation>Otwórz lokalizację pliku</CmiOpenFileLocation>
-  <CmiProperties>Właściwości</CmiProperties>
+	<CmiProperties>Właściwości</CmiProperties>
 	<MsgSuccessfullyKilled>Pomyślnie zakończono zaznoczony(e) proces(y)!</MsgSuccessfullyKilled>
 	<CmiHideShow>Ukryj / Pokaż</CmiHideShow>
 	<MsgAdministrator>DeadLock może nie zadziałac prawidłowo bez praw administratorskich!</MsgAdministrator>
@@ -80,16 +80,18 @@
 	<LblAdvanced>Zaawansowane</LblAdvanced>
 	<LblAutoRunDeadLock>Włącz DeadLock automatycznie:</LblAutoRunDeadLock>
 	<LblWindowsExplorerIntegration>Integruj w menu kontekstowym:</LblWindowsExplorerIntegration>
-  <LblOwnership>Przejąć na własność:</LblOwnership>
+	<LblOwnership>Przejąć na własność:</LblOwnership>
 	<BtnReset>Resetuj</BtnReset>
 	<BtnSave>Zapisz</BtnSave>
-  <TbtnOn>WŁ</TbtnOn>
-  <TbtnOff>WYŁ</TbtnOff>
+	<TbtnOn>WŁ</TbtnOn>
+	<TbtnOff>WYŁ</TbtnOff>
 	<TxtUpdater>Aktualizator</TxtUpdater>
 	<LblPath>Ścieżka:</LblPath>
 	<LblProgress>Postęp:</LblProgress>
 	<BtnCancel>Anuluj</BtnCancel>
 	<BtnUpdate>Aktualizuj</BtnUpdate>
+	<BtnInformation>Informacja</BtnInformation>
+	<NoNewVersion>Nie ma nowej wersji!</NoNewVersion>
 	<MsgCouldNotRestart>Nie można zrestartować sesji. Nie można ustalić blokady zasóbów.</MsgCouldNotRestart>
 	<MsgCouldNotRegister>Nie można rejestrowac zasoby.</MsgCouldNotRegister>
 	<MsgCouldNotList>Nie można ustalić procesów ktore blokują zasoby!</MsgCouldNotList>

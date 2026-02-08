@@ -1,23 +1,26 @@
 # DeadLock
-DeadLock is a tool for Windows that will remove or unlock files and folders that cannot be removed because they're in use by another process.
 
-# About
-DeadLock was created by DeadLine. This GitHub repository has been created to allow user to view, edit, improve and share the code behind DeadLock.
+![GitHub](https://img.shields.io/badge/language-C%23-green)
+![GitHub](https://img.shields.io/github/license/CodeDead/DeadLock)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/CodeDead/DeadLock)
 
-You can find our company on the web:
-https://codedead.com/
+![DeadLock](https://codedead.com/deadlock/deadlock.webp)
 
-Do not hesitate to contact us if you have a question or if you need support with DeadLock.
+DeadLock is a tool for Windows that will remove or unlock files and folders that cannot be removed because they're in use by another process.  
+It can be used to delete files that are locked by the system or by other applications, and it can also be used to unlock files that are locked by the user.
 
-# Requirements in order to build DeadLock:
+## Requirements
+
 * Turn off 'Prefer 32-bit'
 * [Syncfusion](https://www.syncfusion.com/products/communitylicense)
-* [.NET Framework 4.6.2](https://www.microsoft.com/en-us/download/details.aspx?id=53344)
+* [.NET Framework 4.8.1](https://dotnet.microsoft.com/en-us/download/dotnet-framework)
 * [Visual Studio](https://visualstudio.com)
 
-# License
-DeadLock is licensed under the GPLv3.
+## About
 
-# Updates?
-**07/11/2017 (DD-MM-YYYY): The Windows Forms version will be deprecated. Please do not commit any changes to the Windows Forms version.**  
-We're currently working on a WPF version of DeadLock. This might take some time but please have a look at the WPF branch to become a tester! Ofcourse, translation fixes and updates are still as welcome as ever!
+This library is maintained by CodeDead. You can find more about us using the following links:
+* [Website](https://codedead.com)
+* [Bluesky](https://bsky.app/profile/codedead.com)
+* [Facebook](https://facebook.com/deadlinecodedead)
+
+Copyright © 2025 CodeDead

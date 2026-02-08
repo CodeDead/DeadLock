@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<Language xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Language>
   <Author>DeadLine</Author>
   <Comment>Dutch</Comment>
   <BarFile>&amp;Bestand</BarFile>
@@ -90,6 +90,8 @@
   <LblProgress>Vooruitgang:</LblProgress>
   <BtnCancel>Annuleer</BtnCancel>
   <BtnUpdate>Update</BtnUpdate>
+  <BtnInformation>Informatie</BtnInformation>
+  <NoNewVersion>Er is geen nieuwe versie beschikbaar.</NoNewVersion>
   <MsgCouldNotRestart>Kon de restart sessie niet beginnen. Kon de resource lockers niet vinden.</MsgCouldNotRestart>
   <MsgCouldNotRegister>Kon de bronnen niet registreren.</MsgCouldNotRegister>
   <MsgCouldNotList>Kon de processen niet opsommen die de bron vergrendelen!</MsgCouldNotList>

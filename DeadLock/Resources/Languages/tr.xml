@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0"?>
-<Language xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Language>
   <Author>@bkrcrc_ (Twitter)</Author>
   <Comment>Turkish</Comment>
   <BarFile>&amp;Dosya</BarFile>
@@ -90,6 +90,8 @@
   <LblProgress>Süreç:</LblProgress>
   <BtnCancel>İptal</BtnCancel>
   <BtnUpdate>Güncelle</BtnUpdate>
+  <BtnInformation>Bilgi</BtnInformation>
+  <NoNewVersion>Yeni sürüm bulunamadı.</NoNewVersion>
   <MsgCouldNotRestart>Oturum yeniden başlatılamadı. Kaynağı kilitleyen belirlenemedi</MsgCouldNotRestart>
   <MsgCouldNotRegister>Kaunak kaydedilemedi.</MsgCouldNotRegister>
   <MsgCouldNotList>Kaynağı kilitleyen işlemler listelenemedi!</MsgCouldNotList>

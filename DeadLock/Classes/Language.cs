@@ -150,15 +150,13 @@ namespace DeadLock.Classes
 
         #region Updater_Form
         //Updater Form - Text:
-        public string TxtUpdater;
-
         //Updater Form - General:
-        public string LblPath;
-        public string LblProgress;
+        public string NoNewVersion;
 
         //Updater Form - Buttons:
         public string BtnCancel;
         public string BtnUpdate;
+        public string BtnInformation;
         #endregion
 
         #region NativeMethods

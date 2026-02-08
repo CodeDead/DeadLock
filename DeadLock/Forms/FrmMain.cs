@@ -20,7 +20,7 @@ namespace DeadLock.Forms
     {
         #region Variables
         internal readonly LanguageManager LanguageManager;
-        private readonly UpdateManager _updateManager;
+        private UpdateManager _updateManager;
         private readonly string[] _args;
         #endregion
 
@@ -34,7 +34,6 @@ namespace DeadLock.Forms
             LoadTheme();
 
             LanguageManager = new LanguageManager();
-            _updateManager = new UpdateManager(Assembly.GetExecutingAssembly().GetName().Version, "http://codedead.com/Software/DeadLock/update.xml", DataType.Xml);
 
             try
             {
@@ -168,6 +167,18 @@ namespace DeadLock.Forms
             helpToolStripMenuItem.Text = l.BarItemHelp;
             aboutToolStripMenuItem.Text = l.BarItemAbout;
             exitToolStripMenuItem.Text = l.BarItemExit;
+            
+            // Update manager
+            StringVariables stringVariables = new StringVariables
+            {
+                CancelButtonText = l.BtnCancel,
+                DownloadButtonText = l.BtnUpdate,
+                InformationButtonText = l.BtnInformation,
+                NoNewVersionText = l.NoNewVersion,
+                TitleText = "DeadLock",
+                UpdateNowText = l.MsgDownloadNewVersion
+            };
+            _updateManager = new UpdateManager(Assembly.GetExecutingAssembly().GetName().Version, "http://codedead.com/Software/DeadLock/update.xml", stringVariables, DataType.Xml);
         }
 
         /// <summary>

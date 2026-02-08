@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<Language xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Language>
   <Author>fricyo(GitHub)</Author>
   <Comment>繁體中文</Comment>
   <BarFile>檔案(&amp;F)</BarFile>
@@ -90,6 +90,8 @@
   <LblProgress>進程：</LblProgress>
   <BtnCancel>取消</BtnCancel>
   <BtnUpdate>更新</BtnUpdate>
+  <BtnInformation>資訊</BtnInformation>
+  <NoNewVersion>您正在使用最新版本</NoNewVersion>
   <MsgCouldNotRestart>無法開始重新啟動會話。未能確定何者鎖定了資源。</MsgCouldNotRestart>
   <MsgCouldNotRegister>無法註冊資源。</MsgCouldNotRegister>
   <MsgCouldNotList>無法列出鎖定資源的進程!</MsgCouldNotList>

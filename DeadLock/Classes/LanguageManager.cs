@@ -11,18 +11,17 @@ namespace DeadLock.Classes
     /// </summary>
     internal class LanguageManager
     {
-        #region Variables
-
-        private Language _currentLanguage;
-
-        #endregion
+        /// <summary>
+        /// Gets the current language.
+        /// </summary>
+        internal Language CurrentLanguage { get; private set; }
 
         /// <summary>
         /// Generate a new LanguageManager.
         /// </summary>
         internal LanguageManager()
         {
-            _currentLanguage = new Language();
+            CurrentLanguage = new Language();
         }
 
         /// <summary>
@@ -33,11 +32,9 @@ namespace DeadLock.Classes
         {
             try
             {
-                XmlSerializer serializer = new XmlSerializer(_currentLanguage.GetType());
-                using (StreamReader reader = new StreamReader(path))
-                {
-                    _currentLanguage = (Language)serializer.Deserialize(reader);
-                }
+                XmlSerializer serializer = new XmlSerializer(CurrentLanguage.GetType());
+                using StreamReader reader = new StreamReader(path);
+                CurrentLanguage = (Language)serializer.Deserialize(reader);
             }
             catch (Exception ex)
             {
@@ -52,69 +49,29 @@ namespace DeadLock.Classes
         /// <param name="index">The index of the language that should be loaded.</param>
         internal void LoadLanguage(int index)
         {
-            XmlSerializer serializer = new XmlSerializer(_currentLanguage.GetType());
-            using (MemoryStream stream = new MemoryStream())
+            XmlSerializer serializer = new XmlSerializer(CurrentLanguage.GetType());
+            using MemoryStream stream = new MemoryStream();
+            using StreamWriter writer = new StreamWriter(stream);
+            string res = index switch
             {
-                using (StreamWriter writer = new StreamWriter(stream))
-                {
-                    string res;
-                    switch (index)
-                    {
-                        case 0:
-                            res = Properties.Resources.nl;
-                            break;
-                        case 2:
-                            res = Properties.Resources.fr;
-                            break;
-                        case 3:
-                            res = Properties.Resources.ger;
-                            break;
-                        case 4:
-                            res = Properties.Resources.ita;
-                            break;
-                        case 5:
-                            res = Properties.Resources.kor;
-                            break;
-                        case 6:
-                            res = Properties.Resources.pl;
-                            break;
-                        case 7:
-                            res = Properties.Resources.rus;
-                            break;
-                        case 8:
-                            res = Properties.Resources.sr;
-                            break;
-                        case 9:
-                            res = Properties.Resources.esp;
-                            break;
-                        case 10:
-                            res = Properties.Resources.swe;
-                            break;
-                        case 11:
-                            res = Properties.Resources.tr;
-                            break;
-                        case 12:
-                            res = Properties.Resources.bg;
-                            break;
-                        default:
-                            res = Properties.Resources.eng;
-                            break;
-                    }
-                    writer.Write(res);
-                    writer.Flush();
-                    stream.Position = 0;
-                    _currentLanguage = (Language)serializer.Deserialize(stream);
-                }
-            }
-        }
-
-        /// <summary>
-        /// Get the current language.
-        /// </summary>
-        /// <returns>The current language.</returns>
-        internal Language GetLanguage()
-        {
-            return _currentLanguage;
+                0 => Properties.Resources.nl,
+                2 => Properties.Resources.fr,
+                3 => Properties.Resources.ger,
+                4 => Properties.Resources.ita,
+                5 => Properties.Resources.kor,
+                6 => Properties.Resources.pl,
+                7 => Properties.Resources.rus,
+                8 => Properties.Resources.sr,
+                9 => Properties.Resources.esp,
+                10 => Properties.Resources.swe,
+                11 => Properties.Resources.tr,
+                12 => Properties.Resources.bg,
+                _ => Properties.Resources.eng
+            };
+            writer.Write(res);
+            writer.Flush();
+            stream.Position = 0;
+            CurrentLanguage = (Language)serializer.Deserialize(stream);
         }
     }
 }

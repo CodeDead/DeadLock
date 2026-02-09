@@ -1,6 +1,4 @@
-﻿// ReSharper disable UnassignedField.Global
-
-namespace DeadLock.Classes
+﻿namespace DeadLock.Classes
 {
     /// <summary>
     /// Collection of strings that represent the translation of DeadLock into a certain language.
@@ -9,164 +7,164 @@ namespace DeadLock.Classes
     {
         #region Author
 
-        public string Author;
-        public string Comment;
+        public string Author { get; set; }
+        public string Comment { get; set; }
 
         #endregion
 
         #region Shared
 
-        public string BtnClose;
-        public string BarItemSettings;
-        public string BarItemAbout;
-        public string BtnLicense;
+        public string BtnClose { get; set; }
+        public string BarItemSettings { get; set; }
+        public string BarItemAbout { get; set; }
+        public string BtnLicense { get; set; }
 
         #endregion
 
         #region Main_Form
 
         //Main form - Menu items:
-        public string BarFile;
-        public string BarEdit;
-        public string BarView;
-        public string BarTools;
-        public string BarHelp;
+        public string BarFile { get; set; }
+        public string BarEdit { get; set; }
+        public string BarView { get; set; }
+        public string BarTools { get; set; }
+        public string BarHelp { get; set; }
 
         //Main Form - File menu - Items:
-        public string BarItemOpenFiles;
-        public string BarItemOpenFolder;
-        public string BarItemRestart;
-        public string BarItemExit;
+        public string BarItemOpenFiles { get; set; }
+        public string BarItemOpenFolder { get; set; }
+        public string BarItemRestart { get; set; }
+        public string BarItemExit { get; set; }
 
         //Main Form - Edit menu - Items:
-        public string BarItemUnlock;
-        public string BarItemCopy;
-        public string BarItemMove;
-        public string BarItemRemove;
+        public string BarItemUnlock { get; set; }
+        public string BarItemCopy { get; set; }
+        public string BarItemMove { get; set; }
+        public string BarItemRemove { get; set; }
 
-        public string BarItemOwnership;
-        public string BarItemOwnershipTrue;
-        public string BarItemOwnershipFalse;
+        public string BarItemOwnership { get; set; }
+        public string BarItemOwnershipTrue { get; set; }
+        public string BarItemOwnershipFalse { get; set; }
 
-        public string BarItemRemoveItem;
-        public string BarItemClearItems;
-        public string BarItemAutoSizeColumns;
-        public string BarItemCancelTask;
+        public string BarItemRemoveItem { get; set; }
+        public string BarItemClearItems { get; set; }
+        public string BarItemAutoSizeColumns { get; set; }
+        public string BarItemCancelTask { get; set; }
 
         //Main Form - View menu - Items:
-        public string BarItemDetails;
+        public string BarItemDetails { get; set; }
 
         //Main Form - Help menu - Items:
-        public string BarItemHelp;
-        public string BarItemCheckForUpdates;
-        public string BarItemHomePage;
+        public string BarItemHelp { get; set; }
+        public string BarItemCheckForUpdates { get; set; }
+        public string BarItemHomePage { get; set; }
 
         //Main Form - ListView Items:
-        public string ClhPath;
-        public string ClhStatus;
-        public string ClhOwnership;
+        public string ClhPath { get; set; }
+        public string ClhStatus { get; set; }
+        public string ClhOwnership { get; set; }
 
-        public string MsgUnknown;
-        public string MsgLocked;
-        public string MsgUnlocked;
-        public string MsgOperationCancelled;
-        public string MsgLoading;
+        public string MsgUnknown { get; set; }
+        public string MsgLocked { get; set; }
+        public string MsgUnlocked { get; set; }
+        public string MsgOperationCancelled { get; set; }
+        public string MsgLoading { get; set; }
 
-        public string MsgSuccessfullyUnlocked;
-        public string MsgCouldNotUnlock;
+        public string MsgSuccessfullyUnlocked { get; set; }
+        public string MsgCouldNotUnlock { get; set; }
 
-        public string MsgSuccessfullyCopied;
-        public string MsgCouldNotCopy;
+        public string MsgSuccessfullyCopied { get; set; }
+        public string MsgCouldNotCopy { get; set; }
 
-        public string MsgSuccessfullyMoved;
-        public string MsgCouldNotMove;
+        public string MsgSuccessfullyMoved { get; set; }
+        public string MsgCouldNotMove { get; set; }
 
-        public string MsgSuccessfullyRemoved;
-        public string MsgCouldNotRemove;
+        public string MsgSuccessfullyRemoved { get; set; }
+        public string MsgCouldNotRemove { get; set; }
 
         //Main Form - ListView Details:
-        public string ClhFileName;
-        public string ClhProcessId;
+        public string ClhFileName { get; set; }
+        public string ClhProcessId { get; set; }
 
         //Main Form - Status bar:
-        public string LblVersion;
+        public string LblVersion { get; set; }
 
         //Main Form - ContextMenu Items:
-        public string CmiDetails;
-        public string CmiOpenInVirusTotal;
+        public string CmiDetails { get; set; }
+        public string CmiOpenInVirusTotal { get; set; }
 
         //Main Form - ContextMenu Details:
-        public string CmiKill;
-        public string CmiOpenFileLocation;
-        public string CmiProperties;
+        public string CmiKill { get; set; }
+        public string CmiOpenFileLocation { get; set; }
+        public string CmiProperties { get; set; }
 
-        public string MsgSuccessfullyKilled;
+        public string MsgSuccessfullyKilled { get; set; }
 
         //Main Form - NotifyIcon:
-        public string CmiHideShow;
+        public string CmiHideShow { get; set; }
 
         //Main Form - Messages:
-        public string MsgAdministrator;
-        public string MsgDownloadNewVersion;
-        public string MsgLatestVersionAlreadyInstalled;
+        public string MsgAdministrator { get; set; }
+        public string MsgDownloadNewVersion { get; set; }
+        public string MsgLatestVersionAlreadyInstalled { get; set; }
 
         #endregion
 
         #region About_Form
 
         //About Form - About:
-        public string TxtAboutCreated;
-        public string TxtAboutImages;
-        public string TxtAboutTheme;
-        public string TxtAboutCopyright;
-        public string TxtAboutTranslation;
+        public string TxtAboutCreated { get; set; }
+        public string TxtAboutImages { get; set; }
+        public string TxtAboutTheme { get; set; }
+        public string TxtAboutCopyright { get; set; }
+        public string TxtAboutTranslation { get; set; }
 
         #endregion
 
         #region Settings_Form
 
         //Settings Form - General Tab:
-        public string LblGeneral;
-        public string ChbAutoUpdate;
-        public string ChbShowNotifyIcon;
-        public string ChbStartMinimized;
-        public string ChbShowAdminWarning;
+        public string LblGeneral { get; set; }
+        public string ChbAutoUpdate { get; set; }
+        public string ChbShowNotifyIcon { get; set; }
+        public string ChbStartMinimized { get; set; }
+        public string ChbShowAdminWarning { get; set; }
 
         //Settings Form - Appearance Tab:
-        public string LblAppearance;
-        public string LblThemeStyle;
-        public string LblRememberFormSize;
-        public string LblShowDetails;
-        public string LblLanguage;
+        public string LblAppearance { get; set; }
+        public string LblThemeStyle { get; set; }
+        public string LblRememberFormSize { get; set; }
+        public string LblShowDetails { get; set; }
+        public string LblLanguage { get; set; }
 
         //Settings Form - Advanced Tab:
-        public string LblAdvanced;
-        public string LblAutoRunDeadLock;
-        public string LblWindowsExplorerIntegration;
-        public string LblOwnership;
+        public string LblAdvanced { get; set; }
+        public string LblAutoRunDeadLock { get; set; }
+        public string LblWindowsExplorerIntegration { get; set; }
+        public string LblOwnership { get; set; }
 
         //Settings Form - Buttons:
-        public string BtnReset;
-        public string BtnSave;
+        public string BtnReset { get; set; }
+        public string BtnSave { get; set; }
 
         //Settings Form - ToggleButtons
-        public string TbtnOn;
-        public string TbtnOff;
+        public string TbtnOn { get; set; }
+        public string TbtnOff { get; set; }
 
         #endregion
 
         #region NativeMethods
 
-        public string MsgCouldNotRestart;
-        public string MsgCouldNotRegister;
-        public string MsgCouldNotList;
-        public string MsgCouldNotListResult;
+        public string MsgCouldNotRestart { get; set; }
+        public string MsgCouldNotRegister { get; set; }
+        public string MsgCouldNotList { get; set; }
+        public string MsgCouldNotListResult { get; set; }
 
         #endregion
 
         #region ProcessLocker
 
-        public string MsgAccessDenied;
+        public string MsgAccessDenied { get; set; }
 
         #endregion
     }

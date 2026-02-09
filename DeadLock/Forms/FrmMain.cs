@@ -85,7 +85,7 @@ namespace DeadLock.Forms
                 }
             }
 
-            Language l = LanguageManager.GetLanguage();
+            Language l = LanguageManager.CurrentLanguage;
             //Main form - Menu items:
             fileParentBarItem.Text = l.BarFile;
             editParentBarItem.Text = l.BarEdit;
@@ -202,7 +202,7 @@ namespace DeadLock.Forms
         {
             try
             {
-                Language l = LanguageManager.GetLanguage();
+                Language l = LanguageManager.CurrentLanguage;
 
                 string data =
                     await new WebClient().DownloadStringTaskAsync(
@@ -276,7 +276,7 @@ namespace DeadLock.Forms
 
         private void aboutBarItem_Click(object sender, EventArgs e)
         {
-            new FrmAbout(LanguageManager.GetLanguage()).ShowDialog();
+            new FrmAbout(LanguageManager.CurrentLanguage).ShowDialog();
         }
 
         private void exitBarItem_Click(object sender, EventArgs e)
@@ -314,7 +314,7 @@ namespace DeadLock.Forms
 
             if (!add) return;
 
-            Language l = LanguageManager.GetLanguage();
+            Language l = LanguageManager.CurrentLanguage;
             int index = lsvItems.Items.Count;
             ListViewLocker lvi = new ListViewLocker(path, l, index);
 
@@ -396,7 +396,7 @@ namespace DeadLock.Forms
             {
                 if (lsvItems.SelectedItems.Count == 0) return;
 
-                Language l = LanguageManager.GetLanguage();
+                Language l = LanguageManager.CurrentLanguage;
                 ListViewLocker lvl = (ListViewLocker)lsvItems.SelectedItems[0];
 
                 CancelSelectedTask(lvl);
@@ -464,7 +464,7 @@ namespace DeadLock.Forms
                 if (lsvItems.SelectedItems.Count == 0) return;
 
                 ListViewLocker lvl = (ListViewLocker)lsvItems.SelectedItems[0];
-                Language l = LanguageManager.GetLanguage();
+                Language l = LanguageManager.CurrentLanguage;
 
                 CancelSelectedTask(lvl);
                 await Task.Run(() =>
@@ -510,7 +510,7 @@ namespace DeadLock.Forms
 
         private void FrmMain_Shown(object sender, EventArgs e)
         {
-            Language l = LanguageManager.GetLanguage();
+            Language l = LanguageManager.CurrentLanguage;
             try
             {
                 if (Properties.Settings.Default.ShowAdminWarning)
@@ -562,7 +562,7 @@ namespace DeadLock.Forms
             if (lsvItems.SelectedItems.Count == 0) return;
 
             ListViewLocker lvl = (ListViewLocker)lsvItems.SelectedItems[0];
-            Language l = LanguageManager.GetLanguage();
+            Language l = LanguageManager.CurrentLanguage;
 
             CancelSelectedTask(lvl);
             await Task.Run(() =>
@@ -606,7 +606,7 @@ namespace DeadLock.Forms
             if (lsvItems.SelectedItems.Count == 0) return;
 
             ListViewLocker lvl = (ListViewLocker)lsvItems.SelectedItems[0];
-            Language l = LanguageManager.GetLanguage();
+            Language l = LanguageManager.CurrentLanguage;
 
             CancelSelectedTask(lvl);
             await Task.Run(() =>
@@ -663,7 +663,7 @@ namespace DeadLock.Forms
             lsvDetails.Items.Clear();
 
             ListViewLocker lvl = (ListViewLocker)lsvItems.SelectedItems[0];
-            Language l = LanguageManager.GetLanguage();
+            Language l = LanguageManager.CurrentLanguage;
 
             try
             {
@@ -706,8 +706,8 @@ namespace DeadLock.Forms
 
                     foreach (ProcessLocker p in lockers)
                     {
-                        ListViewItem lvi = new ListViewItem { Text = p.GetFileName() };
-                        lvi.SubItems.Add(p.GetFilePath());
+                        ListViewItem lvi = new ListViewItem { Text = p.FileName };
+                        lvi.SubItems.Add(p.FilePath);
                         lvi.SubItems.Add(p.GetProcessId().ToString());
 
                         lsvDetails.Items.Add(lvi);
@@ -742,8 +742,8 @@ namespace DeadLock.Forms
             ListViewLocker lvl = (ListViewLocker)lsvItems.SelectedItems[0];
             foreach (ProcessLocker p in lvl.GetLockers())
             {
-                ListViewItem lvi = new ListViewItem { Text = p.GetFileName() };
-                lvi.SubItems.Add(p.GetFilePath());
+                ListViewItem lvi = new ListViewItem { Text = p.FileName };
+                lvi.SubItems.Add(p.FilePath);
                 lvi.SubItems.Add(p.GetProcessId().ToString());
                 lsvDetails.Items.Add(lvi);
             }
@@ -795,7 +795,7 @@ namespace DeadLock.Forms
         private void SetCancelled(ListViewItem selected)
         {
             if (selected == null) return;
-            Language l = LanguageManager.GetLanguage();
+            Language l = LanguageManager.CurrentLanguage;
             selected.SubItems[1].ForeColor = Color.Red;
             selected.SubItems[1].Text = l.MsgOperationCancelled;
             selected.SubItems[2].Text = l.MsgOperationCancelled;
@@ -809,7 +809,7 @@ namespace DeadLock.Forms
         private void SetLoading(ListViewItem selected, int index)
         {
             if (selected == null) return;
-            Language l = LanguageManager.GetLanguage();
+            Language l = LanguageManager.CurrentLanguage;
             selected.SubItems[index].ForeColor = Color.Black;
             selected.SubItems[index].Text = l.MsgLoading;
         }
@@ -889,7 +889,7 @@ namespace DeadLock.Forms
         private void killToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (lsvDetails.SelectedItems.Count == 0) return;
-            Language lang = LanguageManager.GetLanguage();
+            Language lang = LanguageManager.CurrentLanguage;
             try
             {
                 foreach (ListViewItem l in lsvDetails.SelectedItems)
@@ -967,8 +967,8 @@ namespace DeadLock.Forms
         {
             lvi.SetOwnership(ownership);
             lvi.SubItems[2].Text = lvi.HasOwnership()
-                ? LanguageManager.GetLanguage().BarItemOwnershipTrue
-                : LanguageManager.GetLanguage().BarItemOwnershipFalse;
+                ? LanguageManager.CurrentLanguage.BarItemOwnershipTrue
+                : LanguageManager.CurrentLanguage.BarItemOwnershipFalse;
         }
 
         private void FrmMain_DragEnter(object sender, DragEventArgs e)

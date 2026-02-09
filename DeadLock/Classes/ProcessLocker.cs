@@ -13,10 +13,19 @@ namespace DeadLock.Classes
     {
         #region Variables
         private readonly Process _locker;
-
-        private string _fileName;
-        private string _filePath;
         private readonly Language _language;
+        #endregion
+
+        #region Properties
+        /// <summary>
+        /// Gets the file name that is associated with the ProcessLocker.
+        /// </summary>
+        internal string FileName { get; }
+
+        /// <summary>
+        /// Gets the file path that is associated with the ProcessLocker.
+        /// </summary>
+        internal string FilePath { get; }
         #endregion
 
         /// <summary>
@@ -28,26 +37,8 @@ namespace DeadLock.Classes
         {
             _locker = l;
             _language = language;
-            SetFilePath(GetMainModuleFilepath(l.Id));
-            SetFileName(Path.GetFileName(_filePath));
-        }
-
-        /// <summary>
-        /// Set the file name of the ProcessLocker.
-        /// </summary>
-        /// <param name="fileName">The file name of the process that is associated with the ProcessLocker.</param>
-        private void SetFileName(string fileName)
-        {
-            _fileName = fileName;
-        }
-
-        /// <summary>
-        /// Set the file path that should be associated with the ProcessLocker.
-        /// </summary>
-        /// <param name="filePath">The file path that should be associated with the ProcessLocker.</param>
-        private void SetFilePath(string filePath)
-        {
-            _filePath = string.IsNullOrEmpty(filePath) ? _language.MsgAccessDenied : filePath;
+            FilePath = string.IsNullOrEmpty(GetMainModuleFilepath(l.Id)) ? language.MsgAccessDenied : GetMainModuleFilepath(l.Id);
+            FileName = Path.GetFileName(FilePath);
         }
 
         /// <summary>
@@ -60,7 +51,7 @@ namespace DeadLock.Classes
             string filepath = "";
             try
             {
-                string wmiQueryString = "SELECT ProcessId, ExecutablePath FROM Win32_Process WHERE ProcessId = " + processId;
+                string wmiQueryString = $"SELECT ProcessId, ExecutablePath FROM Win32_Process WHERE ProcessId = {processId}";
                 using (ManagementObjectSearcher searcher = new ManagementObjectSearcher(wmiQueryString))
                 {
                     using (ManagementObjectCollection results = searcher.Get())
@@ -75,24 +66,6 @@ namespace DeadLock.Classes
             }
             catch (Win32Exception) { }
             return filepath;
-        }
-
-        /// <summary>
-        /// Get the file name that is associated with the ProcessLocker.
-        /// </summary>
-        /// <returns>The file name that is associated with the ProcessLocker.</returns>
-        internal string GetFileName()
-        {
-            return _fileName;
-        }
-
-        /// <summary>
-        /// Get the file path that is associated with the ProcessLocker.
-        /// </summary>
-        /// <returns>The file path that is associated with the ProcessLocker.</returns>
-        internal string GetFilePath()
-        {
-            return _filePath;
         }
 
         /// <summary>

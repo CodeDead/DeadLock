@@ -164,15 +164,16 @@ namespace DeadLock.Classes
         /// Show the properties dialog of a file.
         /// </summary>
         /// <param name="path">The path of the file.</param>
-        /// <returns></returns>
         internal static void ShowFileProperties(string path)
         {
-            ShellExecuteInfo info = new ShellExecuteInfo();
-            info.cbSize = Marshal.SizeOf(info);
-            info.lpVerb = "properties";
-            info.lpFile = path;
-            info.nShow = 5;
-            info.fMask = 12;
+            ShellExecuteInfo info = new ShellExecuteInfo
+            {
+                cbSize = Marshal.SizeOf<ShellExecuteInfo>(),
+                lpVerb = "properties",
+                lpFile = path,
+                nShow = 5,
+                fMask = 12
+            };
             ShellExecuteEx(ref info);
         }
     }

@@ -33,59 +33,59 @@ namespace DeadLock.Forms
         /// </summary>
         private void LoadLanguage()
         {
-            Text = @"DeadLock - " + _main.LanguageManager.GetLanguage().BarItemSettings;
+            Text = @"DeadLock - " + _main.LanguageManager.CurrentLanguage.BarItemSettings;
 
-            tpaGeneral.Text = _main.LanguageManager.GetLanguage().LblGeneral;
-            tpaAppearance.Text = _main.LanguageManager.GetLanguage().LblAppearance;
-            tpaAdvanced.Text = _main.LanguageManager.GetLanguage().LblAdvanced;
+            tpaGeneral.Text = _main.LanguageManager.CurrentLanguage.LblGeneral;
+            tpaAppearance.Text = _main.LanguageManager.CurrentLanguage.LblAppearance;
+            tpaAdvanced.Text = _main.LanguageManager.CurrentLanguage.LblAdvanced;
 
             //General
-            lblAutoUpdate.Text = _main.LanguageManager.GetLanguage().ChbAutoUpdate;
-            lblNotifyIcon.Text = _main.LanguageManager.GetLanguage().ChbShowNotifyIcon;
-            lblMinimized.Text = _main.LanguageManager.GetLanguage().ChbStartMinimized;
-            lblAdminWarning.Text = _main.LanguageManager.GetLanguage().ChbShowAdminWarning;
+            lblAutoUpdate.Text = _main.LanguageManager.CurrentLanguage.ChbAutoUpdate;
+            lblNotifyIcon.Text = _main.LanguageManager.CurrentLanguage.ChbShowNotifyIcon;
+            lblMinimized.Text = _main.LanguageManager.CurrentLanguage.ChbStartMinimized;
+            lblAdminWarning.Text = _main.LanguageManager.CurrentLanguage.ChbShowAdminWarning;
 
-            tbtnAutoUpdate.ActiveState.Text = _main.LanguageManager.GetLanguage().TbtnOn;
-            tbtnAutoUpdate.InactiveState.Text = _main.LanguageManager.GetLanguage().TbtnOff;
+            tbtnAutoUpdate.ActiveState.Text = _main.LanguageManager.CurrentLanguage.TbtnOn;
+            tbtnAutoUpdate.InactiveState.Text = _main.LanguageManager.CurrentLanguage.TbtnOff;
 
-            tbtnNotifyIcon.ActiveState.Text = _main.LanguageManager.GetLanguage().TbtnOn;
-            tbtnNotifyIcon.InactiveState.Text = _main.LanguageManager.GetLanguage().TbtnOff;
+            tbtnNotifyIcon.ActiveState.Text = _main.LanguageManager.CurrentLanguage.TbtnOn;
+            tbtnNotifyIcon.InactiveState.Text = _main.LanguageManager.CurrentLanguage.TbtnOff;
 
-            tbtnStartMinimized.ActiveState.Text = _main.LanguageManager.GetLanguage().TbtnOn;
-            tbtnStartMinimized.InactiveState.Text = _main.LanguageManager.GetLanguage().TbtnOff;
+            tbtnStartMinimized.ActiveState.Text = _main.LanguageManager.CurrentLanguage.TbtnOn;
+            tbtnStartMinimized.InactiveState.Text = _main.LanguageManager.CurrentLanguage.TbtnOff;
 
-            tbtnAdminWarning.ActiveState.Text = _main.LanguageManager.GetLanguage().TbtnOn;
-            tbtnAdminWarning.InactiveState.Text = _main.LanguageManager.GetLanguage().TbtnOff;
+            tbtnAdminWarning.ActiveState.Text = _main.LanguageManager.CurrentLanguage.TbtnOn;
+            tbtnAdminWarning.InactiveState.Text = _main.LanguageManager.CurrentLanguage.TbtnOff;
 
             //Appearance
-            lblThemeStyle.Text = _main.LanguageManager.GetLanguage().LblThemeStyle;
-            lblFormSize.Text = _main.LanguageManager.GetLanguage().LblRememberFormSize;
-            lblDetails.Text = _main.LanguageManager.GetLanguage().LblShowDetails;
-            lblLanguage.Text = _main.LanguageManager.GetLanguage().LblLanguage;
+            lblThemeStyle.Text = _main.LanguageManager.CurrentLanguage.LblThemeStyle;
+            lblFormSize.Text = _main.LanguageManager.CurrentLanguage.LblRememberFormSize;
+            lblDetails.Text = _main.LanguageManager.CurrentLanguage.LblShowDetails;
+            lblLanguage.Text = _main.LanguageManager.CurrentLanguage.LblLanguage;
 
-            tbtnFormSize.ActiveState.Text = _main.LanguageManager.GetLanguage().TbtnOn;
-            tbtnFormSize.InactiveState.Text = _main.LanguageManager.GetLanguage().TbtnOff;
+            tbtnFormSize.ActiveState.Text = _main.LanguageManager.CurrentLanguage.TbtnOn;
+            tbtnFormSize.InactiveState.Text = _main.LanguageManager.CurrentLanguage.TbtnOff;
 
-            tbtnDetails.ActiveState.Text = _main.LanguageManager.GetLanguage().TbtnOn;
-            tbtnDetails.InactiveState.Text = _main.LanguageManager.GetLanguage().TbtnOff;
+            tbtnDetails.ActiveState.Text = _main.LanguageManager.CurrentLanguage.TbtnOn;
+            tbtnDetails.InactiveState.Text = _main.LanguageManager.CurrentLanguage.TbtnOff;
 
             //Advanced
-            lblAutorun.Text = _main.LanguageManager.GetLanguage().LblAutoRunDeadLock;
-            lblWindowsExplorerIntegration.Text = _main.LanguageManager.GetLanguage().LblWindowsExplorerIntegration;
-            lblOwnership.Text = _main.LanguageManager.GetLanguage().LblOwnership;
+            lblAutorun.Text = _main.LanguageManager.CurrentLanguage.LblAutoRunDeadLock;
+            lblWindowsExplorerIntegration.Text = _main.LanguageManager.CurrentLanguage.LblWindowsExplorerIntegration;
+            lblOwnership.Text = _main.LanguageManager.CurrentLanguage.LblOwnership;
 
-            tbtnAutoRun.ActiveState.Text = _main.LanguageManager.GetLanguage().TbtnOn;
-            tbtnAutoRun.InactiveState.Text = _main.LanguageManager.GetLanguage().TbtnOff;
+            tbtnAutoRun.ActiveState.Text = _main.LanguageManager.CurrentLanguage.TbtnOn;
+            tbtnAutoRun.InactiveState.Text = _main.LanguageManager.CurrentLanguage.TbtnOff;
 
-            tbtnWindowsExplorerIntegration.ActiveState.Text = _main.LanguageManager.GetLanguage().TbtnOn;
-            tbtnWindowsExplorerIntegration.InactiveState.Text = _main.LanguageManager.GetLanguage().TbtnOff;
+            tbtnWindowsExplorerIntegration.ActiveState.Text = _main.LanguageManager.CurrentLanguage.TbtnOn;
+            tbtnWindowsExplorerIntegration.InactiveState.Text = _main.LanguageManager.CurrentLanguage.TbtnOff;
 
-            tbtnOwnership.ActiveState.Text = _main.LanguageManager.GetLanguage().TbtnOn;
-            tbtnOwnership.InactiveState.Text = _main.LanguageManager.GetLanguage().TbtnOff;
+            tbtnOwnership.ActiveState.Text = _main.LanguageManager.CurrentLanguage.TbtnOn;
+            tbtnOwnership.InactiveState.Text = _main.LanguageManager.CurrentLanguage.TbtnOff;
 
-            btnClose.Text = _main.LanguageManager.GetLanguage().BtnClose;
-            btnReset.Text = _main.LanguageManager.GetLanguage().BtnReset;
-            btnSave.Text = _main.LanguageManager.GetLanguage().BtnSave;
+            btnClose.Text = _main.LanguageManager.CurrentLanguage.BtnClose;
+            btnReset.Text = _main.LanguageManager.CurrentLanguage.BtnReset;
+            btnSave.Text = _main.LanguageManager.CurrentLanguage.BtnSave;
         }
 
         private void btnClose_Click(object sender, EventArgs e)

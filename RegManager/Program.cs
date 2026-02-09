@@ -149,11 +149,9 @@ namespace RegManager
         /// </summary>
         private static void DisableAutoStartup()
         {
-            if (Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run", "DeadLock", "").ToString() == "") return;
-            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run", true))
-            {
-                key?.DeleteValue("DeadLock");
-            }
+            if (Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run", "DeadLock", "")?.ToString() == string.Empty) return;
+            using RegistryKey key = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run", true);
+            key?.DeleteValue("DeadLock");
         }
 
         /// <summary>

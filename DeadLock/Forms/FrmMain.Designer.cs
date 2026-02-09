@@ -291,6 +291,35 @@ namespace DeadLock.Forms
             this.homePageBarItem,
             this.licenseBarItem,
             this.aboutBarItem,
+            this.fileParentBarItem,
+            this.openFilesBarItem,
+            this.openFolderbarItem,
+            this.restartBarItem,
+            this.exitBarItem,
+            this.unlockParentBarItem,
+            this.unlockBarItem,
+            this.copyBarItem,
+            this.moveBarItem,
+            this.removeBarItem,
+            this.ownershipParentBarItem,
+            this.trueBarItem,
+            this.falseBarItem,
+            this.editParentBarItem,
+            this.propertiesBarItem,
+            this.removeItemBarItem,
+            this.clearItemsbarItem,
+            this.autoSizeColumnsBarItem,
+            this.cancelOperationBarItem,
+            this.viewParentBarItem,
+            this.detailsBarItem,
+            this.toolsParentBarItem,
+            this.settingsBarItem,
+            this.helpParentBarItem,
+            this.helpBarItem,
+            this.checkForUpdatesBarItem,
+            this.homePageBarItem,
+            this.licenseBarItem,
+            this.aboutBarItem,
             this.editParentBarItem,
             this.unlockParentBarItem,
             this.ownershipParentBarItem,
@@ -324,7 +353,7 @@ namespace DeadLock.Forms
             this.mfbmMain.MetroColor = System.Drawing.Color.SteelBlue;
             this.mfbmMain.Office2010Theme = Syncfusion.Windows.Forms.Office2010Theme.Managed;
             this.mfbmMain.ResetCustomization = false;
-            this.mfbmMain.SelectedItem = null;
+            this.mfbmMain.SelectedItem = this.fileParentBarItem;
             this.mfbmMain.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
             this.mfbmMain.ThemeName = "Metro";
             this.mfbmMain.UseBackwardCompatiblity = false;
@@ -403,6 +432,7 @@ namespace DeadLock.Forms
             this.exitBarItem.BarName = "exitBarItem";
             this.exitBarItem.CategoryIndex = 0;
             this.exitBarItem.ID = "Exit";
+            this.exitBarItem.Shortcut = System.Windows.Forms.Shortcut.CtrlQ;
             this.exitBarItem.ShowToolTipInPopUp = false;
             this.exitBarItem.SizeToFit = true;
             this.exitBarItem.Text = "Exit";

@@ -55,8 +55,6 @@
   <MsgSuccessfullyKilled>Successfully killed the selected process(es)!</MsgSuccessfullyKilled>
   <CmiHideShow>Hide / Show</CmiHideShow>
   <MsgAdministrator>DeadLock might not function correctly without administrator rights!</MsgAdministrator>
-  <MsgVersion>Version</MsgVersion>
-  <MsgAvailable>is now available!</MsgAvailable>
   <MsgDownloadNewVersion>Would you like to download the latest version?</MsgDownloadNewVersion>
   <MsgLatestVersionAlreadyInstalled>The latest version of DeadLock is already installed!</MsgLatestVersionAlreadyInstalled>
   <TxtAboutCreated>DeadLock was created by DeadLine.</TxtAboutCreated>
@@ -73,7 +71,6 @@
   <ChbShowAdminWarning>Show administrator warning:</ChbShowAdminWarning>
   <LblAppearance>Appearance</LblAppearance>
   <LblThemeStyle>Theme style:</LblThemeStyle>
-  <LblBorderThickness>Border thickness:</LblBorderThickness>
   <LblRememberFormSize>Remember form size:</LblRememberFormSize>
   <LblShowDetails>Show details:</LblShowDetails>
   <LblLanguage>Language:</LblLanguage>
@@ -88,10 +85,6 @@
   <TxtUpdater>Updater</TxtUpdater>
   <LblPath>Path:</LblPath>
   <LblProgress>Progress:</LblProgress>
-  <BtnCancel>Cancel</BtnCancel>
-  <BtnUpdate>Update</BtnUpdate>
-  <BtnInformation>Information</BtnInformation>
-  <NoNewVersion>You are using the latest version</NoNewVersion>
   <MsgCouldNotRestart>Could not begin restart session. Unable to determine resource locker.</MsgCouldNotRestart>
   <MsgCouldNotRegister>Could not register resource.</MsgCouldNotRegister>
   <MsgCouldNotList>Could not list the processes that are locking the resource!</MsgCouldNotList>

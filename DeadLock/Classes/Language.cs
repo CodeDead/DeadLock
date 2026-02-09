@@ -1,4 +1,5 @@
 ﻿// ReSharper disable UnassignedField.Global
+
 namespace DeadLock.Classes
 {
     /// <summary>
@@ -7,18 +8,23 @@ namespace DeadLock.Classes
     public class Language
     {
         #region Author
+
         public string Author;
         public string Comment;
+
         #endregion
 
         #region Shared
+
         public string BtnClose;
         public string BarItemSettings;
         public string BarItemAbout;
         public string BtnLicense;
+
         #endregion
 
         #region Main_Form
+
         //Main form - Menu items:
         public string BarFile;
         public string BarEdit;
@@ -101,23 +107,24 @@ namespace DeadLock.Classes
 
         //Main Form - Messages:
         public string MsgAdministrator;
-
-        public string MsgVersion;
-        public string MsgAvailable;
         public string MsgDownloadNewVersion;
         public string MsgLatestVersionAlreadyInstalled;
+
         #endregion
 
         #region About_Form
+
         //About Form - About:
         public string TxtAboutCreated;
         public string TxtAboutImages;
         public string TxtAboutTheme;
         public string TxtAboutCopyright;
         public string TxtAboutTranslation;
+
         #endregion
 
         #region Settings_Form
+
         //Settings Form - General Tab:
         public string LblGeneral;
         public string ChbAutoUpdate;
@@ -128,7 +135,6 @@ namespace DeadLock.Classes
         //Settings Form - Appearance Tab:
         public string LblAppearance;
         public string LblThemeStyle;
-        public string LblBorderThickness;
         public string LblRememberFormSize;
         public string LblShowDetails;
         public string LblLanguage;
@@ -146,28 +152,22 @@ namespace DeadLock.Classes
         //Settings Form - ToggleButtons
         public string TbtnOn;
         public string TbtnOff;
-        #endregion
 
-        #region Updater_Form
-        //Updater Form - Text:
-        //Updater Form - General:
-        public string NoNewVersion;
-
-        //Updater Form - Buttons:
-        public string BtnCancel;
-        public string BtnUpdate;
-        public string BtnInformation;
         #endregion
 
         #region NativeMethods
+
         public string MsgCouldNotRestart;
         public string MsgCouldNotRegister;
         public string MsgCouldNotList;
         public string MsgCouldNotListResult;
+
         #endregion
 
         #region ProcessLocker
+
         public string MsgAccessDenied;
+
         #endregion
     }
 }

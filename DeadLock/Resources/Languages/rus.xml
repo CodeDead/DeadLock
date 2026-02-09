@@ -55,8 +55,6 @@
   <MsgSuccessfullyKilled>Удачно завершены выделенные процесс(ы)!</MsgSuccessfullyKilled>
   <CmiHideShow>Скрыть / Показать</CmiHideShow>
   <MsgAdministrator>DeadLock может функционировать неправильно без прав администратора!</MsgAdministrator>
-  <MsgVersion>Версия</MsgVersion>
-  <MsgAvailable>Доступна сейчас!</MsgAvailable>
   <MsgDownloadNewVersion>Хотите установить новую версию?</MsgDownloadNewVersion>
   <MsgLatestVersionAlreadyInstalled>Последняя версия программы DeadLock уже установлена!</MsgLatestVersionAlreadyInstalled>
   <TxtAboutCreated>DeadLock был создан компанией DeadLine.</TxtAboutCreated>
@@ -73,7 +71,6 @@
   <ChbShowAdminWarning>Показать предупреждение администратора:</ChbShowAdminWarning>
   <LblAppearance>Вид</LblAppearance>
   <LblThemeStyle>Стиль темы:</LblThemeStyle>
-  <LblBorderThickness>Толщина границы:</LblBorderThickness>
   <LblRememberFormSize>Запомнить размер окна:</LblRememberFormSize>
   <LblShowDetails>Показать подробности:</LblShowDetails>
   <LblLanguage>Язык:</LblLanguage>
@@ -88,10 +85,6 @@
   <TxtUpdater>Центр обновлений</TxtUpdater>
   <LblPath>Путь:</LblPath>
   <LblProgress>Прогресс:</LblProgress>
-  <BtnCancel>Отмена</BtnCancel>
-  <BtnUpdate>Обновление</BtnUpdate>
-  <BtnInformation>Информация</BtnInformation>
-  <NoNewVersion>Вы используете последнюю версию</NoNewVersion>
   <MsgCouldNotRestart>Не удалось начать перезапуск сеанса. Невозможно определить блокировщик ресурсов.</MsgCouldNotRestart>
   <MsgCouldNotRegister>Не удалось определить ресурсы.</MsgCouldNotRegister>
   <MsgCouldNotList>Не удалось получить список процессов, блокирующих ресурс!</MsgCouldNotList>

@@ -55,8 +55,6 @@
   <MsgSuccessfullyKilled>Processus sélectionné enrayé avec succès!</MsgSuccessfullyKilled>
   <CmiHideShow>Hide / Show</CmiHideShow>
   <MsgAdministrator>DeadLock ne fonctionnera pas correctement sans les droits administrateur!</MsgAdministrator>
-  <MsgVersion>Version</MsgVersion>
-  <MsgAvailable>n'est pas disponible!</MsgAvailable>
   <MsgDownloadNewVersion>Voulez vous télécharger la dernière version?</MsgDownloadNewVersion>
   <MsgLatestVersionAlreadyInstalled>La dernière version de DeadLock est déjà installée!</MsgLatestVersionAlreadyInstalled>
   <TxtAboutCreated>DeadLock a été créé par DeadLine.</TxtAboutCreated>
@@ -73,7 +71,6 @@
   <ChbShowAdminWarning>Montrer l'avertissement administrateur:</ChbShowAdminWarning>
   <LblAppearance>Apparence</LblAppearance>
   <LblThemeStyle>Style du Thème:</LblThemeStyle>
-  <LblBorderThickness>Epaisseur de la bordure:</LblBorderThickness>
   <LblRememberFormSize>Se rappeler de la taille de la forme:</LblRememberFormSize>
   <LblShowDetails>Montrer les détails:</LblShowDetails>
   <LblLanguage>Langue:</LblLanguage>
@@ -88,10 +85,6 @@
   <TxtUpdater>Mise à jour</TxtUpdater>
   <LblPath>Chemin:</LblPath>
   <LblProgress>Progression:</LblProgress>
-  <BtnCancel>Annuler</BtnCancel>
-  <BtnUpdate>Mise à jour</BtnUpdate>
-  <BtnInformation>Information</BtnInformation>
-  <NoNewVersion>Pas de nouvelle version disponible.</NoNewVersion>
   <MsgCouldNotRestart>Ne peut commencer à redémarrer la session. Incapable de déterminer la ressource bloquée.</MsgCouldNotRestart>
   <MsgCouldNotRegister>Ne peut enregistrer la resource.</MsgCouldNotRegister>
   <MsgCouldNotList>Ne peut lister les processus qui bloquent la resource!</MsgCouldNotList>

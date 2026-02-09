@@ -5,10 +5,11 @@ using System.Windows.Forms;
 using Microsoft.Win32;
 using Syncfusion.Windows.Forms;
 using Syncfusion.Windows.Forms.Tools;
+using Syncfusion.WinForms.Controls;
 
 namespace DeadLock.Forms
 {
-    public partial class FrmSettings : MetroForm
+    public partial class FrmSettings : SfForm
     {
         #region Variables
         private readonly FrmMain _main;
@@ -58,7 +59,6 @@ namespace DeadLock.Forms
 
             //Appearance
             lblThemeStyle.Text = _main.LanguageManager.GetLanguage().LblThemeStyle;
-            lblBorderThickness.Text = _main.LanguageManager.GetLanguage().LblBorderThickness;
             lblFormSize.Text = _main.LanguageManager.GetLanguage().LblRememberFormSize;
             lblDetails.Text = _main.LanguageManager.GetLanguage().LblShowDetails;
             lblLanguage.Text = _main.LanguageManager.GetLanguage().LblLanguage;
@@ -108,7 +108,6 @@ namespace DeadLock.Forms
 
                 //Appearance
                 cpbThemeStyle.SelectedColor = Properties.Settings.Default.MetroColor;
-                itxtBorderThickness.IntegerValue = Properties.Settings.Default.BorderThickness;
                 tbtnFormSize.ToggleState = Properties.Settings.Default.RememberFormSize ? ToggleButtonState.Active : ToggleButtonState.Inactive;
                 tbtnDetails.ToggleState = Properties.Settings.Default.ViewDetails ? ToggleButtonState.Active : ToggleButtonState.Inactive;
                 cboLanguage.SelectedIndex = Properties.Settings.Default.Language;
@@ -153,7 +152,6 @@ namespace DeadLock.Forms
                 }
             }
 
-
             using (RegistryKey key = Registry.ClassesRoot.OpenSubKey(@"Directory\shell\DeadLock\command"))
             {
                 if (key != null && key.GetValue("", "").ToString() == Application.ExecutablePath + " %1")
@@ -193,7 +191,6 @@ namespace DeadLock.Forms
                 Properties.Settings.Default.ShowAdminWarning = tbtnAdminWarning.ToggleState == ToggleButtonState.Active;
 
                 Properties.Settings.Default.MetroColor = cpbThemeStyle.SelectedColor;
-                Properties.Settings.Default.BorderThickness = (int)itxtBorderThickness.IntegerValue;
                 Properties.Settings.Default.RememberFormSize = tbtnFormSize.ToggleState == ToggleButtonState.Active;
                 Properties.Settings.Default.ViewDetails = tbtnDetails.ToggleState == ToggleButtonState.Active;
 
@@ -260,19 +257,13 @@ namespace DeadLock.Forms
         {
             try
             {
-                BorderThickness = Properties.Settings.Default.BorderThickness;
-                MetroColor = Properties.Settings.Default.MetroColor;
-                BorderColor = Properties.Settings.Default.MetroColor;
-                CaptionBarColor = Properties.Settings.Default.MetroColor;
-
                 btnClose.MetroColor = Properties.Settings.Default.MetroColor;
                 btnReset.MetroColor = Properties.Settings.Default.MetroColor;
                 btnSave.MetroColor = Properties.Settings.Default.MetroColor;
 
                 tbcPanels.FixedSingleBorderColor = Properties.Settings.Default.MetroColor;
                 tbcPanels.ActiveTabColor = Properties.Settings.Default.MetroColor;
-
-                itxtBorderThickness.Metrocolor = Properties.Settings.Default.MetroColor;
+                
                 cboLanguage.MetroColor = Properties.Settings.Default.MetroColor;
                 btnSelectPath.MetroColor = Properties.Settings.Default.MetroColor;
                 txtLanguagePath.Metrocolor = Properties.Settings.Default.MetroColor;

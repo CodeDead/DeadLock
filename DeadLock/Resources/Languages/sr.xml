@@ -55,8 +55,6 @@
   <MsgSuccessfullyKilled>Uspešno je ubijen izabrani proces(i)!</MsgSuccessfullyKilled>
   <CmiHideShow>Sakrij / Prikaži</CmiHideShow>
   <MsgAdministrator>DeadLock možda neće ispravno funkcionisati bez administratorskih prava!</MsgAdministrator>
-  <MsgVersion>Verzija</MsgVersion>
-  <MsgAvailable>sada je dostupan</MsgAvailable>
   <MsgDownloadNewVersion>Želite li da preuzmete najnoviju verziju?</MsgDownloadNewVersion>
   <MsgLatestVersionAlreadyInstalled>Najnovija verzija DeadLock je već instalirana!</MsgLatestVersionAlreadyInstalled>
   <TxtAboutCreated>DeadLock je kodiran od DeadLine.</TxtAboutCreated>
@@ -73,7 +71,6 @@
   <ChbShowAdminWarning>Prikaži administratorska upozorenja:</ChbShowAdminWarning>
   <LblAppearance>Izgled</LblAppearance>
   <LblThemeStyle>Tema:</LblThemeStyle>
-  <LblBorderThickness>Debljina ivica:</LblBorderThickness>
   <LblRememberFormSize>Zapamti obrazac veličine:</LblRememberFormSize>
   <LblShowDetails>Prikaži detalje:</LblShowDetails>
   <LblLanguage>Jezik:</LblLanguage>
@@ -88,10 +85,6 @@
   <TxtUpdater>Updater</TxtUpdater>
   <LblPath>Putanja:</LblPath>
   <LblProgress>Napredak:</LblProgress>
-  <BtnCancel>Otkaži</BtnCancel>
-  <BtnUpdate>Nadogradnja</BtnUpdate>
-  <BtnInformation>Informacije</BtnInformation>
-  <NoNewVersion>Ne postoji nova verzija.</NoNewVersion>
   <MsgCouldNotRestart>Nije moguće početi sesiju restarta. Nedostupno je utvrditi resursni ormarić.</MsgCouldNotRestart>
   <MsgCouldNotRegister>Ne mogu da registrujem resurse.</MsgCouldNotRegister>
   <MsgCouldNotList>Nije moguće navesti procese koji su zaključani.</MsgCouldNotList>

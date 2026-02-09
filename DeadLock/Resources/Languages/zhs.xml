@@ -55,8 +55,6 @@
   <MsgSuccessfullyKilled>成功结束所选进程！</MsgSuccessfullyKilled>
   <CmiHideShow>显示 / 隐藏</CmiHideShow>
   <MsgAdministrator>DeadLock 可能无法不以管理员身份正常运行！</MsgAdministrator>
-  <MsgVersion>版本</MsgVersion>
-  <MsgAvailable>现已推送！</MsgAvailable>
   <MsgDownloadNewVersion>您是否愿意下载最新版本？</MsgDownloadNewVersion>
   <MsgLatestVersionAlreadyInstalled>DeadLock 最新版本已安装！</MsgLatestVersionAlreadyInstalled>
   <TxtAboutCreated>DeadLock 由 DeadLine 创建。</TxtAboutCreated>
@@ -73,7 +71,6 @@
   <ChbShowAdminWarning>显示管理员警告:</ChbShowAdminWarning>
   <LblAppearance>外观</LblAppearance>
   <LblThemeStyle>主题样式:</LblThemeStyle>
-  <LblBorderThickness>边框厚度:</LblBorderThickness>
   <LblRememberFormSize>记住窗口大小:</LblRememberFormSize>
   <LblShowDetails>显示详情:</LblShowDetails>
   <LblLanguage>语言:</LblLanguage>
@@ -88,10 +85,6 @@
   <TxtUpdater>更新</TxtUpdater>
   <LblPath>位置:</LblPath>
   <LblProgress>进程:</LblProgress>
-  <BtnCancel>取消</BtnCancel>
-  <BtnUpdate>更新</BtnUpdate>
-  <BtnInformation>信息</BtnInformation>
-  <NoNewVersion>您正在使用最新版本</NoNewVersion>
   <MsgCouldNotRestart>无法开始重启会话。不能查出资源锁定方。</MsgCouldNotRestart>
   <MsgCouldNotRegister>无法注册资源。</MsgCouldNotRegister>
   <MsgCouldNotList>无法列举锁定资源的进程！</MsgCouldNotList>

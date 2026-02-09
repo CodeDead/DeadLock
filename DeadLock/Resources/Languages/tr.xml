@@ -55,8 +55,6 @@
   <MsgSuccessfullyKilled>Seçilen işlem(ler) başarıyla sonlandırıldı!</MsgSuccessfullyKilled>
   <CmiHideShow>Gizle / Göster</CmiHideShow>
   <MsgAdministrator>DeadLock yönetici izinleri olmadan düzgün çalışmayabilir!</MsgAdministrator>
-  <MsgVersion>Sürüm</MsgVersion>
-  <MsgAvailable>hazır!</MsgAvailable>
   <MsgDownloadNewVersion>En son sürümü indirmek ister misiniz?</MsgDownloadNewVersion>
   <MsgLatestVersionAlreadyInstalled>En güncel DeadLock sürümü zaten yüklü!</MsgLatestVersionAlreadyInstalled>
   <TxtAboutCreated>DeadLock, DeadLine tarafından üretilmiştir.</TxtAboutCreated>
@@ -73,7 +71,6 @@
   <ChbShowAdminWarning>Yönetici izni uyarılarını göster:</ChbShowAdminWarning>
   <LblAppearance>Görünüm</LblAppearance>
   <LblThemeStyle>Tema stili:</LblThemeStyle>
-  <LblBorderThickness>Çerçeve kalınlığı:</LblBorderThickness>
   <LblRememberFormSize>Form boyutunu hatırla:</LblRememberFormSize>
   <LblShowDetails>Detayları göster:</LblShowDetails>
   <LblLanguage>Dil:</LblLanguage>
@@ -88,10 +85,6 @@
   <TxtUpdater>Güncelleyici</TxtUpdater>
   <LblPath>Dosya yolu:</LblPath>
   <LblProgress>Süreç:</LblProgress>
-  <BtnCancel>İptal</BtnCancel>
-  <BtnUpdate>Güncelle</BtnUpdate>
-  <BtnInformation>Bilgi</BtnInformation>
-  <NoNewVersion>Yeni sürüm bulunamadı.</NoNewVersion>
   <MsgCouldNotRestart>Oturum yeniden başlatılamadı. Kaynağı kilitleyen belirlenemedi</MsgCouldNotRestart>
   <MsgCouldNotRegister>Kaunak kaydedilemedi.</MsgCouldNotRegister>
   <MsgCouldNotList>Kaynağı kilitleyen işlemler listelenemedi!</MsgCouldNotList>

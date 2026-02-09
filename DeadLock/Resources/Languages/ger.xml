@@ -55,8 +55,6 @@
   <MsgSuccessfullyKilled>Erflogreich die ausgewählten Prozesse gestoppt!</MsgSuccessfullyKilled>
   <CmiHideShow>Ausblenden / Einblenden</CmiHideShow>
   <MsgAdministrator>DeadLock könnte ohne Administratorrechte nicht richtig funktionieren!</MsgAdministrator>
-  <MsgVersion>Version</MsgVersion>
-  <MsgAvailable>ist nun verfügbar!</MsgAvailable>
   <MsgDownloadNewVersion>Möchtest du die aktuelle Version herunterladen?</MsgDownloadNewVersion>
   <MsgLatestVersionAlreadyInstalled>Die aktuelle Version von DeadLock ist bereits installiert!</MsgLatestVersionAlreadyInstalled>
   <TxtAboutCreated>DeadLock wurde von DeadLine erstellt.</TxtAboutCreated>
@@ -73,7 +71,6 @@
   <ChbShowAdminWarning>Administratorwarnung anzeigen:</ChbShowAdminWarning>
   <LblAppearance>Erscheinung</LblAppearance>
   <LblThemeStyle>Theme style:</LblThemeStyle>
-  <LblBorderThickness>Randdicke:</LblBorderThickness>
   <LblRememberFormSize>Fenstergröße merken:</LblRememberFormSize>
   <LblShowDetails>Details anzeigen:</LblShowDetails>
   <LblLanguage>Sprache:</LblLanguage>
@@ -88,10 +85,6 @@
   <TxtUpdater>Updater</TxtUpdater>
   <LblPath>Pfad:</LblPath>
   <LblProgress>Prozess:</LblProgress>
-  <BtnCancel>Abbrechen</BtnCancel>
-  <BtnUpdate>Update</BtnUpdate>
-  <BtnInformation>Information</BtnInformation>
-  <NoNewVersion>Keine neue Version verfügbar!</NoNewVersion>
   <MsgCouldNotRestart>Konnte keine neustart session erstellen. Es war nicht möglich einen resource locker festzulegen.</MsgCouldNotRestart>
   <MsgCouldNotRegister>Konnte resource nicht registrieren.</MsgCouldNotRegister>
   <MsgCouldNotList>Konnte die Prozesse nicht auflisten!</MsgCouldNotList>

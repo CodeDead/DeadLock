@@ -112,7 +112,7 @@ namespace RegManager
         /// <summary>
         /// Enable or disable Windows Explorer Integration.
         /// </summary>
-        /// <param name="value">A boolean to indicate whether or not Windows Explorer integration should be enabled.</param>
+        /// <param name="value">A boolean to indicate whether Windows Explorer integration should be enabled.</param>
         /// <param name="path">The path to the file that should be added to Windows Explorer integration.</param>
         private static void ChangeExplorerIntegration(bool value, string path)
         {
@@ -159,7 +159,7 @@ namespace RegManager
         /// <summary>
         /// Enable or disable auto startup.
         /// </summary>
-        /// <param name="value">A boolean to indicate whether or not auto startup should be enabled.</param>
+        /// <param name="value">A boolean to indicate whether auto startup should be enabled.</param>
         /// <param name="path">The path that should be added to the registry in order to enable auto startup.</param>
         private static void ChangeAutoStartUp(bool value, string path)
         {

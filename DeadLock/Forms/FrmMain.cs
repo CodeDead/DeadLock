@@ -1,27 +1,32 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Net;
 using System.Reflection;
 using System.Security.Cryptography;
 using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CodeDead.UpdateManager.Classes;
+using System.Xml.Serialization;
 using DeadLock.Classes;
 using Syncfusion.Windows.Forms;
+using Syncfusion.WinForms.Controls;
 using FixedPanel = Syncfusion.Windows.Forms.Tools.Enums.FixedPanel;
+using Update = DeadLock.Classes.Update;
 
 namespace DeadLock.Forms
 {
-    public partial class FrmMain : MetroForm
+    public partial class FrmMain : SfForm
     {
         #region Variables
+
         internal readonly LanguageManager LanguageManager;
-        private UpdateManager _updateManager;
         private readonly string[] _args;
+
         #endregion
 
         /// <summary>
@@ -34,7 +39,6 @@ namespace DeadLock.Forms
             LoadTheme();
 
             LanguageManager = new LanguageManager();
-
             try
             {
                 LanguageSwitch();
@@ -49,6 +53,7 @@ namespace DeadLock.Forms
             {
                 MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
             _args = args;
         }
 
@@ -167,18 +172,25 @@ namespace DeadLock.Forms
             helpToolStripMenuItem.Text = l.BarItemHelp;
             aboutToolStripMenuItem.Text = l.BarItemAbout;
             exitToolStripMenuItem.Text = l.BarItemExit;
-            
-            // Update manager
-            StringVariables stringVariables = new StringVariables
+        }
+
+        private static Update DeserializeXml(string data)
+        {
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(Update));
+            Update update;
+            using (MemoryStream memoryStream = new MemoryStream())
             {
-                CancelButtonText = l.BtnCancel,
-                DownloadButtonText = l.BtnUpdate,
-                InformationButtonText = l.BtnInformation,
-                NoNewVersionText = l.NoNewVersion,
-                TitleText = "DeadLock",
-                UpdateNowText = l.MsgDownloadNewVersion
-            };
-            _updateManager = new UpdateManager(Assembly.GetExecutingAssembly().GetName().Version, "http://codedead.com/Software/DeadLock/update.xml", stringVariables, DataType.Xml);
+                using (StreamWriter streamWriter = new StreamWriter(memoryStream))
+                {
+                    streamWriter.Write(data);
+                    streamWriter.Flush();
+                    memoryStream.Position = 0L;
+                    update = (Update)xmlSerializer.Deserialize(memoryStream);
+                    update.SetApplicationVersion(Assembly.GetExecutingAssembly().GetName().Version);
+                }
+            }
+
+            return update;
         }
 
         /// <summary>
@@ -186,14 +198,43 @@ namespace DeadLock.Forms
         /// </summary>
         /// <param name="showErrors">Show a message if an error occurs or not.</param>
         /// <param name="showNoUpdates">Show a message if no updates are available.</param>
-        private void Update(bool showErrors, bool showNoUpdates)
+        private async void Update(bool showErrors, bool showNoUpdates)
         {
             try
             {
-                _updateManager.CheckForUpdate(showErrors, showNoUpdates);
+                Language l = LanguageManager.GetLanguage();
+
+                string data =
+                    await new WebClient().DownloadStringTaskAsync(
+                        "https://codedead.com/Software/DeadLock/update.xml");
+                Update update = DeserializeXml(data);
+                if (update.CheckForUpdate())
+                {
+                    if (MessageBoxAdv.Show(l.MsgDownloadNewVersion, "DeadLock", MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Information) != DialogResult.Yes) return;
+                    try
+                    {
+                        Process.Start(update.UpdateUrl);
+                    }
+                    catch (Win32Exception ex)
+                    {
+                        if (!showErrors)
+                            return;
+                        MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    if (!showNoUpdates)
+                        return;
+                    MessageBoxAdv.Show(l.MsgLatestVersionAlreadyInstalled, "DeadLock", MessageBoxButtons.OK,
+                        MessageBoxIcon.Asterisk);
+                }
             }
             catch (Exception ex)
             {
+                if (!showErrors)
+                    return;
                 MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -207,11 +248,6 @@ namespace DeadLock.Forms
             {
                 detailsBarItem.Checked = Properties.Settings.Default.ViewDetails;
                 DetailsChange();
-
-                BorderThickness = Properties.Settings.Default.BorderThickness;
-                MetroColor = Properties.Settings.Default.MetroColor;
-                BorderColor = Properties.Settings.Default.MetroColor;
-                CaptionBarColor = Properties.Settings.Default.MetroColor;
 
                 cmsItems.MetroColor = Properties.Settings.Default.MetroColor;
                 cmsDetails.MetroColor = Properties.Settings.Default.MetroColor;
@@ -275,6 +311,7 @@ namespace DeadLock.Forms
             {
                 if (lv.Text == path) add = false;
             }
+
             if (!add) return;
 
             Language l = LanguageManager.GetLanguage();
@@ -293,6 +330,7 @@ namespace DeadLock.Forms
                 Icon ico = Icon.ExtractAssociatedIcon(path);
                 img = ico?.ToBitmap() ?? Properties.Resources.file;
             }
+
             imgFileIcons.Images.Add(img);
             img.Dispose();
 
@@ -333,6 +371,7 @@ namespace DeadLock.Forms
             {
                 lsvItems.Items[i].ImageIndex--;
             }
+
             lsvItems.SelectedItems[0].Remove();
             imgFileIcons.Images.RemoveAt(iImageIndex);
 
@@ -353,56 +392,66 @@ namespace DeadLock.Forms
 
         private async void unlockToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            if (lsvItems.SelectedItems.Count == 0) return;
-
-            Language l = LanguageManager.GetLanguage();
-            ListViewLocker lvl = (ListViewLocker)lsvItems.SelectedItems[0];
-
-            CancelSelectedTask(lvl);
-            await Task.Run(() =>
-            {
-                while (lvl.IsRunning()) { }
-            });
-
             try
             {
-                SetLoading(lvl, 1);
+                if (lsvItems.SelectedItems.Count == 0) return;
 
-                lvl.SetRunning(true);
-                await lvl.Unlock();
+                Language l = LanguageManager.GetLanguage();
+                ListViewLocker lvl = (ListViewLocker)lsvItems.SelectedItems[0];
 
-                if (!lvl.HasCancelled())
+                CancelSelectedTask(lvl);
+                await Task.Run(() =>
                 {
-                    lvl.SubItems[1].ForeColor = Color.Green;
-                    lvl.SubItems[1].Text = l.MsgSuccessfullyUnlocked;
-                }
-                else
+                    while (lvl.IsRunning())
+                    {
+                    }
+                });
+
+                try
                 {
-                    SetCancelled(lvl);
+                    SetLoading(lvl, 1);
+
+                    lvl.SetRunning(true);
+                    await lvl.Unlock();
+
+                    if (!lvl.HasCancelled())
+                    {
+                        lvl.SubItems[1].ForeColor = Color.Green;
+                        lvl.SubItems[1].Text = l.MsgSuccessfullyUnlocked;
+                    }
+                    else
+                    {
+                        SetCancelled(lvl);
+                    }
                 }
+                catch (Exception ex)
+                {
+                    MessageBoxAdv.Show(ex.Message + Environment.NewLine + ex.StackTrace, "DeadLock",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    lvl.SubItems[1].ForeColor = Color.Red;
+                    lvl.SubItems[1].Text = l.MsgCouldNotUnlock;
+                }
+                finally
+                {
+                    lvl.SetRunning(false);
+                }
+
+                lsvDetails.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+                lsvDetails.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             }
             catch (Exception ex)
             {
-                MessageBoxAdv.Show(ex.Message + Environment.NewLine + ex.StackTrace, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                lvl.SubItems[1].ForeColor = Color.Red;
-                lvl.SubItems[1].Text = l.MsgCouldNotUnlock;
+                MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            finally
-            {
-                lvl.SetRunning(false);
-            }
-
-            lsvDetails.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
-            lsvDetails.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
         }
 
         private void homePageBarItem_Click(object sender, EventArgs e)
         {
             try
             {
-                Process.Start("http://codedead.com/");
+                Process.Start("https://codedead.com/");
             }
-            catch (Exception ex)
+            catch (Win32Exception ex)
             {
                 MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -410,43 +459,52 @@ namespace DeadLock.Forms
 
         private async void copyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (lsvItems.SelectedItems.Count == 0) return;
-
-            ListViewLocker lvl = (ListViewLocker)lsvItems.SelectedItems[0];
-            Language l = LanguageManager.GetLanguage();
-
-            CancelSelectedTask(lvl);
-            await Task.Run(() =>
-            {
-                while (lvl.IsRunning()) { }
-            });
-
             try
             {
-                SetLoading(lvl, 1);
+                if (lsvItems.SelectedItems.Count == 0) return;
 
-                lvl.SetRunning(true);
-                await lvl.Copy();
+                ListViewLocker lvl = (ListViewLocker)lsvItems.SelectedItems[0];
+                Language l = LanguageManager.GetLanguage();
 
-                if (!lvl.HasCancelled())
+                CancelSelectedTask(lvl);
+                await Task.Run(() =>
                 {
-                    lvl.SubItems[1].ForeColor = Color.Green;
-                    lvl.SubItems[1].Text = l.MsgSuccessfullyCopied;
+                    while (lvl.IsRunning())
+                    {
+                    }
+                });
+
+                try
+                {
+                    SetLoading(lvl, 1);
+
+                    lvl.SetRunning(true);
+                    await lvl.Copy();
+
+                    if (!lvl.HasCancelled())
+                    {
+                        lvl.SubItems[1].ForeColor = Color.Green;
+                        lvl.SubItems[1].Text = l.MsgSuccessfullyCopied;
+                    }
+                    else
+                    {
+                        SetCancelled(lvl);
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    SetCancelled(lvl);
+                    MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    lvl.SubItems[1].ForeColor = Color.Red;
+                    lvl.SubItems[1].Text = l.MsgCouldNotCopy;
+                }
+                finally
+                {
+                    lvl.SetRunning(false);
                 }
             }
             catch (Exception ex)
             {
                 MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                lvl.SubItems[1].ForeColor = Color.Red;
-                lvl.SubItems[1].Text = l.MsgCouldNotCopy;
-            }
-            finally
-            {
-                lvl.SetRunning(false);
             }
         }
 
@@ -461,7 +519,8 @@ namespace DeadLock.Forms
                     WindowsPrincipal principal = new WindowsPrincipal(identity);
                     if (!principal.IsInRole(WindowsBuiltInRole.Administrator))
                     {
-                        MessageBoxAdv.Show(l.MsgAdministrator, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBoxAdv.Show(l.MsgAdministrator, "DeadLock", MessageBoxButtons.OK,
+                            MessageBoxIcon.Exclamation);
                     }
                 }
 
@@ -469,9 +528,12 @@ namespace DeadLock.Forms
                 {
                     Update(false, false);
                 }
-                Visible = !Properties.Settings.Default.StartMinimized;
 
-                if (_args.Length == 0) return;
+                if (Properties.Settings.Default.StartMinimized)
+                {
+                    Visible = false;
+                }
+
                 foreach (string s in _args)
                 {
                     OpenPath(s);
@@ -505,7 +567,9 @@ namespace DeadLock.Forms
             CancelSelectedTask(lvl);
             await Task.Run(() =>
             {
-                while (lvl.IsRunning()) { }
+                while (lvl.IsRunning())
+                {
+                }
             });
 
             try
@@ -547,7 +611,9 @@ namespace DeadLock.Forms
             CancelSelectedTask(lvl);
             await Task.Run(() =>
             {
-                while (lvl.IsRunning()) { }
+                while (lvl.IsRunning())
+                {
+                }
             });
 
             try
@@ -604,7 +670,9 @@ namespace DeadLock.Forms
                 CancelSelectedTask(lvl);
                 await Task.Run(() =>
                 {
-                    while (lvl.IsRunning()) { }
+                    while (lvl.IsRunning())
+                    {
+                    }
                 });
                 lvl.SetLocker(new List<ProcessLocker>());
 
@@ -633,6 +701,7 @@ namespace DeadLock.Forms
                         lvl.SubItems[1].Text = l.MsgLocked;
                         lvl.SubItems[1].ForeColor = Color.Red;
                     }
+
                     lvl.SubItems[2].Text = lvl.HasOwnership() ? l.BarItemOwnershipTrue : l.BarItemOwnershipFalse;
 
                     foreach (ProcessLocker p in lockers)
@@ -643,6 +712,7 @@ namespace DeadLock.Forms
 
                         lsvDetails.Items.Add(lvi);
                     }
+
                     lvl.SetLocker(lockers);
 
                     lsvDetails.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
@@ -686,6 +756,7 @@ namespace DeadLock.Forms
                 ListViewLocker lvl = (ListViewLocker)lvi;
                 lvl.CancelTask();
             }
+
             lsvItems.Items.Clear();
             lsvDetails.Items.Clear();
             imgFileIcons.Images.Clear();
@@ -706,6 +777,7 @@ namespace DeadLock.Forms
                 splItems.Panel2.Hide();
                 splItems.FixedPanel = FixedPanel.Panel1;
             }
+
             splItems.Panel2Collapsed = !detailsBarItem.Checked;
             splItems.IsSplitterFixed = !detailsBarItem.Checked;
         }
@@ -759,7 +831,8 @@ namespace DeadLock.Forms
             if (File.GetAttributes(lsvItems.SelectedItems[0].Text).HasFlag(FileAttributes.Directory)) return;
             try
             {
-                Process.Start("https://www.virustotal.com/en/file/" + GetSha256FromFile(lsvItems.SelectedItems[0].Text) + "/analysis/");
+                Process.Start("https://www.virustotal.com/en/file/" +
+                              GetSha256FromFile(lsvItems.SelectedItems[0].Text) + "/analysis/");
             }
             catch (Exception ex)
             {
@@ -783,6 +856,7 @@ namespace DeadLock.Forms
                     {
                         sb.Append(t.ToString("x2"));
                     }
+
                     return sb.ToString();
                 }
             }
@@ -793,7 +867,8 @@ namespace DeadLock.Forms
             if (lsvDetails.SelectedItems.Count == 0) return;
             try
             {
-                Process.Start("https://www.virustotal.com/en/file/" + GetSha256FromFile(lsvDetails.SelectedItems[0].SubItems[1].Text) + "/analysis/");
+                Process.Start("https://www.virustotal.com/en/file/" +
+                              GetSha256FromFile(lsvDetails.SelectedItems[0].SubItems[1].Text) + "/analysis/");
             }
             catch (Exception ex)
             {
@@ -821,7 +896,9 @@ namespace DeadLock.Forms
                 {
                     Process.GetProcessById(Convert.ToInt32(l.SubItems[2].Text)).Kill();
                 }
-                MessageBoxAdv.Show(lang.MsgSuccessfullyKilled, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                MessageBoxAdv.Show(lang.MsgSuccessfullyKilled, "DeadLock", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -889,7 +966,9 @@ namespace DeadLock.Forms
         private void SetOwnership(ListViewLocker lvi, bool ownership)
         {
             lvi.SetOwnership(ownership);
-            lvi.SubItems[2].Text = lvi.HasOwnership() ? LanguageManager.GetLanguage().BarItemOwnershipTrue : LanguageManager.GetLanguage().BarItemOwnershipFalse;
+            lvi.SubItems[2].Text = lvi.HasOwnership()
+                ? LanguageManager.GetLanguage().BarItemOwnershipTrue
+                : LanguageManager.GetLanguage().BarItemOwnershipFalse;
         }
 
         private void FrmMain_DragEnter(object sender, DragEventArgs e)

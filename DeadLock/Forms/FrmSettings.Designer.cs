@@ -36,41 +36,14 @@ namespace DeadLock.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection1 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection1 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer1 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
             Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection1 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
-            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection2 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection2 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer2 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
             Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection2 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
-            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection3 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection3 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer3 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
             Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection3 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
-            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection4 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection4 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer4 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
             Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection4 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
-            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection5 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection5 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer5 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
             Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection5 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
-            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection6 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection6 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer6 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
             Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection6 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
-            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection7 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection7 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer7 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
             Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection7 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
-            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection8 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection8 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer8 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
             Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection8 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
-            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection9 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection9 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer9 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
             Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection9 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSettings));
             this.pnlSettings = new System.Windows.Forms.Panel();
@@ -93,8 +66,6 @@ namespace DeadLock.Forms
             this.lblDetails = new System.Windows.Forms.Label();
             this.tbtnFormSize = new Syncfusion.Windows.Forms.Tools.ToggleButton();
             this.lblFormSize = new System.Windows.Forms.Label();
-            this.itxtBorderThickness = new Syncfusion.Windows.Forms.Tools.IntegerTextBox();
-            this.lblBorderThickness = new System.Windows.Forms.Label();
             this.cpbThemeStyle = new Syncfusion.Windows.Forms.ColorPickerButton();
             this.lblThemeStyle = new System.Windows.Forms.Label();
             this.tpaAdvanced = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
@@ -120,7 +91,6 @@ namespace DeadLock.Forms
             ((System.ComponentModel.ISupportInitialize)(this.txtLanguagePath)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbtnDetails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbtnFormSize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itxtBorderThickness)).BeginInit();
             this.tpaAdvanced.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbtnOwnership)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbtnWindowsExplorerIntegration)).BeginInit();
@@ -132,19 +102,17 @@ namespace DeadLock.Forms
             this.pnlSettings.BackColor = System.Drawing.Color.Transparent;
             this.pnlSettings.Controls.Add(this.tbcPanels);
             this.pnlSettings.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSettings.Location = new System.Drawing.Point(0, 0);
+            this.pnlSettings.Location = new System.Drawing.Point(2, 2);
+            this.pnlSettings.Margin = new System.Windows.Forms.Padding(4);
             this.pnlSettings.Name = "pnlSettings";
-            this.pnlSettings.Size = new System.Drawing.Size(403, 224);
+            this.pnlSettings.Size = new System.Drawing.Size(535, 276);
             this.pnlSettings.TabIndex = 0;
             // 
             // tbcPanels
             // 
             this.tbcPanels.ActiveTabColor = System.Drawing.Color.SteelBlue;
-            this.tbcPanels.BeforeTouchSize = new System.Drawing.Size(403, 224);
+            this.tbcPanels.BeforeTouchSize = new System.Drawing.Size(535, 276);
             this.tbcPanels.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbcPanels.CloseButtonForeColor = System.Drawing.Color.White;
-            this.tbcPanels.CloseButtonHoverForeColor = System.Drawing.Color.White;
-            this.tbcPanels.CloseButtonPressedForeColor = System.Drawing.Color.White;
             this.tbcPanels.Controls.Add(this.tpaGeneral);
             this.tbcPanels.Controls.Add(this.tpaAppearance);
             this.tbcPanels.Controls.Add(this.tpaAdvanced);
@@ -154,13 +122,15 @@ namespace DeadLock.Forms
             this.tbcPanels.HotTrack = true;
             this.tbcPanels.LevelTextAndImage = true;
             this.tbcPanels.Location = new System.Drawing.Point(0, 0);
+            this.tbcPanels.Margin = new System.Windows.Forms.Padding(4);
             this.tbcPanels.Name = "tbcPanels";
             this.tbcPanels.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Managed;
             this.tbcPanels.Office2010ColorTheme = Syncfusion.Windows.Forms.Office2010Theme.Managed;
-            this.tbcPanels.Size = new System.Drawing.Size(403, 224);
+            this.tbcPanels.Size = new System.Drawing.Size(535, 276);
             this.tbcPanels.SizeMode = Syncfusion.Windows.Forms.Tools.TabSizeMode.FillToRight;
             this.tbcPanels.TabIndex = 0;
             this.tbcPanels.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
+            this.tbcPanels.ThemeName = "TabRendererMetro";
             this.tbcPanels.ThemesEnabled = true;
             // 
             // tpaGeneral
@@ -179,9 +149,10 @@ namespace DeadLock.Forms
             this.tpaGeneral.Image = global::DeadLock.Properties.Resources.settings;
             this.tpaGeneral.ImageSize = new System.Drawing.Size(16, 16);
             this.tpaGeneral.Location = new System.Drawing.Point(3, 27);
+            this.tpaGeneral.Margin = new System.Windows.Forms.Padding(4);
             this.tpaGeneral.Name = "tpaGeneral";
             this.tpaGeneral.ShowCloseButton = false;
-            this.tpaGeneral.Size = new System.Drawing.Size(397, 194);
+            this.tpaGeneral.Size = new System.Drawing.Size(529, 246);
             this.tpaGeneral.TabBackColor = System.Drawing.Color.Transparent;
             this.tpaGeneral.TabIndex = 1;
             this.tpaGeneral.Text = "General";
@@ -189,16 +160,13 @@ namespace DeadLock.Forms
             // 
             // tbtnAdminWarning
             // 
-            this.tbtnAdminWarning.ActiveState = activeStateCollection1;
             this.tbtnAdminWarning.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbtnAdminWarning.ForeColor = System.Drawing.Color.Black;
-            inactiveStateCollection1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.tbtnAdminWarning.InactiveState = inactiveStateCollection1;
-            this.tbtnAdminWarning.Location = new System.Drawing.Point(268, 125);
-            this.tbtnAdminWarning.MinimumSize = new System.Drawing.Size(52, 20);
+            this.tbtnAdminWarning.Location = new System.Drawing.Point(357, 154);
+            this.tbtnAdminWarning.Margin = new System.Windows.Forms.Padding(4);
+            this.tbtnAdminWarning.MinimumSize = new System.Drawing.Size(69, 25);
             this.tbtnAdminWarning.Name = "tbtnAdminWarning";
-            this.tbtnAdminWarning.Renderer = toggleButtonRenderer1;
-            this.tbtnAdminWarning.Size = new System.Drawing.Size(100, 20);
+            this.tbtnAdminWarning.Size = new System.Drawing.Size(133, 25);
             this.tbtnAdminWarning.Slider = sliderCollection1;
             this.tbtnAdminWarning.TabIndex = 7;
             // 
@@ -206,24 +174,22 @@ namespace DeadLock.Forms
             // 
             this.lblAdminWarning.AutoSize = true;
             this.lblAdminWarning.BackColor = System.Drawing.Color.Transparent;
-            this.lblAdminWarning.Location = new System.Drawing.Point(27, 132);
+            this.lblAdminWarning.Location = new System.Drawing.Point(36, 162);
+            this.lblAdminWarning.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAdminWarning.Name = "lblAdminWarning";
-            this.lblAdminWarning.Size = new System.Drawing.Size(139, 13);
+            this.lblAdminWarning.Size = new System.Drawing.Size(172, 16);
             this.lblAdminWarning.TabIndex = 6;
             this.lblAdminWarning.Text = "Show administrator warning:";
             // 
             // tbtnStartMinimized
             // 
-            this.tbtnStartMinimized.ActiveState = activeStateCollection2;
             this.tbtnStartMinimized.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbtnStartMinimized.ForeColor = System.Drawing.Color.Black;
-            inactiveStateCollection2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.tbtnStartMinimized.InactiveState = inactiveStateCollection2;
-            this.tbtnStartMinimized.Location = new System.Drawing.Point(268, 99);
-            this.tbtnStartMinimized.MinimumSize = new System.Drawing.Size(52, 20);
+            this.tbtnStartMinimized.Location = new System.Drawing.Point(357, 122);
+            this.tbtnStartMinimized.Margin = new System.Windows.Forms.Padding(4);
+            this.tbtnStartMinimized.MinimumSize = new System.Drawing.Size(69, 25);
             this.tbtnStartMinimized.Name = "tbtnStartMinimized";
-            this.tbtnStartMinimized.Renderer = toggleButtonRenderer2;
-            this.tbtnStartMinimized.Size = new System.Drawing.Size(100, 20);
+            this.tbtnStartMinimized.Size = new System.Drawing.Size(133, 25);
             this.tbtnStartMinimized.Slider = sliderCollection2;
             this.tbtnStartMinimized.TabIndex = 5;
             this.tbtnStartMinimized.Text = "toggleButton1";
@@ -232,24 +198,22 @@ namespace DeadLock.Forms
             // 
             this.lblMinimized.AutoSize = true;
             this.lblMinimized.BackColor = System.Drawing.Color.Transparent;
-            this.lblMinimized.Location = new System.Drawing.Point(27, 106);
+            this.lblMinimized.Location = new System.Drawing.Point(36, 130);
+            this.lblMinimized.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMinimized.Name = "lblMinimized";
-            this.lblMinimized.Size = new System.Drawing.Size(80, 13);
+            this.lblMinimized.Size = new System.Drawing.Size(100, 16);
             this.lblMinimized.TabIndex = 4;
             this.lblMinimized.Text = "Start minimized:";
             // 
             // tbtnNotifyIcon
             // 
-            this.tbtnNotifyIcon.ActiveState = activeStateCollection3;
             this.tbtnNotifyIcon.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbtnNotifyIcon.ForeColor = System.Drawing.Color.Black;
-            inactiveStateCollection3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.tbtnNotifyIcon.InactiveState = inactiveStateCollection3;
-            this.tbtnNotifyIcon.Location = new System.Drawing.Point(268, 73);
-            this.tbtnNotifyIcon.MinimumSize = new System.Drawing.Size(52, 20);
+            this.tbtnNotifyIcon.Location = new System.Drawing.Point(357, 90);
+            this.tbtnNotifyIcon.Margin = new System.Windows.Forms.Padding(4);
+            this.tbtnNotifyIcon.MinimumSize = new System.Drawing.Size(69, 25);
             this.tbtnNotifyIcon.Name = "tbtnNotifyIcon";
-            this.tbtnNotifyIcon.Renderer = toggleButtonRenderer3;
-            this.tbtnNotifyIcon.Size = new System.Drawing.Size(100, 20);
+            this.tbtnNotifyIcon.Size = new System.Drawing.Size(133, 25);
             this.tbtnNotifyIcon.Slider = sliderCollection3;
             this.tbtnNotifyIcon.TabIndex = 3;
             // 
@@ -257,24 +221,22 @@ namespace DeadLock.Forms
             // 
             this.lblNotifyIcon.AutoSize = true;
             this.lblNotifyIcon.BackColor = System.Drawing.Color.Transparent;
-            this.lblNotifyIcon.Location = new System.Drawing.Point(27, 80);
+            this.lblNotifyIcon.Location = new System.Drawing.Point(36, 98);
+            this.lblNotifyIcon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNotifyIcon.Name = "lblNotifyIcon";
-            this.lblNotifyIcon.Size = new System.Drawing.Size(88, 13);
+            this.lblNotifyIcon.Size = new System.Drawing.Size(105, 16);
             this.lblNotifyIcon.TabIndex = 2;
             this.lblNotifyIcon.Text = "Show notify icon:";
             // 
             // tbtnAutoUpdate
             // 
-            this.tbtnAutoUpdate.ActiveState = activeStateCollection4;
             this.tbtnAutoUpdate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbtnAutoUpdate.ForeColor = System.Drawing.Color.Black;
-            inactiveStateCollection4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.tbtnAutoUpdate.InactiveState = inactiveStateCollection4;
-            this.tbtnAutoUpdate.Location = new System.Drawing.Point(268, 47);
-            this.tbtnAutoUpdate.MinimumSize = new System.Drawing.Size(52, 20);
+            this.tbtnAutoUpdate.Location = new System.Drawing.Point(357, 58);
+            this.tbtnAutoUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.tbtnAutoUpdate.MinimumSize = new System.Drawing.Size(69, 25);
             this.tbtnAutoUpdate.Name = "tbtnAutoUpdate";
-            this.tbtnAutoUpdate.Renderer = toggleButtonRenderer4;
-            this.tbtnAutoUpdate.Size = new System.Drawing.Size(100, 20);
+            this.tbtnAutoUpdate.Size = new System.Drawing.Size(133, 25);
             this.tbtnAutoUpdate.Slider = sliderCollection4;
             this.tbtnAutoUpdate.TabIndex = 1;
             // 
@@ -282,9 +244,10 @@ namespace DeadLock.Forms
             // 
             this.lblAutoUpdate.AutoSize = true;
             this.lblAutoUpdate.BackColor = System.Drawing.Color.Transparent;
-            this.lblAutoUpdate.Location = new System.Drawing.Point(27, 54);
+            this.lblAutoUpdate.Location = new System.Drawing.Point(36, 66);
+            this.lblAutoUpdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAutoUpdate.Name = "lblAutoUpdate";
-            this.lblAutoUpdate.Size = new System.Drawing.Size(161, 13);
+            this.lblAutoUpdate.Size = new System.Drawing.Size(199, 16);
             this.lblAutoUpdate.TabIndex = 0;
             this.lblAutoUpdate.Text = "Automatically check for updates:";
             // 
@@ -301,16 +264,15 @@ namespace DeadLock.Forms
             this.tpaAppearance.Controls.Add(this.lblDetails);
             this.tpaAppearance.Controls.Add(this.tbtnFormSize);
             this.tpaAppearance.Controls.Add(this.lblFormSize);
-            this.tpaAppearance.Controls.Add(this.itxtBorderThickness);
-            this.tpaAppearance.Controls.Add(this.lblBorderThickness);
             this.tpaAppearance.Controls.Add(this.cpbThemeStyle);
             this.tpaAppearance.Controls.Add(this.lblThemeStyle);
             this.tpaAppearance.Image = global::DeadLock.Properties.Resources.autosize;
             this.tpaAppearance.ImageSize = new System.Drawing.Size(16, 16);
             this.tpaAppearance.Location = new System.Drawing.Point(3, 27);
+            this.tpaAppearance.Margin = new System.Windows.Forms.Padding(4);
             this.tpaAppearance.Name = "tpaAppearance";
             this.tpaAppearance.ShowCloseButton = false;
-            this.tpaAppearance.Size = new System.Drawing.Size(397, 194);
+            this.tpaAppearance.Size = new System.Drawing.Size(529, 246);
             this.tpaAppearance.TabIndex = 2;
             this.tpaAppearance.Text = "Appearance";
             this.tpaAppearance.ThemesEnabled = false;
@@ -318,9 +280,9 @@ namespace DeadLock.Forms
             // cboLanguage
             // 
             this.cboLanguage.BackColor = System.Drawing.Color.White;
-            this.cboLanguage.BeforeTouchSize = new System.Drawing.Size(100, 19);
             this.cboLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboLanguage.Height = 23;
             this.cboLanguage.Items.AddRange(new object[] {
             "Dutch",
             "English",
@@ -335,13 +297,14 @@ namespace DeadLock.Forms
             "Swedish",
             "Turkish",
             "Custom"});
-            this.cboLanguage.Location = new System.Drawing.Point(240, 126);
-            this.cboLanguage.MetroColor = System.Drawing.Color.SteelBlue;
+            this.cboLanguage.Location = new System.Drawing.Point(320, 125);
+            this.cboLanguage.Margin = new System.Windows.Forms.Padding(4);
             this.cboLanguage.Name = "cboLanguage";
-            this.cboLanguage.Size = new System.Drawing.Size(100, 19);
-            this.cboLanguage.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
+            this.cboLanguage.Size = new System.Drawing.Size(133, 23);
             this.cboLanguage.TabIndex = 9;
             this.cboLanguage.Text = "Dutch";
+            this.cboLanguage.TextBoxHeight = 23;
+            this.cboLanguage.ThemeName = "Metro";
             this.cboLanguage.UseMetroButtonColor = true;
             this.cboLanguage.UseMetroColorsInActiveMode = true;
             // 
@@ -349,55 +312,54 @@ namespace DeadLock.Forms
             // 
             this.btnSelectPath.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
             this.btnSelectPath.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnSelectPath.BeforeTouchSize = new System.Drawing.Size(41, 20);
+            this.btnSelectPath.BeforeTouchSize = new System.Drawing.Size(61, 22);
             this.btnSelectPath.ForeColor = System.Drawing.Color.White;
-            this.btnSelectPath.IsBackStageButton = false;
-            this.btnSelectPath.Location = new System.Drawing.Point(346, 153);
-            this.btnSelectPath.MetroColor = System.Drawing.Color.SteelBlue;
+            this.btnSelectPath.Location = new System.Drawing.Point(461, 156);
+            this.btnSelectPath.Margin = new System.Windows.Forms.Padding(4);
             this.btnSelectPath.Name = "btnSelectPath";
-            this.btnSelectPath.Size = new System.Drawing.Size(41, 20);
+            this.btnSelectPath.Size = new System.Drawing.Size(61, 22);
             this.btnSelectPath.TabIndex = 11;
             this.btnSelectPath.Text = "...";
+            this.btnSelectPath.ThemeName = "Metro";
             this.btnSelectPath.UseVisualStyle = true;
             this.btnSelectPath.Click += new System.EventHandler(this.btnSelectPath_Click);
             // 
             // txtLanguagePath
             // 
             this.txtLanguagePath.BackColor = System.Drawing.Color.White;
-            this.txtLanguagePath.BeforeTouchSize = new System.Drawing.Size(305, 20);
+            this.txtLanguagePath.BeforeTouchSize = new System.Drawing.Size(133, 22);
             this.txtLanguagePath.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtLanguagePath.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLanguagePath.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtLanguagePath.Location = new System.Drawing.Point(240, 153);
-            this.txtLanguagePath.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtLanguagePath.Location = new System.Drawing.Point(320, 156);
+            this.txtLanguagePath.Margin = new System.Windows.Forms.Padding(4);
             this.txtLanguagePath.Name = "txtLanguagePath";
             this.txtLanguagePath.ReadOnly = true;
-            this.txtLanguagePath.Size = new System.Drawing.Size(100, 20);
+            this.txtLanguagePath.Size = new System.Drawing.Size(133, 22);
             this.txtLanguagePath.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Metro;
             this.txtLanguagePath.TabIndex = 10;
+            this.txtLanguagePath.ThemeName = "Metro";
             this.txtLanguagePath.DoubleClick += new System.EventHandler(this.btnSelectPath_Click);
             // 
             // lblLanguage
             // 
             this.lblLanguage.AutoSize = true;
-            this.lblLanguage.Location = new System.Drawing.Point(54, 134);
+            this.lblLanguage.Location = new System.Drawing.Point(72, 131);
+            this.lblLanguage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLanguage.Name = "lblLanguage";
-            this.lblLanguage.Size = new System.Drawing.Size(58, 13);
+            this.lblLanguage.Size = new System.Drawing.Size(71, 16);
             this.lblLanguage.TabIndex = 8;
             this.lblLanguage.Text = "Language:";
             // 
             // tbtnDetails
             // 
-            this.tbtnDetails.ActiveState = activeStateCollection5;
             this.tbtnDetails.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbtnDetails.ForeColor = System.Drawing.Color.Black;
-            inactiveStateCollection5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.tbtnDetails.InactiveState = inactiveStateCollection5;
-            this.tbtnDetails.Location = new System.Drawing.Point(240, 100);
-            this.tbtnDetails.MinimumSize = new System.Drawing.Size(52, 20);
+            this.tbtnDetails.Location = new System.Drawing.Point(320, 92);
+            this.tbtnDetails.Margin = new System.Windows.Forms.Padding(4);
+            this.tbtnDetails.MinimumSize = new System.Drawing.Size(69, 25);
             this.tbtnDetails.Name = "tbtnDetails";
-            this.tbtnDetails.Renderer = toggleButtonRenderer5;
-            this.tbtnDetails.Size = new System.Drawing.Size(100, 20);
+            this.tbtnDetails.Size = new System.Drawing.Size(133, 25);
             this.tbtnDetails.Slider = sliderCollection5;
             this.tbtnDetails.TabIndex = 7;
             // 
@@ -405,24 +367,22 @@ namespace DeadLock.Forms
             // 
             this.lblDetails.AutoSize = true;
             this.lblDetails.BackColor = System.Drawing.Color.Transparent;
-            this.lblDetails.Location = new System.Drawing.Point(54, 107);
+            this.lblDetails.Location = new System.Drawing.Point(72, 100);
+            this.lblDetails.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDetails.Name = "lblDetails";
-            this.lblDetails.Size = new System.Drawing.Size(70, 13);
+            this.lblDetails.Size = new System.Drawing.Size(86, 16);
             this.lblDetails.TabIndex = 6;
             this.lblDetails.Text = "Show details:";
             // 
             // tbtnFormSize
             // 
-            this.tbtnFormSize.ActiveState = activeStateCollection6;
             this.tbtnFormSize.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbtnFormSize.ForeColor = System.Drawing.Color.Black;
-            inactiveStateCollection6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.tbtnFormSize.InactiveState = inactiveStateCollection6;
-            this.tbtnFormSize.Location = new System.Drawing.Point(240, 74);
-            this.tbtnFormSize.MinimumSize = new System.Drawing.Size(52, 20);
+            this.tbtnFormSize.Location = new System.Drawing.Point(320, 59);
+            this.tbtnFormSize.Margin = new System.Windows.Forms.Padding(4);
+            this.tbtnFormSize.MinimumSize = new System.Drawing.Size(69, 25);
             this.tbtnFormSize.Name = "tbtnFormSize";
-            this.tbtnFormSize.Renderer = toggleButtonRenderer6;
-            this.tbtnFormSize.Size = new System.Drawing.Size(100, 20);
+            this.tbtnFormSize.Size = new System.Drawing.Size(133, 25);
             this.tbtnFormSize.Slider = sliderCollection6;
             this.tbtnFormSize.TabIndex = 5;
             // 
@@ -430,55 +390,28 @@ namespace DeadLock.Forms
             // 
             this.lblFormSize.AutoSize = true;
             this.lblFormSize.BackColor = System.Drawing.Color.Transparent;
-            this.lblFormSize.Location = new System.Drawing.Point(54, 81);
+            this.lblFormSize.Location = new System.Drawing.Point(72, 67);
+            this.lblFormSize.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFormSize.Name = "lblFormSize";
-            this.lblFormSize.Size = new System.Drawing.Size(105, 13);
+            this.lblFormSize.Size = new System.Drawing.Size(134, 16);
             this.lblFormSize.TabIndex = 4;
             this.lblFormSize.Text = "Remember form size:";
             // 
-            // itxtBorderThickness
-            // 
-            this.itxtBorderThickness.BackGroundColor = System.Drawing.SystemColors.Window;
-            this.itxtBorderThickness.BeforeTouchSize = new System.Drawing.Size(305, 20);
-            this.itxtBorderThickness.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.itxtBorderThickness.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.itxtBorderThickness.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.itxtBorderThickness.IntegerValue = ((long)(1));
-            this.itxtBorderThickness.Location = new System.Drawing.Point(240, 48);
-            this.itxtBorderThickness.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.itxtBorderThickness.MinValue = ((long)(1));
-            this.itxtBorderThickness.Name = "itxtBorderThickness";
-            this.itxtBorderThickness.NullString = "";
-            this.itxtBorderThickness.Size = new System.Drawing.Size(100, 20);
-            this.itxtBorderThickness.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Metro;
-            this.itxtBorderThickness.TabIndex = 3;
-            this.itxtBorderThickness.Text = "1";
-            // 
-            // lblBorderThickness
-            // 
-            this.lblBorderThickness.AutoSize = true;
-            this.lblBorderThickness.BackColor = System.Drawing.Color.Transparent;
-            this.lblBorderThickness.Location = new System.Drawing.Point(54, 55);
-            this.lblBorderThickness.Name = "lblBorderThickness";
-            this.lblBorderThickness.Size = new System.Drawing.Size(89, 13);
-            this.lblBorderThickness.TabIndex = 2;
-            this.lblBorderThickness.Text = "Border thickness:";
-            // 
             // cpbThemeStyle
             // 
+            this.cpbThemeStyle.AccessibilityEnabled = true;
             this.cpbThemeStyle.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
-            this.cpbThemeStyle.BeforeTouchSize = new System.Drawing.Size(100, 23);
-            this.cpbThemeStyle.ColorUISize = new System.Drawing.Size(208, 230);
+            this.cpbThemeStyle.BeforeTouchSize = new System.Drawing.Size(133, 28);
             this.cpbThemeStyle.ForeColor = System.Drawing.Color.White;
-            this.cpbThemeStyle.IsBackStageButton = false;
-            this.cpbThemeStyle.Location = new System.Drawing.Point(240, 19);
-            this.cpbThemeStyle.MetroColor = System.Drawing.Color.SteelBlue;
+            this.cpbThemeStyle.Location = new System.Drawing.Point(320, 23);
+            this.cpbThemeStyle.Margin = new System.Windows.Forms.Padding(4);
             this.cpbThemeStyle.Name = "cpbThemeStyle";
             this.cpbThemeStyle.SelectedAsBackcolor = true;
             this.cpbThemeStyle.SelectedAsText = true;
-            this.cpbThemeStyle.Size = new System.Drawing.Size(100, 23);
+            this.cpbThemeStyle.Size = new System.Drawing.Size(133, 28);
             this.cpbThemeStyle.TabIndex = 1;
             this.cpbThemeStyle.Text = "0";
+            this.cpbThemeStyle.ThemeName = "Metro";
             this.cpbThemeStyle.UseVisualStyle = true;
             this.cpbThemeStyle.UseVisualStyleBackColor = false;
             // 
@@ -486,9 +419,10 @@ namespace DeadLock.Forms
             // 
             this.lblThemeStyle.AutoSize = true;
             this.lblThemeStyle.BackColor = System.Drawing.Color.Transparent;
-            this.lblThemeStyle.Location = new System.Drawing.Point(54, 29);
+            this.lblThemeStyle.Location = new System.Drawing.Point(72, 36);
+            this.lblThemeStyle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblThemeStyle.Name = "lblThemeStyle";
-            this.lblThemeStyle.Size = new System.Drawing.Size(67, 13);
+            this.lblThemeStyle.Size = new System.Drawing.Size(84, 16);
             this.lblThemeStyle.TabIndex = 0;
             this.lblThemeStyle.Text = "Theme style:";
             // 
@@ -506,73 +440,67 @@ namespace DeadLock.Forms
             this.tpaAdvanced.Image = global::DeadLock.Properties.Resources.advancedsettings;
             this.tpaAdvanced.ImageSize = new System.Drawing.Size(16, 16);
             this.tpaAdvanced.Location = new System.Drawing.Point(3, 27);
+            this.tpaAdvanced.Margin = new System.Windows.Forms.Padding(4);
             this.tpaAdvanced.Name = "tpaAdvanced";
             this.tpaAdvanced.ShowCloseButton = false;
-            this.tpaAdvanced.Size = new System.Drawing.Size(397, 194);
+            this.tpaAdvanced.Size = new System.Drawing.Size(529, 246);
             this.tpaAdvanced.TabIndex = 3;
             this.tpaAdvanced.Text = "Advanced";
             this.tpaAdvanced.ThemesEnabled = false;
             // 
             // tbtnOwnership
             // 
-            this.tbtnOwnership.ActiveState = activeStateCollection7;
             this.tbtnOwnership.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbtnOwnership.ForeColor = System.Drawing.Color.Black;
-            inactiveStateCollection7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.tbtnOwnership.InactiveState = inactiveStateCollection7;
-            this.tbtnOwnership.Location = new System.Drawing.Point(262, 112);
-            this.tbtnOwnership.MinimumSize = new System.Drawing.Size(52, 20);
+            this.tbtnOwnership.Location = new System.Drawing.Point(349, 138);
+            this.tbtnOwnership.Margin = new System.Windows.Forms.Padding(4);
+            this.tbtnOwnership.MinimumSize = new System.Drawing.Size(69, 25);
             this.tbtnOwnership.Name = "tbtnOwnership";
-            this.tbtnOwnership.Renderer = toggleButtonRenderer7;
-            this.tbtnOwnership.Size = new System.Drawing.Size(90, 20);
+            this.tbtnOwnership.Size = new System.Drawing.Size(120, 25);
             this.tbtnOwnership.Slider = sliderCollection7;
             this.tbtnOwnership.TabIndex = 5;
             // 
             // lblOwnership
             // 
             this.lblOwnership.AutoSize = true;
-            this.lblOwnership.Location = new System.Drawing.Point(42, 119);
+            this.lblOwnership.Location = new System.Drawing.Point(56, 146);
+            this.lblOwnership.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOwnership.Name = "lblOwnership";
-            this.lblOwnership.Size = new System.Drawing.Size(86, 13);
+            this.lblOwnership.Size = new System.Drawing.Size(106, 16);
             this.lblOwnership.TabIndex = 4;
             this.lblOwnership.Text = "Take ownership:";
             // 
             // tbtnWindowsExplorerIntegration
             // 
-            this.tbtnWindowsExplorerIntegration.ActiveState = activeStateCollection8;
             this.tbtnWindowsExplorerIntegration.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbtnWindowsExplorerIntegration.ForeColor = System.Drawing.Color.Black;
-            inactiveStateCollection8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.tbtnWindowsExplorerIntegration.InactiveState = inactiveStateCollection8;
-            this.tbtnWindowsExplorerIntegration.Location = new System.Drawing.Point(262, 86);
-            this.tbtnWindowsExplorerIntegration.MinimumSize = new System.Drawing.Size(52, 20);
+            this.tbtnWindowsExplorerIntegration.Location = new System.Drawing.Point(349, 106);
+            this.tbtnWindowsExplorerIntegration.Margin = new System.Windows.Forms.Padding(4);
+            this.tbtnWindowsExplorerIntegration.MinimumSize = new System.Drawing.Size(69, 25);
             this.tbtnWindowsExplorerIntegration.Name = "tbtnWindowsExplorerIntegration";
-            this.tbtnWindowsExplorerIntegration.Renderer = toggleButtonRenderer8;
-            this.tbtnWindowsExplorerIntegration.Size = new System.Drawing.Size(90, 20);
+            this.tbtnWindowsExplorerIntegration.Size = new System.Drawing.Size(120, 25);
             this.tbtnWindowsExplorerIntegration.Slider = sliderCollection8;
             this.tbtnWindowsExplorerIntegration.TabIndex = 3;
             // 
             // lblWindowsExplorerIntegration
             // 
             this.lblWindowsExplorerIntegration.AutoSize = true;
-            this.lblWindowsExplorerIntegration.Location = new System.Drawing.Point(42, 93);
+            this.lblWindowsExplorerIntegration.Location = new System.Drawing.Point(56, 114);
+            this.lblWindowsExplorerIntegration.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWindowsExplorerIntegration.Name = "lblWindowsExplorerIntegration";
-            this.lblWindowsExplorerIntegration.Size = new System.Drawing.Size(147, 13);
+            this.lblWindowsExplorerIntegration.Size = new System.Drawing.Size(183, 16);
             this.lblWindowsExplorerIntegration.TabIndex = 2;
             this.lblWindowsExplorerIntegration.Text = "Windows Explorer integration:";
             // 
             // tbtnAutoRun
             // 
-            this.tbtnAutoRun.ActiveState = activeStateCollection9;
             this.tbtnAutoRun.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbtnAutoRun.ForeColor = System.Drawing.Color.Black;
-            inactiveStateCollection9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.tbtnAutoRun.InactiveState = inactiveStateCollection9;
-            this.tbtnAutoRun.Location = new System.Drawing.Point(262, 60);
-            this.tbtnAutoRun.MinimumSize = new System.Drawing.Size(52, 20);
+            this.tbtnAutoRun.Location = new System.Drawing.Point(349, 74);
+            this.tbtnAutoRun.Margin = new System.Windows.Forms.Padding(4);
+            this.tbtnAutoRun.MinimumSize = new System.Drawing.Size(69, 25);
             this.tbtnAutoRun.Name = "tbtnAutoRun";
-            this.tbtnAutoRun.Renderer = toggleButtonRenderer9;
-            this.tbtnAutoRun.Size = new System.Drawing.Size(90, 20);
+            this.tbtnAutoRun.Size = new System.Drawing.Size(120, 25);
             this.tbtnAutoRun.Slider = sliderCollection9;
             this.tbtnAutoRun.TabIndex = 1;
             // 
@@ -580,9 +508,10 @@ namespace DeadLock.Forms
             // 
             this.lblAutorun.AutoSize = true;
             this.lblAutorun.BackColor = System.Drawing.Color.Transparent;
-            this.lblAutorun.Location = new System.Drawing.Point(42, 67);
+            this.lblAutorun.Location = new System.Drawing.Point(56, 82);
+            this.lblAutorun.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAutorun.Name = "lblAutorun";
-            this.lblAutorun.Size = new System.Drawing.Size(147, 13);
+            this.lblAutorun.Size = new System.Drawing.Size(182, 16);
             this.lblAutorun.TabIndex = 0;
             this.lblAutorun.Text = "Run DeadLock automatically:";
             // 
@@ -590,16 +519,16 @@ namespace DeadLock.Forms
             // 
             this.btnClose.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
             this.btnClose.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnClose.BeforeTouchSize = new System.Drawing.Size(75, 23);
+            this.btnClose.BeforeTouchSize = new System.Drawing.Size(100, 28);
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.IsBackStageButton = false;
-            this.btnClose.Location = new System.Drawing.Point(12, 230);
-            this.btnClose.MetroColor = System.Drawing.Color.SteelBlue;
+            this.btnClose.Location = new System.Drawing.Point(6, 286);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.Size = new System.Drawing.Size(100, 28);
             this.btnClose.TabIndex = 1;
             this.btnClose.Text = "Close";
+            this.btnClose.ThemeName = "Metro";
             this.btnClose.UseVisualStyle = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -607,15 +536,15 @@ namespace DeadLock.Forms
             // 
             this.btnReset.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
             this.btnReset.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnReset.BeforeTouchSize = new System.Drawing.Size(75, 23);
+            this.btnReset.BeforeTouchSize = new System.Drawing.Size(100, 28);
             this.btnReset.ForeColor = System.Drawing.Color.White;
-            this.btnReset.IsBackStageButton = false;
-            this.btnReset.Location = new System.Drawing.Point(93, 230);
-            this.btnReset.MetroColor = System.Drawing.Color.SteelBlue;
+            this.btnReset.Location = new System.Drawing.Point(114, 286);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(4);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(75, 23);
+            this.btnReset.Size = new System.Drawing.Size(100, 28);
             this.btnReset.TabIndex = 2;
             this.btnReset.Text = "Reset";
+            this.btnReset.ThemeName = "Metro";
             this.btnReset.UseVisualStyle = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
@@ -623,41 +552,38 @@ namespace DeadLock.Forms
             // 
             this.btnSave.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
             this.btnSave.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnSave.BeforeTouchSize = new System.Drawing.Size(75, 23);
+            this.btnSave.BeforeTouchSize = new System.Drawing.Size(100, 28);
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.IsBackStageButton = false;
-            this.btnSave.Location = new System.Drawing.Point(316, 230);
-            this.btnSave.MetroColor = System.Drawing.Color.SteelBlue;
+            this.btnSave.Location = new System.Drawing.Point(433, 286);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(100, 28);
             this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Save";
+            this.btnSave.ThemeName = "Metro";
             this.btnSave.UseVisualStyle = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // FrmSettings
             // 
             this.AcceptButton = this.btnSave;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BorderColor = System.Drawing.Color.SteelBlue;
-            this.BorderThickness = 3;
             this.CancelButton = this.btnClose;
-            this.CaptionBarColor = System.Drawing.Color.SteelBlue;
-            this.CaptionButtonColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(403, 265);
+            this.ClientSize = new System.Drawing.Size(539, 326);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pnlSettings);
             this.DoubleBuffered = true;
-            this.DropShadow = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MetroColor = System.Drawing.Color.SteelBlue;
             this.Name = "FrmSettings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Style.MdiChild.IconHorizontalAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Style.MdiChild.IconVerticalAlignment = System.Windows.Forms.VisualStyles.VerticalAlignment.Center;
             this.Text = "DeadLock - Settings";
             this.Load += new System.EventHandler(this.FrmSettings_Load);
             this.pnlSettings.ResumeLayout(false);
@@ -676,7 +602,6 @@ namespace DeadLock.Forms
             ((System.ComponentModel.ISupportInitialize)(this.txtLanguagePath)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbtnDetails)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbtnFormSize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itxtBorderThickness)).EndInit();
             this.tpaAdvanced.ResumeLayout(false);
             this.tpaAdvanced.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbtnOwnership)).EndInit();
@@ -706,8 +631,6 @@ namespace DeadLock.Forms
         private System.Windows.Forms.Label lblAdminWarning;
         private Syncfusion.Windows.Forms.ColorPickerButton cpbThemeStyle;
         private System.Windows.Forms.Label lblThemeStyle;
-        private Syncfusion.Windows.Forms.Tools.IntegerTextBox itxtBorderThickness;
-        private System.Windows.Forms.Label lblBorderThickness;
         private Syncfusion.Windows.Forms.Tools.ToggleButton tbtnFormSize;
         private System.Windows.Forms.Label lblFormSize;
         private Syncfusion.Windows.Forms.Tools.ToggleButton tbtnDetails;

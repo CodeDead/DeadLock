@@ -55,8 +55,6 @@
   <MsgSuccessfullyKilled>Lyckades stoppa de vald(a) processer(na)!</MsgSuccessfullyKilled>
   <CmiHideShow>Göm / Visa</CmiHideShow>
   <MsgAdministrator>DeadLock fungerar kanske inte på rätt sätt utan administrativa rättigheter!</MsgAdministrator>
-  <MsgVersion>Version</MsgVersion>
-  <MsgAvailable>finns nu tillgänglig!</MsgAvailable>
   <MsgDownloadNewVersion>Vill du ladda ned den senaste versionen?</MsgDownloadNewVersion>
   <MsgLatestVersionAlreadyInstalled>Senaste versionen av DeadLock är redan installerad!</MsgLatestVersionAlreadyInstalled>
   <TxtAboutCreated>DeadLock är skapat av DeadLine.</TxtAboutCreated>
@@ -73,7 +71,6 @@
   <ChbShowAdminWarning>Visa administratörsvarning:</ChbShowAdminWarning>
   <LblAppearance>Utseende</LblAppearance>
   <LblThemeStyle>Temastil:</LblThemeStyle>
-  <LblBorderThickness>Ramtjocklek:</LblBorderThickness>
   <LblRememberFormSize>Kom ihåg formulärstorlek:</LblRememberFormSize>
   <LblShowDetails>Visa detaljer:</LblShowDetails>
   <LblLanguage>Språk:</LblLanguage>
@@ -88,10 +85,6 @@
   <TxtUpdater>Uppdaterare</TxtUpdater>
   <LblPath>Sökväg:</LblPath>
   <LblProgress>Förlopp:</LblProgress>
-  <BtnCancel>Avbryt</BtnCancel>
-  <BtnUpdate>Uppdatera</BtnUpdate>
-  <BtnInformation>Information</BtnInformation>
-  <NoNewVersion>Ingen ny version tillgänglig.</NoNewVersion>
   <MsgCouldNotRestart>Kan inte påbörja återstartsession. Omöjligt att avgöra vad som låser källan.</MsgCouldNotRestart>
   <MsgCouldNotRegister>Kan inte registrera källan.</MsgCouldNotRegister>
   <MsgCouldNotList>Kan inte lista processerna som låser källan!</MsgCouldNotList>

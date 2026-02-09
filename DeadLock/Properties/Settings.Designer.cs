@@ -37,7 +37,7 @@ namespace DeadLock.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("SteelBlue")]
+        [global::System.Configuration.DefaultSettingValueAttribute("RoyalBlue")]
         public global::System.Drawing.Color MetroColor {
             get {
                 return ((global::System.Drawing.Color)(this["MetroColor"]));

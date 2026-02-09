@@ -6,7 +6,7 @@
       <Value Profile="(Default)">1</Value>
     </Setting>
     <Setting Name="MetroColor" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)">SteelBlue</Value>
+      <Value Profile="(Default)">RoyalBlue</Value>
     </Setting>
     <Setting Name="FormSize" Type="System.Drawing.Size" Scope="User">
       <Value Profile="(Default)">0, 0</Value>

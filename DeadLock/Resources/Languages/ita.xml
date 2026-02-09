@@ -55,8 +55,6 @@
 	<MsgSuccessfullyKilled>Processo/i selezionato/i arrestato/i con successo!</MsgSuccessfullyKilled>
 	<CmiHideShow>Nascondi / Mostra</CmiHideShow>
 	<MsgAdministrator>DeadLock potrebbe non funzionare correttamente senza i diritti d´amministratore!</MsgAdministrator>
-	<MsgVersion>Versione</MsgVersion>
-	<MsgAvailable>e´ora disponibile!</MsgAvailable>
 	<MsgDownloadNewVersion>Scaricare la versione piu recente?</MsgDownloadNewVersion>
 	<MsgLatestVersionAlreadyInstalled>La versione di DeadLock piu recente e´stata gia´installata!</MsgLatestVersionAlreadyInstalled>
 	<TxtAboutCreated>DeadLock è stato creato da DeadLine.</TxtAboutCreated>
@@ -72,7 +70,6 @@
 	<ChbShowAdminWarning>Mostra avvertenze amministratore:</ChbShowAdminWarning>
 	<LblAppearance>Apparenza</LblAppearance>
 	<LblThemeStyle>Stile Tema:</LblThemeStyle>
-	<LblBorderThickness>Spessore bordi:</LblBorderThickness>
 	<LblRememberFormSize>Ricorda dimensioni forma:</LblRememberFormSize>
 	<LblShowDetails>Mostra dettagli:</LblShowDetails>
 	<LblLanguage>Lingua:</LblLanguage>
@@ -88,10 +85,6 @@
 	<TxtUpdater>Aggiornatore</TxtUpdater>
 	<LblPath>Percorso:</LblPath>
 	<LblProgress>Progresso:</LblProgress>
-	<BtnCancel>Cancella</BtnCancel>
-	<BtnUpdate>Aggiorna</BtnUpdate>
-	<BtnInformation>Informazione</BtnInformation>
-	<NoNewVersion>Non sono state trovate nuove versioni!</NoNewVersion>
 	<MsgCouldNotRestart>Non e´stato possibile riavviare la sessione. Impossibile identificare blocco risorsa.</MsgCouldNotRestart>
 	<MsgCouldNotRegister>Non e´stato possibile registrare la risorsa.</MsgCouldNotRegister>
 	<MsgCouldNotList>Non e´stato possibile determinare i processi che bloccano la risorsa!</MsgCouldNotList>

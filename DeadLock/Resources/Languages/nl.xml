@@ -55,8 +55,6 @@
   <MsgSuccessfullyKilled>De geselecteerde processen zijn met success gesloten!</MsgSuccessfullyKilled>
   <CmiHideShow>Verberg / Toon</CmiHideShow>
   <MsgAdministrator>DeadLock zal mogelijk niet correct functioneren zonder administratieve rechten!</MsgAdministrator>
-  <MsgVersion>Versie</MsgVersion>
-  <MsgAvailable>is nu beschikbaar!</MsgAvailable>
   <MsgDownloadNewVersion>Wil je de laatste nieuwe versie downloaden?</MsgDownloadNewVersion>
   <MsgLatestVersionAlreadyInstalled>U heeft de meest recente versie!</MsgLatestVersionAlreadyInstalled>
   <TxtAboutCreated>DeadLock werd gemaakt door DeadLine.</TxtAboutCreated>
@@ -73,7 +71,6 @@
   <ChbShowAdminWarning>Toon administratieve waarschuwing:</ChbShowAdminWarning>
   <LblAppearance>Uiterlijk</LblAppearance>
   <LblThemeStyle>Thema stijl:</LblThemeStyle>
-  <LblBorderThickness>Grens dikte:</LblBorderThickness>
   <LblRememberFormSize>Onthoud formulier grootte:</LblRememberFormSize>
   <LblShowDetails>Toon details:</LblShowDetails>
   <LblLanguage>Taal:</LblLanguage>
@@ -88,10 +85,6 @@
   <TxtUpdater>Updater</TxtUpdater>
   <LblPath>Pad:</LblPath>
   <LblProgress>Vooruitgang:</LblProgress>
-  <BtnCancel>Annuleer</BtnCancel>
-  <BtnUpdate>Update</BtnUpdate>
-  <BtnInformation>Informatie</BtnInformation>
-  <NoNewVersion>Er is geen nieuwe versie beschikbaar.</NoNewVersion>
   <MsgCouldNotRestart>Kon de restart sessie niet beginnen. Kon de resource lockers niet vinden.</MsgCouldNotRestart>
   <MsgCouldNotRegister>Kon de bronnen niet registreren.</MsgCouldNotRegister>
   <MsgCouldNotList>Kon de processen niet opsommen die de bron vergrendelen!</MsgCouldNotList>

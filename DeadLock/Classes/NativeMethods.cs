@@ -61,7 +61,7 @@ namespace DeadLock.Classes
         }
 
         [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Auto)]
-        private struct Shellexecuteinfo
+        private struct ShellExecuteInfo
         {
             public int cbSize;
             public uint fMask;
@@ -101,7 +101,7 @@ namespace DeadLock.Classes
         private static extern int RmGetList(uint dwSessionHandle, out uint pnProcInfoNeeded, ref uint pnProcInfo, [In, Out] RmProcessInfo[] rgAffectedApps, ref uint lpdwRebootReasons);
 
         [DllImport("shell32.dll", CharSet = CharSet.Auto)]
-        private static extern bool ShellExecuteEx(ref Shellexecuteinfo lpExecInfo);
+        private static extern bool ShellExecuteEx(ref ShellExecuteInfo lpExecInfo);
         #endregion
 
         /// <summary>
@@ -112,17 +112,15 @@ namespace DeadLock.Classes
         /// <returns>A collection of processes that are locking a file.</returns>
         internal static IEnumerable<Process> FindLockingProcesses(string path, Language language)
         {
-            uint handle;
             string key = Guid.NewGuid().ToString();
             List<Process> processes = new List<Process>();
 
-            int res = RmStartSession(out handle, 0, key);
+            int res = RmStartSession(out var handle, 0, key);
             if (res != 0) throw new Exception(language.MsgCouldNotRestart);
 
             try
             {
                 const int errorMoreData = 234;
-                uint pnProcInfoNeeded;
                 uint pnProcInfo = 0;
                 uint lpdwRebootReasons = RmRebootReasonNone;
 
@@ -130,7 +128,7 @@ namespace DeadLock.Classes
                 res = RmRegisterResources(handle, (uint)resources.Length, resources, 0, null, 0, null);
 
                 if (res != 0) throw new Exception(language.MsgCouldNotRegister);
-                res = RmGetList(handle, out pnProcInfoNeeded, ref pnProcInfo, null, ref lpdwRebootReasons);
+                res = RmGetList(handle, out var pnProcInfoNeeded, ref pnProcInfo, null, ref lpdwRebootReasons);
 
                 if (res == errorMoreData)
                 {
@@ -169,7 +167,7 @@ namespace DeadLock.Classes
         /// <returns></returns>
         internal static void ShowFileProperties(string path)
         {
-            Shellexecuteinfo info = new Shellexecuteinfo();
+            ShellExecuteInfo info = new ShellExecuteInfo();
             info.cbSize = Marshal.SizeOf(info);
             info.lpVerb = "properties";
             info.lpFile = path;

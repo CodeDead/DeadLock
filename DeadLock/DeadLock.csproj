@@ -44,9 +44,6 @@
     <ApplicationIcon>Paomedia-Small-N-Flat-Lock.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CodeDead.UpdateManager, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CodeDead.UpdateManager.1.5.0\lib\net48\CodeDead.UpdateManager.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Syncfusion.Grid.Base, Version=32.2462.3.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <HintPath>..\packages\Syncfusion.Grid.Base.32.2.3\lib\net462\Syncfusion.Grid.Base.dll</HintPath>

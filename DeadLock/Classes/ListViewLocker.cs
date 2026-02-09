@@ -23,6 +23,7 @@ namespace DeadLock.Classes
     internal class ListViewLocker : ListViewItem
     {
         #region Variables
+
         private readonly string _path;
         private List<ProcessLocker> _lockers;
 
@@ -31,6 +32,7 @@ namespace DeadLock.Classes
         private bool _isRunning;
 
         private readonly Language _language;
+
         #endregion
 
         /// <summary>
@@ -57,14 +59,14 @@ namespace DeadLock.Classes
         /// <summary>
         /// Check if the ListViewLocker is currently executing a task.
         /// </summary>
-        /// <returns>A boolean that represents whether or not the ListViewLocker is executing a task.</returns>
+        /// <returns>A boolean that represents whether the ListViewLocker is executing a task.</returns>
         internal bool IsRunning()
         {
             return _isRunning;
         }
 
         /// <summary>
-        /// Set whether or not the ListViewLocker is executing a task.
+        /// Set whether the ListViewLocker is executing a task.
         /// </summary>
         /// <param name="running">True if the ListViewLocker is executing a task and false if the ListViewLocker is not executing a task.</param>
         internal void SetRunning(bool running)
@@ -110,25 +112,25 @@ namespace DeadLock.Classes
         }
 
         /// <summary>
-        /// Set whether or not the task that is associated with the ListViewLocker has cancelled.
+        /// Set whether the task that is associated with the ListViewLocker has canceled.
         /// </summary>
-        /// <param name="c">A boolean to represent whether or not the task has cancelled.</param>
+        /// <param name="c">A boolean to represent whether the task has canceled.</param>
         private void SetCancelled(bool c)
         {
             _hasCancelled = c;
         }
 
         /// <summary>
-        /// Check whether or not the task that is associated with the ListViewLocker has cancelled or not.
+        /// Check whether the task that is associated with the ListViewLocker has canceled or not.
         /// </summary>
-        /// <returns>A boolean to represent whether or not the task has cancelled.</returns>
+        /// <returns>A boolean to represent whether the task has canceled.</returns>
         internal bool HasCancelled()
         {
             return _hasCancelled;
         }
 
         /// <summary>
-        /// Generate a new CancellationTokenSource if the old one has been cancelled.
+        /// Generate a new CancellationTokenSource if the old one has been canceled.
         /// </summary>
         private void ResetCancellationToken()
         {
@@ -168,7 +170,10 @@ namespace DeadLock.Classes
                         {
                             ds.SetOwner(self.User);
                         }
-                        ds.AddAccessRule(new FileSystemAccessRule(self.User, FileSystemRights.FullControl, InheritanceFlags.ObjectInherit | InheritanceFlags.ContainerInherit, PropagationFlags.None, AccessControlType.Allow));
+
+                        ds.AddAccessRule(new FileSystemAccessRule(self.User, FileSystemRights.FullControl,
+                            InheritanceFlags.ObjectInherit | InheritanceFlags.ContainerInherit, PropagationFlags.None,
+                            AccessControlType.Allow));
                         info.SetAccessControl(ds);
                     }
                     else
@@ -181,7 +186,9 @@ namespace DeadLock.Classes
                         {
                             fs.SetOwner(self.User);
                         }
-                        fs.AddAccessRule(new FileSystemAccessRule(self.User, FileSystemRights.FullControl, AccessControlType.Allow));
+
+                        fs.AddAccessRule(new FileSystemAccessRule(self.User, FileSystemRights.FullControl,
+                            AccessControlType.Allow));
                         File.SetAccessControl(GetPath(), fs);
                         File.SetAttributes(GetPath(), FileAttributes.Normal);
                     }
@@ -193,11 +200,13 @@ namespace DeadLock.Classes
                         DirectoryInfo directoryInfo = new DirectoryInfo(GetPath());
                         DirectorySecurity directorySecurity = directoryInfo.GetAccessControl();
                         directorySecurity.SetAccessRuleProtection(true, false);
-                        AuthorizationRuleCollection rules = directorySecurity.GetAccessRules(true, true, typeof(NTAccount));
+                        AuthorizationRuleCollection rules =
+                            directorySecurity.GetAccessRules(true, true, typeof(NTAccount));
                         foreach (FileSystemAccessRule rule in rules)
                         {
                             directorySecurity.RemoveAccessRule(rule);
                         }
+
                         Directory.SetAccessControl(GetPath(), directorySecurity);
                     }
                     else
@@ -209,6 +218,7 @@ namespace DeadLock.Classes
                         {
                             fs.RemoveAccessRule(rule);
                         }
+
                         File.SetAccessControl(GetPath(), fs);
                     }
                 }
@@ -220,20 +230,20 @@ namespace DeadLock.Classes
         }
 
         /// <summary>
-        /// Check whether or not the operator has ownership rights to the file or folder that is associated with the ListViewLocker.
+        /// Check whether the operator has ownership rights to the file or folder that is associated with the ListViewLocker.
         /// </summary>
-        /// <returns>A boolean that represents whether or not the operator has ownership rights to the file or folder that is associated with the ListViewLocker.</returns>
+        /// <returns>A boolean that represents whether the operator has ownership rights to the file or folder that is associated with the ListViewLocker.</returns>
         internal bool HasOwnership()
         {
             bool isWriteAccess = false;
             try
             {
-                AuthorizationRuleCollection collection = Directory.GetAccessControl(GetPath()).GetAccessRules(true, true, typeof(NTAccount));
-                foreach (FileSystemAccessRule rule in collection)
+                AuthorizationRuleCollection collection =
+                    Directory.GetAccessControl(GetPath()).GetAccessRules(true, true, typeof(NTAccount));
+                if (collection.Cast<FileSystemAccessRule>()
+                    .Any(rule => rule.AccessControlType == AccessControlType.Allow))
                 {
-                    if (rule.AccessControlType != AccessControlType.Allow) continue;
                     isWriteAccess = true;
-                    break;
                 }
             }
             catch (Exception)
@@ -278,6 +288,7 @@ namespace DeadLock.Classes
                                         add = false;
                                     }
                                 }
+
                                 if (add)
                                 {
                                     lockers.Add(new ProcessLocker(p, _language));
@@ -300,10 +311,8 @@ namespace DeadLock.Classes
                     try
                     {
                         GetCancellationToken().ThrowIfCancellationRequested();
-                        foreach (Process p in NativeMethods.FindLockingProcesses(GetPath(), _language))
-                        {
-                            lockers.Add(new ProcessLocker(p, _language));
-                        }
+                        lockers.AddRange(NativeMethods.FindLockingProcesses(GetPath(), _language)
+                            .Select(p => new ProcessLocker(p, _language)));
                     }
                     catch (OperationCanceledException)
                     {
@@ -313,6 +322,7 @@ namespace DeadLock.Classes
                     }
                 });
             }
+
             return lockers;
         }
 
@@ -323,7 +333,8 @@ namespace DeadLock.Classes
         /// <param name="patternMatch">The pattern that should be used to find the files.</param>
         /// <param name="searchOption">The SearchOption that should be used to find the files.</param>
         /// <returns>A list of files inside a folder that are accessible to the operator.</returns>
-        private static IEnumerable<string> GetDirectoryFiles(string rootPath, string patternMatch, SearchOption searchOption)
+        private static IEnumerable<string> GetDirectoryFiles(string rootPath, string patternMatch,
+            SearchOption searchOption)
         {
             IEnumerable<string> foundFiles = Enumerable.Empty<string>();
 
@@ -332,20 +343,26 @@ namespace DeadLock.Classes
                 try
                 {
                     IEnumerable<string> subDirs = Directory.EnumerateDirectories(rootPath);
-                    foreach (string dir in subDirs)
-                    {
-                        foundFiles = foundFiles.Concat(GetDirectoryFiles(dir, patternMatch, searchOption));
-                    }
+                    foundFiles = subDirs.Aggregate(foundFiles,
+                        (current, dir) => current.Concat(GetDirectoryFiles(dir, patternMatch, searchOption)));
                 }
-                catch (UnauthorizedAccessException) { }
-                catch (PathTooLongException) { }
+                catch (UnauthorizedAccessException)
+                {
+                }
+                catch (PathTooLongException)
+                {
+                }
             }
 
             try
             {
-                foundFiles = foundFiles.Concat(Directory.EnumerateFiles(rootPath, patternMatch)); // Add files from the current directory
+                foundFiles =
+                    foundFiles.Concat(Directory.EnumerateFiles(rootPath,
+                        patternMatch)); // Add files from the current directory
             }
-            catch (UnauthorizedAccessException) { }
+            catch (UnauthorizedAccessException)
+            {
+            }
 
             return foundFiles;
         }
@@ -367,6 +384,7 @@ namespace DeadLock.Classes
                         SetOwnership(true);
                     }
                 }
+
                 List<ProcessLocker> lockers = await GetLockerDetails();
                 await Task.Run(() =>
                 {
@@ -380,9 +398,12 @@ namespace DeadLock.Classes
                             p.GetProcess().WaitForExit();
                         }
                     }
-                    catch (OperationCanceledException) { }
-                    catch (Win32Exception) { }
-
+                    catch (OperationCanceledException)
+                    {
+                    }
+                    catch (Win32Exception)
+                    {
+                    }
                 });
                 return true;
             }
@@ -390,6 +411,7 @@ namespace DeadLock.Classes
             {
                 MessageBoxAdv.Show(win32Exception.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
             return false;
         }
 
@@ -410,6 +432,7 @@ namespace DeadLock.Classes
                 {
                     FileSystem.DeleteFile(GetPath(), UIOption.OnlyErrorDialogs, RecycleOption.SendToRecycleBin);
                 }
+
                 return true;
             }
             catch (FileNotFoundException)
@@ -424,6 +447,7 @@ namespace DeadLock.Classes
             {
                 CancelTask();
             }
+
             return false;
         }
 
@@ -441,12 +465,13 @@ namespace DeadLock.Classes
                     await Unlock();
                     await Task.Run(() =>
                     {
-
                         try
                         {
                             string sourcePath = GetPath().TrimEnd('\\', ' ');
                             string targetPath = fbd.SelectedPath.TrimEnd('\\', ' ');
-                            IEnumerable<IGrouping<string, string>> files = Directory.EnumerateFiles(sourcePath, "*", SearchOption.AllDirectories).GroupBy(Path.GetDirectoryName);
+                            IEnumerable<IGrouping<string, string>> files = Directory
+                                .EnumerateFiles(sourcePath, "*", SearchOption.AllDirectories)
+                                .GroupBy(Path.GetDirectoryName);
                             foreach (IGrouping<string, string> folder in files)
                             {
                                 GetCancellationToken().ThrowIfCancellationRequested();
@@ -462,13 +487,16 @@ namespace DeadLock.Classes
                                     {
                                         File.Delete(targetFile);
                                     }
+
                                     File.Move(file, targetFile);
                                 }
                             }
+
                             Directory.Delete(GetPath(), true);
                         }
-                        catch (OperationCanceledException) { }
-
+                        catch (OperationCanceledException)
+                        {
+                        }
                     });
                 }
                 else return false;
@@ -481,15 +509,13 @@ namespace DeadLock.Classes
                     if (sfd.ShowDialog() == DialogResult.OK)
                     {
                         await Unlock();
-                        await Task.Run(() =>
-                        {
-                            File.Move(GetPath(), sfd.FileName);
-                        });
+                        await Task.Run(() => { File.Move(GetPath(), sfd.FileName); });
                     }
                     else return false;
                 }
                 else return false;
             }
+
             return true;
         }
 
@@ -505,10 +531,7 @@ namespace DeadLock.Classes
                 if (fbd.ShowDialog() == DialogResult.OK)
                 {
                     await Unlock();
-                    await Task.Run(() =>
-                    {
-                        FileSystem.CopyDirectory(GetPath(), fbd.SelectedPath);
-                    });
+                    await Task.Run(() => { FileSystem.CopyDirectory(GetPath(), fbd.SelectedPath); });
                 }
                 else return false;
             }
@@ -518,13 +541,11 @@ namespace DeadLock.Classes
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
                     await Unlock();
-                    await Task.Run(() =>
-                    {
-                        File.Copy(GetPath(), sfd.FileName);
-                    });
+                    await Task.Run(() => { File.Copy(GetPath(), sfd.FileName); });
                 }
                 else return false;
             }
+
             return true;
         }
     }

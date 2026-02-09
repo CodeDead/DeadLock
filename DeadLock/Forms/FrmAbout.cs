@@ -4,10 +4,11 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using DeadLock.Classes;
 using Syncfusion.Windows.Forms;
+using Syncfusion.WinForms.Controls;
 
 namespace DeadLock.Forms
 {
-    public partial class FrmAbout : MetroForm
+    public partial class FrmAbout : SfForm
     {
         #region Variables
         private readonly Language _language;
@@ -45,7 +46,7 @@ namespace DeadLock.Forms
         {
             try
             {
-                Process.Start("http://codedead.com/");
+                Process.Start("https://codedead.com/");
             }
             catch (Win32Exception ex)
             {
@@ -72,11 +73,6 @@ namespace DeadLock.Forms
         {
             try
             {
-                BorderThickness = Properties.Settings.Default.BorderThickness;
-                MetroColor = Properties.Settings.Default.MetroColor;
-                BorderColor = Properties.Settings.Default.MetroColor;
-                CaptionBarColor = Properties.Settings.Default.MetroColor;
-
                 btnClose.MetroColor = Properties.Settings.Default.MetroColor;
                 btnLicense.MetroColor = Properties.Settings.Default.MetroColor;
                 btnCodeDead.MetroColor = Properties.Settings.Default.MetroColor;

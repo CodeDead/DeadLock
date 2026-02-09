@@ -55,8 +55,6 @@
   <MsgSuccessfullyKilled>成功終止所選的進程！</MsgSuccessfullyKilled>
   <CmiHideShow>隱藏 / 顯示</CmiHideShow>
   <MsgAdministrator>沒有管理權限，DeadLock 可能無法正常運作！</MsgAdministrator>
-  <MsgVersion>版本</MsgVersion>
-  <MsgAvailable>現已可用！</MsgAvailable>
   <MsgDownloadNewVersion>您想要下載最新版本嗎？</MsgDownloadNewVersion>
   <MsgLatestVersionAlreadyInstalled>DeadLock 最新版本已經安裝！</MsgLatestVersionAlreadyInstalled>
   <TxtAboutCreated>DeadLine 創建了 DeadLock。</TxtAboutCreated>
@@ -73,7 +71,6 @@
   <ChbShowAdminWarning>顯示管理員警告：</ChbShowAdminWarning>
   <LblAppearance>外貌</LblAppearance>
   <LblThemeStyle>主題風格：</LblThemeStyle>
-  <LblBorderThickness>邊框粗細：</LblBorderThickness>
   <LblRememberFormSize>記住視窗大小：</LblRememberFormSize>
   <LblShowDetails>顯示內容：</LblShowDetails>
   <LblLanguage>語言：</LblLanguage>
@@ -88,10 +85,6 @@
   <TxtUpdater>更新</TxtUpdater>
   <LblPath>路徑：</LblPath>
   <LblProgress>進程：</LblProgress>
-  <BtnCancel>取消</BtnCancel>
-  <BtnUpdate>更新</BtnUpdate>
-  <BtnInformation>資訊</BtnInformation>
-  <NoNewVersion>您正在使用最新版本</NoNewVersion>
   <MsgCouldNotRestart>無法開始重新啟動會話。未能確定何者鎖定了資源。</MsgCouldNotRestart>
   <MsgCouldNotRegister>無法註冊資源。</MsgCouldNotRegister>
   <MsgCouldNotList>無法列出鎖定資源的進程!</MsgCouldNotList>

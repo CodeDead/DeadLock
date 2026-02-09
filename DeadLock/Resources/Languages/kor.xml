@@ -55,8 +55,6 @@
   <MsgSuccessfullyKilled>선택한 프로세스가 성공적으로 종료되었습니다!</MsgSuccessfullyKilled>
   <CmiHideShow>숨김 / 표시</CmiHideShow>
   <MsgAdministrator>DeadLock는 관리자 권한이 없으면 제대로 작동되지 않을 수 있습니다!</MsgAdministrator>
-  <MsgVersion>버전</MsgVersion>
-  <MsgAvailable>지금 사용 사용 가능!</MsgAvailable>
   <MsgDownloadNewVersion>최신 버전을 내려받으시겠습니까?</MsgDownloadNewVersion>
   <MsgLatestVersionAlreadyInstalled>이미 DeadLock 최신 버전이 설치되어 있습니다!</MsgLatestVersionAlreadyInstalled>
   <TxtAboutCreated>DeadLock는 DeadLine에 의해 제작되었습니다.</TxtAboutCreated>
@@ -73,7 +71,6 @@
   <ChbShowAdminWarning>관리자 경고 표시:</ChbShowAdminWarning>
   <LblAppearance>외관</LblAppearance>
   <LblThemeStyle>테마 스타일:</LblThemeStyle>
-  <LblBorderThickness>테두리 두께:</LblBorderThickness>
   <LblRememberFormSize>양식 크기 기억:</LblRememberFormSize>
   <LblShowDetails>자세히 표시:</LblShowDetails>
   <LblLanguage>언어:</LblLanguage>
@@ -88,10 +85,6 @@
   <TxtUpdater>업데이터</TxtUpdater>
   <LblPath>경로:</LblPath>
   <LblProgress>진행:</LblProgress>
-  <BtnCancel>취소</BtnCancel>
-  <BtnUpdate>업데이트</BtnUpdate>
-  <BtnInformation>정보</BtnInformation>
-  <NoNewVersion>최신 버전을 사용 중입니다</NoNewVersion>
   <MsgCouldNotRestart>세션을 재시작 불가. 리소스를 잠그고 있는 개체를 확인할 수 없습니다.</MsgCouldNotRestart>
   <MsgCouldNotRegister>리소스를 등록할 수 없습니다.</MsgCouldNotRegister>
   <MsgCouldNotList>리소스를 잠그고 있는 프로세스를 나열할 수 없습니다!</MsgCouldNotList>

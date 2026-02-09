@@ -110,6 +110,28 @@ namespace DeadLock.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
+        ///&lt;Language&gt;
+        ///    &lt;Author&gt;jekovcarр&lt;/Author&gt;
+        ///    &lt;Comment&gt;Булгариан&lt;/Comment&gt;
+        ///    &lt;BarFile&gt;&amp;amp;Файл&lt;/BarFile&gt;
+        ///    &lt;BarEdit&gt;&amp;amp;Редактиране&lt;/BarEdit&gt;
+        ///    &lt;BarView&gt;&amp;amp;Преглед&lt;/BarView&gt;
+        ///    &lt;BarTools&gt;&amp;amp;Инструменти&lt;/BarTools&gt;
+        ///    &lt;BarHelp&gt;&amp;amp;Помощ&lt;/BarHelp&gt;
+        ///    &lt;BarItemOpenFiles&gt;Отвори файл(ове)...&lt;/BarItemOpenFiles&gt;
+        ///    &lt;BarItemOpenFolder&gt;Отвори папка...&lt;/BarItemOpenFolder&gt;
+        ///    &lt;BarItemRestart&gt;Рестарт&lt;/BarItemRestart&gt;
+        ///    &lt;BarItemExit&gt;Изход&lt;/BarItemExit&gt;
+        ///    &lt;BarItemUnl [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string bg {
+            get {
+                return ResourceManager.GetString("bg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap copy {
@@ -142,19 +164,18 @@ namespace DeadLock.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
         ///&lt;Language&gt;
-        ///  &lt;Author&gt;DeadLine&lt;/Author&gt;
-        ///  &lt;Comment&gt;English&lt;/Comment&gt;
-        ///  &lt;BarFile&gt;&amp;amp;File&lt;/BarFile&gt;
-        ///  &lt;BarEdit&gt;&amp;amp;Edit&lt;/BarEdit&gt;
-        ///  &lt;BarView&gt;&amp;amp;View&lt;/BarView&gt;
-        ///  &lt;BarTools&gt;&amp;amp;Tools&lt;/BarTools&gt;
-        ///  &lt;BarHelp&gt;&amp;amp;Help&lt;/BarHelp&gt;
-        ///  &lt;BarItemOpenFiles&gt;Open file(s)...&lt;/BarItemOpenFiles&gt;
-        ///  &lt;BarItemOpenFolder&gt;Open folder...&lt;/BarItemOpenFolder&gt;
-        ///  &lt;BarItemRestart&gt;Restart&lt;/BarItemRestart&gt;
-        ///  &lt;BarItemExit&gt;Exit&lt;/BarItemExit&gt;
-        ///  &lt;BarItemUnlock&gt;Unlock&lt;/BarItemUnlock&gt;
-        ///  &lt;BarItemCopy&gt;Copy&lt;/B [rest of string was truncated]&quot;;.
+        ///    &lt;Author&gt;DeadLine&lt;/Author&gt;
+        ///    &lt;Comment&gt;English&lt;/Comment&gt;
+        ///    &lt;BarFile&gt;&amp;amp;File&lt;/BarFile&gt;
+        ///    &lt;BarEdit&gt;&amp;amp;Edit&lt;/BarEdit&gt;
+        ///    &lt;BarView&gt;&amp;amp;View&lt;/BarView&gt;
+        ///    &lt;BarTools&gt;&amp;amp;Tools&lt;/BarTools&gt;
+        ///    &lt;BarHelp&gt;&amp;amp;Help&lt;/BarHelp&gt;
+        ///    &lt;BarItemOpenFiles&gt;Open file(s)...&lt;/BarItemOpenFiles&gt;
+        ///    &lt;BarItemOpenFolder&gt;Open folder...&lt;/BarItemOpenFolder&gt;
+        ///    &lt;BarItemRestart&gt;Restart&lt;/BarItemRestart&gt;
+        ///    &lt;BarItemExit&gt;Exit&lt;/BarItemExit&gt;
+        ///    &lt;BarItemUnlock&gt;Unlock&lt;/BarItemUnlock&gt; [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string eng {
             get {
@@ -165,18 +186,18 @@ namespace DeadLock.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
         ///&lt;Language&gt;
-        ///  &lt;Author&gt;Pedro Cortés Díaz&lt;/Author&gt;
-        ///  &lt;Comment&gt;Spanish&lt;/Comment&gt;
-        ///  &lt;BarFile&gt;&amp;amp;Archivo&lt;/BarFile&gt;
-        ///  &lt;BarEdit&gt;&amp;amp;Edición&lt;/BarEdit&gt;
-        ///  &lt;BarView&gt;&amp;amp;Ver&lt;/BarView&gt;
-        ///  &lt;BarTools&gt;&amp;amp;Herramientas&lt;/BarTools&gt;
-        ///  &lt;BarHelp&gt;&amp;amp;Ayuda&lt;/BarHelp&gt;
-        ///  &lt;BarItemOpenFiles&gt;Abrir archivo(s)...&lt;/BarItemOpenFiles&gt;
-        ///  &lt;BarItemOpenFolder&gt;Abrir carpeta...&lt;/BarItemOpenFolder&gt;
-        ///  &lt;BarItemRestart&gt;Reiniciar&lt;/BarItemRestart&gt;
-        ///  &lt;BarItemExit&gt;Salir&lt;/BarItemExit&gt;
-        ///  &lt;BarItemUnlock&gt;Desbloquear&lt;/Ba [rest of string was truncated]&quot;;.
+        ///    &lt;Author&gt;Pedro Cortés Díaz&lt;/Author&gt;
+        ///    &lt;Comment&gt;Spanish&lt;/Comment&gt;
+        ///    &lt;BarFile&gt;&amp;amp;Archivo&lt;/BarFile&gt;
+        ///    &lt;BarEdit&gt;&amp;amp;Edición&lt;/BarEdit&gt;
+        ///    &lt;BarView&gt;&amp;amp;Ver&lt;/BarView&gt;
+        ///    &lt;BarTools&gt;&amp;amp;Herramientas&lt;/BarTools&gt;
+        ///    &lt;BarHelp&gt;&amp;amp;Ayuda&lt;/BarHelp&gt;
+        ///    &lt;BarItemOpenFiles&gt;Abrir archivo(s)...&lt;/BarItemOpenFiles&gt;
+        ///    &lt;BarItemOpenFolder&gt;Abrir carpeta...&lt;/BarItemOpenFolder&gt;
+        ///    &lt;BarItemRestart&gt;Reiniciar&lt;/BarItemRestart&gt;
+        ///    &lt;BarItemExit&gt;Salir&lt;/BarItemExit&gt;
+        ///    &lt;BarIt [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string esp {
             get {
@@ -217,18 +238,18 @@ namespace DeadLock.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
         ///&lt;Language&gt;
-        ///  &lt;Author&gt;pouemes&lt;/Author&gt;
-        ///  &lt;Comment&gt;Français&lt;/Comment&gt;
-        ///  &lt;BarFile&gt;&amp;amp;Fichier&lt;/BarFile&gt;
-        ///  &lt;BarEdit&gt;&amp;amp;Editer&lt;/BarEdit&gt;
-        ///  &lt;BarView&gt;&amp;amp;Voir&lt;/BarView&gt;
-        ///  &lt;BarTools&gt;&amp;amp;Outils&lt;/BarTools&gt;
-        ///  &lt;BarHelp&gt;&amp;amp;Aide&lt;/BarHelp&gt;
-        ///  &lt;BarItemOpenFiles&gt;Ouvrir fichier(s)...&lt;/BarItemOpenFiles&gt;
-        ///  &lt;BarItemOpenFolder&gt;Ouvrir répertoire...&lt;/BarItemOpenFolder&gt;
-        ///  &lt;BarItemRestart&gt;Redémarrer&lt;/BarItemRestart&gt;
-        ///  &lt;BarItemExit&gt;Quitter&lt;/BarItemExit&gt;
-        ///  &lt;BarItemUnlock&gt;Débloquer&lt;/BarItemUnloc [rest of string was truncated]&quot;;.
+        ///    &lt;Author&gt;pouemes&lt;/Author&gt;
+        ///    &lt;Comment&gt;Français&lt;/Comment&gt;
+        ///    &lt;BarFile&gt;&amp;amp;Fichier&lt;/BarFile&gt;
+        ///    &lt;BarEdit&gt;&amp;amp;Editer&lt;/BarEdit&gt;
+        ///    &lt;BarView&gt;&amp;amp;Voir&lt;/BarView&gt;
+        ///    &lt;BarTools&gt;&amp;amp;Outils&lt;/BarTools&gt;
+        ///    &lt;BarHelp&gt;&amp;amp;Aide&lt;/BarHelp&gt;
+        ///    &lt;BarItemOpenFiles&gt;Ouvrir fichier(s)...&lt;/BarItemOpenFiles&gt;
+        ///    &lt;BarItemOpenFolder&gt;Ouvrir répertoire...&lt;/BarItemOpenFolder&gt;
+        ///    &lt;BarItemRestart&gt;Redémarrer&lt;/BarItemRestart&gt;
+        ///    &lt;BarItemExit&gt;Quitter&lt;/BarItemExit&gt;
+        ///    &lt;BarItemUnlock [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string fr {
             get {
@@ -239,19 +260,18 @@ namespace DeadLock.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
         ///&lt;Language&gt;
-        ///  &lt;Author&gt;Ced999&lt;/Author&gt;
-        ///  &lt;Comment&gt;German&lt;/Comment&gt;
-        ///  &lt;BarFile&gt;&amp;amp;Datei&lt;/BarFile&gt;
-        ///  &lt;BarEdit&gt;&amp;amp;Bearbeiten&lt;/BarEdit&gt;
-        ///  &lt;BarView&gt;&amp;amp;Ansicht&lt;/BarView&gt;
-        ///  &lt;BarTools&gt;&amp;amp;Werkzeuge&lt;/BarTools&gt;
-        ///  &lt;BarHelp&gt;&amp;amp;Hilfe&lt;/BarHelp&gt;
-        ///  &lt;BarItemOpenFiles&gt;Datei öffnen...&lt;/BarItemOpenFiles&gt;
-        ///  &lt;BarItemOpenFolder&gt;Ordner öffnen...&lt;/BarItemOpenFolder&gt;
-        ///  &lt;BarItemRestart&gt;Neustart&lt;/BarItemRestart&gt;
-        ///  &lt;BarItemExit&gt;Beenden&lt;/BarItemExit&gt;
-        ///  &lt;BarItemUnlock&gt;Entsperren&lt;/BarItemUnlock&gt;
-        /// [rest of string was truncated]&quot;;.
+        ///    &lt;Author&gt;Ced999&lt;/Author&gt;
+        ///    &lt;Comment&gt;German&lt;/Comment&gt;
+        ///    &lt;BarFile&gt;&amp;amp;Datei&lt;/BarFile&gt;
+        ///    &lt;BarEdit&gt;&amp;amp;Bearbeiten&lt;/BarEdit&gt;
+        ///    &lt;BarView&gt;&amp;amp;Ansicht&lt;/BarView&gt;
+        ///    &lt;BarTools&gt;&amp;amp;Werkzeuge&lt;/BarTools&gt;
+        ///    &lt;BarHelp&gt;&amp;amp;Hilfe&lt;/BarHelp&gt;
+        ///    &lt;BarItemOpenFiles&gt;Datei öffnen...&lt;/BarItemOpenFiles&gt;
+        ///    &lt;BarItemOpenFolder&gt;Ordner öffnen...&lt;/BarItemOpenFolder&gt;
+        ///    &lt;BarItemRestart&gt;Neustart&lt;/BarItemRestart&gt;
+        ///    &lt;BarItemExit&gt;Beenden&lt;/BarItemExit&gt;
+        ///    &lt;BarItemUnlock&gt;Ents [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ger {
             get {
@@ -272,18 +292,17 @@ namespace DeadLock.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
         ///&lt;Language&gt;
-        ///	&lt;Author&gt;Sardor Tarik&lt;/Author&gt;
-        ///	&lt;Comment&gt;Italian&lt;/Comment&gt;
-        ///	&lt;BarFile&gt;&amp;amp;File&lt;/BarFile&gt;
-        ///	&lt;BarEdit&gt;&amp;amp;Modifica&lt;/BarEdit&gt;
-        ///	&lt;BarView&gt;&amp;amp;Visualizza&lt;/BarView&gt;
-        ///	&lt;BarTools&gt;&amp;amp;Strumenti&lt;/BarTools&gt;
-        ///	&lt;BarHelp&gt;&amp;amp;Aiuto&lt;/BarHelp&gt;
-        ///	&lt;BarItemOpenFiles&gt;Apri file...&lt;/BarItemOpenFiles&gt;
-        ///	&lt;BarItemOpenFolder&gt;Apri cartella...&lt;/BarItemOpenFolder&gt;
-        ///	&lt;BarItemRestart&gt;Riavvia&lt;/BarItemRestart&gt;
-        ///	&lt;BarItemExit&gt;Esci&lt;/BarItemExit&gt;
-        ///	&lt;BarItemUnlock&gt;Sblocca [rest of string was truncated]&quot;;.
+        ///    &lt;Author&gt;Sardor Tarik&lt;/Author&gt;
+        ///    &lt;Comment&gt;Italian&lt;/Comment&gt;
+        ///    &lt;BarFile&gt;&amp;amp;File&lt;/BarFile&gt;
+        ///    &lt;BarEdit&gt;&amp;amp;Modifica&lt;/BarEdit&gt;
+        ///    &lt;BarView&gt;&amp;amp;Visualizza&lt;/BarView&gt;
+        ///    &lt;BarTools&gt;&amp;amp;Strumenti&lt;/BarTools&gt;
+        ///    &lt;BarHelp&gt;&amp;amp;Aiuto&lt;/BarHelp&gt;
+        ///    &lt;BarItemOpenFiles&gt;Apri file...&lt;/BarItemOpenFiles&gt;
+        ///    &lt;BarItemOpenFolder&gt;Apri cartella...&lt;/BarItemOpenFolder&gt;
+        ///    &lt;BarItemRestart&gt;Riavvia&lt;/BarItemRestart&gt;
+        ///    &lt;BarItemExit&gt;Esci&lt;/BarI [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ita {
             get {
@@ -294,20 +313,19 @@ namespace DeadLock.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
         ///&lt;Language&gt;
-        ///  &lt;Author&gt;Jaehyung Lee&lt;/Author&gt;
-        ///  &lt;Comment&gt;한국어&lt;/Comment&gt;
-        ///  &lt;BarFile&gt;&amp;amp;파일&lt;/BarFile&gt;
-        ///  &lt;BarEdit&gt;&amp;amp;편집&lt;/BarEdit&gt;
-        ///  &lt;BarView&gt;&amp;amp;보기&lt;/BarView&gt;
-        ///  &lt;BarTools&gt;&amp;amp;도구&lt;/BarTools&gt;
-        ///  &lt;BarHelp&gt;&amp;amp;도움말&lt;/BarHelp&gt;
-        ///  &lt;BarItemOpenFiles&gt;파일 열기...&lt;/BarItemOpenFiles&gt;
-        ///  &lt;BarItemOpenFolder&gt;폴더 열기...&lt;/BarItemOpenFolder&gt;
-        ///  &lt;BarItemRestart&gt;재시작&lt;/BarItemRestart&gt;
-        ///  &lt;BarItemExit&gt;끝내기&lt;/BarItemExit&gt;
-        ///  &lt;BarItemUnlock&gt;풀기&lt;/BarItemUnlock&gt;
-        ///  &lt;BarItemCopy&gt;복사&lt;/BarItemCopy&gt;
-        ///  &lt;BarItemMove&gt;이동&lt;/Ba [rest of string was truncated]&quot;;.
+        ///    &lt;Author&gt;Jaehyung Lee&lt;/Author&gt;
+        ///    &lt;Comment&gt;한국어&lt;/Comment&gt;
+        ///    &lt;BarFile&gt;&amp;amp;파일&lt;/BarFile&gt;
+        ///    &lt;BarEdit&gt;&amp;amp;편집&lt;/BarEdit&gt;
+        ///    &lt;BarView&gt;&amp;amp;보기&lt;/BarView&gt;
+        ///    &lt;BarTools&gt;&amp;amp;도구&lt;/BarTools&gt;
+        ///    &lt;BarHelp&gt;&amp;amp;도움말&lt;/BarHelp&gt;
+        ///    &lt;BarItemOpenFiles&gt;파일 열기...&lt;/BarItemOpenFiles&gt;
+        ///    &lt;BarItemOpenFolder&gt;폴더 열기...&lt;/BarItemOpenFolder&gt;
+        ///    &lt;BarItemRestart&gt;재시작&lt;/BarItemRestart&gt;
+        ///    &lt;BarItemExit&gt;끝내기&lt;/BarItemExit&gt;
+        ///    &lt;BarItemUnlock&gt;풀기&lt;/BarItemUnlock&gt;
+        ///    &lt;BarItemCopy&gt;복사&lt;/BarItemCo [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string kor {
             get {
@@ -338,18 +356,18 @@ namespace DeadLock.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
         ///&lt;Language&gt;
-        ///  &lt;Author&gt;DeadLine&lt;/Author&gt;
-        ///  &lt;Comment&gt;Dutch&lt;/Comment&gt;
-        ///  &lt;BarFile&gt;&amp;amp;Bestand&lt;/BarFile&gt;
-        ///  &lt;BarEdit&gt;&amp;amp;Aanpassen&lt;/BarEdit&gt;
-        ///  &lt;BarView&gt;&amp;amp;Beeld&lt;/BarView&gt;
-        ///  &lt;BarTools&gt;&amp;amp;Gereedschap&lt;/BarTools&gt;
-        ///  &lt;BarHelp&gt;&amp;amp;Help&lt;/BarHelp&gt;
-        ///  &lt;BarItemOpenFiles&gt;Open bestand(en)...&lt;/BarItemOpenFiles&gt;
-        ///  &lt;BarItemOpenFolder&gt;Open folder...&lt;/BarItemOpenFolder&gt;
-        ///  &lt;BarItemRestart&gt;Herstart&lt;/BarItemRestart&gt;
-        ///  &lt;BarItemExit&gt;Sluiten&lt;/BarItemExit&gt;
-        ///  &lt;BarItemUnlock&gt;Ontgrendel&lt;/BarItemUnlock [rest of string was truncated]&quot;;.
+        ///    &lt;Author&gt;DeadLine&lt;/Author&gt;
+        ///    &lt;Comment&gt;Dutch&lt;/Comment&gt;
+        ///    &lt;BarFile&gt;&amp;amp;Bestand&lt;/BarFile&gt;
+        ///    &lt;BarEdit&gt;&amp;amp;Aanpassen&lt;/BarEdit&gt;
+        ///    &lt;BarView&gt;&amp;amp;Beeld&lt;/BarView&gt;
+        ///    &lt;BarTools&gt;&amp;amp;Gereedschap&lt;/BarTools&gt;
+        ///    &lt;BarHelp&gt;&amp;amp;Help&lt;/BarHelp&gt;
+        ///    &lt;BarItemOpenFiles&gt;Open bestand(en)...&lt;/BarItemOpenFiles&gt;
+        ///    &lt;BarItemOpenFolder&gt;Open folder...&lt;/BarItemOpenFolder&gt;
+        ///    &lt;BarItemRestart&gt;Herstart&lt;/BarItemRestart&gt;
+        ///    &lt;BarItemExit&gt;Sluiten&lt;/BarItemExit&gt;
+        ///    &lt;BarItemUnlock&gt;O [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string nl {
             get {
@@ -370,19 +388,18 @@ namespace DeadLock.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
         ///&lt;Language&gt;
-        ///	&lt;Author&gt;Nickk888&lt;/Author&gt;
-        ///	&lt;Comment&gt;Polish&lt;/Comment&gt;
-        ///	&lt;BarFile&gt;&amp;amp;Plik&lt;/BarFile&gt;
-        ///	&lt;BarEdit&gt;&amp;amp;Edytuj&lt;/BarEdit&gt;
-        ///	&lt;BarView&gt;&amp;amp;Widok&lt;/BarView&gt;
-        ///	&lt;BarTools&gt;&amp;amp;Narzędzia&lt;/BarTools&gt;
-        ///	&lt;BarHelp&gt;&amp;amp;Pomoc&lt;/BarHelp&gt;
-        ///	&lt;BarItemOpenFiles&gt;Otwórz plik(i)...&lt;/BarItemOpenFiles&gt;
-        ///	&lt;BarItemOpenFolder&gt;Otwórz folder...&lt;/BarItemOpenFolder&gt;
-        ///	&lt;BarItemRestart&gt;Zrestartuj&lt;/BarItemRestart&gt;
-        ///	&lt;BarItemExit&gt;Wyjdź&lt;/BarItemExit&gt;
-        ///	&lt;BarItemUnlock&gt;Odblokuj&lt;/BarItemUnlock&gt;
-        ///	&lt;BarItemCopy&gt;Kop [rest of string was truncated]&quot;;.
+        ///    &lt;Author&gt;Nickk888&lt;/Author&gt;
+        ///    &lt;Comment&gt;Polish&lt;/Comment&gt;
+        ///    &lt;BarFile&gt;&amp;amp;Plik&lt;/BarFile&gt;
+        ///    &lt;BarEdit&gt;&amp;amp;Edytuj&lt;/BarEdit&gt;
+        ///    &lt;BarView&gt;&amp;amp;Widok&lt;/BarView&gt;
+        ///    &lt;BarTools&gt;&amp;amp;Narzędzia&lt;/BarTools&gt;
+        ///    &lt;BarHelp&gt;&amp;amp;Pomoc&lt;/BarHelp&gt;
+        ///    &lt;BarItemOpenFiles&gt;Otwórz plik(i)...&lt;/BarItemOpenFiles&gt;
+        ///    &lt;BarItemOpenFolder&gt;Otwórz folder...&lt;/BarItemOpenFolder&gt;
+        ///    &lt;BarItemRestart&gt;Zrestartuj&lt;/BarItemRestart&gt;
+        ///    &lt;BarItemExit&gt;Wyjdź&lt;/BarItemExit&gt;
+        ///    &lt;BarItemUnlock&gt;Odbloku [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string pl {
             get {
@@ -403,18 +420,18 @@ namespace DeadLock.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
         ///&lt;Language&gt;
-        ///  &lt;Author&gt;Leonid Gorokhov&lt;/Author&gt;
-        ///  &lt;Comment&gt;Russian&lt;/Comment&gt;
-        ///  &lt;BarFile&gt;&amp;amp;Файл&lt;/BarFile&gt;
-        ///  &lt;BarEdit&gt;&amp;amp;Правка&lt;/BarEdit&gt;
-        ///  &lt;BarView&gt;&amp;amp;Вид&lt;/BarView&gt;
-        ///  &lt;BarTools&gt;&amp;amp;Инструменты&lt;/BarTools&gt;
-        ///  &lt;BarHelp&gt;&amp;amp;Помощь&lt;/BarHelp&gt;
-        ///  &lt;BarItemOpenFiles&gt;Открыть файл(ы)...&lt;/BarItemOpenFiles&gt;
-        ///  &lt;BarItemOpenFolder&gt;Открыть папку...&lt;/BarItemOpenFolder&gt;
-        ///  &lt;BarItemRestart&gt;Перезапуск&lt;/BarItemRestart&gt;
-        ///  &lt;BarItemExit&gt;Выход&lt;/BarItemExit&gt;
-        ///  &lt;BarItemUnlock&gt;Разблокировать&lt;/BarIt [rest of string was truncated]&quot;;.
+        ///    &lt;Author&gt;Leonid Gorokhov&lt;/Author&gt;
+        ///    &lt;Comment&gt;Russian&lt;/Comment&gt;
+        ///    &lt;BarFile&gt;&amp;amp;Файл&lt;/BarFile&gt;
+        ///    &lt;BarEdit&gt;&amp;amp;Правка&lt;/BarEdit&gt;
+        ///    &lt;BarView&gt;&amp;amp;Вид&lt;/BarView&gt;
+        ///    &lt;BarTools&gt;&amp;amp;Инструменты&lt;/BarTools&gt;
+        ///    &lt;BarHelp&gt;&amp;amp;Помощь&lt;/BarHelp&gt;
+        ///    &lt;BarItemOpenFiles&gt;Открыть файл(ы)...&lt;/BarItemOpenFiles&gt;
+        ///    &lt;BarItemOpenFolder&gt;Открыть папку...&lt;/BarItemOpenFolder&gt;
+        ///    &lt;BarItemRestart&gt;Перезапуск&lt;/BarItemRestart&gt;
+        ///    &lt;BarItemExit&gt;Выход&lt;/BarItemExit&gt;
+        ///    &lt;BarItemUnlo [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string rus {
             get {
@@ -435,18 +452,18 @@ namespace DeadLock.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
         ///&lt;Language&gt;
-        ///  &lt;Author&gt;Nikola Janković&lt;/Author&gt;
-        ///  &lt;Comment&gt;Srpski&lt;/Comment&gt;
-        ///  &lt;BarFile&gt;&amp;amp;Datoteka&lt;/BarFile&gt;
-        ///  &lt;BarEdit&gt;&amp;amp;Uredi&lt;/BarEdit&gt;
-        ///  &lt;BarView&gt;&amp;amp;Pregled&lt;/BarView&gt;
-        ///  &lt;BarTools&gt;&amp;amp;Alati&lt;/BarTools&gt;
-        ///  &lt;BarHelp&gt;&amp;amp;Pomoć&lt;/BarHelp&gt;
-        ///  &lt;BarItemOpenFiles&gt;Otvori fajl(ove)...&lt;/BarItemOpenFiles&gt;
-        ///  &lt;BarItemOpenFolder&gt;Otvori folder...&lt;/BarItemOpenFolder&gt;
-        ///  &lt;BarItemRestart&gt;Restart&lt;/BarItemRestart&gt;
-        ///  &lt;BarItemExit&gt;Izlaz&lt;/BarItemExit&gt;
-        ///  &lt;BarItemUnlock&gt;Otključaj&lt;/BarItemUnlock [rest of string was truncated]&quot;;.
+        ///    &lt;Author&gt;Nikola Janković&lt;/Author&gt;
+        ///    &lt;Comment&gt;Srpski&lt;/Comment&gt;
+        ///    &lt;BarFile&gt;&amp;amp;Datoteka&lt;/BarFile&gt;
+        ///    &lt;BarEdit&gt;&amp;amp;Uredi&lt;/BarEdit&gt;
+        ///    &lt;BarView&gt;&amp;amp;Pregled&lt;/BarView&gt;
+        ///    &lt;BarTools&gt;&amp;amp;Alati&lt;/BarTools&gt;
+        ///    &lt;BarHelp&gt;&amp;amp;Pomoć&lt;/BarHelp&gt;
+        ///    &lt;BarItemOpenFiles&gt;Otvori fajl(ove)...&lt;/BarItemOpenFiles&gt;
+        ///    &lt;BarItemOpenFolder&gt;Otvori folder...&lt;/BarItemOpenFolder&gt;
+        ///    &lt;BarItemRestart&gt;Restart&lt;/BarItemRestart&gt;
+        ///    &lt;BarItemExit&gt;Izlaz&lt;/BarItemExit&gt;
+        ///    &lt;BarItemUnlock&gt; [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string sr {
             get {
@@ -457,19 +474,18 @@ namespace DeadLock.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
         ///&lt;Language&gt;
-        ///  &lt;Author&gt;Mats Arvendal&lt;/Author&gt;
-        ///  &lt;Comment&gt;Swedish&lt;/Comment&gt;
-        ///  &lt;BarFile&gt;&amp;amp;Arkiv&lt;/BarFile&gt;
-        ///  &lt;BarEdit&gt;&amp;amp;Redigera&lt;/BarEdit&gt;
-        ///  &lt;BarView&gt;&amp;amp;Visa&lt;/BarView&gt;
-        ///  &lt;BarTools&gt;&amp;amp;Verktyg&lt;/BarTools&gt;
-        ///  &lt;BarHelp&gt;&amp;amp;Hjälp&lt;/BarHelp&gt;
-        ///  &lt;BarItemOpenFiles&gt;Öppna fil(er)...&lt;/BarItemOpenFiles&gt;
-        ///  &lt;BarItemOpenFolder&gt;Öppna mapp...&lt;/BarItemOpenFolder&gt;
-        ///  &lt;BarItemRestart&gt;Starta om&lt;/BarItemRestart&gt;
-        ///  &lt;BarItemExit&gt;Avsluta&lt;/BarItemExit&gt;
-        ///  &lt;BarItemUnlock&gt;Lås upp&lt;/BarItemUnlock&gt;
-        ///  &lt; [rest of string was truncated]&quot;;.
+        ///    &lt;Author&gt;Mats Arvendal&lt;/Author&gt;
+        ///    &lt;Comment&gt;Swedish&lt;/Comment&gt;
+        ///    &lt;BarFile&gt;&amp;amp;Arkiv&lt;/BarFile&gt;
+        ///    &lt;BarEdit&gt;&amp;amp;Redigera&lt;/BarEdit&gt;
+        ///    &lt;BarView&gt;&amp;amp;Visa&lt;/BarView&gt;
+        ///    &lt;BarTools&gt;&amp;amp;Verktyg&lt;/BarTools&gt;
+        ///    &lt;BarHelp&gt;&amp;amp;Hjälp&lt;/BarHelp&gt;
+        ///    &lt;BarItemOpenFiles&gt;Öppna fil(er)...&lt;/BarItemOpenFiles&gt;
+        ///    &lt;BarItemOpenFolder&gt;Öppna mapp...&lt;/BarItemOpenFolder&gt;
+        ///    &lt;BarItemRestart&gt;Starta om&lt;/BarItemRestart&gt;
+        ///    &lt;BarItemExit&gt;Avsluta&lt;/BarItemExit&gt;
+        ///    &lt;BarItemUnlock&gt;Lås  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string swe {
             get {
@@ -480,18 +496,18 @@ namespace DeadLock.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
         ///&lt;Language&gt;
-        ///  &lt;Author&gt;@bkrcrc_ (Twitter)&lt;/Author&gt;
-        ///  &lt;Comment&gt;Turkish&lt;/Comment&gt;
-        ///  &lt;BarFile&gt;&amp;amp;Dosya&lt;/BarFile&gt;
-        ///  &lt;BarEdit&gt;&amp;amp;Düzenle&lt;/BarEdit&gt;
-        ///  &lt;BarView&gt;&amp;amp;Göster&lt;/BarView&gt;
-        ///  &lt;BarTools&gt;&amp;amp;Araçlar&lt;/BarTools&gt;
-        ///  &lt;BarHelp&gt;&amp;amp;Yardım&lt;/BarHelp&gt;
-        ///  &lt;BarItemOpenFiles&gt;Dosya(ları) aç...&lt;/BarItemOpenFiles&gt;
-        ///  &lt;BarItemOpenFolder&gt;Klasör aç...&lt;/BarItemOpenFolder&gt;
-        ///  &lt;BarItemRestart&gt;Yeniden başlat&lt;/BarItemRestart&gt;
-        ///  &lt;BarItemExit&gt;Çıkış&lt;/BarItemExit&gt;
-        ///  &lt;BarItemUnlock&gt;Kilit Aç&lt;/BarItemU [rest of string was truncated]&quot;;.
+        ///    &lt;Author&gt;@bkrcrc_ (Twitter)&lt;/Author&gt;
+        ///    &lt;Comment&gt;Turkish&lt;/Comment&gt;
+        ///    &lt;BarFile&gt;&amp;amp;Dosya&lt;/BarFile&gt;
+        ///    &lt;BarEdit&gt;&amp;amp;Düzenle&lt;/BarEdit&gt;
+        ///    &lt;BarView&gt;&amp;amp;Göster&lt;/BarView&gt;
+        ///    &lt;BarTools&gt;&amp;amp;Araçlar&lt;/BarTools&gt;
+        ///    &lt;BarHelp&gt;&amp;amp;Yardım&lt;/BarHelp&gt;
+        ///    &lt;BarItemOpenFiles&gt;Dosya(ları) aç...&lt;/BarItemOpenFiles&gt;
+        ///    &lt;BarItemOpenFolder&gt;Klasör aç...&lt;/BarItemOpenFolder&gt;
+        ///    &lt;BarItemRestart&gt;Yeniden başlat&lt;/BarItemRestart&gt;
+        ///    &lt;BarItemExit&gt;Çıkış&lt;/BarItemExit&gt;
+        ///    &lt;BarItemU [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string tr {
             get {
@@ -552,19 +568,18 @@ namespace DeadLock.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
         ///&lt;Language&gt;
-        ///  &lt;Author&gt;Krasnaya Ploshchad’&lt;/Author&gt;
-        ///  &lt;Comment&gt;Chinese Simplified&lt;/Comment&gt;
-        ///  &lt;BarFile&gt;文件(&amp;amp;F)&lt;/BarFile&gt;
-        ///  &lt;BarEdit&gt;编辑(&amp;amp;E)&lt;/BarEdit&gt;
-        ///  &lt;BarView&gt;查看(&amp;amp;V)&lt;/BarView&gt;
-        ///  &lt;BarTools&gt;工具(&amp;amp;T)&lt;/BarTools&gt;
-        ///  &lt;BarHelp&gt;帮助(&amp;amp;H)&lt;/BarHelp&gt;
-        ///  &lt;BarItemOpenFiles&gt;打开文件...&lt;/BarItemOpenFiles&gt;
-        ///  &lt;BarItemOpenFolder&gt;打开文件夹...&lt;/BarItemOpenFolder&gt;
-        ///  &lt;BarItemRestart&gt;重启&lt;/BarItemRestart&gt;
-        ///  &lt;BarItemExit&gt;退出&lt;/BarItemExit&gt;
-        ///  &lt;BarItemUnlock&gt;解锁&lt;/BarItemUnlock&gt;
-        ///  &lt;BarItemCopy&gt;复制&lt;/Ba [rest of string was truncated]&quot;;.
+        ///    &lt;Author&gt;Krasnaya Ploshchad’&lt;/Author&gt;
+        ///    &lt;Comment&gt;Chinese Simplified&lt;/Comment&gt;
+        ///    &lt;BarFile&gt;文件(&amp;amp;F)&lt;/BarFile&gt;
+        ///    &lt;BarEdit&gt;编辑(&amp;amp;E)&lt;/BarEdit&gt;
+        ///    &lt;BarView&gt;查看(&amp;amp;V)&lt;/BarView&gt;
+        ///    &lt;BarTools&gt;工具(&amp;amp;T)&lt;/BarTools&gt;
+        ///    &lt;BarHelp&gt;帮助(&amp;amp;H)&lt;/BarHelp&gt;
+        ///    &lt;BarItemOpenFiles&gt;打开文件...&lt;/BarItemOpenFiles&gt;
+        ///    &lt;BarItemOpenFolder&gt;打开文件夹...&lt;/BarItemOpenFolder&gt;
+        ///    &lt;BarItemRestart&gt;重启&lt;/BarItemRestart&gt;
+        ///    &lt;BarItemExit&gt;退出&lt;/BarItemExit&gt;
+        ///    &lt;BarItemUnlock&gt;解锁&lt;/BarItemUnlock [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string zhs {
             get {
@@ -575,20 +590,19 @@ namespace DeadLock.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot;?&gt;
         ///&lt;Language&gt;
-        ///  &lt;Author&gt;fricyo(GitHub)&lt;/Author&gt;
-        ///  &lt;Comment&gt;繁體中文&lt;/Comment&gt;
-        ///  &lt;BarFile&gt;檔案(&amp;amp;F)&lt;/BarFile&gt;
-        ///  &lt;BarEdit&gt;編輯(&amp;amp;E)&lt;/BarEdit&gt;
-        ///  &lt;BarView&gt;瀏覽(&amp;amp;V)&lt;/BarView&gt;
-        ///  &lt;BarTools&gt;工具(&amp;amp;T)&lt;/BarTools&gt;
-        ///  &lt;BarHelp&gt;幫助(&amp;amp;H)&lt;/BarHelp&gt;
-        ///  &lt;BarItemOpenFiles&gt;開啟檔案...&lt;/BarItemOpenFiles&gt;
-        ///  &lt;BarItemOpenFolder&gt;開啟資料夾...&lt;/BarItemOpenFolder&gt;
-        ///  &lt;BarItemRestart&gt;重新開始&lt;/BarItemRestart&gt;
-        ///  &lt;BarItemExit&gt;離開&lt;/BarItemExit&gt;
-        ///  &lt;BarItemUnlock&gt;解鎖&lt;/BarItemUnlock&gt;
-        ///  &lt;BarItemCopy&gt;複製&lt;/BarItemCopy&gt;
-        ///  &lt;Ba [rest of string was truncated]&quot;;.
+        ///    &lt;Author&gt;fricyo(GitHub)&lt;/Author&gt;
+        ///    &lt;Comment&gt;繁體中文&lt;/Comment&gt;
+        ///    &lt;BarFile&gt;檔案(&amp;amp;F)&lt;/BarFile&gt;
+        ///    &lt;BarEdit&gt;編輯(&amp;amp;E)&lt;/BarEdit&gt;
+        ///    &lt;BarView&gt;瀏覽(&amp;amp;V)&lt;/BarView&gt;
+        ///    &lt;BarTools&gt;工具(&amp;amp;T)&lt;/BarTools&gt;
+        ///    &lt;BarHelp&gt;幫助(&amp;amp;H)&lt;/BarHelp&gt;
+        ///    &lt;BarItemOpenFiles&gt;開啟檔案...&lt;/BarItemOpenFiles&gt;
+        ///    &lt;BarItemOpenFolder&gt;開啟資料夾...&lt;/BarItemOpenFolder&gt;
+        ///    &lt;BarItemRestart&gt;重新開始&lt;/BarItemRestart&gt;
+        ///    &lt;BarItemExit&gt;離開&lt;/BarItemExit&gt;
+        ///    &lt;BarItemUnlock&gt;解鎖&lt;/BarItemUnlock&gt;
+        ///    &lt;BarItemCo [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string zht {
             get {

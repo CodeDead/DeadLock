@@ -1,93 +1,96 @@
 ﻿<?xml version="1.0"?>
 <Language>
-  <Author>pouemes</Author>
-  <Comment>Français</Comment>
-  <BarFile>&amp;Fichier</BarFile>
-  <BarEdit>&amp;Editer</BarEdit>
-  <BarView>&amp;Voir</BarView>
-  <BarTools>&amp;Outils</BarTools>
-  <BarHelp>&amp;Aide</BarHelp>
-  <BarItemOpenFiles>Ouvrir fichier(s)...</BarItemOpenFiles>
-  <BarItemOpenFolder>Ouvrir répertoire...</BarItemOpenFolder>
-  <BarItemRestart>Redémarrer</BarItemRestart>
-  <BarItemExit>Quitter</BarItemExit>
-  <BarItemUnlock>Débloquer</BarItemUnlock>
-  <BarItemCopy>Copier</BarItemCopy>
-  <BarItemMove>Déplacer</BarItemMove>
-  <BarItemRemove>Supprimer</BarItemRemove>
-  <BarItemOwnership>Propriété</BarItemOwnership>
-  <BarItemOwnershipTrue>Vrai</BarItemOwnershipTrue>
-  <BarItemOwnershipFalse>Faux</BarItemOwnershipFalse>
-  <BarItemRemoveItem>Supprimer l'item</BarItemRemoveItem>
-  <BarItemClearItems>Effacer l'item</BarItemClearItems>
-  <BarItemAutoSizeColumns>Taille Auto colonnes</BarItemAutoSizeColumns>
-  <BarItemCancelTask>Suspendre la tâche</BarItemCancelTask>
-  <BarItemDetails>Détails</BarItemDetails>
-  <BarItemSettings>Réglages</BarItemSettings>
-  <BarItemHelp>Aide</BarItemHelp>
-  <BarItemCheckForUpdates>Recherche mises à jour</BarItemCheckForUpdates>
-  <BarItemHomePage>Page d'accueil</BarItemHomePage>
-  <BarItemAbout>A propos</BarItemAbout>
-  <ClhPath>Chemin</ClhPath>
-  <ClhStatus>Status</ClhStatus>
-  <ClhOwnership>Propriété</ClhOwnership>
-  <MsgUnknown>Inconnu</MsgUnknown>
-  <MsgLocked>Bloqué</MsgLocked>
-  <MsgUnlocked>Débloqué</MsgUnlocked>
-  <MsgOperationCancelled>Operation arrêtée</MsgOperationCancelled>
-  <MsgLoading>En charge...</MsgLoading>
-  <MsgSuccessfullyUnlocked>Débloquage réussit</MsgSuccessfullyUnlocked>
-  <MsgCouldNotUnlock>Ne peut d'ébloquer l'item</MsgCouldNotUnlock>
-  <MsgSuccessfullyCopied>Copie réussit</MsgSuccessfullyCopied>
-  <MsgCouldNotCopy>Ne peut copier l'item</MsgCouldNotCopy>
-  <MsgSuccessfullyMoved>Déplacement réussit</MsgSuccessfullyMoved>
-  <MsgCouldNotMove>Ne peut déplacer l'item</MsgCouldNotMove>
-  <MsgSuccessfullyRemoved>Effacement réussit</MsgSuccessfullyRemoved>
-  <MsgCouldNotRemove>Ne peut supprimer l'item</MsgCouldNotRemove>
-  <ClhFileName>Nom du fichier</ClhFileName>
-  <ClhProcessId>Processus ID</ClhProcessId>
-  <LblVersion>Version:</LblVersion>
-  <CmiDetails>Details</CmiDetails>
-  <CmiOpenInVirusTotal>Ouvert en VirusTotal</CmiOpenInVirusTotal>
-  <CmiKill>Tuer</CmiKill>
-  <CmiOpenFileLocation>Ouvrir l'endroit du fichier</CmiOpenFileLocation>
-  <CmiProperties>Propriétés</CmiProperties>
-  <MsgSuccessfullyKilled>Processus sélectionné enrayé avec succès!</MsgSuccessfullyKilled>
-  <CmiHideShow>Hide / Show</CmiHideShow>
-  <MsgAdministrator>DeadLock ne fonctionnera pas correctement sans les droits administrateur!</MsgAdministrator>
-  <MsgDownloadNewVersion>Voulez vous télécharger la dernière version?</MsgDownloadNewVersion>
-  <MsgLatestVersionAlreadyInstalled>La dernière version de DeadLock est déjà installée!</MsgLatestVersionAlreadyInstalled>
-  <TxtAboutCreated>DeadLock a été créé par DeadLine.</TxtAboutCreated>
-  <TxtAboutImages>Images: small-n-flat par paomedia</TxtAboutImages>
-  <TxtAboutTheme>Theme par: SyncFusion</TxtAboutTheme>
-  <TxtAboutCopyright>Copyright &#169; CodeDead 2026</TxtAboutCopyright>
-  <TxtAboutTranslation>Traduction: http://pouemes.free.fr</TxtAboutTranslation>
-  <BtnClose>Fermer</BtnClose>
-  <BtnLicense>Licence</BtnLicense>
-  <LblGeneral>Général</LblGeneral>
-  <ChbAutoUpdate>Recherche automatique des mises à jour:</ChbAutoUpdate>
-  <ChbShowNotifyIcon>Montrer l'icone de notification:</ChbShowNotifyIcon>
-  <ChbStartMinimized>Démarrer minimisé:</ChbStartMinimized>
-  <ChbShowAdminWarning>Montrer l'avertissement administrateur:</ChbShowAdminWarning>
-  <LblAppearance>Apparence</LblAppearance>
-  <LblThemeStyle>Style du Thème:</LblThemeStyle>
-  <LblRememberFormSize>Se rappeler de la taille de la forme:</LblRememberFormSize>
-  <LblShowDetails>Montrer les détails:</LblShowDetails>
-  <LblLanguage>Langue:</LblLanguage>
-  <LblAdvanced>Avancé</LblAdvanced>
-  <LblAutoRunDeadLock>Lancer DeadLock automatiquement:</LblAutoRunDeadLock>
-  <LblWindowsExplorerIntegration>Windows Explorer integration:</LblWindowsExplorerIntegration>
-  <LblOwnership>Prend la propriété:</LblOwnership>
-  <BtnReset>Reset</BtnReset>
-  <BtnSave>Sauver</BtnSave>
-  <TbtnOn>ON</TbtnOn>
-  <TbtnOff>OFF</TbtnOff>
-  <TxtUpdater>Mise à jour</TxtUpdater>
-  <LblPath>Chemin:</LblPath>
-  <LblProgress>Progression:</LblProgress>
-  <MsgCouldNotRestart>Ne peut commencer à redémarrer la session. Incapable de déterminer la ressource bloquée.</MsgCouldNotRestart>
-  <MsgCouldNotRegister>Ne peut enregistrer la resource.</MsgCouldNotRegister>
-  <MsgCouldNotList>Ne peut lister les processus qui bloquent la resource!</MsgCouldNotList>
-  <MsgCouldNotListResult>Ne peut lister les processus qui bloquent la resource. Echec de resultats!</MsgCouldNotListResult>
-  <MsgAccessDenied>Accès interdit</MsgAccessDenied>
+    <Author>pouemes</Author>
+    <Comment>Français</Comment>
+    <BarFile>&amp;Fichier</BarFile>
+    <BarEdit>&amp;Editer</BarEdit>
+    <BarView>&amp;Voir</BarView>
+    <BarTools>&amp;Outils</BarTools>
+    <BarHelp>&amp;Aide</BarHelp>
+    <BarItemOpenFiles>Ouvrir fichier(s)...</BarItemOpenFiles>
+    <BarItemOpenFolder>Ouvrir répertoire...</BarItemOpenFolder>
+    <BarItemRestart>Redémarrer</BarItemRestart>
+    <BarItemExit>Quitter</BarItemExit>
+    <BarItemUnlock>Débloquer</BarItemUnlock>
+    <BarItemCopy>Copier</BarItemCopy>
+    <BarItemMove>Déplacer</BarItemMove>
+    <BarItemRemove>Supprimer</BarItemRemove>
+    <BarItemOwnership>Propriété</BarItemOwnership>
+    <BarItemOwnershipTrue>Vrai</BarItemOwnershipTrue>
+    <BarItemOwnershipFalse>Faux</BarItemOwnershipFalse>
+    <BarItemRemoveItem>Supprimer l'item</BarItemRemoveItem>
+    <BarItemClearItems>Effacer l'item</BarItemClearItems>
+    <BarItemAutoSizeColumns>Taille Auto colonnes</BarItemAutoSizeColumns>
+    <BarItemCancelTask>Suspendre la tâche</BarItemCancelTask>
+    <BarItemDetails>Détails</BarItemDetails>
+    <BarItemSettings>Réglages</BarItemSettings>
+    <BarItemHelp>Aide</BarItemHelp>
+    <BarItemCheckForUpdates>Recherche mises à jour</BarItemCheckForUpdates>
+    <BarItemHomePage>Page d'accueil</BarItemHomePage>
+    <BarItemAbout>A propos</BarItemAbout>
+    <ClhPath>Chemin</ClhPath>
+    <ClhStatus>Status</ClhStatus>
+    <ClhOwnership>Propriété</ClhOwnership>
+    <MsgUnknown>Inconnu</MsgUnknown>
+    <MsgLocked>Bloqué</MsgLocked>
+    <MsgUnlocked>Débloqué</MsgUnlocked>
+    <MsgOperationCancelled>Operation arrêtée</MsgOperationCancelled>
+    <MsgLoading>En charge...</MsgLoading>
+    <MsgSuccessfullyUnlocked>Débloquage réussit</MsgSuccessfullyUnlocked>
+    <MsgCouldNotUnlock>Ne peut d'ébloquer l'item</MsgCouldNotUnlock>
+    <MsgSuccessfullyCopied>Copie réussit</MsgSuccessfullyCopied>
+    <MsgCouldNotCopy>Ne peut copier l'item</MsgCouldNotCopy>
+    <MsgSuccessfullyMoved>Déplacement réussit</MsgSuccessfullyMoved>
+    <MsgCouldNotMove>Ne peut déplacer l'item</MsgCouldNotMove>
+    <MsgSuccessfullyRemoved>Effacement réussit</MsgSuccessfullyRemoved>
+    <MsgCouldNotRemove>Ne peut supprimer l'item</MsgCouldNotRemove>
+    <ClhFileName>Nom du fichier</ClhFileName>
+    <ClhProcessId>Processus ID</ClhProcessId>
+    <LblVersion>Version:</LblVersion>
+    <CmiDetails>Details</CmiDetails>
+    <CmiOpenInVirusTotal>Ouvert en VirusTotal</CmiOpenInVirusTotal>
+    <CmiKill>Tuer</CmiKill>
+    <CmiOpenFileLocation>Ouvrir l'endroit du fichier</CmiOpenFileLocation>
+    <CmiProperties>Propriétés</CmiProperties>
+    <MsgSuccessfullyKilled>Processus sélectionné enrayé avec succès!</MsgSuccessfullyKilled>
+    <CmiHideShow>Hide / Show</CmiHideShow>
+    <MsgAdministrator>DeadLock ne fonctionnera pas correctement sans les droits administrateur!</MsgAdministrator>
+    <MsgDownloadNewVersion>Voulez vous télécharger la dernière version?</MsgDownloadNewVersion>
+    <MsgLatestVersionAlreadyInstalled>La dernière version de DeadLock est déjà installée!
+    </MsgLatestVersionAlreadyInstalled>
+    <TxtAboutCreated>DeadLock a été créé par DeadLine.</TxtAboutCreated>
+    <TxtAboutImages>Images: small-n-flat par paomedia</TxtAboutImages>
+    <TxtAboutTheme>Theme par: SyncFusion</TxtAboutTheme>
+    <TxtAboutCopyright>Copyright &#169; CodeDead 2026</TxtAboutCopyright>
+    <TxtAboutTranslation>Traduction: http://pouemes.free.fr</TxtAboutTranslation>
+    <BtnClose>Fermer</BtnClose>
+    <BtnLicense>Licence</BtnLicense>
+    <LblGeneral>Général</LblGeneral>
+    <ChbAutoUpdate>Recherche automatique des mises à jour:</ChbAutoUpdate>
+    <ChbShowNotifyIcon>Montrer l'icone de notification:</ChbShowNotifyIcon>
+    <ChbStartMinimized>Démarrer minimisé:</ChbStartMinimized>
+    <ChbShowAdminWarning>Montrer l'avertissement administrateur:</ChbShowAdminWarning>
+    <LblAppearance>Apparence</LblAppearance>
+    <LblThemeStyle>Style du Thème:</LblThemeStyle>
+    <LblRememberFormSize>Se rappeler de la taille de la forme:</LblRememberFormSize>
+    <LblShowDetails>Montrer les détails:</LblShowDetails>
+    <LblLanguage>Langue:</LblLanguage>
+    <LblAdvanced>Avancé</LblAdvanced>
+    <LblAutoRunDeadLock>Lancer DeadLock automatiquement:</LblAutoRunDeadLock>
+    <LblWindowsExplorerIntegration>Windows Explorer integration:</LblWindowsExplorerIntegration>
+    <LblOwnership>Prend la propriété:</LblOwnership>
+    <BtnReset>Reset</BtnReset>
+    <BtnSave>Sauver</BtnSave>
+    <TbtnOn>ON</TbtnOn>
+    <TbtnOff>OFF</TbtnOff>
+    <TxtUpdater>Mise à jour</TxtUpdater>
+    <LblPath>Chemin:</LblPath>
+    <LblProgress>Progression:</LblProgress>
+    <MsgCouldNotRestart>Ne peut commencer à redémarrer la session. Incapable de déterminer la ressource bloquée.
+    </MsgCouldNotRestart>
+    <MsgCouldNotRegister>Ne peut enregistrer la resource.</MsgCouldNotRegister>
+    <MsgCouldNotList>Ne peut lister les processus qui bloquent la resource!</MsgCouldNotList>
+    <MsgCouldNotListResult>Ne peut lister les processus qui bloquent la resource. Echec de resultats!
+    </MsgCouldNotListResult>
+    <MsgAccessDenied>Accès interdit</MsgAccessDenied>
 </Language>

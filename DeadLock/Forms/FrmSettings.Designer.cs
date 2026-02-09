@@ -296,6 +296,7 @@ namespace DeadLock.Forms
             "Spanish",
             "Swedish",
             "Turkish",
+            "Bulgarian",
             "Custom"});
             this.cboLanguage.Location = new System.Drawing.Point(320, 125);
             this.cboLanguage.Margin = new System.Windows.Forms.Padding(4);

@@ -1,93 +1,93 @@
 <?xml version="1.0"?>
 <Language>
-  <Author>fricyo(GitHub)</Author>
-  <Comment>繁體中文</Comment>
-  <BarFile>檔案(&amp;F)</BarFile>
-  <BarEdit>編輯(&amp;E)</BarEdit>
-  <BarView>瀏覽(&amp;V)</BarView>
-  <BarTools>工具(&amp;T)</BarTools>
-  <BarHelp>幫助(&amp;H)</BarHelp>
-  <BarItemOpenFiles>開啟檔案...</BarItemOpenFiles>
-  <BarItemOpenFolder>開啟資料夾...</BarItemOpenFolder>
-  <BarItemRestart>重新開始</BarItemRestart>
-  <BarItemExit>離開</BarItemExit>
-  <BarItemUnlock>解鎖</BarItemUnlock>
-  <BarItemCopy>複製</BarItemCopy>
-  <BarItemMove>移動</BarItemMove>
-  <BarItemRemove>移除</BarItemRemove>
-  <BarItemOwnership>所有者</BarItemOwnership>
-  <BarItemOwnershipTrue>是</BarItemOwnershipTrue>
-  <BarItemOwnershipFalse>否</BarItemOwnershipFalse>
-  <BarItemRemoveItem>移除項目</BarItemRemoveItem>
-  <BarItemClearItems>清除項目</BarItemClearItems>
-  <BarItemAutoSizeColumns>自動適配欄寬</BarItemAutoSizeColumns>
-  <BarItemCancelTask>工作取消</BarItemCancelTask>
-  <BarItemDetails>內容</BarItemDetails>
-  <BarItemSettings>設定</BarItemSettings>
-  <BarItemHelp>幫助</BarItemHelp>
-  <BarItemCheckForUpdates>檢查更新</BarItemCheckForUpdates>
-  <BarItemHomePage>首頁</BarItemHomePage>
-  <BarItemAbout>關於</BarItemAbout>
-  <ClhPath>路徑</ClhPath>
-  <ClhStatus>狀態</ClhStatus>
-  <ClhOwnership>所有者</ClhOwnership>
-  <MsgUnknown>未知</MsgUnknown>
-  <MsgLocked>已鎖定</MsgLocked>
-  <MsgUnlocked>已解鎖</MsgUnlocked>
-  <MsgOperationCancelled>操作被取消</MsgOperationCancelled>
-  <MsgLoading>讀取中...</MsgLoading>
-  <MsgSuccessfullyUnlocked>成功解鎖</MsgSuccessfullyUnlocked>
-  <MsgCouldNotUnlock>無法解鎖此項目</MsgCouldNotUnlock>
-  <MsgSuccessfullyCopied>成功複製</MsgSuccessfullyCopied>
-  <MsgCouldNotCopy>無法複製此項目</MsgCouldNotCopy>
-  <MsgSuccessfullyMoved>成功移動</MsgSuccessfullyMoved>
-  <MsgCouldNotMove>無法移動此項目</MsgCouldNotMove>
-  <MsgSuccessfullyRemoved>成功移除</MsgSuccessfullyRemoved>
-  <MsgCouldNotRemove>無法移除此項目</MsgCouldNotRemove>
-  <ClhFileName>檔案名稱</ClhFileName>
-  <ClhProcessId>進程 ID</ClhProcessId>
-  <LblVersion>版本：</LblVersion>
-  <CmiDetails>內容</CmiDetails>
-  <CmiOpenInVirusTotal>以 VirusTotal 開啟</CmiOpenInVirusTotal>
-  <CmiKill>殺死</CmiKill>
-  <CmiOpenFileLocation>開啟檔案位置</CmiOpenFileLocation>
-  <CmiProperties>屬性</CmiProperties>
-  <MsgSuccessfullyKilled>成功終止所選的進程！</MsgSuccessfullyKilled>
-  <CmiHideShow>隱藏 / 顯示</CmiHideShow>
-  <MsgAdministrator>沒有管理權限，DeadLock 可能無法正常運作！</MsgAdministrator>
-  <MsgDownloadNewVersion>您想要下載最新版本嗎？</MsgDownloadNewVersion>
-  <MsgLatestVersionAlreadyInstalled>DeadLock 最新版本已經安裝！</MsgLatestVersionAlreadyInstalled>
-  <TxtAboutCreated>DeadLine 創建了 DeadLock。</TxtAboutCreated>
-  <TxtAboutImages>圖片：small-n-flat by paomedia</TxtAboutImages>
-  <TxtAboutTheme>主題：SyncFusion</TxtAboutTheme>
-  <TxtAboutCopyright>Copyright &#169; CodeDead 2026</TxtAboutCopyright>
-  <TxtAboutTranslation>翻譯：</TxtAboutTranslation>
-  <BtnClose>關閉</BtnClose>
-  <BtnLicense>授權</BtnLicense>
-  <LblGeneral>正常</LblGeneral>
-  <ChbAutoUpdate>自動檢查更新：</ChbAutoUpdate>
-  <ChbShowNotifyIcon>顯示通知圖示：</ChbShowNotifyIcon>
-  <ChbStartMinimized>最小化啟動：</ChbStartMinimized>
-  <ChbShowAdminWarning>顯示管理員警告：</ChbShowAdminWarning>
-  <LblAppearance>外貌</LblAppearance>
-  <LblThemeStyle>主題風格：</LblThemeStyle>
-  <LblRememberFormSize>記住視窗大小：</LblRememberFormSize>
-  <LblShowDetails>顯示內容：</LblShowDetails>
-  <LblLanguage>語言：</LblLanguage>
-  <LblAdvanced>進階</LblAdvanced>
-  <LblAutoRunDeadLock>自動運行DeadLock:</LblAutoRunDeadLock>
-  <LblWindowsExplorerIntegration>Windows 檔案總管整合：</LblWindowsExplorerIntegration>
-  <LblOwnership>取得所有權：</LblOwnership>
-  <BtnReset>重置</BtnReset>
-  <BtnSave>儲存</BtnSave>
-  <TbtnOn>開</TbtnOn>
-  <TbtnOff>關</TbtnOff>
-  <TxtUpdater>更新</TxtUpdater>
-  <LblPath>路徑：</LblPath>
-  <LblProgress>進程：</LblProgress>
-  <MsgCouldNotRestart>無法開始重新啟動會話。未能確定何者鎖定了資源。</MsgCouldNotRestart>
-  <MsgCouldNotRegister>無法註冊資源。</MsgCouldNotRegister>
-  <MsgCouldNotList>無法列出鎖定資源的進程!</MsgCouldNotList>
-  <MsgCouldNotListResult>無法列出鎖定資源的進程。未能取得結果的大小!</MsgCouldNotListResult>
-  <MsgAccessDenied>存取遭拒絕</MsgAccessDenied>
+    <Author>fricyo(GitHub)</Author>
+    <Comment>繁體中文</Comment>
+    <BarFile>檔案(&amp;F)</BarFile>
+    <BarEdit>編輯(&amp;E)</BarEdit>
+    <BarView>瀏覽(&amp;V)</BarView>
+    <BarTools>工具(&amp;T)</BarTools>
+    <BarHelp>幫助(&amp;H)</BarHelp>
+    <BarItemOpenFiles>開啟檔案...</BarItemOpenFiles>
+    <BarItemOpenFolder>開啟資料夾...</BarItemOpenFolder>
+    <BarItemRestart>重新開始</BarItemRestart>
+    <BarItemExit>離開</BarItemExit>
+    <BarItemUnlock>解鎖</BarItemUnlock>
+    <BarItemCopy>複製</BarItemCopy>
+    <BarItemMove>移動</BarItemMove>
+    <BarItemRemove>移除</BarItemRemove>
+    <BarItemOwnership>所有者</BarItemOwnership>
+    <BarItemOwnershipTrue>是</BarItemOwnershipTrue>
+    <BarItemOwnershipFalse>否</BarItemOwnershipFalse>
+    <BarItemRemoveItem>移除項目</BarItemRemoveItem>
+    <BarItemClearItems>清除項目</BarItemClearItems>
+    <BarItemAutoSizeColumns>自動適配欄寬</BarItemAutoSizeColumns>
+    <BarItemCancelTask>工作取消</BarItemCancelTask>
+    <BarItemDetails>內容</BarItemDetails>
+    <BarItemSettings>設定</BarItemSettings>
+    <BarItemHelp>幫助</BarItemHelp>
+    <BarItemCheckForUpdates>檢查更新</BarItemCheckForUpdates>
+    <BarItemHomePage>首頁</BarItemHomePage>
+    <BarItemAbout>關於</BarItemAbout>
+    <ClhPath>路徑</ClhPath>
+    <ClhStatus>狀態</ClhStatus>
+    <ClhOwnership>所有者</ClhOwnership>
+    <MsgUnknown>未知</MsgUnknown>
+    <MsgLocked>已鎖定</MsgLocked>
+    <MsgUnlocked>已解鎖</MsgUnlocked>
+    <MsgOperationCancelled>操作被取消</MsgOperationCancelled>
+    <MsgLoading>讀取中...</MsgLoading>
+    <MsgSuccessfullyUnlocked>成功解鎖</MsgSuccessfullyUnlocked>
+    <MsgCouldNotUnlock>無法解鎖此項目</MsgCouldNotUnlock>
+    <MsgSuccessfullyCopied>成功複製</MsgSuccessfullyCopied>
+    <MsgCouldNotCopy>無法複製此項目</MsgCouldNotCopy>
+    <MsgSuccessfullyMoved>成功移動</MsgSuccessfullyMoved>
+    <MsgCouldNotMove>無法移動此項目</MsgCouldNotMove>
+    <MsgSuccessfullyRemoved>成功移除</MsgSuccessfullyRemoved>
+    <MsgCouldNotRemove>無法移除此項目</MsgCouldNotRemove>
+    <ClhFileName>檔案名稱</ClhFileName>
+    <ClhProcessId>進程 ID</ClhProcessId>
+    <LblVersion>版本：</LblVersion>
+    <CmiDetails>內容</CmiDetails>
+    <CmiOpenInVirusTotal>以 VirusTotal 開啟</CmiOpenInVirusTotal>
+    <CmiKill>殺死</CmiKill>
+    <CmiOpenFileLocation>開啟檔案位置</CmiOpenFileLocation>
+    <CmiProperties>屬性</CmiProperties>
+    <MsgSuccessfullyKilled>成功終止所選的進程！</MsgSuccessfullyKilled>
+    <CmiHideShow>隱藏 / 顯示</CmiHideShow>
+    <MsgAdministrator>沒有管理權限，DeadLock 可能無法正常運作！</MsgAdministrator>
+    <MsgDownloadNewVersion>您想要下載最新版本嗎？</MsgDownloadNewVersion>
+    <MsgLatestVersionAlreadyInstalled>DeadLock 最新版本已經安裝！</MsgLatestVersionAlreadyInstalled>
+    <TxtAboutCreated>DeadLine 創建了 DeadLock。</TxtAboutCreated>
+    <TxtAboutImages>圖片：small-n-flat by paomedia</TxtAboutImages>
+    <TxtAboutTheme>主題：SyncFusion</TxtAboutTheme>
+    <TxtAboutCopyright>Copyright &#169; CodeDead 2026</TxtAboutCopyright>
+    <TxtAboutTranslation>翻譯：</TxtAboutTranslation>
+    <BtnClose>關閉</BtnClose>
+    <BtnLicense>授權</BtnLicense>
+    <LblGeneral>正常</LblGeneral>
+    <ChbAutoUpdate>自動檢查更新：</ChbAutoUpdate>
+    <ChbShowNotifyIcon>顯示通知圖示：</ChbShowNotifyIcon>
+    <ChbStartMinimized>最小化啟動：</ChbStartMinimized>
+    <ChbShowAdminWarning>顯示管理員警告：</ChbShowAdminWarning>
+    <LblAppearance>外貌</LblAppearance>
+    <LblThemeStyle>主題風格：</LblThemeStyle>
+    <LblRememberFormSize>記住視窗大小：</LblRememberFormSize>
+    <LblShowDetails>顯示內容：</LblShowDetails>
+    <LblLanguage>語言：</LblLanguage>
+    <LblAdvanced>進階</LblAdvanced>
+    <LblAutoRunDeadLock>自動運行DeadLock:</LblAutoRunDeadLock>
+    <LblWindowsExplorerIntegration>Windows 檔案總管整合：</LblWindowsExplorerIntegration>
+    <LblOwnership>取得所有權：</LblOwnership>
+    <BtnReset>重置</BtnReset>
+    <BtnSave>儲存</BtnSave>
+    <TbtnOn>開</TbtnOn>
+    <TbtnOff>關</TbtnOff>
+    <TxtUpdater>更新</TxtUpdater>
+    <LblPath>路徑：</LblPath>
+    <LblProgress>進程：</LblProgress>
+    <MsgCouldNotRestart>無法開始重新啟動會話。未能確定何者鎖定了資源。</MsgCouldNotRestart>
+    <MsgCouldNotRegister>無法註冊資源。</MsgCouldNotRegister>
+    <MsgCouldNotList>無法列出鎖定資源的進程!</MsgCouldNotList>
+    <MsgCouldNotListResult>無法列出鎖定資源的進程。未能取得結果的大小!</MsgCouldNotListResult>
+    <MsgAccessDenied>存取遭拒絕</MsgAccessDenied>
 </Language>

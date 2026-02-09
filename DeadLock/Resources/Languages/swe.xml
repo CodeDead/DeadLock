@@ -1,93 +1,97 @@
 ﻿<?xml version="1.0"?>
 <Language>
-  <Author>Mats Arvendal</Author>
-  <Comment>Swedish</Comment>
-  <BarFile>&amp;Arkiv</BarFile>
-  <BarEdit>&amp;Redigera</BarEdit>
-  <BarView>&amp;Visa</BarView>
-  <BarTools>&amp;Verktyg</BarTools>
-  <BarHelp>&amp;Hjälp</BarHelp>
-  <BarItemOpenFiles>Öppna fil(er)...</BarItemOpenFiles>
-  <BarItemOpenFolder>Öppna mapp...</BarItemOpenFolder>
-  <BarItemRestart>Starta om</BarItemRestart>
-  <BarItemExit>Avsluta</BarItemExit>
-  <BarItemUnlock>Lås upp</BarItemUnlock>
-  <BarItemCopy>Kopiera</BarItemCopy>
-  <BarItemMove>Flytta</BarItemMove>
-  <BarItemRemove>Ta bort</BarItemRemove>
-  <BarItemOwnership>Ägarskap</BarItemOwnership>
-  <BarItemOwnershipTrue>Sann</BarItemOwnershipTrue>
-  <BarItemOwnershipFalse>Falsk</BarItemOwnershipFalse>
-  <BarItemRemoveItem>Ta bort post</BarItemRemoveItem>
-  <BarItemClearItems>Rensa poster</BarItemClearItems>
-  <BarItemAutoSizeColumns>Optimera kolumner</BarItemAutoSizeColumns>
-  <BarItemCancelTask>Avbryt uppgift</BarItemCancelTask>
-  <BarItemDetails>Detaljer</BarItemDetails>
-  <BarItemSettings>Inställningar</BarItemSettings>
-  <BarItemHelp>Hjälp (på engelska)</BarItemHelp>
-  <BarItemCheckForUpdates>Sök efter updateringar</BarItemCheckForUpdates>
-  <BarItemHomePage>Webbplats</BarItemHomePage>
-  <BarItemAbout>Om</BarItemAbout>
-  <ClhPath>Sökväg</ClhPath>
-  <ClhStatus>Status</ClhStatus>
-  <ClhOwnership>Ägarskap</ClhOwnership>
-  <MsgUnknown>Okänd</MsgUnknown>
-  <MsgLocked>Låst</MsgLocked>
-  <MsgUnlocked>Upplåst</MsgUnlocked>
-  <MsgOperationCancelled>Operationen avbröts</MsgOperationCancelled>
-  <MsgLoading>Laddar...</MsgLoading>
-  <MsgSuccessfullyUnlocked>Upplåsningen lyckades</MsgSuccessfullyUnlocked>
-  <MsgCouldNotUnlock>Kunde inte låsa upp posten</MsgCouldNotUnlock>
-  <MsgSuccessfullyCopied>Kopieringen lyckades</MsgSuccessfullyCopied>
-  <MsgCouldNotCopy>Kunde inte kopiera posten</MsgCouldNotCopy>
-  <MsgSuccessfullyMoved>Flytten lyckades</MsgSuccessfullyMoved>
-  <MsgCouldNotMove>Kunde inte flytta posten</MsgCouldNotMove>
-  <MsgSuccessfullyRemoved>Borttagningen lyckades</MsgSuccessfullyRemoved>
-  <MsgCouldNotRemove>Kunde inte ta bort posten</MsgCouldNotRemove>
-  <ClhFileName>Filnamn</ClhFileName>
-  <ClhProcessId>Process-ID</ClhProcessId>
-  <LblVersion>Version:</LblVersion>
-  <CmiDetails>Detaljer</CmiDetails>
-  <CmiOpenInVirusTotal>Öppna i VirusTotal</CmiOpenInVirusTotal>
-  <CmiKill>Stoppa</CmiKill>
-  <CmiOpenFileLocation>Öppna filplats</CmiOpenFileLocation>
-  <CmiProperties>Egenskaper</CmiProperties>
-  <MsgSuccessfullyKilled>Lyckades stoppa de vald(a) processer(na)!</MsgSuccessfullyKilled>
-  <CmiHideShow>Göm / Visa</CmiHideShow>
-  <MsgAdministrator>DeadLock fungerar kanske inte på rätt sätt utan administrativa rättigheter!</MsgAdministrator>
-  <MsgDownloadNewVersion>Vill du ladda ned den senaste versionen?</MsgDownloadNewVersion>
-  <MsgLatestVersionAlreadyInstalled>Senaste versionen av DeadLock är redan installerad!</MsgLatestVersionAlreadyInstalled>
-  <TxtAboutCreated>DeadLock är skapat av DeadLine.</TxtAboutCreated>
-  <TxtAboutImages>Bilder: small-n-flat by paomedia</TxtAboutImages>
-  <TxtAboutTheme>Tema av: SyncFusion</TxtAboutTheme>
-  <TxtAboutCopyright>Copyright &#169; CodeDead 2026</TxtAboutCopyright>
-  <TxtAboutTranslation>Översättning:</TxtAboutTranslation>
-  <BtnClose>Stäng</BtnClose>
-  <BtnLicense>Licens</BtnLicense>
-  <LblGeneral>Allmänt</LblGeneral>
-  <ChbAutoUpdate>Automatisk kontroll efter updateringar:</ChbAutoUpdate>
-  <ChbShowNotifyIcon>Visa meddelandeikon:</ChbShowNotifyIcon>
-  <ChbStartMinimized>Starta minimerad:</ChbStartMinimized>
-  <ChbShowAdminWarning>Visa administratörsvarning:</ChbShowAdminWarning>
-  <LblAppearance>Utseende</LblAppearance>
-  <LblThemeStyle>Temastil:</LblThemeStyle>
-  <LblRememberFormSize>Kom ihåg formulärstorlek:</LblRememberFormSize>
-  <LblShowDetails>Visa detaljer:</LblShowDetails>
-  <LblLanguage>Språk:</LblLanguage>
-  <LblAdvanced>Avancerat</LblAdvanced>
-  <LblAutoRunDeadLock>Kör DeadLock automatiskt:</LblAutoRunDeadLock>
-  <LblWindowsExplorerIntegration>Integration med Windows Utforskaren:</LblWindowsExplorerIntegration>
-  <LblOwnership>Överta ägarskap:</LblOwnership>
-  <BtnReset>Återställ</BtnReset>
-  <BtnSave>Spara</BtnSave>
-  <TbtnOn>PÅ</TbtnOn>
-  <TbtnOff>AV</TbtnOff>
-  <TxtUpdater>Uppdaterare</TxtUpdater>
-  <LblPath>Sökväg:</LblPath>
-  <LblProgress>Förlopp:</LblProgress>
-  <MsgCouldNotRestart>Kan inte påbörja återstartsession. Omöjligt att avgöra vad som låser källan.</MsgCouldNotRestart>
-  <MsgCouldNotRegister>Kan inte registrera källan.</MsgCouldNotRegister>
-  <MsgCouldNotList>Kan inte lista processerna som låser källan!</MsgCouldNotList>
-  <MsgCouldNotListResult>Kan inte lista processerna som låser källan. Mislyckades med att få storleken på resultatet!</MsgCouldNotListResult>
-  <MsgAccessDenied>Åtkomst nekas</MsgAccessDenied>
+    <Author>Mats Arvendal</Author>
+    <Comment>Swedish</Comment>
+    <BarFile>&amp;Arkiv</BarFile>
+    <BarEdit>&amp;Redigera</BarEdit>
+    <BarView>&amp;Visa</BarView>
+    <BarTools>&amp;Verktyg</BarTools>
+    <BarHelp>&amp;Hjälp</BarHelp>
+    <BarItemOpenFiles>Öppna fil(er)...</BarItemOpenFiles>
+    <BarItemOpenFolder>Öppna mapp...</BarItemOpenFolder>
+    <BarItemRestart>Starta om</BarItemRestart>
+    <BarItemExit>Avsluta</BarItemExit>
+    <BarItemUnlock>Lås upp</BarItemUnlock>
+    <BarItemCopy>Kopiera</BarItemCopy>
+    <BarItemMove>Flytta</BarItemMove>
+    <BarItemRemove>Ta bort</BarItemRemove>
+    <BarItemOwnership>Ägarskap</BarItemOwnership>
+    <BarItemOwnershipTrue>Sann</BarItemOwnershipTrue>
+    <BarItemOwnershipFalse>Falsk</BarItemOwnershipFalse>
+    <BarItemRemoveItem>Ta bort post</BarItemRemoveItem>
+    <BarItemClearItems>Rensa poster</BarItemClearItems>
+    <BarItemAutoSizeColumns>Optimera kolumner</BarItemAutoSizeColumns>
+    <BarItemCancelTask>Avbryt uppgift</BarItemCancelTask>
+    <BarItemDetails>Detaljer</BarItemDetails>
+    <BarItemSettings>Inställningar</BarItemSettings>
+    <BarItemHelp>Hjälp (på engelska)</BarItemHelp>
+    <BarItemCheckForUpdates>Sök efter updateringar</BarItemCheckForUpdates>
+    <BarItemHomePage>Webbplats</BarItemHomePage>
+    <BarItemAbout>Om</BarItemAbout>
+    <ClhPath>Sökväg</ClhPath>
+    <ClhStatus>Status</ClhStatus>
+    <ClhOwnership>Ägarskap</ClhOwnership>
+    <MsgUnknown>Okänd</MsgUnknown>
+    <MsgLocked>Låst</MsgLocked>
+    <MsgUnlocked>Upplåst</MsgUnlocked>
+    <MsgOperationCancelled>Operationen avbröts</MsgOperationCancelled>
+    <MsgLoading>Laddar...</MsgLoading>
+    <MsgSuccessfullyUnlocked>Upplåsningen lyckades</MsgSuccessfullyUnlocked>
+    <MsgCouldNotUnlock>Kunde inte låsa upp posten</MsgCouldNotUnlock>
+    <MsgSuccessfullyCopied>Kopieringen lyckades</MsgSuccessfullyCopied>
+    <MsgCouldNotCopy>Kunde inte kopiera posten</MsgCouldNotCopy>
+    <MsgSuccessfullyMoved>Flytten lyckades</MsgSuccessfullyMoved>
+    <MsgCouldNotMove>Kunde inte flytta posten</MsgCouldNotMove>
+    <MsgSuccessfullyRemoved>Borttagningen lyckades</MsgSuccessfullyRemoved>
+    <MsgCouldNotRemove>Kunde inte ta bort posten</MsgCouldNotRemove>
+    <ClhFileName>Filnamn</ClhFileName>
+    <ClhProcessId>Process-ID</ClhProcessId>
+    <LblVersion>Version:</LblVersion>
+    <CmiDetails>Detaljer</CmiDetails>
+    <CmiOpenInVirusTotal>Öppna i VirusTotal</CmiOpenInVirusTotal>
+    <CmiKill>Stoppa</CmiKill>
+    <CmiOpenFileLocation>Öppna filplats</CmiOpenFileLocation>
+    <CmiProperties>Egenskaper</CmiProperties>
+    <MsgSuccessfullyKilled>Lyckades stoppa de vald(a) processer(na)!</MsgSuccessfullyKilled>
+    <CmiHideShow>Göm / Visa</CmiHideShow>
+    <MsgAdministrator>DeadLock fungerar kanske inte på rätt sätt utan administrativa rättigheter!</MsgAdministrator>
+    <MsgDownloadNewVersion>Vill du ladda ned den senaste versionen?</MsgDownloadNewVersion>
+    <MsgLatestVersionAlreadyInstalled>Senaste versionen av DeadLock är redan installerad!
+    </MsgLatestVersionAlreadyInstalled>
+    <TxtAboutCreated>DeadLock är skapat av DeadLine.</TxtAboutCreated>
+    <TxtAboutImages>Bilder: small-n-flat by paomedia</TxtAboutImages>
+    <TxtAboutTheme>Tema av: SyncFusion</TxtAboutTheme>
+    <TxtAboutCopyright>Copyright &#169; CodeDead 2026</TxtAboutCopyright>
+    <TxtAboutTranslation>Översättning:</TxtAboutTranslation>
+    <BtnClose>Stäng</BtnClose>
+    <BtnLicense>Licens</BtnLicense>
+    <LblGeneral>Allmänt</LblGeneral>
+    <ChbAutoUpdate>Automatisk kontroll efter updateringar:</ChbAutoUpdate>
+    <ChbShowNotifyIcon>Visa meddelandeikon:</ChbShowNotifyIcon>
+    <ChbStartMinimized>Starta minimerad:</ChbStartMinimized>
+    <ChbShowAdminWarning>Visa administratörsvarning:</ChbShowAdminWarning>
+    <LblAppearance>Utseende</LblAppearance>
+    <LblThemeStyle>Temastil:</LblThemeStyle>
+    <LblRememberFormSize>Kom ihåg formulärstorlek:</LblRememberFormSize>
+    <LblShowDetails>Visa detaljer:</LblShowDetails>
+    <LblLanguage>Språk:</LblLanguage>
+    <LblAdvanced>Avancerat</LblAdvanced>
+    <LblAutoRunDeadLock>Kör DeadLock automatiskt:</LblAutoRunDeadLock>
+    <LblWindowsExplorerIntegration>Integration med Windows Utforskaren:</LblWindowsExplorerIntegration>
+    <LblOwnership>Överta ägarskap:</LblOwnership>
+    <BtnReset>Återställ</BtnReset>
+    <BtnSave>Spara</BtnSave>
+    <TbtnOn>PÅ</TbtnOn>
+    <TbtnOff>AV</TbtnOff>
+    <TxtUpdater>Uppdaterare</TxtUpdater>
+    <LblPath>Sökväg:</LblPath>
+    <LblProgress>Förlopp:</LblProgress>
+    <MsgCouldNotRestart>Kan inte påbörja återstartsession. Omöjligt att avgöra vad som låser källan.
+    </MsgCouldNotRestart>
+    <MsgCouldNotRegister>Kan inte registrera källan.</MsgCouldNotRegister>
+    <MsgCouldNotList>Kan inte lista processerna som låser källan!</MsgCouldNotList>
+    <MsgCouldNotListResult>Kan inte lista processerna som låser källan. Mislyckades med att få storleken på
+        resultatet!
+    </MsgCouldNotListResult>
+    <MsgAccessDenied>Åtkomst nekas</MsgAccessDenied>
 </Language>

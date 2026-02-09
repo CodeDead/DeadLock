@@ -1,93 +1,96 @@
 <?xml version="1.0"?>
 <Language>
-  <Author>Leonid Gorokhov</Author>
-  <Comment>Russian</Comment>
-  <BarFile>&amp;Файл</BarFile>
-  <BarEdit>&amp;Правка</BarEdit>
-  <BarView>&amp;Вид</BarView>
-  <BarTools>&amp;Инструменты</BarTools>
-  <BarHelp>&amp;Помощь</BarHelp>
-  <BarItemOpenFiles>Открыть файл(ы)...</BarItemOpenFiles>
-  <BarItemOpenFolder>Открыть папку...</BarItemOpenFolder>
-  <BarItemRestart>Перезапуск</BarItemRestart>
-  <BarItemExit>Выход</BarItemExit>
-  <BarItemUnlock>Разблокировать</BarItemUnlock>
-  <BarItemCopy>Копировать</BarItemCopy>
-  <BarItemMove>Переместить</BarItemMove>
-  <BarItemRemove>Удалить</BarItemRemove>
-  <BarItemOwnership>Права</BarItemOwnership>
-  <BarItemOwnershipTrue>Да</BarItemOwnershipTrue>
-  <BarItemOwnershipFalse>Нет</BarItemOwnershipFalse>
-  <BarItemRemoveItem>Удалить строку</BarItemRemoveItem>
-  <BarItemClearItems>Очистить строки</BarItemClearItems>
-  <BarItemAutoSizeColumns>Автокоррекция колонн</BarItemAutoSizeColumns>
-  <BarItemCancelTask>Отменить задачу</BarItemCancelTask>
-  <BarItemDetails>Детали</BarItemDetails>
-  <BarItemSettings>Настройки</BarItemSettings>
-  <BarItemHelp>Помощь</BarItemHelp>
-  <BarItemCheckForUpdates>Проверить обновления</BarItemCheckForUpdates>
-  <BarItemHomePage>Домашняя страница</BarItemHomePage>
-  <BarItemAbout>О программе</BarItemAbout>
-  <ClhPath>Путь</ClhPath>
-  <ClhStatus>Статус</ClhStatus>
-  <ClhOwnership>Права</ClhOwnership>
-  <MsgUnknown>Неизвестно</MsgUnknown>
-  <MsgLocked>Заблокировано</MsgLocked>
-  <MsgUnlocked>Разблокировано</MsgUnlocked>
-  <MsgOperationCancelled>Операция отменена</MsgOperationCancelled>
-  <MsgLoading>Загрузка...</MsgLoading>
-  <MsgSuccessfullyUnlocked>Удачно разблокировано</MsgSuccessfullyUnlocked>
-  <MsgCouldNotUnlock>Невозможно разблокировать</MsgCouldNotUnlock>
-  <MsgSuccessfullyCopied>Удачно копировано</MsgSuccessfullyCopied>
-  <MsgCouldNotCopy>Невозможно копировать</MsgCouldNotCopy>
-  <MsgSuccessfullyMoved>Удачно перемещено</MsgSuccessfullyMoved>
-  <MsgCouldNotMove>Невозможно переместить</MsgCouldNotMove>
-  <MsgSuccessfullyRemoved>Удачно удалено</MsgSuccessfullyRemoved>
-  <MsgCouldNotRemove>Невозможно удалить</MsgCouldNotRemove>
-  <ClhFileName>Имя файла</ClhFileName>
-  <ClhProcessId>Процесс</ClhProcessId>
-  <LblVersion>Версия:</LblVersion>
-  <CmiDetails>Детали</CmiDetails>
-  <CmiOpenInVirusTotal>Открыть в VirusTotal</CmiOpenInVirusTotal>
-  <CmiKill>Завершить</CmiKill>
-  <CmiOpenFileLocation>Открыть расположение файла</CmiOpenFileLocation>
-  <CmiProperties>Свойства</CmiProperties>
-  <MsgSuccessfullyKilled>Удачно завершены выделенные процесс(ы)!</MsgSuccessfullyKilled>
-  <CmiHideShow>Скрыть / Показать</CmiHideShow>
-  <MsgAdministrator>DeadLock может функционировать неправильно без прав администратора!</MsgAdministrator>
-  <MsgDownloadNewVersion>Хотите установить новую версию?</MsgDownloadNewVersion>
-  <MsgLatestVersionAlreadyInstalled>Последняя версия программы DeadLock уже установлена!</MsgLatestVersionAlreadyInstalled>
-  <TxtAboutCreated>DeadLock был создан компанией DeadLine.</TxtAboutCreated>
-  <TxtAboutImages>Изображения: small-n-flat by paomedia</TxtAboutImages>
-  <TxtAboutTheme>Тема: SyncFusion</TxtAboutTheme>
-  <TxtAboutCopyright>Copyright &#169; CodeDead 2026</TxtAboutCopyright>
-  <TxtAboutTranslation>Перевод: Леонид Горохов</TxtAboutTranslation>
-  <BtnClose>Закрыть</BtnClose>
-  <BtnLicense>Лицензия</BtnLicense>
-  <LblGeneral>Главная</LblGeneral>
-  <ChbAutoUpdate>Проверять наличие обновлений:</ChbAutoUpdate>
-  <ChbShowNotifyIcon>Показать значок в трее:</ChbShowNotifyIcon>
-  <ChbStartMinimized>Запустить свёрнутым:</ChbStartMinimized>
-  <ChbShowAdminWarning>Показать предупреждение администратора:</ChbShowAdminWarning>
-  <LblAppearance>Вид</LblAppearance>
-  <LblThemeStyle>Стиль темы:</LblThemeStyle>
-  <LblRememberFormSize>Запомнить размер окна:</LblRememberFormSize>
-  <LblShowDetails>Показать подробности:</LblShowDetails>
-  <LblLanguage>Язык:</LblLanguage>
-  <LblAdvanced>Дополнительно</LblAdvanced>
-  <LblAutoRunDeadLock>Запускать DeadLock aвтоматически:</LblAutoRunDeadLock>
-  <LblWindowsExplorerIntegration>Интеграция в Проводник:</LblWindowsExplorerIntegration>
-  <LblOwnership>Получить права:</LblOwnership>
-  <BtnReset>Сброс</BtnReset>
-  <BtnSave>Сохранить</BtnSave>
-  <TbtnOn>ВКЛ</TbtnOn>
-  <TbtnOff>ВЫКЛ</TbtnOff>
-  <TxtUpdater>Центр обновлений</TxtUpdater>
-  <LblPath>Путь:</LblPath>
-  <LblProgress>Прогресс:</LblProgress>
-  <MsgCouldNotRestart>Не удалось начать перезапуск сеанса. Невозможно определить блокировщик ресурсов.</MsgCouldNotRestart>
-  <MsgCouldNotRegister>Не удалось определить ресурсы.</MsgCouldNotRegister>
-  <MsgCouldNotList>Не удалось получить список процессов, блокирующих ресурс!</MsgCouldNotList>
-  <MsgCouldNotListResult>Не удалось получить список процессов, блокирующих ресурс. Невозможно получить результат!</MsgCouldNotListResult>
-  <MsgAccessDenied>Отказано в доступе!</MsgAccessDenied>
+    <Author>Leonid Gorokhov</Author>
+    <Comment>Russian</Comment>
+    <BarFile>&amp;Файл</BarFile>
+    <BarEdit>&amp;Правка</BarEdit>
+    <BarView>&amp;Вид</BarView>
+    <BarTools>&amp;Инструменты</BarTools>
+    <BarHelp>&amp;Помощь</BarHelp>
+    <BarItemOpenFiles>Открыть файл(ы)...</BarItemOpenFiles>
+    <BarItemOpenFolder>Открыть папку...</BarItemOpenFolder>
+    <BarItemRestart>Перезапуск</BarItemRestart>
+    <BarItemExit>Выход</BarItemExit>
+    <BarItemUnlock>Разблокировать</BarItemUnlock>
+    <BarItemCopy>Копировать</BarItemCopy>
+    <BarItemMove>Переместить</BarItemMove>
+    <BarItemRemove>Удалить</BarItemRemove>
+    <BarItemOwnership>Права</BarItemOwnership>
+    <BarItemOwnershipTrue>Да</BarItemOwnershipTrue>
+    <BarItemOwnershipFalse>Нет</BarItemOwnershipFalse>
+    <BarItemRemoveItem>Удалить строку</BarItemRemoveItem>
+    <BarItemClearItems>Очистить строки</BarItemClearItems>
+    <BarItemAutoSizeColumns>Автокоррекция колонн</BarItemAutoSizeColumns>
+    <BarItemCancelTask>Отменить задачу</BarItemCancelTask>
+    <BarItemDetails>Детали</BarItemDetails>
+    <BarItemSettings>Настройки</BarItemSettings>
+    <BarItemHelp>Помощь</BarItemHelp>
+    <BarItemCheckForUpdates>Проверить обновления</BarItemCheckForUpdates>
+    <BarItemHomePage>Домашняя страница</BarItemHomePage>
+    <BarItemAbout>О программе</BarItemAbout>
+    <ClhPath>Путь</ClhPath>
+    <ClhStatus>Статус</ClhStatus>
+    <ClhOwnership>Права</ClhOwnership>
+    <MsgUnknown>Неизвестно</MsgUnknown>
+    <MsgLocked>Заблокировано</MsgLocked>
+    <MsgUnlocked>Разблокировано</MsgUnlocked>
+    <MsgOperationCancelled>Операция отменена</MsgOperationCancelled>
+    <MsgLoading>Загрузка...</MsgLoading>
+    <MsgSuccessfullyUnlocked>Удачно разблокировано</MsgSuccessfullyUnlocked>
+    <MsgCouldNotUnlock>Невозможно разблокировать</MsgCouldNotUnlock>
+    <MsgSuccessfullyCopied>Удачно копировано</MsgSuccessfullyCopied>
+    <MsgCouldNotCopy>Невозможно копировать</MsgCouldNotCopy>
+    <MsgSuccessfullyMoved>Удачно перемещено</MsgSuccessfullyMoved>
+    <MsgCouldNotMove>Невозможно переместить</MsgCouldNotMove>
+    <MsgSuccessfullyRemoved>Удачно удалено</MsgSuccessfullyRemoved>
+    <MsgCouldNotRemove>Невозможно удалить</MsgCouldNotRemove>
+    <ClhFileName>Имя файла</ClhFileName>
+    <ClhProcessId>Процесс</ClhProcessId>
+    <LblVersion>Версия:</LblVersion>
+    <CmiDetails>Детали</CmiDetails>
+    <CmiOpenInVirusTotal>Открыть в VirusTotal</CmiOpenInVirusTotal>
+    <CmiKill>Завершить</CmiKill>
+    <CmiOpenFileLocation>Открыть расположение файла</CmiOpenFileLocation>
+    <CmiProperties>Свойства</CmiProperties>
+    <MsgSuccessfullyKilled>Удачно завершены выделенные процесс(ы)!</MsgSuccessfullyKilled>
+    <CmiHideShow>Скрыть / Показать</CmiHideShow>
+    <MsgAdministrator>DeadLock может функционировать неправильно без прав администратора!</MsgAdministrator>
+    <MsgDownloadNewVersion>Хотите установить новую версию?</MsgDownloadNewVersion>
+    <MsgLatestVersionAlreadyInstalled>Последняя версия программы DeadLock уже установлена!
+    </MsgLatestVersionAlreadyInstalled>
+    <TxtAboutCreated>DeadLock был создан компанией DeadLine.</TxtAboutCreated>
+    <TxtAboutImages>Изображения: small-n-flat by paomedia</TxtAboutImages>
+    <TxtAboutTheme>Тема: SyncFusion</TxtAboutTheme>
+    <TxtAboutCopyright>Copyright &#169; CodeDead 2026</TxtAboutCopyright>
+    <TxtAboutTranslation>Перевод: Леонид Горохов</TxtAboutTranslation>
+    <BtnClose>Закрыть</BtnClose>
+    <BtnLicense>Лицензия</BtnLicense>
+    <LblGeneral>Главная</LblGeneral>
+    <ChbAutoUpdate>Проверять наличие обновлений:</ChbAutoUpdate>
+    <ChbShowNotifyIcon>Показать значок в трее:</ChbShowNotifyIcon>
+    <ChbStartMinimized>Запустить свёрнутым:</ChbStartMinimized>
+    <ChbShowAdminWarning>Показать предупреждение администратора:</ChbShowAdminWarning>
+    <LblAppearance>Вид</LblAppearance>
+    <LblThemeStyle>Стиль темы:</LblThemeStyle>
+    <LblRememberFormSize>Запомнить размер окна:</LblRememberFormSize>
+    <LblShowDetails>Показать подробности:</LblShowDetails>
+    <LblLanguage>Язык:</LblLanguage>
+    <LblAdvanced>Дополнительно</LblAdvanced>
+    <LblAutoRunDeadLock>Запускать DeadLock aвтоматически:</LblAutoRunDeadLock>
+    <LblWindowsExplorerIntegration>Интеграция в Проводник:</LblWindowsExplorerIntegration>
+    <LblOwnership>Получить права:</LblOwnership>
+    <BtnReset>Сброс</BtnReset>
+    <BtnSave>Сохранить</BtnSave>
+    <TbtnOn>ВКЛ</TbtnOn>
+    <TbtnOff>ВЫКЛ</TbtnOff>
+    <TxtUpdater>Центр обновлений</TxtUpdater>
+    <LblPath>Путь:</LblPath>
+    <LblProgress>Прогресс:</LblProgress>
+    <MsgCouldNotRestart>Не удалось начать перезапуск сеанса. Невозможно определить блокировщик ресурсов.
+    </MsgCouldNotRestart>
+    <MsgCouldNotRegister>Не удалось определить ресурсы.</MsgCouldNotRegister>
+    <MsgCouldNotList>Не удалось получить список процессов, блокирующих ресурс!</MsgCouldNotList>
+    <MsgCouldNotListResult>Не удалось получить список процессов, блокирующих ресурс. Невозможно получить результат!
+    </MsgCouldNotListResult>
+    <MsgAccessDenied>Отказано в доступе!</MsgAccessDenied>
 </Language>

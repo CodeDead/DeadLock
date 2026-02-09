@@ -1,98 +1,96 @@
 <?xml version="1.0"?>
-<Language xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Author>jekovcarр</Author>
-  <Comment>Булгариан</Comment>
-  <BarFile>&amp;Файл</BarFile>
-  <BarEdit>&amp;Редактиране</BarEdit>
-  <BarView>&amp;Преглед</BarView>
-  <BarTools>&amp;Инструменти</BarTools>
-  <BarHelp>&amp;Помощ</BarHelp>
-  <BarItemOpenFiles>Отвори файл(ове)...</BarItemOpenFiles>
-  <BarItemOpenFolder>Отвори папка...</BarItemOpenFolder>
-  <BarItemRestart>Рестарт</BarItemRestart>
-  <BarItemExit>Изход</BarItemExit>
-  <BarItemUnlock>Отключи</BarItemUnlock>
-  <BarItemCopy>Копирай</BarItemCopy>
-  <BarItemMove>Премести</BarItemMove>
-  <BarItemRemove>Изтрий</BarItemRemove>
-  <BarItemOwnership>Достъп</BarItemOwnership>
-  <BarItemOwnershipTrue>Да</BarItemOwnershipTrue>
-  <BarItemOwnershipFalse>Не</BarItemOwnershipFalse>
-  <BarItemRemoveItem>Премахни реда</BarItemRemoveItem>
-  <BarItemClearItems>Изчисти редовете</BarItemClearItems>
-  <BarItemAutoSizeColumns>Колони с автоматичен размер</BarItemAutoSizeColumns>
-  <BarItemCancelTask>Отмени задачата</BarItemCancelTask>
-  <BarItemDetails>Подробности</BarItemDetails>
-  <BarItemSettings>Настройки</BarItemSettings>
-  <BarItemHelp>Помощ</BarItemHelp>
-  <BarItemCheckForUpdates>Провери актуализации</BarItemCheckForUpdates>
-  <BarItemHomePage>Начална страница</BarItemHomePage>
-  <BarItemAbout>Относно</BarItemAbout>
-  <ClhPath>Път</ClhPath>
-  <ClhStatus>Статус</ClhStatus>
-  <ClhOwnership>Достъп</ClhOwnership>
-  <MsgUnknown>Неизвестен</MsgUnknown>
-  <MsgLocked>Заключен</MsgLocked>
-  <MsgUnlocked>Отключен</MsgUnlocked>
-  <MsgOperationCancelled>Операцията е отменена</MsgOperationCancelled>
-  <MsgLoading>Зарежда се...</MsgLoading>
-  <MsgSuccessfullyUnlocked>Отключен</MsgSuccessfullyUnlocked>
-  <MsgCouldNotUnlock>Не може да отключи Елемента</MsgCouldNotUnlock>
-  <MsgSuccessfullyCopied>УКопиран</MsgSuccessfullyCopied>
-  <MsgCouldNotCopy>Не може да копира Елемента</MsgCouldNotCopy>
-  <MsgSuccessfullyMoved>Преместен</MsgSuccessfullyMoved>
-  <MsgCouldNotMove>Елемента не можа да бъде преместен</MsgCouldNotMove>
-  <MsgSuccessfullyRemoved>Изтрит</MsgSuccessfullyRemoved>
-  <MsgCouldNotRemove>Елемента не може да се премахне</MsgCouldNotRemove>
-  <ClhFileName>Име Файл</ClhFileName>
-  <ClhProcessId>ID процес</ClhProcessId>
-  <LblVersion>Версия:</LblVersion>
-  <CmiDetails>Подробности</CmiDetails>
-  <CmiOpenInVirusTotal>Отвори с VirusTotal</CmiOpenInVirusTotal>
-  <CmiKill>Завърши</CmiKill>
-  <CmiOpenFileLocation>Отвори местоположението на файла</CmiOpenFileLocation>
-  <CmiProperties>Свойства</CmiProperties>
-  <MsgSuccessfullyKilled>Успешно завърши избраните процеси!</MsgSuccessfullyKilled>
-  <CmiHideShow>Скрий / Покажи</CmiHideShow>
-  <MsgAdministrator>DeadLock може да не функционира правилно без админ права!</MsgAdministrator>
-  <MsgVersion>Версия</MsgVersion>
-  <MsgAvailable>Вече е налична!</MsgAvailable>
-  <MsgDownloadNewVersion>Искате ли да изтеглите новата версия?</MsgDownloadNewVersion>
-  <MsgLatestVersionAlreadyInstalled>Последната версия на DeadLock вече е инсталирана!</MsgLatestVersionAlreadyInstalled>
-  <TxtAboutCreated>DeadLock е създаден от DeadLine.</TxtAboutCreated>
-  <TxtAboutImages>Изображения: small-n-flat от paomedia</TxtAboutImages>
-  <TxtAboutTheme>Автор на темата: SyncFusion</TxtAboutTheme>
-  <TxtAboutCopyright>Авторско право &#169; CodeDead 2016</TxtAboutCopyright>
-  <TxtAboutTranslation>Превод: Живко Жеков</TxtAboutTranslation>
-  <BtnClose>Затвори</BtnClose>
-  <BtnLicense>Лиценз</BtnLicense>
-  <LblGeneral>Начало</LblGeneral>
-  <ChbAutoUpdate>Проверка за актуализации:</ChbAutoUpdate>
-  <ChbShowNotifyIcon>Показвай икона за известия:</ChbShowNotifyIcon>
-  <ChbStartMinimized>Минимизиран Старт:</ChbStartMinimized>
-  <ChbShowAdminWarning>Показвай админ предупреждение:</ChbShowAdminWarning>
-  <LblAppearance>Изглед</LblAppearance>
-  <LblThemeStyle>Стил на темата:</LblThemeStyle>
-  <LblBorderThickness>Дебелина на контура:</LblBorderThickness>
-  <LblRememberFormSize>Запомни размер на формата:</LblRememberFormSize>
-  <LblShowDetails>Покажи подробности:</LblShowDetails>
-  <LblLanguage>Език:</LblLanguage>
-  <LblAdvanced>Разширени</LblAdvanced>
-  <LblAutoRunDeadLock>АвтоСтарт на DeadLock:</LblAutoRunDeadLock>
-  <LblWindowsExplorerIntegration>Интеграция в Explorer:</LblWindowsExplorerIntegration>
-  <LblOwnership>Получен достъп:</LblOwnership>
-  <BtnReset>Нулирай</BtnReset>
-  <BtnSave>Запази</BtnSave>
-  <TbtnOn>ВКЛ</TbtnOn>
-  <TbtnOff>ИЗКЛ</TbtnOff>
-  <TxtUpdater>Актуализатор</TxtUpdater>
-  <LblPath>Път:</LblPath>
-  <LblProgress>Напредък:</LblProgress>
-  <BtnCancel>Отказ</BtnCancel>
-  <BtnUpdate>Актуализация</BtnUpdate>
-  <MsgCouldNotRestart>Рестарта не успя. Не може да определи блокировача на ресурси.</MsgCouldNotRestart>
-  <MsgCouldNotRegister>Не можа да определи ресурсите.</MsgCouldNotRegister>
-  <MsgCouldNotList>Не може да изброи процесите, които заключват ресурса!</MsgCouldNotList>
-  <MsgCouldNotListResult>Не може да се изброи процесите, заключващи ресурса. Неуспешно получаване на размера на резултата!</MsgCouldNotListResult>
-  <MsgAccessDenied>Достъпът е отказан</MsgAccessDenied>
+<Language>
+    <Author>jekovcarр</Author>
+    <Comment>Български</Comment>
+    <BarFile>&amp;Файл</BarFile>
+    <BarEdit>&amp;Редактиране</BarEdit>
+    <BarView>&amp;Преглед</BarView>
+    <BarTools>&amp;Инструменти</BarTools>
+    <BarHelp>&amp;Помощ</BarHelp>
+    <BarItemOpenFiles>Отвори файл(ове)...</BarItemOpenFiles>
+    <BarItemOpenFolder>Отвори папка...</BarItemOpenFolder>
+    <BarItemRestart>Рестарт</BarItemRestart>
+    <BarItemExit>Изход</BarItemExit>
+    <BarItemUnlock>Отключи</BarItemUnlock>
+    <BarItemCopy>Копирай</BarItemCopy>
+    <BarItemMove>Премести</BarItemMove>
+    <BarItemRemove>Изтрий</BarItemRemove>
+    <BarItemOwnership>Достъп</BarItemOwnership>
+    <BarItemOwnershipTrue>Да</BarItemOwnershipTrue>
+    <BarItemOwnershipFalse>Не</BarItemOwnershipFalse>
+    <BarItemRemoveItem>Премахни реда</BarItemRemoveItem>
+    <BarItemClearItems>Изчисти редовете</BarItemClearItems>
+    <BarItemAutoSizeColumns>Автоматично оразмеряване на колоните</BarItemAutoSizeColumns>
+    <BarItemCancelTask>Отмени задачата</BarItemCancelTask>
+    <BarItemDetails>Подробности</BarItemDetails>
+    <BarItemSettings>Настройки</BarItemSettings>
+    <BarItemHelp>Помощ</BarItemHelp>
+    <BarItemCheckForUpdates>Провери за актуализации</BarItemCheckForUpdates>
+    <BarItemHomePage>Начална страница</BarItemHomePage>
+    <BarItemAbout>Относно</BarItemAbout>
+    <ClhPath>Път</ClhPath>
+    <ClhStatus>Статус</ClhStatus>
+    <ClhOwnership>Достъп</ClhOwnership>
+    <MsgUnknown>Неизвестен</MsgUnknown>
+    <MsgLocked>Заключен</MsgLocked>
+    <MsgUnlocked>Отключен</MsgUnlocked>
+    <MsgOperationCancelled>Операцията е отменена</MsgOperationCancelled>
+    <MsgLoading>Зарежда се...</MsgLoading>
+    <MsgSuccessfullyUnlocked>Отключен</MsgSuccessfullyUnlocked>
+    <MsgCouldNotUnlock>Не може да отключи Елемента</MsgCouldNotUnlock>
+    <MsgSuccessfullyCopied>Копирано</MsgSuccessfullyCopied>
+    <MsgCouldNotCopy>Не можа да се копира елементът</MsgCouldNotCopy>
+    <MsgSuccessfullyMoved>Преместен</MsgSuccessfullyMoved>
+    <MsgCouldNotMove>Елемента не можа да бъде преместен</MsgCouldNotMove>
+    <MsgSuccessfullyRemoved>Изтрит</MsgSuccessfullyRemoved>
+    <MsgCouldNotRemove>Елемента не може да се премахне</MsgCouldNotRemove>
+    <ClhFileName>Име на файл</ClhFileName>
+    <ClhProcessId>ID на процес</ClhProcessId>
+    <LblVersion>Версия:</LblVersion>
+    <CmiDetails>Подробности</CmiDetails>
+    <CmiOpenInVirusTotal>Отвори с VirusTotal</CmiOpenInVirusTotal>
+    <CmiKill>Завърши</CmiKill>
+    <CmiOpenFileLocation>Отвори местоположението на файла</CmiOpenFileLocation>
+    <CmiProperties>Свойства</CmiProperties>
+    <MsgSuccessfullyKilled>Успешно завърши избраните процеси!</MsgSuccessfullyKilled>
+    <CmiHideShow>Скрий / Покажи</CmiHideShow>
+    <MsgAdministrator>DeadLock може да не функционира правилно без административни права!</MsgAdministrator>
+    <MsgDownloadNewVersion>Искате ли да изтеглите новата версия?</MsgDownloadNewVersion>
+    <MsgLatestVersionAlreadyInstalled>Последната версия на DeadLock вече е инсталирана!
+    </MsgLatestVersionAlreadyInstalled>
+    <TxtAboutCreated>DeadLock е създаден от DeadLine.</TxtAboutCreated>
+    <TxtAboutImages>Изображения: small-n-flat от paomedia</TxtAboutImages>
+    <TxtAboutTheme>Автор на темата: SyncFusion</TxtAboutTheme>
+    <TxtAboutCopyright>Авторско право &#169; CodeDead 2026</TxtAboutCopyright>
+    <TxtAboutTranslation>Превод: Живко Жеков</TxtAboutTranslation>
+    <BtnClose>Затвори</BtnClose>
+    <BtnLicense>Лиценз</BtnLicense>
+    <LblGeneral>Начало</LblGeneral>
+    <ChbAutoUpdate>Проверка за актуализации:</ChbAutoUpdate>
+    <ChbShowNotifyIcon>Показвай икона за известия:</ChbShowNotifyIcon>
+    <ChbStartMinimized>Стартиране минимизиран:</ChbStartMinimized>
+    <ChbShowAdminWarning>Показвай админ предупреждение:</ChbShowAdminWarning>
+    <LblAppearance>Изглед</LblAppearance>
+    <LblThemeStyle>Стил на темата:</LblThemeStyle>
+    <LblRememberFormSize>Запомни размер на формата:</LblRememberFormSize>
+    <LblShowDetails>Покажи подробности:</LblShowDetails>
+    <LblLanguage>Език:</LblLanguage>
+    <LblAdvanced>Разширени</LblAdvanced>
+    <LblAutoRunDeadLock>Автоматично стартиране на DeadLock:</LblAutoRunDeadLock>
+    <LblWindowsExplorerIntegration>Интеграция в Explorer:</LblWindowsExplorerIntegration>
+    <LblOwnership>Получен достъп:</LblOwnership>
+    <BtnReset>Нулирай</BtnReset>
+    <BtnSave>Запази</BtnSave>
+    <TbtnOn>ВКЛ</TbtnOn>
+    <TbtnOff>ИЗКЛ</TbtnOff>
+    <TxtUpdater>Актуализатор</TxtUpdater>
+    <LblPath>Път:</LblPath>
+    <LblProgress>Напредък:</LblProgress>
+    <MsgCouldNotRestart>Рестарта не успя. Не може да определи блокировача на ресурси.</MsgCouldNotRestart>
+    <MsgCouldNotRegister>Не можа да определи ресурсите.</MsgCouldNotRegister>
+    <MsgCouldNotList>Не може да изброи процесите, които заключват ресурса!</MsgCouldNotList>
+    <MsgCouldNotListResult>Не може да се изброи процесите, заключващи ресурса. Неуспешно получаване на размера на
+        резултата!
+    </MsgCouldNotListResult>
+    <MsgAccessDenied>Достъпът е отказан</MsgAccessDenied>
 </Language>

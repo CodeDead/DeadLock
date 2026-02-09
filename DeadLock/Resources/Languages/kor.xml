@@ -1,93 +1,93 @@
 ﻿<?xml version="1.0"?>
 <Language>
-  <Author>Jaehyung Lee</Author>
-  <Comment>한국어</Comment>
-  <BarFile>&amp;파일</BarFile>
-  <BarEdit>&amp;편집</BarEdit>
-  <BarView>&amp;보기</BarView>
-  <BarTools>&amp;도구</BarTools>
-  <BarHelp>&amp;도움말</BarHelp>
-  <BarItemOpenFiles>파일 열기...</BarItemOpenFiles>
-  <BarItemOpenFolder>폴더 열기...</BarItemOpenFolder>
-  <BarItemRestart>재시작</BarItemRestart>
-  <BarItemExit>끝내기</BarItemExit>
-  <BarItemUnlock>풀기</BarItemUnlock>
-  <BarItemCopy>복사</BarItemCopy>
-  <BarItemMove>이동</BarItemMove>
-  <BarItemRemove>제거</BarItemRemove>
-  <BarItemOwnership>소유권</BarItemOwnership>
-  <BarItemOwnershipTrue>True</BarItemOwnershipTrue>
-  <BarItemOwnershipFalse>False</BarItemOwnershipFalse>
-  <BarItemRemoveItem>항목 제거</BarItemRemoveItem>
-  <BarItemClearItems>항목 지우기</BarItemClearItems>
-  <BarItemAutoSizeColumns>열 자동 크기</BarItemAutoSizeColumns>
-  <BarItemCancelTask>작업 취소</BarItemCancelTask>
-  <BarItemDetails>자세히</BarItemDetails>
-  <BarItemSettings>설정</BarItemSettings>
-  <BarItemHelp>도움말</BarItemHelp>
-  <BarItemCheckForUpdates>업데이트 확인</BarItemCheckForUpdates>
-  <BarItemHomePage>홈페이지</BarItemHomePage>
-  <BarItemAbout>정보</BarItemAbout>
-  <ClhPath>경로</ClhPath>
-  <ClhStatus>상태</ClhStatus>
-  <ClhOwnership>소유권</ClhOwnership>
-  <MsgUnknown>알 수 없음</MsgUnknown>
-  <MsgLocked>잠김</MsgLocked>
-  <MsgUnlocked>풀림</MsgUnlocked>
-  <MsgOperationCancelled>작업 취소됨</MsgOperationCancelled>
-  <MsgLoading>불러오는 중...</MsgLoading>
-  <MsgSuccessfullyUnlocked>성공적으로 풀렸습니다.</MsgSuccessfullyUnlocked>
-  <MsgCouldNotUnlock>잠긴 항목을 풀 수가 없습니다.</MsgCouldNotUnlock>
-  <MsgSuccessfullyCopied>성공적으로 복사되었습니다.</MsgSuccessfullyCopied>
-  <MsgCouldNotCopy>항목을 복사할 수가 없습니다.</MsgCouldNotCopy>
-  <MsgSuccessfullyMoved>성공적으로 이동되었습니다.</MsgSuccessfullyMoved>
-  <MsgCouldNotMove>항목을 이동할 수가 없습니다.</MsgCouldNotMove>
-  <MsgSuccessfullyRemoved>성공적으로 제거되었습니다.</MsgSuccessfullyRemoved>
-  <MsgCouldNotRemove>항목을 제거할 수가 없습니다.</MsgCouldNotRemove>
-  <ClhFileName>파일 이름</ClhFileName>
-  <ClhProcessId>프로세스 ID</ClhProcessId>
-  <LblVersion>버전:</LblVersion>
-  <CmiDetails>자세히</CmiDetails>
-  <CmiOpenInVirusTotal>VirusTotal에서 열기</CmiOpenInVirusTotal>
-  <CmiKill>종료</CmiKill>
-  <CmiOpenFileLocation>파일 위치 열기</CmiOpenFileLocation>
-  <CmiProperties>등록</CmiProperties>
-  <MsgSuccessfullyKilled>선택한 프로세스가 성공적으로 종료되었습니다!</MsgSuccessfullyKilled>
-  <CmiHideShow>숨김 / 표시</CmiHideShow>
-  <MsgAdministrator>DeadLock는 관리자 권한이 없으면 제대로 작동되지 않을 수 있습니다!</MsgAdministrator>
-  <MsgDownloadNewVersion>최신 버전을 내려받으시겠습니까?</MsgDownloadNewVersion>
-  <MsgLatestVersionAlreadyInstalled>이미 DeadLock 최신 버전이 설치되어 있습니다!</MsgLatestVersionAlreadyInstalled>
-  <TxtAboutCreated>DeadLock는 DeadLine에 의해 제작되었습니다.</TxtAboutCreated>
-  <TxtAboutImages>이미지: small-n-flat by paomedia</TxtAboutImages>
-  <TxtAboutTheme>테마: SyncFusion</TxtAboutTheme>
-  <TxtAboutCopyright>저작권 &#169; CodeDead 2026</TxtAboutCopyright>
-  <TxtAboutTranslation>번역:</TxtAboutTranslation>
-  <BtnClose>닫기</BtnClose>
-  <BtnLicense>라이센스</BtnLicense>
-  <LblGeneral>일반</LblGeneral>
-  <ChbAutoUpdate>업데이트 자동 확인:</ChbAutoUpdate>
-  <ChbShowNotifyIcon>알림 표시:</ChbShowNotifyIcon>
-  <ChbStartMinimized>최소화된 시작:</ChbStartMinimized>
-  <ChbShowAdminWarning>관리자 경고 표시:</ChbShowAdminWarning>
-  <LblAppearance>외관</LblAppearance>
-  <LblThemeStyle>테마 스타일:</LblThemeStyle>
-  <LblRememberFormSize>양식 크기 기억:</LblRememberFormSize>
-  <LblShowDetails>자세히 표시:</LblShowDetails>
-  <LblLanguage>언어:</LblLanguage>
-  <LblAdvanced>고급</LblAdvanced>
-  <LblAutoRunDeadLock>DeadLock 자동 실행:</LblAutoRunDeadLock>
-  <LblWindowsExplorerIntegration>윈도우 탐색기에 통합:</LblWindowsExplorerIntegration>
-  <LblOwnership>관리자 권한 얻기:</LblOwnership>
-  <BtnReset>재설정</BtnReset>
-  <BtnSave>저장</BtnSave>
-  <TbtnOn>켜짐</TbtnOn>
-  <TbtnOff>꺼짐</TbtnOff>
-  <TxtUpdater>업데이터</TxtUpdater>
-  <LblPath>경로:</LblPath>
-  <LblProgress>진행:</LblProgress>
-  <MsgCouldNotRestart>세션을 재시작 불가. 리소스를 잠그고 있는 개체를 확인할 수 없습니다.</MsgCouldNotRestart>
-  <MsgCouldNotRegister>리소스를 등록할 수 없습니다.</MsgCouldNotRegister>
-  <MsgCouldNotList>리소스를 잠그고 있는 프로세스를 나열할 수 없습니다!</MsgCouldNotList>
-  <MsgCouldNotListResult>리소스를 잠그고 있는 프로세스를 나열할 수 없습니다. 결과의 크기 확인 실패!</MsgCouldNotListResult>
-  <MsgAccessDenied>접근이 거부되었습니다.</MsgAccessDenied>
+    <Author>Jaehyung Lee</Author>
+    <Comment>한국어</Comment>
+    <BarFile>&amp;파일</BarFile>
+    <BarEdit>&amp;편집</BarEdit>
+    <BarView>&amp;보기</BarView>
+    <BarTools>&amp;도구</BarTools>
+    <BarHelp>&amp;도움말</BarHelp>
+    <BarItemOpenFiles>파일 열기...</BarItemOpenFiles>
+    <BarItemOpenFolder>폴더 열기...</BarItemOpenFolder>
+    <BarItemRestart>재시작</BarItemRestart>
+    <BarItemExit>끝내기</BarItemExit>
+    <BarItemUnlock>풀기</BarItemUnlock>
+    <BarItemCopy>복사</BarItemCopy>
+    <BarItemMove>이동</BarItemMove>
+    <BarItemRemove>제거</BarItemRemove>
+    <BarItemOwnership>소유권</BarItemOwnership>
+    <BarItemOwnershipTrue>True</BarItemOwnershipTrue>
+    <BarItemOwnershipFalse>False</BarItemOwnershipFalse>
+    <BarItemRemoveItem>항목 제거</BarItemRemoveItem>
+    <BarItemClearItems>항목 지우기</BarItemClearItems>
+    <BarItemAutoSizeColumns>열 자동 크기</BarItemAutoSizeColumns>
+    <BarItemCancelTask>작업 취소</BarItemCancelTask>
+    <BarItemDetails>자세히</BarItemDetails>
+    <BarItemSettings>설정</BarItemSettings>
+    <BarItemHelp>도움말</BarItemHelp>
+    <BarItemCheckForUpdates>업데이트 확인</BarItemCheckForUpdates>
+    <BarItemHomePage>홈페이지</BarItemHomePage>
+    <BarItemAbout>정보</BarItemAbout>
+    <ClhPath>경로</ClhPath>
+    <ClhStatus>상태</ClhStatus>
+    <ClhOwnership>소유권</ClhOwnership>
+    <MsgUnknown>알 수 없음</MsgUnknown>
+    <MsgLocked>잠김</MsgLocked>
+    <MsgUnlocked>풀림</MsgUnlocked>
+    <MsgOperationCancelled>작업 취소됨</MsgOperationCancelled>
+    <MsgLoading>불러오는 중...</MsgLoading>
+    <MsgSuccessfullyUnlocked>성공적으로 풀렸습니다.</MsgSuccessfullyUnlocked>
+    <MsgCouldNotUnlock>잠긴 항목을 풀 수가 없습니다.</MsgCouldNotUnlock>
+    <MsgSuccessfullyCopied>성공적으로 복사되었습니다.</MsgSuccessfullyCopied>
+    <MsgCouldNotCopy>항목을 복사할 수가 없습니다.</MsgCouldNotCopy>
+    <MsgSuccessfullyMoved>성공적으로 이동되었습니다.</MsgSuccessfullyMoved>
+    <MsgCouldNotMove>항목을 이동할 수가 없습니다.</MsgCouldNotMove>
+    <MsgSuccessfullyRemoved>성공적으로 제거되었습니다.</MsgSuccessfullyRemoved>
+    <MsgCouldNotRemove>항목을 제거할 수가 없습니다.</MsgCouldNotRemove>
+    <ClhFileName>파일 이름</ClhFileName>
+    <ClhProcessId>프로세스 ID</ClhProcessId>
+    <LblVersion>버전:</LblVersion>
+    <CmiDetails>자세히</CmiDetails>
+    <CmiOpenInVirusTotal>VirusTotal에서 열기</CmiOpenInVirusTotal>
+    <CmiKill>종료</CmiKill>
+    <CmiOpenFileLocation>파일 위치 열기</CmiOpenFileLocation>
+    <CmiProperties>등록</CmiProperties>
+    <MsgSuccessfullyKilled>선택한 프로세스가 성공적으로 종료되었습니다!</MsgSuccessfullyKilled>
+    <CmiHideShow>숨김 / 표시</CmiHideShow>
+    <MsgAdministrator>DeadLock는 관리자 권한이 없으면 제대로 작동되지 않을 수 있습니다!</MsgAdministrator>
+    <MsgDownloadNewVersion>최신 버전을 내려받으시겠습니까?</MsgDownloadNewVersion>
+    <MsgLatestVersionAlreadyInstalled>이미 DeadLock 최신 버전이 설치되어 있습니다!</MsgLatestVersionAlreadyInstalled>
+    <TxtAboutCreated>DeadLock는 DeadLine에 의해 제작되었습니다.</TxtAboutCreated>
+    <TxtAboutImages>이미지: small-n-flat by paomedia</TxtAboutImages>
+    <TxtAboutTheme>테마: SyncFusion</TxtAboutTheme>
+    <TxtAboutCopyright>저작권 &#169; CodeDead 2026</TxtAboutCopyright>
+    <TxtAboutTranslation>번역:</TxtAboutTranslation>
+    <BtnClose>닫기</BtnClose>
+    <BtnLicense>라이센스</BtnLicense>
+    <LblGeneral>일반</LblGeneral>
+    <ChbAutoUpdate>업데이트 자동 확인:</ChbAutoUpdate>
+    <ChbShowNotifyIcon>알림 표시:</ChbShowNotifyIcon>
+    <ChbStartMinimized>최소화된 시작:</ChbStartMinimized>
+    <ChbShowAdminWarning>관리자 경고 표시:</ChbShowAdminWarning>
+    <LblAppearance>외관</LblAppearance>
+    <LblThemeStyle>테마 스타일:</LblThemeStyle>
+    <LblRememberFormSize>양식 크기 기억:</LblRememberFormSize>
+    <LblShowDetails>자세히 표시:</LblShowDetails>
+    <LblLanguage>언어:</LblLanguage>
+    <LblAdvanced>고급</LblAdvanced>
+    <LblAutoRunDeadLock>DeadLock 자동 실행:</LblAutoRunDeadLock>
+    <LblWindowsExplorerIntegration>윈도우 탐색기에 통합:</LblWindowsExplorerIntegration>
+    <LblOwnership>관리자 권한 얻기:</LblOwnership>
+    <BtnReset>재설정</BtnReset>
+    <BtnSave>저장</BtnSave>
+    <TbtnOn>켜짐</TbtnOn>
+    <TbtnOff>꺼짐</TbtnOff>
+    <TxtUpdater>업데이터</TxtUpdater>
+    <LblPath>경로:</LblPath>
+    <LblProgress>진행:</LblProgress>
+    <MsgCouldNotRestart>세션을 재시작 불가. 리소스를 잠그고 있는 개체를 확인할 수 없습니다.</MsgCouldNotRestart>
+    <MsgCouldNotRegister>리소스를 등록할 수 없습니다.</MsgCouldNotRegister>
+    <MsgCouldNotList>리소스를 잠그고 있는 프로세스를 나열할 수 없습니다!</MsgCouldNotList>
+    <MsgCouldNotListResult>리소스를 잠그고 있는 프로세스를 나열할 수 없습니다. 결과의 크기 확인 실패!</MsgCouldNotListResult>
+    <MsgAccessDenied>접근이 거부되었습니다.</MsgAccessDenied>
 </Language>

@@ -1,93 +1,95 @@
 ﻿<?xml version="1.0"?>
 <Language>
-  <Author>DeadLine</Author>
-  <Comment>English</Comment>
-  <BarFile>&amp;File</BarFile>
-  <BarEdit>&amp;Edit</BarEdit>
-  <BarView>&amp;View</BarView>
-  <BarTools>&amp;Tools</BarTools>
-  <BarHelp>&amp;Help</BarHelp>
-  <BarItemOpenFiles>Open file(s)...</BarItemOpenFiles>
-  <BarItemOpenFolder>Open folder...</BarItemOpenFolder>
-  <BarItemRestart>Restart</BarItemRestart>
-  <BarItemExit>Exit</BarItemExit>
-  <BarItemUnlock>Unlock</BarItemUnlock>
-  <BarItemCopy>Copy</BarItemCopy>
-  <BarItemMove>Move</BarItemMove>
-  <BarItemRemove>Remove</BarItemRemove>
-  <BarItemOwnership>Ownership</BarItemOwnership>
-  <BarItemOwnershipTrue>True</BarItemOwnershipTrue>
-  <BarItemOwnershipFalse>False</BarItemOwnershipFalse>
-  <BarItemRemoveItem>Remove item</BarItemRemoveItem>
-  <BarItemClearItems>Clear items</BarItemClearItems>
-  <BarItemAutoSizeColumns>Auto size columns</BarItemAutoSizeColumns>
-  <BarItemCancelTask>Cancel task</BarItemCancelTask>
-  <BarItemDetails>Details</BarItemDetails>
-  <BarItemSettings>Settings</BarItemSettings>
-  <BarItemHelp>Help</BarItemHelp>
-  <BarItemCheckForUpdates>Check for updates</BarItemCheckForUpdates>
-  <BarItemHomePage>Homepage</BarItemHomePage>
-  <BarItemAbout>About</BarItemAbout>
-  <ClhPath>Path</ClhPath>
-  <ClhStatus>Status</ClhStatus>
-  <ClhOwnership>Ownership</ClhOwnership>
-  <MsgUnknown>Unknown</MsgUnknown>
-  <MsgLocked>Locked</MsgLocked>
-  <MsgUnlocked>Unlocked</MsgUnlocked>
-  <MsgOperationCancelled>Operation cancelled</MsgOperationCancelled>
-  <MsgLoading>Loading...</MsgLoading>
-  <MsgSuccessfullyUnlocked>Successfully unlocked</MsgSuccessfullyUnlocked>
-  <MsgCouldNotUnlock>Could not unlock the item</MsgCouldNotUnlock>
-  <MsgSuccessfullyCopied>Successfully copied</MsgSuccessfullyCopied>
-  <MsgCouldNotCopy>Could not copy the item</MsgCouldNotCopy>
-  <MsgSuccessfullyMoved>Successfully moved</MsgSuccessfullyMoved>
-  <MsgCouldNotMove>Could not move the item</MsgCouldNotMove>
-  <MsgSuccessfullyRemoved>Successfully removed</MsgSuccessfullyRemoved>
-  <MsgCouldNotRemove>Could not remove the item</MsgCouldNotRemove>
-  <ClhFileName>File name</ClhFileName>
-  <ClhProcessId>Process ID</ClhProcessId>
-  <LblVersion>Version:</LblVersion>
-  <CmiDetails>Details</CmiDetails>
-  <CmiOpenInVirusTotal>Open in VirusTotal</CmiOpenInVirusTotal>
-  <CmiKill>Kill</CmiKill>
-  <CmiOpenFileLocation>Open file location</CmiOpenFileLocation>
-  <CmiProperties>Properties</CmiProperties>
-  <MsgSuccessfullyKilled>Successfully killed the selected process(es)!</MsgSuccessfullyKilled>
-  <CmiHideShow>Hide / Show</CmiHideShow>
-  <MsgAdministrator>DeadLock might not function correctly without administrator rights!</MsgAdministrator>
-  <MsgDownloadNewVersion>Would you like to download the latest version?</MsgDownloadNewVersion>
-  <MsgLatestVersionAlreadyInstalled>The latest version of DeadLock is already installed!</MsgLatestVersionAlreadyInstalled>
-  <TxtAboutCreated>DeadLock was created by DeadLine.</TxtAboutCreated>
-  <TxtAboutImages>Images: small-n-flat by paomedia</TxtAboutImages>
-  <TxtAboutTheme>Theme by: SyncFusion</TxtAboutTheme>
-  <TxtAboutCopyright>Copyright &#169; CodeDead 2026</TxtAboutCopyright>
-  <TxtAboutTranslation>Translation:</TxtAboutTranslation>
-  <BtnClose>Close</BtnClose>
-  <BtnLicense>License</BtnLicense>
-  <LblGeneral>General</LblGeneral>
-  <ChbAutoUpdate>Automatically check for updates:</ChbAutoUpdate>
-  <ChbShowNotifyIcon>Show notify icon:</ChbShowNotifyIcon>
-  <ChbStartMinimized>Start minimized:</ChbStartMinimized>
-  <ChbShowAdminWarning>Show administrator warning:</ChbShowAdminWarning>
-  <LblAppearance>Appearance</LblAppearance>
-  <LblThemeStyle>Theme style:</LblThemeStyle>
-  <LblRememberFormSize>Remember form size:</LblRememberFormSize>
-  <LblShowDetails>Show details:</LblShowDetails>
-  <LblLanguage>Language:</LblLanguage>
-  <LblAdvanced>Advanced</LblAdvanced>
-  <LblAutoRunDeadLock>Run DeadLock automatically:</LblAutoRunDeadLock>
-  <LblWindowsExplorerIntegration>Windows Explorer integration:</LblWindowsExplorerIntegration>
-  <LblOwnership>Take ownership:</LblOwnership>
-  <BtnReset>Reset</BtnReset>
-  <BtnSave>Save</BtnSave>
-  <TbtnOn>ON</TbtnOn>
-  <TbtnOff>OFF</TbtnOff>
-  <TxtUpdater>Updater</TxtUpdater>
-  <LblPath>Path:</LblPath>
-  <LblProgress>Progress:</LblProgress>
-  <MsgCouldNotRestart>Could not begin restart session. Unable to determine resource locker.</MsgCouldNotRestart>
-  <MsgCouldNotRegister>Could not register resource.</MsgCouldNotRegister>
-  <MsgCouldNotList>Could not list the processes that are locking the resource!</MsgCouldNotList>
-  <MsgCouldNotListResult>Could not list the processes that are locking the resource. Failed to get size of result!</MsgCouldNotListResult>
-  <MsgAccessDenied>Access denied</MsgAccessDenied>
+    <Author>DeadLine</Author>
+    <Comment>English</Comment>
+    <BarFile>&amp;File</BarFile>
+    <BarEdit>&amp;Edit</BarEdit>
+    <BarView>&amp;View</BarView>
+    <BarTools>&amp;Tools</BarTools>
+    <BarHelp>&amp;Help</BarHelp>
+    <BarItemOpenFiles>Open file(s)...</BarItemOpenFiles>
+    <BarItemOpenFolder>Open folder...</BarItemOpenFolder>
+    <BarItemRestart>Restart</BarItemRestart>
+    <BarItemExit>Exit</BarItemExit>
+    <BarItemUnlock>Unlock</BarItemUnlock>
+    <BarItemCopy>Copy</BarItemCopy>
+    <BarItemMove>Move</BarItemMove>
+    <BarItemRemove>Remove</BarItemRemove>
+    <BarItemOwnership>Ownership</BarItemOwnership>
+    <BarItemOwnershipTrue>True</BarItemOwnershipTrue>
+    <BarItemOwnershipFalse>False</BarItemOwnershipFalse>
+    <BarItemRemoveItem>Remove item</BarItemRemoveItem>
+    <BarItemClearItems>Clear items</BarItemClearItems>
+    <BarItemAutoSizeColumns>Auto size columns</BarItemAutoSizeColumns>
+    <BarItemCancelTask>Cancel task</BarItemCancelTask>
+    <BarItemDetails>Details</BarItemDetails>
+    <BarItemSettings>Settings</BarItemSettings>
+    <BarItemHelp>Help</BarItemHelp>
+    <BarItemCheckForUpdates>Check for updates</BarItemCheckForUpdates>
+    <BarItemHomePage>Homepage</BarItemHomePage>
+    <BarItemAbout>About</BarItemAbout>
+    <ClhPath>Path</ClhPath>
+    <ClhStatus>Status</ClhStatus>
+    <ClhOwnership>Ownership</ClhOwnership>
+    <MsgUnknown>Unknown</MsgUnknown>
+    <MsgLocked>Locked</MsgLocked>
+    <MsgUnlocked>Unlocked</MsgUnlocked>
+    <MsgOperationCancelled>Operation cancelled</MsgOperationCancelled>
+    <MsgLoading>Loading...</MsgLoading>
+    <MsgSuccessfullyUnlocked>Successfully unlocked</MsgSuccessfullyUnlocked>
+    <MsgCouldNotUnlock>Could not unlock the item</MsgCouldNotUnlock>
+    <MsgSuccessfullyCopied>Successfully copied</MsgSuccessfullyCopied>
+    <MsgCouldNotCopy>Could not copy the item</MsgCouldNotCopy>
+    <MsgSuccessfullyMoved>Successfully moved</MsgSuccessfullyMoved>
+    <MsgCouldNotMove>Could not move the item</MsgCouldNotMove>
+    <MsgSuccessfullyRemoved>Successfully removed</MsgSuccessfullyRemoved>
+    <MsgCouldNotRemove>Could not remove the item</MsgCouldNotRemove>
+    <ClhFileName>File name</ClhFileName>
+    <ClhProcessId>Process ID</ClhProcessId>
+    <LblVersion>Version:</LblVersion>
+    <CmiDetails>Details</CmiDetails>
+    <CmiOpenInVirusTotal>Open in VirusTotal</CmiOpenInVirusTotal>
+    <CmiKill>Kill</CmiKill>
+    <CmiOpenFileLocation>Open file location</CmiOpenFileLocation>
+    <CmiProperties>Properties</CmiProperties>
+    <MsgSuccessfullyKilled>Successfully killed the selected process(es)!</MsgSuccessfullyKilled>
+    <CmiHideShow>Hide / Show</CmiHideShow>
+    <MsgAdministrator>DeadLock might not function correctly without administrator rights!</MsgAdministrator>
+    <MsgDownloadNewVersion>Would you like to download the latest version?</MsgDownloadNewVersion>
+    <MsgLatestVersionAlreadyInstalled>The latest version of DeadLock is already installed!
+    </MsgLatestVersionAlreadyInstalled>
+    <TxtAboutCreated>DeadLock was created by DeadLine.</TxtAboutCreated>
+    <TxtAboutImages>Images: small-n-flat by paomedia</TxtAboutImages>
+    <TxtAboutTheme>Theme by: SyncFusion</TxtAboutTheme>
+    <TxtAboutCopyright>Copyright &#169; CodeDead 2026</TxtAboutCopyright>
+    <TxtAboutTranslation>Translation:</TxtAboutTranslation>
+    <BtnClose>Close</BtnClose>
+    <BtnLicense>License</BtnLicense>
+    <LblGeneral>General</LblGeneral>
+    <ChbAutoUpdate>Automatically check for updates:</ChbAutoUpdate>
+    <ChbShowNotifyIcon>Show notify icon:</ChbShowNotifyIcon>
+    <ChbStartMinimized>Start minimized:</ChbStartMinimized>
+    <ChbShowAdminWarning>Show administrator warning:</ChbShowAdminWarning>
+    <LblAppearance>Appearance</LblAppearance>
+    <LblThemeStyle>Theme style:</LblThemeStyle>
+    <LblRememberFormSize>Remember form size:</LblRememberFormSize>
+    <LblShowDetails>Show details:</LblShowDetails>
+    <LblLanguage>Language:</LblLanguage>
+    <LblAdvanced>Advanced</LblAdvanced>
+    <LblAutoRunDeadLock>Run DeadLock automatically:</LblAutoRunDeadLock>
+    <LblWindowsExplorerIntegration>Windows Explorer integration:</LblWindowsExplorerIntegration>
+    <LblOwnership>Take ownership:</LblOwnership>
+    <BtnReset>Reset</BtnReset>
+    <BtnSave>Save</BtnSave>
+    <TbtnOn>ON</TbtnOn>
+    <TbtnOff>OFF</TbtnOff>
+    <TxtUpdater>Updater</TxtUpdater>
+    <LblPath>Path:</LblPath>
+    <LblProgress>Progress:</LblProgress>
+    <MsgCouldNotRestart>Could not begin restart session. Unable to determine resource locker.</MsgCouldNotRestart>
+    <MsgCouldNotRegister>Could not register resource.</MsgCouldNotRegister>
+    <MsgCouldNotList>Could not list the processes that are locking the resource!</MsgCouldNotList>
+    <MsgCouldNotListResult>Could not list the processes that are locking the resource. Failed to get size of result!
+    </MsgCouldNotListResult>
+    <MsgAccessDenied>Access denied</MsgAccessDenied>
 </Language>

@@ -1,93 +1,95 @@
 <?xml version="1.0"?>
 <Language>
-  <Author>DeadLine</Author>
-  <Comment>Dutch</Comment>
-  <BarFile>&amp;Bestand</BarFile>
-  <BarEdit>&amp;Aanpassen</BarEdit>
-  <BarView>&amp;Beeld</BarView>
-  <BarTools>&amp;Gereedschap</BarTools>
-  <BarHelp>&amp;Help</BarHelp>
-  <BarItemOpenFiles>Open bestand(en)...</BarItemOpenFiles>
-  <BarItemOpenFolder>Open folder...</BarItemOpenFolder>
-  <BarItemRestart>Herstart</BarItemRestart>
-  <BarItemExit>Sluiten</BarItemExit>
-  <BarItemUnlock>Ontgrendel</BarItemUnlock>
-  <BarItemCopy>Namaken</BarItemCopy>
-  <BarItemMove>Verplaatsen</BarItemMove>
-  <BarItemRemove>Verwijderen</BarItemRemove>
-  <BarItemOwnership>Eigendomsrecht</BarItemOwnership>
-  <BarItemOwnershipTrue>Waar</BarItemOwnershipTrue>
-  <BarItemOwnershipFalse>Onwaar</BarItemOwnershipFalse>
-  <BarItemRemoveItem>Verwijder item</BarItemRemoveItem>
-  <BarItemClearItems>Verwijder alle items</BarItemClearItems>
-  <BarItemAutoSizeColumns>Kolom automatisch aanpassen</BarItemAutoSizeColumns>
-  <BarItemCancelTask>Annuleer taak</BarItemCancelTask>
-  <BarItemDetails>Details</BarItemDetails>
-  <BarItemSettings>Instellingen</BarItemSettings>
-  <BarItemHelp>Help</BarItemHelp>
-  <BarItemCheckForUpdates>Controleer op updates</BarItemCheckForUpdates>
-  <BarItemHomePage>Startpagina</BarItemHomePage>
-  <BarItemAbout>Over</BarItemAbout>
-  <ClhPath>Pad</ClhPath>
-  <ClhStatus>Status</ClhStatus>
-  <ClhOwnership>Eigendomsrecht</ClhOwnership>
-  <MsgUnknown>Onbekend</MsgUnknown>
-  <MsgLocked>Vergrendeld</MsgLocked>
-  <MsgUnlocked>Ontgrendeld</MsgUnlocked>
-  <MsgOperationCancelled>Operatie geannuleerd</MsgOperationCancelled>
-  <MsgLoading>Laden...</MsgLoading>
-  <MsgSuccessfullyUnlocked>Successvol ontgrendeld</MsgSuccessfullyUnlocked>
-  <MsgCouldNotUnlock>Kon het item niet ontgrendelen</MsgCouldNotUnlock>
-  <MsgSuccessfullyCopied>Successvol gekopieerd</MsgSuccessfullyCopied>
-  <MsgCouldNotCopy>Kon het item niet namaken</MsgCouldNotCopy>
-  <MsgSuccessfullyMoved>Succesvol verplaatst</MsgSuccessfullyMoved>
-  <MsgCouldNotMove>Kon het item niet verplaatsen</MsgCouldNotMove>
-  <MsgSuccessfullyRemoved>Successvol verwijderd</MsgSuccessfullyRemoved>
-  <MsgCouldNotRemove>Kon het item niet verwijderen</MsgCouldNotRemove>
-  <ClhFileName>Bestandsnaam</ClhFileName>
-  <ClhProcessId>Process ID</ClhProcessId>
-  <LblVersion>Versie:</LblVersion>
-  <CmiDetails>Details</CmiDetails>
-  <CmiOpenInVirusTotal>Openen in VirusTotal</CmiOpenInVirusTotal>
-  <CmiKill>Sluiten</CmiKill>
-  <CmiOpenFileLocation>Open bestandslocatie</CmiOpenFileLocation>
-  <CmiProperties>Eigenschappen</CmiProperties>
-  <MsgSuccessfullyKilled>De geselecteerde processen zijn met success gesloten!</MsgSuccessfullyKilled>
-  <CmiHideShow>Verberg / Toon</CmiHideShow>
-  <MsgAdministrator>DeadLock zal mogelijk niet correct functioneren zonder administratieve rechten!</MsgAdministrator>
-  <MsgDownloadNewVersion>Wil je de laatste nieuwe versie downloaden?</MsgDownloadNewVersion>
-  <MsgLatestVersionAlreadyInstalled>U heeft de meest recente versie!</MsgLatestVersionAlreadyInstalled>
-  <TxtAboutCreated>DeadLock werd gemaakt door DeadLine.</TxtAboutCreated>
-  <TxtAboutImages>Afbeeldingen: small-n-flat door paomedia</TxtAboutImages>
-  <TxtAboutTheme>Thema door: SyncFusion</TxtAboutTheme>
-  <TxtAboutCopyright>Copyright &#169; CodeDead 2026</TxtAboutCopyright>
-  <TxtAboutTranslation>Vertaling:</TxtAboutTranslation>
-  <BtnClose>Sluiten</BtnClose>
-  <BtnLicense>Licentie</BtnLicense>
-  <LblGeneral>Algemeen</LblGeneral>
-  <ChbAutoUpdate>Controleer automatisch op updates:</ChbAutoUpdate>
-  <ChbShowNotifyIcon>Toon notificatie icoon:</ChbShowNotifyIcon>
-  <ChbStartMinimized>Start geminimaliseerd:</ChbStartMinimized>
-  <ChbShowAdminWarning>Toon administratieve waarschuwing:</ChbShowAdminWarning>
-  <LblAppearance>Uiterlijk</LblAppearance>
-  <LblThemeStyle>Thema stijl:</LblThemeStyle>
-  <LblRememberFormSize>Onthoud formulier grootte:</LblRememberFormSize>
-  <LblShowDetails>Toon details:</LblShowDetails>
-  <LblLanguage>Taal:</LblLanguage>
-  <LblAdvanced>Geadvanceerd</LblAdvanced>
-  <LblAutoRunDeadLock>Start DeadLock automatisch:</LblAutoRunDeadLock>
-  <LblWindowsExplorerIntegration>Windows Explorer integratie:</LblWindowsExplorerIntegration>
-  <LblOwnership>Neem eigendomsrecht:</LblOwnership>
-  <BtnReset>Resetten</BtnReset>
-  <BtnSave>Opslaan</BtnSave>
-  <TbtnOn>AAN</TbtnOn>
-  <TbtnOff>UIT</TbtnOff>
-  <TxtUpdater>Updater</TxtUpdater>
-  <LblPath>Pad:</LblPath>
-  <LblProgress>Vooruitgang:</LblProgress>
-  <MsgCouldNotRestart>Kon de restart sessie niet beginnen. Kon de resource lockers niet vinden.</MsgCouldNotRestart>
-  <MsgCouldNotRegister>Kon de bronnen niet registreren.</MsgCouldNotRegister>
-  <MsgCouldNotList>Kon de processen niet opsommen die de bron vergrendelen!</MsgCouldNotList>
-  <MsgCouldNotListResult>Kon de processen niet opsommen die de bron vergrendelen. Kon de grootte van het resultaat niet bepalen!</MsgCouldNotListResult>
-  <MsgAccessDenied>Toegang geweigerd</MsgAccessDenied>
+    <Author>DeadLine</Author>
+    <Comment>Dutch</Comment>
+    <BarFile>&amp;Bestand</BarFile>
+    <BarEdit>&amp;Aanpassen</BarEdit>
+    <BarView>&amp;Beeld</BarView>
+    <BarTools>&amp;Gereedschap</BarTools>
+    <BarHelp>&amp;Help</BarHelp>
+    <BarItemOpenFiles>Open bestand(en)...</BarItemOpenFiles>
+    <BarItemOpenFolder>Open folder...</BarItemOpenFolder>
+    <BarItemRestart>Herstart</BarItemRestart>
+    <BarItemExit>Sluiten</BarItemExit>
+    <BarItemUnlock>Ontgrendel</BarItemUnlock>
+    <BarItemCopy>Namaken</BarItemCopy>
+    <BarItemMove>Verplaatsen</BarItemMove>
+    <BarItemRemove>Verwijderen</BarItemRemove>
+    <BarItemOwnership>Eigendomsrecht</BarItemOwnership>
+    <BarItemOwnershipTrue>Waar</BarItemOwnershipTrue>
+    <BarItemOwnershipFalse>Onwaar</BarItemOwnershipFalse>
+    <BarItemRemoveItem>Verwijder item</BarItemRemoveItem>
+    <BarItemClearItems>Verwijder alle items</BarItemClearItems>
+    <BarItemAutoSizeColumns>Kolom automatisch aanpassen</BarItemAutoSizeColumns>
+    <BarItemCancelTask>Annuleer taak</BarItemCancelTask>
+    <BarItemDetails>Details</BarItemDetails>
+    <BarItemSettings>Instellingen</BarItemSettings>
+    <BarItemHelp>Help</BarItemHelp>
+    <BarItemCheckForUpdates>Controleer op updates</BarItemCheckForUpdates>
+    <BarItemHomePage>Startpagina</BarItemHomePage>
+    <BarItemAbout>Over</BarItemAbout>
+    <ClhPath>Pad</ClhPath>
+    <ClhStatus>Status</ClhStatus>
+    <ClhOwnership>Eigendomsrecht</ClhOwnership>
+    <MsgUnknown>Onbekend</MsgUnknown>
+    <MsgLocked>Vergrendeld</MsgLocked>
+    <MsgUnlocked>Ontgrendeld</MsgUnlocked>
+    <MsgOperationCancelled>Operatie geannuleerd</MsgOperationCancelled>
+    <MsgLoading>Laden...</MsgLoading>
+    <MsgSuccessfullyUnlocked>Successvol ontgrendeld</MsgSuccessfullyUnlocked>
+    <MsgCouldNotUnlock>Kon het item niet ontgrendelen</MsgCouldNotUnlock>
+    <MsgSuccessfullyCopied>Successvol gekopieerd</MsgSuccessfullyCopied>
+    <MsgCouldNotCopy>Kon het item niet namaken</MsgCouldNotCopy>
+    <MsgSuccessfullyMoved>Succesvol verplaatst</MsgSuccessfullyMoved>
+    <MsgCouldNotMove>Kon het item niet verplaatsen</MsgCouldNotMove>
+    <MsgSuccessfullyRemoved>Successvol verwijderd</MsgSuccessfullyRemoved>
+    <MsgCouldNotRemove>Kon het item niet verwijderen</MsgCouldNotRemove>
+    <ClhFileName>Bestandsnaam</ClhFileName>
+    <ClhProcessId>Process ID</ClhProcessId>
+    <LblVersion>Versie:</LblVersion>
+    <CmiDetails>Details</CmiDetails>
+    <CmiOpenInVirusTotal>Openen in VirusTotal</CmiOpenInVirusTotal>
+    <CmiKill>Sluiten</CmiKill>
+    <CmiOpenFileLocation>Open bestandslocatie</CmiOpenFileLocation>
+    <CmiProperties>Eigenschappen</CmiProperties>
+    <MsgSuccessfullyKilled>De geselecteerde processen zijn met success gesloten!</MsgSuccessfullyKilled>
+    <CmiHideShow>Verberg / Toon</CmiHideShow>
+    <MsgAdministrator>DeadLock zal mogelijk niet correct functioneren zonder administratieve rechten!</MsgAdministrator>
+    <MsgDownloadNewVersion>Wil je de laatste nieuwe versie downloaden?</MsgDownloadNewVersion>
+    <MsgLatestVersionAlreadyInstalled>U heeft de meest recente versie!</MsgLatestVersionAlreadyInstalled>
+    <TxtAboutCreated>DeadLock werd gemaakt door DeadLine.</TxtAboutCreated>
+    <TxtAboutImages>Afbeeldingen: small-n-flat door paomedia</TxtAboutImages>
+    <TxtAboutTheme>Thema door: SyncFusion</TxtAboutTheme>
+    <TxtAboutCopyright>Copyright &#169; CodeDead 2026</TxtAboutCopyright>
+    <TxtAboutTranslation>Vertaling:</TxtAboutTranslation>
+    <BtnClose>Sluiten</BtnClose>
+    <BtnLicense>Licentie</BtnLicense>
+    <LblGeneral>Algemeen</LblGeneral>
+    <ChbAutoUpdate>Controleer automatisch op updates:</ChbAutoUpdate>
+    <ChbShowNotifyIcon>Toon notificatie icoon:</ChbShowNotifyIcon>
+    <ChbStartMinimized>Start geminimaliseerd:</ChbStartMinimized>
+    <ChbShowAdminWarning>Toon administratieve waarschuwing:</ChbShowAdminWarning>
+    <LblAppearance>Uiterlijk</LblAppearance>
+    <LblThemeStyle>Thema stijl:</LblThemeStyle>
+    <LblRememberFormSize>Onthoud formulier grootte:</LblRememberFormSize>
+    <LblShowDetails>Toon details:</LblShowDetails>
+    <LblLanguage>Taal:</LblLanguage>
+    <LblAdvanced>Geadvanceerd</LblAdvanced>
+    <LblAutoRunDeadLock>Start DeadLock automatisch:</LblAutoRunDeadLock>
+    <LblWindowsExplorerIntegration>Windows Explorer integratie:</LblWindowsExplorerIntegration>
+    <LblOwnership>Neem eigendomsrecht:</LblOwnership>
+    <BtnReset>Resetten</BtnReset>
+    <BtnSave>Opslaan</BtnSave>
+    <TbtnOn>AAN</TbtnOn>
+    <TbtnOff>UIT</TbtnOff>
+    <TxtUpdater>Updater</TxtUpdater>
+    <LblPath>Pad:</LblPath>
+    <LblProgress>Vooruitgang:</LblProgress>
+    <MsgCouldNotRestart>Kon de restart sessie niet beginnen. Kon de resource lockers niet vinden.</MsgCouldNotRestart>
+    <MsgCouldNotRegister>Kon de bronnen niet registreren.</MsgCouldNotRegister>
+    <MsgCouldNotList>Kon de processen niet opsommen die de bron vergrendelen!</MsgCouldNotList>
+    <MsgCouldNotListResult>Kon de processen niet opsommen die de bron vergrendelen. Kon de grootte van het resultaat
+        niet bepalen!
+    </MsgCouldNotListResult>
+    <MsgAccessDenied>Toegang geweigerd</MsgAccessDenied>
 </Language>

@@ -13,7 +13,7 @@ namespace DeadLock
         [STAThread]
         private static void Main(string[] args)
         {
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR KEY HERE");
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1JGaF1cXmhLYVJzWmFZfVhgdV9EYVZVQmY/P1ZhSXxVdkdjUX5dcnVRQGFYV0V9XEA=");
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

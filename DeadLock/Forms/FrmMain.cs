@@ -62,7 +62,7 @@ namespace DeadLock.Forms
         /// </summary>
         internal void LanguageSwitch()
         {
-            if (Properties.Settings.Default.Language == 12)
+            if (Properties.Settings.Default.Language == 13)
             {
                 if (Properties.Settings.Default.LanguagePath.Length != 0)
                 {

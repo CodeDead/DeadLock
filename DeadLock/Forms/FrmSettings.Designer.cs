@@ -110,7 +110,7 @@ namespace DeadLock.Forms
             // 
             // tbcPanels
             // 
-            this.tbcPanels.ActiveTabColor = System.Drawing.Color.SteelBlue;
+            this.tbcPanels.ActiveTabColor = System.Drawing.Color.RoyalBlue;
             this.tbcPanels.BeforeTouchSize = new System.Drawing.Size(535, 276);
             this.tbcPanels.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbcPanels.Controls.Add(this.tpaGeneral);
@@ -129,6 +129,7 @@ namespace DeadLock.Forms
             this.tbcPanels.Size = new System.Drawing.Size(535, 276);
             this.tbcPanels.SizeMode = Syncfusion.Windows.Forms.Tools.TabSizeMode.FillToRight;
             this.tbcPanels.TabIndex = 0;
+            this.tbcPanels.TabPanelBackColor = System.Drawing.Color.Transparent;
             this.tbcPanels.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
             this.tbcPanels.ThemeName = "TabRendererMetro";
             this.tbcPanels.ThemesEnabled = true;

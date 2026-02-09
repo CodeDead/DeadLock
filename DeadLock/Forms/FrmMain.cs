@@ -831,8 +831,8 @@ namespace DeadLock.Forms
             if (File.GetAttributes(lsvItems.SelectedItems[0].Text).HasFlag(FileAttributes.Directory)) return;
             try
             {
-                Process.Start("https://www.virustotal.com/en/file/" +
-                              GetSha256FromFile(lsvItems.SelectedItems[0].Text) + "/analysis/");
+                Process.Start("https://www.virustotal.com/gui/file/" +
+                              GetSha256FromFile(lsvItems.SelectedItems[0].Text) + "/detection");
             }
             catch (Exception ex)
             {

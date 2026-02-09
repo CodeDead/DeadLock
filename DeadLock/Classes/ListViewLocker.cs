@@ -170,7 +170,6 @@ namespace DeadLock.Classes
                         DirectoryInfo info = new DirectoryInfo(path);
                         DirectorySecurity ds = info.GetAccessControl();
                         ds.SetAccessRuleProtection(false, true);
-                        
                         if (ds.GetOwner(typeof(NTAccount)).ToString() != self.Name)
                         {
                             ds.SetOwner(self.User);
@@ -185,7 +184,6 @@ namespace DeadLock.Classes
                     {
                         FileSecurity fs = File.GetAccessControl(path);
                         fs.SetAccessRuleProtection(false, true);
-                        
                         if (fs.GetOwner(typeof(NTAccount)).ToString() != self.Name)
                         {
                             fs.SetOwner(self.User);

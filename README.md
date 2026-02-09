@@ -23,4 +23,4 @@ This library is maintained by CodeDead. You can find more about us using the fol
 * [Bluesky](https://bsky.app/profile/codedead.com)
 * [Facebook](https://facebook.com/deadlinecodedead)
 
-Copyright © 2025 CodeDead
+Copyright © 2026 CodeDead

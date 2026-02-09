@@ -152,20 +152,25 @@ namespace DeadLock.Classes
         /// <summary>
         /// Change the ownership of the file or folder that is associated with the ListViewLocker.
         /// </summary>
-        /// <param name="owned">A boolean to represent wether the operator owns the file or folder that is associated with the ListViewLocker.</param>
+        /// <param name="owned">A boolean to represent whether the operator owns the file or folder that is associated with the ListViewLocker.</param>
         internal void SetOwnership(bool owned)
         {
             try
             {
+                string path = GetPath();
+                bool isDirectory = File.GetAttributes(path).HasFlag(FileAttributes.Directory);
+
                 if (owned)
                 {
-                    if (File.GetAttributes(GetPath()).HasFlag(FileAttributes.Directory))
+                    WindowsIdentity self = WindowsIdentity.GetCurrent();
+                    if (self.User == null) return;
+
+                    if (isDirectory)
                     {
-                        DirectoryInfo info = new DirectoryInfo(GetPath());
-                        WindowsIdentity self = WindowsIdentity.GetCurrent();
+                        DirectoryInfo info = new DirectoryInfo(path);
                         DirectorySecurity ds = info.GetAccessControl();
                         ds.SetAccessRuleProtection(false, true);
-                        if (self.User == null) return;
+                        
                         if (ds.GetOwner(typeof(NTAccount)).ToString() != self.Name)
                         {
                             ds.SetOwner(self.User);
@@ -178,10 +183,9 @@ namespace DeadLock.Classes
                     }
                     else
                     {
-                        WindowsIdentity self = WindowsIdentity.GetCurrent();
-                        FileSecurity fs = File.GetAccessControl(GetPath());
+                        FileSecurity fs = File.GetAccessControl(path);
                         fs.SetAccessRuleProtection(false, true);
-                        if (self.User == null) return;
+                        
                         if (fs.GetOwner(typeof(NTAccount)).ToString() != self.Name)
                         {
                             fs.SetOwner(self.User);
@@ -189,15 +193,15 @@ namespace DeadLock.Classes
 
                         fs.AddAccessRule(new FileSystemAccessRule(self.User, FileSystemRights.FullControl,
                             AccessControlType.Allow));
-                        File.SetAccessControl(GetPath(), fs);
-                        File.SetAttributes(GetPath(), FileAttributes.Normal);
+                        File.SetAccessControl(path, fs);
+                        File.SetAttributes(path, FileAttributes.Normal);
                     }
                 }
                 else
                 {
-                    if (File.GetAttributes(GetPath()).HasFlag(FileAttributes.Directory))
+                    if (isDirectory)
                     {
-                        DirectoryInfo directoryInfo = new DirectoryInfo(GetPath());
+                        DirectoryInfo directoryInfo = new DirectoryInfo(path);
                         DirectorySecurity directorySecurity = directoryInfo.GetAccessControl();
                         directorySecurity.SetAccessRuleProtection(true, false);
                         AuthorizationRuleCollection rules =
@@ -207,11 +211,11 @@ namespace DeadLock.Classes
                             directorySecurity.RemoveAccessRule(rule);
                         }
 
-                        Directory.SetAccessControl(GetPath(), directorySecurity);
+                        Directory.SetAccessControl(path, directorySecurity);
                     }
                     else
                     {
-                        FileSecurity fs = File.GetAccessControl(GetPath());
+                        FileSecurity fs = File.GetAccessControl(path);
                         fs.SetAccessRuleProtection(true, false);
                         AuthorizationRuleCollection rules = fs.GetAccessRules(true, true, typeof(NTAccount));
                         foreach (FileSystemAccessRule rule in rules)
@@ -219,7 +223,7 @@ namespace DeadLock.Classes
                             fs.RemoveAccessRule(rule);
                         }
 
-                        File.SetAccessControl(GetPath(), fs);
+                        File.SetAccessControl(path, fs);
                     }
                 }
             }

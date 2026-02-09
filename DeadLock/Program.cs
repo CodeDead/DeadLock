@@ -7,6 +7,8 @@ namespace DeadLock
 {
     internal static class Program
     {
+        private const string ApplicationName = "DeadLock";
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -30,7 +32,7 @@ namespace DeadLock
             }
             catch (Exception ex)
             {
-                MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBoxAdv.Show(ex.Message, ApplicationName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             MessageBoxAdv.MessageBoxStyle = MessageBoxAdv.Style.Metro;
             Application.Run(new FrmMain(args));

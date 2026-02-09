@@ -37,7 +37,8 @@ namespace DeadLock.Classes
         {
             _locker = l;
             _language = language;
-            FilePath = string.IsNullOrEmpty(GetMainModuleFilepath(l.Id)) ? language.MsgAccessDenied : GetMainModuleFilepath(l.Id);
+            string filePath = GetMainModuleFilepath(l.Id);
+            FilePath = string.IsNullOrEmpty(filePath) ? language.MsgAccessDenied : filePath;
             FileName = Path.GetFileName(FilePath);
         }
 

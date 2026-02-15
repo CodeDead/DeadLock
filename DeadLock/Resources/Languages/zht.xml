@@ -90,4 +90,5 @@
     <MsgCouldNotList>無法列出鎖定資源的進程!</MsgCouldNotList>
     <MsgCouldNotListResult>無法列出鎖定資源的進程。未能取得結果的大小!</MsgCouldNotListResult>
     <MsgAccessDenied>存取遭拒絕</MsgAccessDenied>
+	<BtnDonate>捐款</BtnDonate>
 </Language>

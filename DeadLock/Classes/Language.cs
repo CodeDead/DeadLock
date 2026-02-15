@@ -120,6 +120,7 @@ namespace DeadLock.Classes
         public string TxtAboutTheme;
         public string TxtAboutCopyright;
         public string TxtAboutTranslation;
+        public string BtnDonate;
 
         #endregion
 

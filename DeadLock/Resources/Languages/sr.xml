@@ -93,4 +93,5 @@
     <MsgCouldNotListResult>Nije moguće navesti procese koji su zaključani. Nemoguće je dobiti veličinu rezultata!
     </MsgCouldNotListResult>
     <MsgAccessDenied>Zabranjen pristup</MsgAccessDenied>
+	<BtnDonate>Doniraj</BtnDonate>
 </Language>

@@ -94,4 +94,5 @@
         resultado!
     </MsgCouldNotListResult>
     <MsgAccessDenied>Acceso denegado</MsgAccessDenied>
+	<BtnDonate>Donar</BtnDonate>
 </Language>

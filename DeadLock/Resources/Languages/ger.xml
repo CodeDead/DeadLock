@@ -94,4 +94,5 @@
     <MsgCouldNotListResult>Konnte die Prozesse nicht auflisten! Auslesen der Größe des Ergebnisses nicht möglich!
     </MsgCouldNotListResult>
     <MsgAccessDenied>Zugriff verweigert</MsgAccessDenied>
+	<BtnDonate>Spenden</BtnDonate>
 </Language>

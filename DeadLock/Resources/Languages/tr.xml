@@ -90,4 +90,5 @@
     <MsgCouldNotList>Kaynağı kilitleyen işlemler listelenemedi!</MsgCouldNotList>
     <MsgCouldNotListResult>Kaynağı kilitleyen işlemler listelenemedi. Sonuç boyutunu alınamadı!</MsgCouldNotListResult>
     <MsgAccessDenied>Erişim reddedildi</MsgAccessDenied>
+	<BtnDonate>Bağış Yap</BtnDonate>
 </Language>

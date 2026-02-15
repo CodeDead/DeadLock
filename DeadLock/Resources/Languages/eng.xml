@@ -92,4 +92,5 @@
     <MsgCouldNotListResult>Could not list the processes that are locking the resource. Failed to get size of result!
     </MsgCouldNotListResult>
     <MsgAccessDenied>Access denied</MsgAccessDenied>
+	<BtnDonate>Donate</BtnDonate>
 </Language>

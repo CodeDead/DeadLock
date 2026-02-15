@@ -90,4 +90,5 @@
     <MsgCouldNotList>리소스를 잠그고 있는 프로세스를 나열할 수 없습니다!</MsgCouldNotList>
     <MsgCouldNotListResult>리소스를 잠그고 있는 프로세스를 나열할 수 없습니다. 결과의 크기 확인 실패!</MsgCouldNotListResult>
     <MsgAccessDenied>접근이 거부되었습니다.</MsgAccessDenied>
+	<BtnDonate>기부</BtnDonate>
 </Language>

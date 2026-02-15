@@ -11,7 +11,9 @@ namespace DeadLock.Forms
     public partial class FrmAbout : SfForm
     {
         #region Variables
+
         private readonly Language _language;
+
         #endregion
 
         /// <summary>
@@ -32,9 +34,13 @@ namespace DeadLock.Forms
         private void LoadLanguage()
         {
             Text = @"DeadLock - " + _language.BarItemAbout;
-            txtAbout.Text = _language.TxtAboutCreated + Environment.NewLine + _language.TxtAboutImages + Environment.NewLine + _language.TxtAboutTheme + Environment.NewLine + Environment.NewLine + _language.TxtAboutCopyright + Environment.NewLine + Environment.NewLine + _language.TxtAboutTranslation + Environment.NewLine + _language.Comment + @" - " + _language.Author;
+            txtAbout.Text = _language.TxtAboutCreated + Environment.NewLine + _language.TxtAboutImages +
+                            Environment.NewLine + _language.TxtAboutTheme + Environment.NewLine + Environment.NewLine +
+                            _language.TxtAboutCopyright + Environment.NewLine + Environment.NewLine +
+                            _language.TxtAboutTranslation + Environment.NewLine + _language.Comment + @" - " +
+                            _language.Author;
             btnClose.Text = _language.BtnClose;
-            btnLicense.Text = _language.BtnLicense;
+            btnDonate.Text = _language.BtnDonate;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -54,18 +60,6 @@ namespace DeadLock.Forms
             }
         }
 
-        private void btnLicense_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Process.Start(Application.StartupPath + "\\gpl.pdf");
-            }
-            catch (Win32Exception ex)
-            {
-                MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
         /// <summary>
         /// Change the GUI to match the theme.
         /// </summary>
@@ -74,7 +68,7 @@ namespace DeadLock.Forms
             try
             {
                 btnClose.MetroColor = Properties.Settings.Default.MetroColor;
-                btnLicense.MetroColor = Properties.Settings.Default.MetroColor;
+                btnDonate.MetroColor = Properties.Settings.Default.MetroColor;
                 btnCodeDead.MetroColor = Properties.Settings.Default.MetroColor;
             }
             catch (Exception ex)
@@ -86,6 +80,18 @@ namespace DeadLock.Forms
         private void FrmAbout_Load(object sender, EventArgs e)
         {
             LoadTheme();
+        }
+
+        private void btnDonate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start("https://codedead.com/donate/");
+            }
+            catch (Win32Exception ex)
+            {
+                MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

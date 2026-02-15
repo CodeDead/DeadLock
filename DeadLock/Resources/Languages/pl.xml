@@ -92,4 +92,5 @@
     <MsgCouldNotListResult>Nie można ustalić procesów ktore blokują zasobu. Nie udało się pobrać wielkości wyniku!
     </MsgCouldNotListResult>
     <MsgAccessDenied>Odmowa dostępu</MsgAccessDenied>
+	<BtnDonate>Donate</BtnDonate>
 </Language>

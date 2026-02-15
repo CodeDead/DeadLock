@@ -90,4 +90,5 @@
     <MsgCouldNotList>无法列举锁定资源的进程！</MsgCouldNotList>
     <MsgCouldNotListResult>无法列举锁定资源的进程。获取结果长度失败！</MsgCouldNotListResult>
     <MsgAccessDenied>访问被拒绝</MsgAccessDenied>
+	<BtnDonate>捐赠</BtnDonate>
 </Language>

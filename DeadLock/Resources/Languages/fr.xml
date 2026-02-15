@@ -93,4 +93,5 @@
     <MsgCouldNotListResult>Ne peut lister les processus qui bloquent la resource. Echec de resultats!
     </MsgCouldNotListResult>
     <MsgAccessDenied>Accès interdit</MsgAccessDenied>
+	<BtnDonate>Faire un don</BtnDonate>
 </Language>

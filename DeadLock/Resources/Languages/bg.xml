@@ -93,4 +93,5 @@
         резултата!
     </MsgCouldNotListResult>
     <MsgAccessDenied>Достъпът е отказан</MsgAccessDenied>
+	<BtnDonate>Дарете</BtnDonate>
 </Language>

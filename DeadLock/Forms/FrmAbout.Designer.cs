@@ -42,7 +42,7 @@ namespace DeadLock.Forms
             this.pnlImage = new System.Windows.Forms.Panel();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.btnClose = new Syncfusion.Windows.Forms.ButtonAdv();
-            this.btnLicense = new Syncfusion.Windows.Forms.ButtonAdv();
+            this.btnDonate = new Syncfusion.Windows.Forms.ButtonAdv();
             this.btnCodeDead = new Syncfusion.Windows.Forms.ButtonAdv();
             this.pnlAbout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtAbout)).BeginInit();
@@ -117,22 +117,22 @@ namespace DeadLock.Forms
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // btnLicense
+            // btnDonate
             // 
-            this.btnLicense.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
-            this.btnLicense.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.btnLicense.BeforeTouchSize = new System.Drawing.Size(100, 28);
-            this.btnLicense.ForeColor = System.Drawing.Color.White;
-            this.btnLicense.Location = new System.Drawing.Point(245, 187);
-            this.btnLicense.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLicense.Name = "btnLicense";
-            this.btnLicense.Size = new System.Drawing.Size(100, 28);
-            this.btnLicense.TabIndex = 1;
-            this.btnLicense.Text = "License";
-            this.btnLicense.ThemeName = "Metro";
-            this.btnLicense.UseVisualStyle = true;
-            this.btnLicense.UseVisualStyleBackColor = false;
-            this.btnLicense.Click += new System.EventHandler(this.btnLicense_Click);
+            this.btnDonate.Appearance = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
+            this.btnDonate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
+            this.btnDonate.BeforeTouchSize = new System.Drawing.Size(100, 28);
+            this.btnDonate.ForeColor = System.Drawing.Color.White;
+            this.btnDonate.Location = new System.Drawing.Point(245, 187);
+            this.btnDonate.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDonate.Name = "btnDonate";
+            this.btnDonate.Size = new System.Drawing.Size(100, 28);
+            this.btnDonate.TabIndex = 1;
+            this.btnDonate.Text = "Donate";
+            this.btnDonate.ThemeName = "Metro";
+            this.btnDonate.UseVisualStyle = true;
+            this.btnDonate.UseVisualStyleBackColor = false;
+            this.btnDonate.Click += new System.EventHandler(this.btnDonate_Click);
             // 
             // btnCodeDead
             // 
@@ -158,7 +158,7 @@ namespace DeadLock.Forms
             this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(459, 221);
             this.Controls.Add(this.btnCodeDead);
-            this.Controls.Add(this.btnLicense);
+            this.Controls.Add(this.btnDonate);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pnlAbout);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -187,7 +187,7 @@ namespace DeadLock.Forms
         private System.Windows.Forms.PictureBox picLogo;
         private Syncfusion.Windows.Forms.Tools.TextBoxExt txtAbout;
         private Syncfusion.Windows.Forms.ButtonAdv btnClose;
-        private Syncfusion.Windows.Forms.ButtonAdv btnLicense;
+        private Syncfusion.Windows.Forms.ButtonAdv btnDonate;
         private Syncfusion.Windows.Forms.ButtonAdv btnCodeDead;
     }
 }

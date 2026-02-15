@@ -93,4 +93,5 @@
     <MsgCouldNotListResult>Не удалось получить список процессов, блокирующих ресурс. Невозможно получить результат!
     </MsgCouldNotListResult>
     <MsgAccessDenied>Отказано в доступе!</MsgAccessDenied>
+	<BtnDonate>Пожертвовать</BtnDonate>
 </Language>

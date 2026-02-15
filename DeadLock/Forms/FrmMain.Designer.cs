@@ -72,9 +72,9 @@ namespace DeadLock.Forms
             this.versionStaticBarItem = new Syncfusion.Windows.Forms.Tools.XPMenus.StaticBarItem();
             this.splItems = new Syncfusion.Windows.Forms.Tools.SplitContainerAdv();
             this.lsvItems = new System.Windows.Forms.ListView();
-            this.clhPath = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhOwnership = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhPath = new System.Windows.Forms.ColumnHeader();
+            this.clhStatus = new System.Windows.Forms.ColumnHeader();
+            this.clhOwnership = new System.Windows.Forms.ColumnHeader();
             this.cmsItems = new Syncfusion.Windows.Forms.Tools.ContextMenuStripEx();
             this.unlockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unlockToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -98,9 +98,9 @@ namespace DeadLock.Forms
             this.cancelCurrentOperationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imgFileIcons = new System.Windows.Forms.ImageList(this.components);
             this.lsvDetails = new System.Windows.Forms.ListView();
-            this.clhFileName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhProcessPath = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhProcessID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhFileName = new System.Windows.Forms.ColumnHeader();
+            this.clhProcessPath = new System.Windows.Forms.ColumnHeader();
+            this.clhProcessID = new System.Windows.Forms.ColumnHeader();
             this.cmsDetails = new Syncfusion.Windows.Forms.Tools.ContextMenuStripEx();
             this.propertiesToolStripMenuItemDetails = new System.Windows.Forms.ToolStripMenuItem();
             this.splitToolStripMenuItem12 = new System.Windows.Forms.ToolStripSeparator();
@@ -145,244 +145,43 @@ namespace DeadLock.Forms
             this.mfbmMain.EnableMenuMerge = true;
             this.mfbmMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mfbmMain.Form = this;
-            this.mfbmMain.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] {
-            this.fileParentBarItem,
-            this.openFilesBarItem,
-            this.openFolderbarItem,
-            this.restartBarItem,
-            this.exitBarItem,
-            this.unlockParentBarItem,
-            this.unlockBarItem,
-            this.copyBarItem,
-            this.moveBarItem,
-            this.removeBarItem,
-            this.ownershipParentBarItem,
-            this.trueBarItem,
-            this.falseBarItem,
-            this.editParentBarItem,
-            this.propertiesBarItem,
-            this.removeItemBarItem,
-            this.clearItemsbarItem,
-            this.autoSizeColumnsBarItem,
-            this.cancelOperationBarItem,
-            this.viewParentBarItem,
-            this.detailsBarItem,
-            this.toolsParentBarItem,
-            this.settingsBarItem,
-            this.helpParentBarItem,
-            this.helpBarItem,
-            this.checkForUpdatesBarItem,
-            this.homePageBarItem,
-            this.licenseBarItem,
-            this.aboutBarItem,
-            this.fileParentBarItem,
-            this.openFilesBarItem,
-            this.openFolderbarItem,
-            this.restartBarItem,
-            this.exitBarItem,
-            this.unlockParentBarItem,
-            this.unlockBarItem,
-            this.copyBarItem,
-            this.moveBarItem,
-            this.removeBarItem,
-            this.ownershipParentBarItem,
-            this.trueBarItem,
-            this.falseBarItem,
-            this.editParentBarItem,
-            this.propertiesBarItem,
-            this.removeItemBarItem,
-            this.clearItemsbarItem,
-            this.autoSizeColumnsBarItem,
-            this.cancelOperationBarItem,
-            this.viewParentBarItem,
-            this.detailsBarItem,
-            this.toolsParentBarItem,
-            this.settingsBarItem,
-            this.helpParentBarItem,
-            this.helpBarItem,
-            this.checkForUpdatesBarItem,
-            this.homePageBarItem,
-            this.licenseBarItem,
-            this.aboutBarItem,
-            this.fileParentBarItem,
-            this.openFilesBarItem,
-            this.openFolderbarItem,
-            this.restartBarItem,
-            this.exitBarItem,
-            this.unlockParentBarItem,
-            this.unlockBarItem,
-            this.copyBarItem,
-            this.moveBarItem,
-            this.removeBarItem,
-            this.ownershipParentBarItem,
-            this.trueBarItem,
-            this.falseBarItem,
-            this.editParentBarItem,
-            this.propertiesBarItem,
-            this.removeItemBarItem,
-            this.clearItemsbarItem,
-            this.autoSizeColumnsBarItem,
-            this.cancelOperationBarItem,
-            this.viewParentBarItem,
-            this.detailsBarItem,
-            this.toolsParentBarItem,
-            this.settingsBarItem,
-            this.helpParentBarItem,
-            this.helpBarItem,
-            this.checkForUpdatesBarItem,
-            this.homePageBarItem,
-            this.licenseBarItem,
-            this.aboutBarItem,
-            this.fileParentBarItem,
-            this.openFilesBarItem,
-            this.openFolderbarItem,
-            this.restartBarItem,
-            this.exitBarItem,
-            this.unlockParentBarItem,
-            this.unlockBarItem,
-            this.copyBarItem,
-            this.moveBarItem,
-            this.removeBarItem,
-            this.ownershipParentBarItem,
-            this.trueBarItem,
-            this.falseBarItem,
-            this.editParentBarItem,
-            this.propertiesBarItem,
-            this.removeItemBarItem,
-            this.clearItemsbarItem,
-            this.autoSizeColumnsBarItem,
-            this.cancelOperationBarItem,
-            this.viewParentBarItem,
-            this.detailsBarItem,
-            this.toolsParentBarItem,
-            this.settingsBarItem,
-            this.helpParentBarItem,
-            this.helpBarItem,
-            this.checkForUpdatesBarItem,
-            this.homePageBarItem,
-            this.licenseBarItem,
-            this.aboutBarItem,
-            this.fileParentBarItem,
-            this.openFilesBarItem,
-            this.openFolderbarItem,
-            this.restartBarItem,
-            this.exitBarItem,
-            this.unlockParentBarItem,
-            this.unlockBarItem,
-            this.copyBarItem,
-            this.moveBarItem,
-            this.removeBarItem,
-            this.ownershipParentBarItem,
-            this.trueBarItem,
-            this.falseBarItem,
-            this.editParentBarItem,
-            this.propertiesBarItem,
-            this.removeItemBarItem,
-            this.clearItemsbarItem,
-            this.autoSizeColumnsBarItem,
-            this.cancelOperationBarItem,
-            this.viewParentBarItem,
-            this.detailsBarItem,
-            this.toolsParentBarItem,
-            this.settingsBarItem,
-            this.helpParentBarItem,
-            this.helpBarItem,
-            this.checkForUpdatesBarItem,
-            this.homePageBarItem,
-            this.licenseBarItem,
-            this.aboutBarItem,
-            this.fileParentBarItem,
-            this.openFilesBarItem,
-            this.openFolderbarItem,
-            this.restartBarItem,
-            this.exitBarItem,
-            this.unlockParentBarItem,
-            this.unlockBarItem,
-            this.copyBarItem,
-            this.moveBarItem,
-            this.removeBarItem,
-            this.ownershipParentBarItem,
-            this.trueBarItem,
-            this.falseBarItem,
-            this.editParentBarItem,
-            this.propertiesBarItem,
-            this.removeItemBarItem,
-            this.clearItemsbarItem,
-            this.autoSizeColumnsBarItem,
-            this.cancelOperationBarItem,
-            this.viewParentBarItem,
-            this.detailsBarItem,
-            this.toolsParentBarItem,
-            this.settingsBarItem,
-            this.helpParentBarItem,
-            this.helpBarItem,
-            this.checkForUpdatesBarItem,
-            this.homePageBarItem,
-            this.licenseBarItem,
-            this.aboutBarItem,
-            this.fileParentBarItem,
-            this.openFilesBarItem,
-            this.openFolderbarItem,
-            this.restartBarItem,
-            this.exitBarItem,
-            this.unlockParentBarItem,
-            this.unlockBarItem,
-            this.copyBarItem,
-            this.moveBarItem,
-            this.removeBarItem,
-            this.ownershipParentBarItem,
-            this.trueBarItem,
-            this.falseBarItem,
-            this.editParentBarItem,
-            this.propertiesBarItem,
-            this.removeItemBarItem,
-            this.clearItemsbarItem,
-            this.autoSizeColumnsBarItem,
-            this.cancelOperationBarItem,
-            this.viewParentBarItem,
-            this.detailsBarItem,
-            this.toolsParentBarItem,
-            this.settingsBarItem,
-            this.helpParentBarItem,
-            this.helpBarItem,
-            this.checkForUpdatesBarItem,
-            this.homePageBarItem,
-            this.licenseBarItem,
-            this.aboutBarItem,
-            this.editParentBarItem,
-            this.unlockParentBarItem,
-            this.ownershipParentBarItem,
-            this.propertiesBarItem,
-            this.trueBarItem,
-            this.falseBarItem,
-            this.clearItemsbarItem,
-            this.autoSizeColumnsBarItem,
-            this.cancelOperationBarItem,
-            this.unlockBarItem,
-            this.fileParentBarItem,
-            this.copyBarItem,
-            this.moveBarItem,
-            this.openFilesBarItem,
-            this.openFolderbarItem,
-            this.restartBarItem,
-            this.exitBarItem,
-            this.toolsParentBarItem,
-            this.settingsBarItem,
-            this.helpParentBarItem,
-            this.helpBarItem,
-            this.checkForUpdatesBarItem,
-            this.homePageBarItem,
-            this.licenseBarItem,
-            this.aboutBarItem,
-            this.versionStaticBarItem,
-            this.viewParentBarItem,
-            this.detailsBarItem,
-            this.removeItemBarItem,
-            this.removeBarItem});
+            this.mfbmMain.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[]
+            {
+                this.helpParentBarItem,
+                this.fileParentBarItem,
+                this.helpBarItem,
+                this.openFilesBarItem,
+                this.checkForUpdatesBarItem,
+                this.openFolderbarItem,
+                this.homePageBarItem,
+                this.restartBarItem,
+                this.licenseBarItem,
+                this.exitBarItem,
+                this.aboutBarItem,
+                this.unlockParentBarItem,
+                this.unlockBarItem,
+                this.copyBarItem,
+                this.moveBarItem,
+                this.removeBarItem,
+                this.ownershipParentBarItem,
+                this.trueBarItem,
+                this.falseBarItem,
+                this.editParentBarItem,
+                this.propertiesBarItem,
+                this.removeItemBarItem,
+                this.clearItemsbarItem,
+                this.autoSizeColumnsBarItem,
+                this.cancelOperationBarItem,
+                this.viewParentBarItem,
+                this.detailsBarItem,
+                this.toolsParentBarItem,
+                this.settingsBarItem,
+                this.versionStaticBarItem,
+            });
             this.mfbmMain.MetroColor = System.Drawing.Color.SteelBlue;
             this.mfbmMain.Office2010Theme = Syncfusion.Windows.Forms.Office2010Theme.Managed;
             this.mfbmMain.ResetCustomization = false;
-            this.mfbmMain.SelectedItem = this.fileParentBarItem;
+            this.mfbmMain.SelectedItem = null;
             this.mfbmMain.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
             this.mfbmMain.ThemeName = "Metro";
             this.mfbmMain.UseBackwardCompatiblity = false;
@@ -391,17 +190,9 @@ namespace DeadLock.Forms
             // 
             this.barMain.AllowCustomizing = false;
             this.barMain.BarName = "MainMenu";
-            this.barMain.BarStyle = ((Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle)(((((Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.AllowQuickCustomizing | Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.IsMainMenu) 
-            | Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.RotateWhenVertical) 
-            | Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.Visible) 
-            | Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.DrawDragBorder)));
+            this.barMain.BarStyle = ((Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle)(((((Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.AllowQuickCustomizing | Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.IsMainMenu) | Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.RotateWhenVertical) | Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.Visible) | Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.DrawDragBorder)));
             this.barMain.Caption = "MainMenu";
-            this.barMain.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] {
-            this.fileParentBarItem,
-            this.editParentBarItem,
-            this.viewParentBarItem,
-            this.toolsParentBarItem,
-            this.helpParentBarItem});
+            this.barMain.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] { this.fileParentBarItem, this.editParentBarItem, this.viewParentBarItem, this.toolsParentBarItem, this.helpParentBarItem });
             this.barMain.Manager = this.mfbmMain;
             // 
             // fileParentBarItem
@@ -409,15 +200,10 @@ namespace DeadLock.Forms
             this.fileParentBarItem.BarName = "fileParentBarItem";
             this.fileParentBarItem.CategoryIndex = 0;
             this.fileParentBarItem.ID = "&File";
-            this.fileParentBarItem.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] {
-            this.openFilesBarItem,
-            this.openFolderbarItem,
-            this.restartBarItem,
-            this.exitBarItem});
+            this.fileParentBarItem.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] { this.openFilesBarItem, this.openFolderbarItem, this.restartBarItem, this.exitBarItem });
             this.fileParentBarItem.Manager = this.mfbmMain;
             this.fileParentBarItem.MetroColor = System.Drawing.Color.SteelBlue;
-            this.fileParentBarItem.SeparatorIndices.AddRange(new int[] {
-            2});
+            this.fileParentBarItem.SeparatorIndices.AddRange(new int[] { 2 });
             this.fileParentBarItem.ShowToolTipInPopUp = false;
             this.fileParentBarItem.SizeToFit = true;
             this.fileParentBarItem.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
@@ -472,21 +258,10 @@ namespace DeadLock.Forms
             this.editParentBarItem.BarName = "editParentBarItem";
             this.editParentBarItem.CategoryIndex = 1;
             this.editParentBarItem.ID = "&Edit";
-            this.editParentBarItem.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] {
-            this.unlockParentBarItem,
-            this.ownershipParentBarItem,
-            this.propertiesBarItem,
-            this.removeItemBarItem,
-            this.clearItemsbarItem,
-            this.autoSizeColumnsBarItem,
-            this.cancelOperationBarItem});
+            this.editParentBarItem.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] { this.unlockParentBarItem, this.ownershipParentBarItem, this.propertiesBarItem, this.removeItemBarItem, this.clearItemsbarItem, this.autoSizeColumnsBarItem, this.cancelOperationBarItem });
             this.editParentBarItem.Manager = this.mfbmMain;
             this.editParentBarItem.MetroColor = System.Drawing.Color.SteelBlue;
-            this.editParentBarItem.SeparatorIndices.AddRange(new int[] {
-            2,
-            3,
-            5,
-            6});
+            this.editParentBarItem.SeparatorIndices.AddRange(new int[] { 2, 3, 5, 6 });
             this.editParentBarItem.ShowToolTipInPopUp = false;
             this.editParentBarItem.SizeToFit = true;
             this.editParentBarItem.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
@@ -498,16 +273,10 @@ namespace DeadLock.Forms
             this.unlockParentBarItem.BarName = "unlockParentBarItem";
             this.unlockParentBarItem.CategoryIndex = 1;
             this.unlockParentBarItem.ID = "Unlock";
-            this.unlockParentBarItem.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] {
-            this.unlockBarItem,
-            this.copyBarItem,
-            this.moveBarItem,
-            this.removeBarItem});
+            this.unlockParentBarItem.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] { this.unlockBarItem, this.copyBarItem, this.moveBarItem, this.removeBarItem });
             this.unlockParentBarItem.Manager = this.mfbmMain;
             this.unlockParentBarItem.MetroColor = System.Drawing.Color.SteelBlue;
-            this.unlockParentBarItem.SeparatorIndices.AddRange(new int[] {
-            1,
-            3});
+            this.unlockParentBarItem.SeparatorIndices.AddRange(new int[] { 1, 3 });
             this.unlockParentBarItem.ShowToolTipInPopUp = false;
             this.unlockParentBarItem.SizeToFit = true;
             this.unlockParentBarItem.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
@@ -559,9 +328,7 @@ namespace DeadLock.Forms
             this.ownershipParentBarItem.BarName = "ownershipParentBarItem";
             this.ownershipParentBarItem.CategoryIndex = 1;
             this.ownershipParentBarItem.ID = "Ownership";
-            this.ownershipParentBarItem.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] {
-            this.trueBarItem,
-            this.falseBarItem});
+            this.ownershipParentBarItem.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] { this.trueBarItem, this.falseBarItem });
             this.ownershipParentBarItem.Manager = this.mfbmMain;
             this.ownershipParentBarItem.MetroColor = System.Drawing.Color.SteelBlue;
             this.ownershipParentBarItem.ShowToolTipInPopUp = false;
@@ -645,8 +412,7 @@ namespace DeadLock.Forms
             this.viewParentBarItem.BarName = "viewParentBarItem";
             this.viewParentBarItem.CategoryIndex = 2;
             this.viewParentBarItem.ID = "&View";
-            this.viewParentBarItem.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] {
-            this.detailsBarItem});
+            this.viewParentBarItem.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] { this.detailsBarItem });
             this.viewParentBarItem.Manager = this.mfbmMain;
             this.viewParentBarItem.MetroColor = System.Drawing.Color.SteelBlue;
             this.viewParentBarItem.ShowToolTipInPopUp = false;
@@ -671,8 +437,7 @@ namespace DeadLock.Forms
             this.toolsParentBarItem.BarName = "toolsParentBarItem";
             this.toolsParentBarItem.CategoryIndex = 3;
             this.toolsParentBarItem.ID = "&Tools";
-            this.toolsParentBarItem.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] {
-            this.settingsBarItem});
+            this.toolsParentBarItem.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] { this.settingsBarItem });
             this.toolsParentBarItem.Manager = this.mfbmMain;
             this.toolsParentBarItem.MetroColor = System.Drawing.Color.SteelBlue;
             this.toolsParentBarItem.ShowToolTipInPopUp = false;
@@ -696,18 +461,10 @@ namespace DeadLock.Forms
             this.helpParentBarItem.BarName = "helpParentBarItem";
             this.helpParentBarItem.CategoryIndex = 4;
             this.helpParentBarItem.ID = "&Help";
-            this.helpParentBarItem.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] {
-            this.helpBarItem,
-            this.checkForUpdatesBarItem,
-            this.homePageBarItem,
-            this.licenseBarItem,
-            this.aboutBarItem});
+            this.helpParentBarItem.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] { this.helpBarItem, this.checkForUpdatesBarItem, this.homePageBarItem, this.licenseBarItem, this.aboutBarItem });
             this.helpParentBarItem.Manager = this.mfbmMain;
             this.helpParentBarItem.MetroColor = System.Drawing.Color.SteelBlue;
-            this.helpParentBarItem.SeparatorIndices.AddRange(new int[] {
-            1,
-            3,
-            4});
+            this.helpParentBarItem.SeparatorIndices.AddRange(new int[] { 1, 3, 4 });
             this.helpParentBarItem.ShowToolTipInPopUp = false;
             this.helpParentBarItem.SizeToFit = true;
             this.helpParentBarItem.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
@@ -767,13 +524,9 @@ namespace DeadLock.Forms
             // barStatus
             // 
             this.barStatus.BarName = "StatusMenu";
-            this.barStatus.BarStyle = ((Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle)(((((Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.AllowQuickCustomizing | Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.RotateWhenVertical) 
-            | Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.Visible) 
-            | Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.DrawDragBorder) 
-            | Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.IsStatusBar)));
+            this.barStatus.BarStyle = ((Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle)(((((Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.AllowQuickCustomizing | Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.RotateWhenVertical) | Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.Visible) | Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.DrawDragBorder) | Syncfusion.Windows.Forms.Tools.XPMenus.BarStyle.IsStatusBar)));
             this.barStatus.Caption = "StatusMenu";
-            this.barStatus.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] {
-            this.versionStaticBarItem});
+            this.barStatus.Items.AddRange(new Syncfusion.Windows.Forms.Tools.XPMenus.BarItem[] { this.versionStaticBarItem });
             this.barStatus.Manager = this.mfbmMain;
             // 
             // versionStaticBarItem
@@ -815,10 +568,7 @@ namespace DeadLock.Forms
             // 
             // lsvItems
             // 
-            this.lsvItems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.clhPath,
-            this.clhStatus,
-            this.clhOwnership});
+            this.lsvItems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { this.clhPath, this.clhStatus, this.clhOwnership });
             this.lsvItems.ContextMenuStrip = this.cmsItems;
             this.lsvItems.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lsvItems.FullRowSelect = true;
@@ -853,19 +603,7 @@ namespace DeadLock.Forms
             // 
             this.cmsItems.DropShadowEnabled = false;
             this.cmsItems.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.cmsItems.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.unlockToolStripMenuItem,
-            this.ownershipToolStripMenuItem,
-            this.splitToolStripMenuItem1,
-            this.detailsToolStripMenuItem,
-            this.propertiesToolStripMenuItemItems,
-            this.splitToolStripMenuItem2,
-            this.removeItemToolStripMenuItem,
-            this.clearItemsToolStripMenuItem,
-            this.splitToolStripMenuItem3,
-            this.openInVirusTotalToolStripMenuItem,
-            this.splitToolStripMenuItem8,
-            this.cancelCurrentOperationToolStripMenuItem});
+            this.cmsItems.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.unlockToolStripMenuItem, this.ownershipToolStripMenuItem, this.splitToolStripMenuItem1, this.detailsToolStripMenuItem, this.propertiesToolStripMenuItemItems, this.splitToolStripMenuItem2, this.removeItemToolStripMenuItem, this.clearItemsToolStripMenuItem, this.splitToolStripMenuItem3, this.openInVirusTotalToolStripMenuItem, this.splitToolStripMenuItem8, this.cancelCurrentOperationToolStripMenuItem });
             this.cmsItems.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(236)))), ((int)(((byte)(249)))));
             this.cmsItems.Name = "cmsItems";
             this.cmsItems.Size = new System.Drawing.Size(255, 236);
@@ -873,13 +611,7 @@ namespace DeadLock.Forms
             // 
             // unlockToolStripMenuItem
             // 
-            this.unlockToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.unlockToolStripMenuItem1,
-            this.splitToolStripMenuItem4,
-            this.copyToolStripMenuItem,
-            this.moveToolStripMenuItem,
-            this.splitToolStripMenuItem5,
-            this.removeToolStripMenuItem});
+            this.unlockToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.unlockToolStripMenuItem1, this.splitToolStripMenuItem4, this.copyToolStripMenuItem, this.moveToolStripMenuItem, this.splitToolStripMenuItem5, this.removeToolStripMenuItem });
             this.unlockToolStripMenuItem.Image = global::DeadLock.Properties.Resources.unlock;
             this.unlockToolStripMenuItem.Name = "unlockToolStripMenuItem";
             this.unlockToolStripMenuItem.Size = new System.Drawing.Size(254, 26);
@@ -889,24 +621,22 @@ namespace DeadLock.Forms
             // 
             this.unlockToolStripMenuItem1.Image = global::DeadLock.Properties.Resources.unlock;
             this.unlockToolStripMenuItem1.Name = "unlockToolStripMenuItem1";
-            this.unlockToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
-            | System.Windows.Forms.Keys.U)));
-            this.unlockToolStripMenuItem1.Size = new System.Drawing.Size(251, 26);
+            this.unlockToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) | System.Windows.Forms.Keys.U)));
+            this.unlockToolStripMenuItem1.Size = new System.Drawing.Size(237, 24);
             this.unlockToolStripMenuItem1.Text = "Unlock";
             this.unlockToolStripMenuItem1.Click += new System.EventHandler(this.unlockToolStripMenuItem1_Click);
             // 
             // splitToolStripMenuItem4
             // 
             this.splitToolStripMenuItem4.Name = "splitToolStripMenuItem4";
-            this.splitToolStripMenuItem4.Size = new System.Drawing.Size(248, 6);
+            this.splitToolStripMenuItem4.Size = new System.Drawing.Size(234, 6);
             // 
             // copyToolStripMenuItem
             // 
             this.copyToolStripMenuItem.Image = global::DeadLock.Properties.Resources.copy;
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            this.copyToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
-            | System.Windows.Forms.Keys.C)));
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(251, 26);
+            this.copyToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) | System.Windows.Forms.Keys.C)));
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(237, 24);
             this.copyToolStripMenuItem.Text = "Copy";
             this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
@@ -914,32 +644,28 @@ namespace DeadLock.Forms
             // 
             this.moveToolStripMenuItem.Image = global::DeadLock.Properties.Resources.move;
             this.moveToolStripMenuItem.Name = "moveToolStripMenuItem";
-            this.moveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
-            | System.Windows.Forms.Keys.M)));
-            this.moveToolStripMenuItem.Size = new System.Drawing.Size(251, 26);
+            this.moveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) | System.Windows.Forms.Keys.M)));
+            this.moveToolStripMenuItem.Size = new System.Drawing.Size(237, 24);
             this.moveToolStripMenuItem.Text = "Move";
             this.moveToolStripMenuItem.Click += new System.EventHandler(this.moveToolStripMenuItem_Click);
             // 
             // splitToolStripMenuItem5
             // 
             this.splitToolStripMenuItem5.Name = "splitToolStripMenuItem5";
-            this.splitToolStripMenuItem5.Size = new System.Drawing.Size(248, 6);
+            this.splitToolStripMenuItem5.Size = new System.Drawing.Size(234, 6);
             // 
             // removeToolStripMenuItem
             // 
             this.removeToolStripMenuItem.Image = global::DeadLock.Properties.Resources.delete;
             this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
-            this.removeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.Delete)));
-            this.removeToolStripMenuItem.Size = new System.Drawing.Size(251, 26);
+            this.removeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) | System.Windows.Forms.Keys.Delete)));
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(237, 24);
             this.removeToolStripMenuItem.Text = "Remove";
             this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
             // 
             // ownershipToolStripMenuItem
             // 
-            this.ownershipToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.trueOwnershipToolStripMenuItem,
-            this.falseOwnershipToolStripMenuItem});
+            this.ownershipToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.trueOwnershipToolStripMenuItem, this.falseOwnershipToolStripMenuItem });
             this.ownershipToolStripMenuItem.Image = global::DeadLock.Properties.Resources.ownership;
             this.ownershipToolStripMenuItem.Name = "ownershipToolStripMenuItem";
             this.ownershipToolStripMenuItem.Size = new System.Drawing.Size(254, 26);
@@ -950,7 +676,7 @@ namespace DeadLock.Forms
             this.trueOwnershipToolStripMenuItem.Image = global::DeadLock.Properties.Resources.allow;
             this.trueOwnershipToolStripMenuItem.Name = "trueOwnershipToolStripMenuItem";
             this.trueOwnershipToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
-            this.trueOwnershipToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.trueOwnershipToolStripMenuItem.Size = new System.Drawing.Size(159, 24);
             this.trueOwnershipToolStripMenuItem.Text = "True";
             this.trueOwnershipToolStripMenuItem.Click += new System.EventHandler(this.trueOwnershipToolStripMenuItem_Click);
             // 
@@ -959,7 +685,7 @@ namespace DeadLock.Forms
             this.falseOwnershipToolStripMenuItem.Image = global::DeadLock.Properties.Resources.delete;
             this.falseOwnershipToolStripMenuItem.Name = "falseOwnershipToolStripMenuItem";
             this.falseOwnershipToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
-            this.falseOwnershipToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.falseOwnershipToolStripMenuItem.Size = new System.Drawing.Size(159, 24);
             this.falseOwnershipToolStripMenuItem.Text = "False";
             this.falseOwnershipToolStripMenuItem.Click += new System.EventHandler(this.falseOwnershipToolStripMenuItem_Click);
             // 
@@ -1045,10 +771,7 @@ namespace DeadLock.Forms
             // 
             // lsvDetails
             // 
-            this.lsvDetails.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.clhFileName,
-            this.clhProcessPath,
-            this.clhProcessID});
+            this.lsvDetails.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { this.clhFileName, this.clhProcessPath, this.clhProcessID });
             this.lsvDetails.ContextMenuStrip = this.cmsDetails;
             this.lsvDetails.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lsvDetails.FullRowSelect = true;
@@ -1079,14 +802,7 @@ namespace DeadLock.Forms
             // 
             this.cmsDetails.DropShadowEnabled = false;
             this.cmsDetails.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.cmsDetails.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.propertiesToolStripMenuItemDetails,
-            this.splitToolStripMenuItem12,
-            this.killToolStripMenuItem,
-            this.splitToolStripMenuItem6,
-            this.openFileLocationToolStripMenuItem,
-            this.splitToolStripMenuItem7,
-            this.openInVirusTotalToolStripMenuItem1});
+            this.cmsDetails.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.propertiesToolStripMenuItemDetails, this.splitToolStripMenuItem12, this.killToolStripMenuItem, this.splitToolStripMenuItem6, this.openFileLocationToolStripMenuItem, this.splitToolStripMenuItem7, this.openInVirusTotalToolStripMenuItem1 });
             this.cmsDetails.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(236)))), ((int)(((byte)(249)))));
             this.cmsDetails.Name = "cmsDetails";
             this.cmsDetails.Size = new System.Drawing.Size(255, 126);
@@ -1154,15 +870,7 @@ namespace DeadLock.Forms
             // 
             this.cmsTray.DropShadowEnabled = false;
             this.cmsTray.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.cmsTray.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.hideShowToolStripMenuItem,
-            this.splitToolStripMenuItem9,
-            this.settingsToolStripMenuItem,
-            this.splitToolStripMenuItem10,
-            this.helpToolStripMenuItem,
-            this.aboutToolStripMenuItem,
-            this.splitToolStripMenuItem11,
-            this.exitToolStripMenuItem});
+            this.cmsTray.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.hideShowToolStripMenuItem, this.splitToolStripMenuItem9, this.settingsToolStripMenuItem, this.splitToolStripMenuItem10, this.helpToolStripMenuItem, this.aboutToolStripMenuItem, this.splitToolStripMenuItem11, this.exitToolStripMenuItem });
             this.cmsTray.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(236)))), ((int)(((byte)(249)))));
             this.cmsTray.Name = "cmsTray";
             this.cmsTray.Size = new System.Drawing.Size(165, 152);
@@ -1251,7 +959,6 @@ namespace DeadLock.Forms
             this.cmsDetails.ResumeLayout(false);
             this.cmsTray.ResumeLayout(false);
             this.ResumeLayout(false);
-
         }
 
         #endregion

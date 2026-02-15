@@ -999,5 +999,17 @@ namespace DeadLock.Forms
             if (lsvItems.SelectedItems.Count == 0) return;
             NativeMethods.ShowFileProperties(lsvItems.SelectedItems[0].Text);
         }
+
+        private void donateBarItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start("https://codedead.com/donate/");
+            }
+            catch (Win32Exception ex)
+            {
+                MessageBoxAdv.Show(ex.Message, "DeadLock", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
